@@ -1,0 +1,546 @@
+{
+ "as_of": "2026-10-25",
+ "mae": 3.53,
+ "mae_midterm": 3.66,
+ "polls_mae": 3.07,
+ "note": "Intellz early-vote read: each county keeps its 2024 presidential margin, and turnout is reweighted by how this year's early ballots compare with the same day before the election in the baseline year, by county group (Trump won by 5+, Harris won by 5+, swing). Tilt = that reweighted margin minus 2024 (negative = this year's turnout mix leans more Democratic than 2024, positive = more Republican). Backtested on past state races: average miss 3.5 points (3.7 midterm to midterm, where it beat the polls). Counties are not voters: a county group's turnout is not its partisanship.",
+ "states": {
+  "CO": {
+   "date26": "2026-10-22",
+   "dbe": 12.0,
+   "baseline": {
+    "year": "2024",
+    "date": "2024-10-24",
+    "dbe": 12.0
+   },
+   "m24": -11.03,
+   "m_rw": -11.46,
+   "tilt": -0.43,
+   "groups": {
+    "R5": {
+     "share26": 40.471,
+     "share24": 38.85,
+     "growth": 0.809
+    },
+    "D5": {
+     "share26": 58.445,
+     "share24": 60.088,
+     "growth": 0.841
+    },
+    "SW": {
+     "share26": 1.084,
+     "share24": 1.062,
+     "growth": 0.788
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-CO",
+     "D": "John Hickenlooper",
+     "R": "Mark Baisley",
+     "poll": "",
+     "kalshi": 0.988,
+     "poly": 0.99
+    },
+    {
+     "id": "GOV-CO",
+     "D": "Phil Weiser",
+     "R": "Victor Marx",
+     "poll": "",
+     "kalshi": 0.966,
+     "poly": 0.97
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://www.coloradosos.gov/pubs/newsRoom/pressReleases/2026/20261022GenElectionActivity.xlsx"
+   ]
+  },
+  "FL": {
+   "date26": "2026-10-23",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2022",
+    "date": "2022-10-27",
+    "dbe": 12.0
+   },
+   "m24": 13.1,
+   "m_rw": 12.89,
+   "tilt": -0.21,
+   "groups": {
+    "R5": {
+     "share26": 63.209,
+     "share24": 62.249,
+     "growth": 1.06
+    },
+    "D5": {
+     "share26": 15.779,
+     "share24": 16.495,
+     "growth": 1.123
+    },
+    "SW": {
+     "share26": 21.012,
+     "share24": 21.255,
+     "growth": 1.023
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-FL-S",
+     "D": "Angie Nixon",
+     "R": "Ashley Moody",
+     "poll": "R+6.4",
+     "kalshi": 0.105,
+     "poly": 0.09
+    },
+    {
+     "id": "GOV-FL",
+     "D": "David Jolly",
+     "R": "Byron Donalds",
+     "poll": "R+4.7",
+     "kalshi": 0.185,
+     "poly": 0.185
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://countyfilesvbm-ev.floridados.gov/VoteByMailEarlyVotingReports/PublicStats"
+   ]
+  },
+  "GA": {
+   "date26": "2026-10-23",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2022",
+    "date": "2022-10-28",
+    "dbe": 11.0
+   },
+   "m24": 2.19,
+   "m_rw": 0.56,
+   "tilt": -1.63,
+   "groups": {
+    "R5": {
+     "share26": 42.399,
+     "share24": 47.158,
+     "growth": 1.008
+    },
+    "D5": {
+     "share26": 54.777,
+     "share24": 50.377,
+     "growth": 1.102
+    },
+    "SW": {
+     "share26": 2.824,
+     "share24": 2.465,
+     "growth": 1.021
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-GA",
+     "D": "Jon Ossoff",
+     "R": "Mike Collins",
+     "poll": "D+8.5",
+     "kalshi": 0.958,
+     "poly": 0.962
+    },
+    {
+     "id": "GOV-GA",
+     "D": "Keisha Lance Bottoms",
+     "R": "Rick Jackson",
+     "poll": "R+1.5",
+     "kalshi": 0.585,
+     "poly": 0.625
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://www.georgiavotes.com/county"
+   ]
+  },
+  "IA": {
+   "date26": "dbe11",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2022",
+    "date": "dbe11",
+    "dbe": 11.0
+   },
+   "m24": 13.26,
+   "m_rw": 13.16,
+   "tilt": -0.1,
+   "groups": {
+    "R5": {
+     "share26": 53.737,
+     "share24": 56.047,
+     "growth": 1.247
+    },
+    "D5": {
+     "share26": 32.192,
+     "share24": 30.974,
+     "growth": 1.275
+    },
+    "SW": {
+     "share26": 14.071,
+     "share24": 12.978,
+     "growth": 1.163
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-IA",
+     "D": "Josh Turek",
+     "R": "Ashley Hinson",
+     "poll": "EVEN ",
+     "kalshi": 0.425,
+     "poly": 0.425
+    },
+    {
+     "id": "GOV-IA",
+     "D": "Rob Sand",
+     "R": "Zach Lahn",
+     "poll": "D+7.3",
+     "kalshi": 0.865,
+     "poly": 0.875
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://election.lab.ufl.edu/early-vote/2026-early-voting/"
+   ]
+  },
+  "MD": {
+   "date26": "dbe10",
+   "dbe": 10.0,
+   "baseline": {
+    "year": "2024",
+    "date": "dbe10",
+    "dbe": 10.0
+   },
+   "m24": -28.75,
+   "m_rw": -29.45,
+   "tilt": -0.7,
+   "groups": {
+    "R5": {
+     "share26": 25.126,
+     "share24": 22.924,
+     "growth": 0.502
+    },
+    "D5": {
+     "share26": 72.934,
+     "share24": 75.958,
+     "growth": 0.539
+    },
+    "SW": {
+     "share26": 1.94,
+     "share24": 1.119,
+     "growth": 0.667
+    }
+   },
+   "races": [
+    {
+     "id": "GOV-MD",
+     "D": "Wes Moore",
+     "R": "Dan Cox",
+     "poll": "",
+     "kalshi": 0.973,
+     "poly": 0.977
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://elections.maryland.gov/press_room/2026_stats/GG26/EarlyVoting_RAW_data.csv"
+   ]
+  },
+  "ME": {
+   "date26": "dbe11",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2024",
+    "date": "dbe11",
+    "dbe": 11.0
+   },
+   "m24": -6.94,
+   "m_rw": -8.41,
+   "tilt": -1.47,
+   "groups": {
+    "R5": {
+     "share26": 26.811,
+     "share24": 34.965,
+     "growth": 0.718
+    },
+    "D5": {
+     "share26": 61.44,
+     "share24": 53.245,
+     "growth": 0.863
+    },
+    "SW": {
+     "share26": 11.749,
+     "share24": 11.79,
+     "growth": 0.785
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-ME",
+     "D": "Troy Jackson",
+     "R": "Susan Collins",
+     "poll": "D+2.1",
+     "kalshi": 0.635,
+     "poly": 0.635
+    },
+    {
+     "id": "GOV-ME",
+     "D": "Hannah Pingree",
+     "R": "Robert B. Charles",
+     "poll": "D+11.8",
+     "kalshi": 0.955,
+     "poly": 0.956
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://www.maine.gov/sos/sites/maine.gov.sos/files/inline-files/11-3-26%20AB%20Voter%20File%20as%20of%2010-23-26.txt"
+   ]
+  },
+  "NC": {
+   "date26": "2026-10-23",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2024",
+    "date": "2024-10-25",
+    "dbe": 11.0
+   },
+   "m24": 3.22,
+   "m_rw": 0.55,
+   "tilt": -2.68,
+   "groups": {
+    "R5": {
+     "share26": 45.81,
+     "share24": 49.836,
+     "growth": 0.503
+    },
+    "D5": {
+     "share26": 49.408,
+     "share24": 45.556,
+     "growth": 0.611
+    },
+    "SW": {
+     "share26": 4.783,
+     "share24": 4.608,
+     "growth": 0.599
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-NC",
+     "D": "Roy Cooper",
+     "R": "Michael Whatley",
+     "poll": "D+10.7",
+     "kalshi": 0.964,
+     "poly": 0.967
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://s3.amazonaws.com/dl.ncsbe.gov/ENRS/2026_11_03/absentee_20261103.zip ; https://s3.amazonaws.com/dl.ncsbe.gov/data/ncvoter_Statewide.zip (file dated 2026-10-18)"
+   ]
+  },
+  "OH": {
+   "date26": "2026-10-23",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2024",
+    "date": "2024-10-25",
+    "dbe": 11.0
+   },
+   "m24": 11.21,
+   "m_rw": 10.75,
+   "tilt": -0.46,
+   "groups": {
+    "R5": {
+     "share26": 63.259,
+     "share24": 59.626,
+     "growth": 0.647
+    },
+    "D5": {
+     "share26": 33.715,
+     "share24": 35.955,
+     "growth": 0.677
+    },
+    "SW": {
+     "share26": 3.027,
+     "share24": 4.418,
+     "growth": 0.557
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-OH-S",
+     "D": "Sherrod Brown",
+     "R": "Jon Husted",
+     "poll": "D+3.9",
+     "kalshi": 0.685,
+     "poly": 0.675
+    },
+    {
+     "id": "GOV-OH",
+     "D": "Amy Acton",
+     "R": "Vivek Ramaswamy",
+     "poll": "D+3.7",
+     "kalshi": 0.805,
+     "poly": 0.825
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://publicfiles.ohiosos.gov/free/absentee_public_export/Absentee_Request_Report.txt"
+   ]
+  },
+  "PA": {
+   "date26": "dbe11",
+   "dbe": 11.0,
+   "baseline": {
+    "year": "2024",
+    "date": "dbe13",
+    "dbe": 13.0
+   },
+   "m24": 1.54,
+   "m_rw": 1.39,
+   "tilt": -0.15,
+   "groups": {
+    "R5": {
+     "share26": 36.962,
+     "share24": 43.588,
+     "growth": 0.624
+    },
+    "D5": {
+     "share26": 42.782,
+     "share24": 39.445,
+     "growth": 0.63
+    },
+    "SW": {
+     "share26": 20.256,
+     "share24": 16.967,
+     "growth": 0.687
+    }
+   },
+   "races": [
+    {
+     "id": "GOV-PA",
+     "D": "Josh Shapiro",
+     "R": "Stacy Garrity",
+     "poll": "D+23.3",
+     "kalshi": 0.974,
+     "poly": 0.976
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://www.pavoterservices.pa.gov/2026%20General%20Daily%20Mail%20Ballot%20Report.xlsx"
+   ]
+  },
+  "SC": {
+   "date26": "2026-10-22",
+   "dbe": 12.0,
+   "baseline": {
+    "year": "2024",
+    "date": "2024-10-24",
+    "dbe": 12.0
+   },
+   "m24": 17.87,
+   "m_rw": 17.44,
+   "tilt": -0.43,
+   "groups": {
+    "R5": {
+     "share26": 75.99,
+     "share24": 78.291,
+     "growth": 0.703
+    },
+    "D5": {
+     "share26": 21.788,
+     "share24": 19.538,
+     "growth": 0.747
+    },
+    "SW": {
+     "share26": 2.222,
+     "share24": 2.171,
+     "growth": 0.669
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-SC",
+     "D": "Annie Andrews",
+     "R": "Darline Graham",
+     "poll": "R+2.0",
+     "kalshi": 0.205,
+     "poly": 0.205
+    },
+    {
+     "id": "GOV-SC",
+     "D": "Jermaine Johnson",
+     "R": "Alan Wilson",
+     "poll": "",
+     "kalshi": 0.061,
+     "poly": 0.066
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://scvotes.gov/wp-content/uploads/2026/10/EV-Totals-10-22-26.csv"
+   ]
+  },
+  "TX": {
+   "date26": "2026-10-25",
+   "dbe": 9.0,
+   "baseline": {
+    "year": "2024",
+    "date": "2024-10-27",
+    "dbe": 9.0
+   },
+   "m24": 13.69,
+   "m_rw": 11.76,
+   "tilt": -1.93,
+   "groups": {
+    "R5": {
+     "share26": 52.596,
+     "share24": 55.255,
+     "growth": 0.624
+    },
+    "D5": {
+     "share26": 37.538,
+     "share24": 36.288,
+     "growth": 0.735
+    },
+    "SW": {
+     "share26": 9.866,
+     "share24": 8.457,
+     "growth": 0.765
+    }
+   },
+   "races": [
+    {
+     "id": "SEN-TX",
+     "D": "James Talarico",
+     "R": "Ken Paxton",
+     "poll": "D+2.3",
+     "kalshi": 0.645,
+     "poly": 0.635
+    },
+    {
+     "id": "GOV-TX",
+     "D": "Gina Hinojosa",
+     "R": "Greg Abbott",
+     "poll": "R+2.8",
+     "kalshi": 0.325,
+     "poly": 0.305
+    }
+   ],
+   "grade": "M",
+   "sources": [
+    "https://goelect.txelections.civixapps.com/ivis-evr-ui/evr"
+   ]
+  }
+ }
+}

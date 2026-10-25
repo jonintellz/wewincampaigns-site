@@ -1960,8 +1960,8 @@ function renderStateHero(S) {
 
 /* the template: a state page renders, in order, whichever sections its data file carries */
 const STATE_SECTIONS = { hero: S => renderStateHero(S), turnout: () => renderTurnout(), map: () => renderMap(), composition: () => renderComposition(), pool: () => renderPool(), edday: () => renderEdday(), needs: S => renderNeeds(S),
-  verdict: S => renderTexasVerdict(S, 7), races: S => renderStateRaces(S, 8), alldata: S => renderExtras('TX', 9, 'Texas') };
-const SUB_LABELS = { turnout: 'Turnout', map: 'Map', composition: 'Who is voting', pool: 'Still to vote', edday: 'Election Day', needs: 'What it takes', alldata: 'All the data', verdict: 'National ledger', races: 'Every race' };
+  verdict: S => renderTexasVerdict(S, 7), races: S => renderStateRaces(S, 8), evread: S => renderEvRead('TX', 9, 'Texas'), alldata: S => renderExtras('TX', 10, 'Texas') };
+const SUB_LABELS = { turnout: 'Turnout', map: 'Map', composition: 'Who is voting', pool: 'Still to vote', edday: 'Election Day', needs: 'What it takes', evread: 'Early-vote read', alldata: 'All the data', verdict: 'National ledger', races: 'Every race' };
 /* Texas keeps its own template; the national ledger's Texas row is a section of its own, cell by cell */
 /* ================================================================= 6. WHAT A DEMOCRATIC WIN TAKES (Texas) */
 function renderNeeds(S) {
@@ -2363,12 +2363,13 @@ const pmargin = p => p.d == null || p.r == null || !p.b ? null : 100 * (p.d - p.
 
 /* ================================================================= NATIONAL STATE PAGE */
 function renderNatState(S) {
-  const items = S.sections.filter(k => k !== 'verdict').map(k => [k, { ev: 'Early vote', mix: 'Who is voting', pool: 'Still to vote', polls: 'Polls', perror: 'Poll error', coverage: 'Coverage', races: 'Every race' }[k]]).concat([['alldata', 'All the data']]);
+  const items = S.sections.filter(k => k !== 'verdict').map(k => [k, { ev: 'Early vote', mix: 'Who is voting', pool: 'Still to vote', polls: 'Polls', perror: 'Poll error', coverage: 'Coverage', races: 'Every race' }[k]]).concat([['evread', 'Early-vote read'], ['alldata', 'All the data']]);
   const nav = subnav(S.name, items, stateSwitch());
   run('hero', () => renderNatHero(S));
   const R = { ev: renderNatEv, mix: renderNatMix, pool: renderNatPool, polls: renderNatPolls, perror: renderNatPerror, coverage: renderNatCoverage, races: renderStateRaces };
   let num = 0;
   S.sections.filter(k => R[k]).forEach(k => run(k, () => R[k](S, ++num)));
+  run('evread', () => renderEvRead(S.abbr, ++num, S.name));
   run('alldata', () => renderExtras(S.abbr, ++num, S.name));
   watchSubnav(nav);
 }
@@ -2830,6 +2831,30 @@ function renderExtras(abbr, num, name) {
   const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return 'source'; } };
   const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); load(); } }, { rootMargin: '400px 0px' });
   io.observe(w);
+}
+/* ================================================================= EARLY-VOTE READ, every race (backtested method; states with a same-day baseline) */
+function renderEvRead(abbr, num, name) {
+  const w = nband('evread', num, 'What the early vote is tilting toward', 'The Intellz early-vote read for every Senate and governor race in ' + name + ': this year\'s turnout mix applied to the 2024 county results, beside the polls and the markets.', 'live');
+  const box = h('div', {}, h('p', { class: 'loading' }, 'Loading the read.'));
+  w.append(card('primary', box));
+  getJSON('data/evread.json').then(E => {
+    const S = E.states[abbr];
+    const lean = v => (v > 0 ? 'R+' : v < 0 ? 'D+' : 'even ') + fNum(Math.abs(v), 1);
+    if (!S) { box.replaceChildren(h('p', { class: 'note' }, 'No read for ' + name + ': there is no same-day county early-vote series from 2022 or 2024 to compare against, and without one the read missed by more in our backtest. ' + E.note)); return; }
+    const dir = S.tilt < 0 ? 'more Democratic' : 'more Republican';
+    const GL = { R5: 'Trump won by 5+', D5: 'Harris won by 5+', SW: 'Swing' };
+    const rows = Object.entries(S.groups).map(([g, v]) => ({ g: GL[g], s26: v.share26, s24: v.share24, gr: v.growth }));
+    const races = S.races.length ? tableEl([{ k: 'id', label: 'Race' }, { k: 'D', label: 'Democrat' }, { k: 'R', label: 'Republican' }, { k: 'poll', label: 'Poll average' },
+      { k: 'kalshi', label: 'Kalshi, D', fmt: r => r.kalshi == null ? 'n/a' : fNum(100 * r.kalshi, 0) + '%' }, { k: 'poly', label: 'Polymarket, D', fmt: r => r.poly == null ? 'n/a' : fNum(100 * r.poly, 0) + '%' }], S.races) : h('p', { class: 'muted' }, 'No Senate or governor race on the ballot.');
+    box.replaceChildren(
+      h('div', { style: 'display:flex;gap:28px;flex-wrap:wrap;align-items:flex-end' },
+        h('div', {}, h('div', { class: 'k muted' }, 'Turnout tilt vs 2024'), h('div', { class: 'big hi' }, lean(S.tilt)), h('p', { class: 'muted', style: 'font-size:13px;margin:0' }, 'this year\'s early electorate, by county, leans ' + fNum(Math.abs(S.tilt), 1) + ' points ' + dir + ' than 2024\'s')),
+        h('div', {}, h('div', { class: 'k muted' }, '2024 margin, reweighted'), h('div', { class: 'big' }, lean(S.m_rw)), h('p', { class: 'muted', style: 'font-size:13px;margin:0' }, '2024 was ' + lean(S.m24) + '; read error about ' + fNum(E.mae, 1) + ' points'))),
+      h('p', { class: 'note' }, 'Early ballots through ' + S.date26 + ' (' + S.dbe + ' days before Election Day), compared with the same day in ' + S.baseline.year + '. Read it as the direction the turnout mix is tilting, before persuasion and before Election Day: a Democratic tilt this early is what front-loading looks like, and the test is whether it narrows as Republicans vote late.'),
+      tableEl([{ k: 'g', label: 'County group (2024)' }, { k: 's26', label: 'Share of 2026 early ballots', num: true, fmt: r => fPct(r.s26, 1) }, { k: 's24', label: 'Share of 2024 vote', num: true, fmt: r => fPct(r.s24, 1) }, { k: 'gr', label: 'Ballots vs same day ' + S.baseline.year, num: true, fmt: r => r.gr == null ? 'n/a' : fNum(100 * r.gr, 0) + '%' }], rows),
+      h('h4', { style: 'margin-top:16px' }, 'The races'), races,
+      h('p', { class: 'note' }, E.note));
+  }).catch(() => box.replaceChildren(h('p', { class: 'note' }, 'The read could not be loaded.')));
 }
 function renderNationalPage() {
   const N = D.national;
