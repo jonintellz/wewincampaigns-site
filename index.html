@@ -1382,13 +1382,13 @@ function renderPool() {
       { k: 'remaining', label: 'Not yet voted', num: true, fmt: r => fInt(r.remaining) }, { k: 'exp_mid', label: 'Expected, mid', num: true, fmt: r => fInt(r.exp_mid) }, { k: 'exp_high', label: 'Expected, high', num: true, fmt: r => fInt(r.exp_high) }], M.rows, { sortable: true }));
     w.append(card('primary', h('div', { class: 'card-head' }, h('div', {}, h('h3', {}, 'Voted, still expected, unlikely'), h('p', { class: 'sub' }, 'Every registered Texan by primary history and how many of their last five primaries they voted in. Each bar is that group\'s registered voters; the number on the right is how many more are expected to vote at their usual midterm rate.'))),
       el, legend([['var(--hi)', 'Already voted early'], ['var(--steel)', 'Still expected (their 2018 and 2022 average turnout rate)'], ['var(--none)', 'Unlikely to vote']]),
-      h('p', { class: 'note' }, P.model.note + ' Counts come from the commercial voter file\'s early-vote collection (' + M.collection.replace(/^L2 /, '') + '), which runs behind the SOS file.'),
+      h('p', { class: 'note' }, P.model.note + ' Counts come from the commercial voter file\'s early-vote collection (' + M.collection.replace(/^a commercial voter file /, '') + '), which runs behind the SOS file.'),
       h('div', { class: 'chart-foot' }, tb, srcs([P.model])), th));
   } else w.append(pendingBox('The remaining-pool model', P.expected, 5));
   const cards = [];
   if (P.public || P.model) {
     const stacks = [];
-    if (P.model) { const C = P.model.value.comp; [['now', 'Voted so far (voter file)'], ['mid', 'Final, mid (midterm rates)'], ['high', 'Final, high (2024 rates)']].forEach(([k, t]) => stacks.push({ lab: t, R: C[k].R, D: C[k].D, other: C[k].both + C[k].none, src: 'L2' })); }
+    if (P.model) { const C = P.model.value.comp; [['now', 'Voted so far (voter file)'], ['mid', 'Final, mid (midterm rates)'], ['high', 'Final, high (2024 rates)']].forEach(([k, t]) => stacks.push({ lab: t, R: C[k].R, D: C[k].D, other: C[k].both + C[k].none, src: 'a commercial voter file' })); }
     const SC = P.public ? P.public.scenarios.value : [];
     SC.forEach(sc => stacks.push({ lab: sc.name.replace(/\s*\(.*\)/, ''), R: sc.R, D: sc.D, other: sc.NP, be: sc.breakeven, total: sc.total }));
     const cEl = chartBox(el => {
