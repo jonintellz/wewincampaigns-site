@@ -1890,20 +1890,62 @@ function renderDesk() {
 /* ================================================================= 12. METHOD */
 function renderMethod() {
   const M = D.meta;
-  const w = band('method', null, 'Method and sources', 'How every number on this page was graded, where it came from, and when.', 'live');
+  const BT = ((D.explainer || {}).points || []).find(p => p.id === 'backtest');
+  const B = BT ? BT.fig.value : null;
+  const E = D.evread || null;
+  const w = band('method', null, 'How we do it', 'The Intellz method: what we measure, how we measure it, how we test ourselves, and where every number comes from.', 'live');
+  const step = (n, title, what, how, why) => h('div', { class: 'card', style: 'display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;align-items:start' },
+    h('div', { class: 'band-num', style: 'font-size:34px;line-height:1' }, String(n).padStart(2, '0')),
+    h('div', { style: 'min-width:0' }, h('h3', { style: 'margin:0 0 8px' }, title),
+      h('p', { style: 'margin:0 0 8px' }, h('b', {}, 'What we measure. '), what),
+      h('p', { style: 'margin:0 0 8px' }, h('b', {}, 'How. '), how),
+      h('p', { class: 'muted', style: 'margin:0' }, h('b', {}, 'Why it beats the headline. '), why)));
+  const steps = h('div', { style: 'display:grid;gap:14px' },
+    step(1, 'Same day, same yardstick', 'How many people have voted, against the same point in every election since 2016.',
+      'We line up each year by early-voting day and by days before Election Day, and divide by registered voters, so registration growth does not pass for enthusiasm. Midterms are compared with midterms (2018, 2022) and presidential years are shown beside them.',
+      'Most "record turnout" stories compare raw ballots with 2024, the best early-vote year Republicans have had. Per registered voter, Texas is tracking 2018.'),
+    step(2, 'Who has voted', 'The make-up of the early electorate: primary history in Texas, party registration in the 22 states that record it, and age, race and county group where the state publishes them.',
+      'Texas has no party registration, so we use each early voter\'s primary history (Republican only, Democratic only, both, or none) from the county rosters, day by day.',
+      'Daily composition shows the pattern a single total hides: Democrats banked their regular voters first, and each later day has leaned more Republican.'),
+    step(3, 'Who is still left to vote', 'The reservoir: past primary and midterm voters who have not voted yet, by party history and how reliably they vote.',
+      'Each group\'s count of registrants who have not cast a ballot, beside the share of that group that has already voted.',
+      'It shows where the late vote can come from. In Texas the larger pool of reliable voters still to vote has a Republican primary history.'),
+    step(4, 'What the early vote is tilting toward', 'For every Senate and governor race in a state with a same-day county series: the 2024 county results reweighted by this year\'s turnout pace.',
+      'Counties are grouped by their 2024 margin. Each group\'s early ballots are compared with the same day in the last comparable election, and the 2024 result is recomputed with this year\'s turnout mix.' + (E ? ' Shown for ' + Object.keys(E.states).length + ' states.' : ''),
+      'It measures the electorate by where the ballots come from, not by what a pollster\'s likely-voter model assumes.'),
+    step(5, 'The polls, filtered', 'Every public poll of the major races, read four ways: all polls, without the exposed fake firms, crosstab-published polls only, and a labelled sensitivity test.',
+      'Each poll is opened at the pollster\'s own release; crosstabs are read where published; the four firms exposed this year (and anything that shares their people or patterns) are flagged and removed from the averages.',
+      'Averages that quietly include fabricated polls move the whole narrative; we show the average with and without them.'),
+    step(6, 'The media, checked like for like', 'Headline claims about the early vote and the polls, tested against the right comparison year and the original data.',
+      'We open the outlet\'s own article and the data it cites, and mark the comparison it used (2024, 2022 or 2018).',
+      'The most-cited early-vote stat, the party-registration lead, has a poor record (below).'));
+  const track = B ? card('primary', h('h3', { style: 'margin-top:0' }, 'Our track record: tested on past elections'),
+      h('p', { class: 'sub' }, 'Each read was run on past state races using only the early vote that existed ' + B.dbe[0] + ' to ' + B.dbe[1] + ' days out, then scored against the certified result.'),
+      tableEl([{ k: 'm', label: 'Read' }, { k: 'n', label: 'Races', num: true }, { k: 'e', label: 'Average miss, points', num: true }], [
+        { m: 'Final polling average (signed: toward Democrats)', n: B.polls_n, e: fNum(Math.abs(B.polls_signed), 1) + ' toward D' },
+        { m: 'Turnout read, midterm against midterm', n: B.mb_n, e: fNum(B.mb_mae, 2) + ' (polls ' + fNum(B.mbp_mae, 2) + ')' },
+        { m: 'Turnout read, against the previous cycle', n: B.m1_n, e: fNum(B.m1_mae, 2) + ' (polls ' + fNum(B.polls_mae, 2) + ')' },
+        { m: 'Texas primary-history read', n: B.m3_n, e: fNum(B.m3_mae, 2) },
+        { m: 'Party-registration lead (the media\'s favourite)', n: B.m2_n, e: fNum(B.m2_mae, 1) }]),
+      h('p', { class: 'note' }, 'Every case is in the backtest file; the arithmetic was re-derived by an independent check. Small numbers of races: read these as track records, not guarantees.'), srcs([BT.fig])) : null;
+  const verify = card('', h('h3', { style: 'margin-top:0' }, 'How we check ourselves'),
+    h('ul', { style: 'margin:0;padding-left:20px;display:grid;gap:6px' },
+      h('li', {}, 'Every relayed figure on the main pages was opened at its original (the pollster\'s release, the rater\'s page, the state election office, the outlet\'s own article). Figures we could not trace say "original not found" beside the number.'),
+      h('li', {}, 'An independent second check re-opens every correction and a random sample of matches.'),
+      h('li', {}, 'Every method is red-teamed by a panel of outside AI models before it is used, and the rulings are kept on file.'),
+      h('li', {}, 'The site will not build if a figure lacks a source, a grade or a date, if a county total does not add up to the state total, or if a source link is dead.')));
   const grades = card('', h('h4', {}, 'The grade on every figure'), h('ul', { class: 'plain grades', style: 'margin-top:8px' }, Object.entries(M.grades).map(([g, t]) => h('li', {}, chip(g), h('span', {}, t)))),
-    h('p', { class: 'note' }, 'Open the Sources drawer under any card to see each figure\'s source link, grade and as-of date. Party in Texas means primary history: Texas has no party registration.'));
-  const asof = card('', h('h4', {}, 'As of, by source'), h('dl', { class: 'kv' }, Object.values(M.asof).flat().map(a => [h('dt', {}, a.what), h('dd', { style: 'text-align:right;font-family:var(--f-body);font-size:13px' }, a.when)])), h('p', { class: 'note mono' }, 'Built ' + M.site.built + (M.r3 && M.r3.done ? '. Round-3 refresh files read: ' + M.r3.used.length + '.' : '.')));
-  const files = card('', h('h4', {}, 'Data files'), h('p', { class: 'sub' }, 'The page loads these files; every figure in them carries its value, grade, as-of date, source link and note.'),
-    h('details', { class: 'srcgroup' }, h('summary', {}, 'The ' + M.files.length + ' data files'), h('ul', { class: 'plain mono', style: 'margin-top:8px;font-size:12px;display:grid;gap:4px' }, M.files.map(f => h('li', {}, f.file + ' · ' + fInt(f.bytes / 1024) + ' KB')))),
-    h('ul', { class: 'plain mono', style: 'margin-top:8px;font-size:12px;display:grid;gap:4px' }, h('li', {}, 'geo/tx_counties.json · Texas counties, from the U.S. Census atlas (us-atlas)'), h('li', {}, 'geo/us_states.json · US states, from the same atlas (us-atlas 3, states 1:10m)'), h('li', {}, 'Every rendered figure, its value, grade, as-of, input file and source link: build_manifest.txt, kept with the build.')));
+    h('p', { class: 'note' }, 'Open the Sources drawer under any card to see each figure\'s source link, grade and as-of date.'));
+  const asof = card('', h('h4', {}, 'As of, by source'), h('details', { class: 'srcgroup' }, h('summary', {}, 'Show the as-of date for each data source'),
+    h('dl', { class: 'kv' }, Object.values(M.asof).flat().map(a => [h('dt', {}, a.what), h('dd', { style: 'text-align:right;font-family:var(--f-body);font-size:13px' }, a.when)]))),
+    h('p', { class: 'note mono' }, 'Built ' + M.site.built + '.'));
   const secTitle = Object.fromEntries(M.sections.map(s => [s.id, s.title]));
   const SRC = D.sources || { sources: [], source_count: 0 };
   const bySec = d3.group(SRC.sources.flatMap(s => s.sections.map(sec => [sec, s])), d => d[0]);
   const order = M.sections.map(s => s.id).filter((id, i, a) => a.indexOf(id) === i && bySec.has(id) && (SHOW_DESK_NOTES || id !== 'desk'));
-  const srcCard = card('', h('h4', {}, 'Every source, by section'), h('p', { class: 'sub' }, SRC.source_count + ' sources. Links that start with # open the section of this site that holds the figures.'),
-    order.map(id => h('details', { class: 'srcgroup' }, h('summary', {}, secTitle[id] + ' · ' + bySec.get(id).length), h('ul', {}, bySec.get(id).map(([, s]) => h('li', {}, aLink(s.url, s.title)))))));
-  w.append(h('div', { class: 'method-grid' }, grades, asof, files), h('div', { class: 'support', style: 'grid-template-columns:minmax(0,1fr)' }, srcCard),
+  const srcCard = card('', h('h4', {}, 'Every source, by section'), h('p', { class: 'sub' }, SRC.source_count + ' sources.'),
+    order.map(id => h('details', { class: 'srcgroup' }, h('summary', {}, (secTitle[id] || id) + ' · ' + bySec.get(id).length), h('ul', {}, bySec.get(id).map(([, s]) => h('li', {}, aLink(s.url, s.title)))))));
+  w.append(steps, h('div', { class: 'support two', style: 'margin-top:18px' }, track, verify), h('div', { class: 'method-grid', style: 'margin-top:18px' }, grades, asof), h('div', { class: 'support', style: 'grid-template-columns:minmax(0,1fr)' }, srcCard),
     h('p', { class: 'note', style: 'margin-top:18px' }, 'Intellz Research. Aggregate counts only: no voter names or voter IDs are used or published.'));
 }
 
@@ -3039,7 +3081,7 @@ const PAGES = {
   polls: { files: ['polls', 'context'], render: () => run('polls', renderPolls) },
   fakepolls: { files: ['fakepolls'], render: () => run('fakepolls', renderFake) },
   coverage: { files: ['coverage'], render: () => run('coverage', renderCoverage) },
-  method: { files: ['sources'], render: () => run('method', renderMethod) },
+  method: { files: ['sources', 'explainer', 'evread'], render: () => run('method', renderMethod) },
   desk: { files: ['desk'], render: () => run('desk', renderDesk) },
 };
 const RENDERED = new Set();
