@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:10 PM",
- "total": 254918,
+ "as_of": "2026-11-03 03:12 PM",
+ "total": 256565,
  "base22_total": 517013,
- "pct_of_22": 49.3,
- "mix_lean_vs_22": 2.29,
+ "pct_of_22": 49.6,
+ "mix_lean_vs_22": 2.34,
  "counties": [
   {
    "county": "Dallas",
@@ -14,95 +14,95 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:10 PM"
+   "updated": "03:12 PM"
   },
   {
    "county": "Travis",
-   "today": 67454,
+   "today": 68161,
    "ed22": 130241,
-   "pct22": 51.8,
+   "pct22": 52.3,
    "ed24": 96528,
-   "pct24": 69.9,
+   "pct24": 70.6,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "03:06 PM"
+   "updated": "03:12 PM"
   },
   {
    "county": "Montgomery",
-   "today": 40083,
+   "today": 40474,
    "ed22": 67248,
-   "pct22": 59.6,
+   "pct22": 60.2,
    "ed24": 57549,
-   "pct24": 69.7,
+   "pct24": 70.3,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "03:07 PM"
+   "updated": "03:12 PM"
   },
   {
    "county": "Bell",
-   "today": 16554,
+   "today": 16698,
    "ed22": 29955,
-   "pct22": 55.3,
+   "pct22": 55.7,
    "ed24": 29024,
-   "pct24": 57.0,
+   "pct24": 57.5,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "03:07 PM"
+   "updated": "03:13 PM"
   },
   {
    "county": "Mclennan",
-   "today": 14718,
+   "today": 14848,
    "ed22": 27228,
-   "pct22": 54.1,
+   "pct22": 54.5,
    "ed24": 25422,
-   "pct24": 57.9,
+   "pct24": 58.4,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "03:09 PM"
+   "updated": "03:14 PM"
   },
   {
    "county": "Hays",
-   "today": 12929,
+   "today": 13071,
    "ed22": 23506,
-   "pct22": 55.0,
+   "pct22": 55.6,
    "ed24": 20320,
-   "pct24": 63.6,
+   "pct24": 64.3,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "03:06 PM"
+   "updated": "03:12 PM"
   },
   {
    "county": "Ellis",
-   "today": 10637,
+   "today": 10752,
    "ed22": 22089,
-   "pct22": 48.2,
+   "pct22": 48.7,
    "ed24": 17850,
-   "pct24": 59.6,
+   "pct24": 60.2,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "03:06 PM"
+   "updated": "03:11 PM"
   },
   {
    "county": "Hockley",
-   "today": 1002,
+   "today": 1012,
    "ed22": 2415,
-   "pct22": 41.5,
+   "pct22": 41.9,
    "ed24": 2025,
-   "pct24": 49.5,
+   "pct24": 50.0,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "03:08 PM"
+   "updated": "03:13 PM"
   },
   {
    "county": "Madison",
-   "today": 804,
+   "today": 812,
    "ed22": 1805,
-   "pct22": 44.5,
+   "pct22": 45.0,
    "ed24": 1174,
-   "pct24": 68.5,
+   "pct24": 69.2,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "03:09 PM"
+   "updated": "03:14 PM"
   }
  ],
  "dallas": {
@@ -4942,16 +4942,21 @@
  "harris": {
   "sites": 623,
   "bands": {
-   "0-14 min": 598,
-   "15-29 min": 12,
-   "30+ min": 13
+   "0-14 min": 596,
+   "15-29 min": 13,
+   "30+ min": 14
   },
-  "in_line": 3150,
+  "in_line": 3200,
   "worst": [
    [
     "Tom Bass Park Community Center Section Three",
     "Houston",
     200
+   ],
+   [
+    "Greater True Light Missionary Baptist Church",
+    "Houston",
+    35
    ],
    [
     "Jean Hines Caldwell Elementary School",
@@ -4974,18 +4979,13 @@
     35
    ],
    [
-    "First Christian Church",
-    "Katy",
-    35
-   ],
-   [
     "Kingsland Baptist Church North Katy Campus",
     "Katy",
     35
    ],
    [
-    "Kreinhop Elementary School",
-    "Spring",
+    "Rice University Welcome Center",
+    "Houston",
     30
    ]
   ]
@@ -4995,8 +4995,13 @@
    "county": "Tarrant",
    "sites": 224,
    "avg": 5.8,
-   "over30": 33,
+   "over30": 27,
    "worst": [
+    [
+     "4205 Basswood Boulevard",
+     120,
+     "Fort Worth"
+    ],
     [
      "700 East Abram Street",
      120,
@@ -5018,14 +5023,9 @@
      "Fort Worth"
     ],
     [
-     "1075 Eagle Boulevard",
+     "901 Precinct Line Road",
      60,
-     "Haslet"
-    ],
-    [
-     "1216 Diamond Back Lane",
-     60,
-     "Haslet"
+     "Hurst"
     ]
    ]
   },
@@ -5061,7 +5061,7 @@
      ""
     ],
     [
-     "Collins Garden Branch Library",
+     "Gardendale Early Learning Program",
      15,
      ""
     ]
@@ -5237,6 +5237,10 @@
   [
    "15:10",
    254918
+  ],
+  [
+   "15:12",
+   256565
   ]
  ]
 }
