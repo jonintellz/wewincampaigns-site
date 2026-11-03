@@ -217,7 +217,8 @@ function pageLive(){return `
 <div><h2>Harris: lines</h2><p class="deck">Harris publishes wait times during the day, not counts.</p><div id="liveHarris"></div></div></section>
 <p class="note" style="margin-top:24px">Unofficial, from the Secretary of State and county websites. The canvass is official.</p>`}
 
-const RACE_ORDER=['senat','governor','lieutenant','attorney','comptroller','land','agricultur','railroad'];
+const RACE_RX=[/^u\.?\s?s\.? senat/i,/^governor/i,/^lieutenant governor/i,/^attorney general/i,/^comptroller/i,/land/i,/agricultur/i,/railroad/i];
+const rk=x=>{const i=RACE_RX.findIndex(re=>re.test(x.race.trim()));return i<0?99:i};
 const pcol=p=>/^R/i.test(p||'')?'--rep':/^D/i.test(p||'')?'--dem':'--both';
 const mg=v=>v==null||isNaN(v)?'–':(v>0?'R+':'D+')+Math.abs(v).toFixed(1);
 function raceCard(r,big){const tot=r.candidates.reduce((s,c)=>s+(c.votes||0),0);const cs=[...r.candidates].sort((a,b)=>(b.votes||0)-(a.votes||0));
@@ -227,8 +228,8 @@ const hasVotes=rs=>rs&&rs.some(r=>r.candidates&&r.candidates.some(c=>c.votes>0))
 function renderResults(){const el=$('#resBody');if(!el)return;const R=window.RES;
  if(!R||!hasVotes(R.statewide)){
   el.innerHTML=`<div class="grid g2">${['U.S. Senate: Talarico (D) vs Paxton (R)','Governor: Abbott (R) vs Hinojosa (D)'].map(t=>`<div class="card"><h3>${t}</h3><p class="src" style="margin:0">Counting starts after 7 pm Central. Early-vote totals usually post first, within the first hour.</p></div>`).join('')}</div>`;return}
- const rank=x=>{const k=RACE_ORDER.findIndex(n=>x.race.toLowerCase().includes(n));return k<0?99:k};
- const sw=R.statewide.filter(r=>rank(r)<99).sort((a,b)=>rank(a)-rank(b));const rest=R.statewide.filter(r=>rank(r)===99);
+ const rank=rk;
+ const sw=R.statewide.filter(r=>rank(r)<99).sort((a,b)=>rank(a)-rank(b));const dn=r=>+((r.race.match(/District (\d+)/)||[0,999])[1]);const rest=R.statewide.filter(r=>rank(r)===99).sort((a,b)=>dn(a)-dn(b));
  $('#resDeck').textContent=`Unofficial, ${R.source||'Texas Secretary of State'}, read ${R.as_of}.`;
  let h=`<div class="grid g2">${sw.slice(0,2).map(r=>raceCard(r,1)).join('')}</div>`;
  if(sw.length>2)h+=`<div class="grid g3" style="margin-top:14px">${sw.slice(2).map(r=>raceCard(r)).join('')}</div>`;
@@ -280,7 +281,7 @@ function renderDallas(){if(route()!=='dallas'||!L||!L.dallas)return;const dl=L.d
   +tile('Average wait',dl.avg_wait+' min','across all sites')+tile('Early vote, final',mil(c.ev||0),`${c.pct}% of registered`);
  const R=window.RES,DR=R&&R.dallas;
  if(DR&&hasVotes(DR.races)){$('#dalResDeck').textContent=`Unofficial, ${DR.source||'Dallas County Elections'}, read ${DR.as_of||R.as_of}${DR.reporting?' · '+DR.reporting:''}.`;
-  $('#dalRes').innerHTML=`<div class="grid g3">${DR.races.filter(x=>x!==r).slice(0,24).map(x=>raceCard(x)).join('')}</div>`}
+  $('#dalRes').innerHTML=`<div class="grid g3">${[...DR.races].filter(x=>x!==r).sort((a,b)=>{const k=x=>{const i=rk(x);return i<99?i:(/representative/i.test(x.race)?50:/commission|county|judge|sheriff|district attorney/i.test(x.race)?40:99)};return k(a)-k(b)}).slice(0,40).map(x=>raceCard(x)).join('')}</div>`}
  else $('#dalRes').innerHTML=`<div class="card"><p class="src" style="margin:0">Dallas County posts results after 7 pm: Senate, Governor, the congressional seats and every county race.</p></div>`;
  drawSites()}
 function drawSites(){const el=$('#dalSites');if(!el||!L||!L.dallas)return;const q=($('#siteQ').value||'').toLowerCase(),only=$('#siteD2').checked;

@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 02:00 PM",
- "total": 203636,
+ "as_of": "2026-11-03 02:04 PM",
+ "total": 204589,
  "base22_total": 517013,
- "pct_of_22": 39.4,
- "mix_lean_vs_22": 3.78,
+ "pct_of_22": 39.6,
+ "mix_lean_vs_22": 3.73,
  "counties": [
   {
    "county": "Dallas",
@@ -14,18 +14,18 @@
    "pct24": 33.1,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "02:00 PM"
+   "updated": "02:04 PM"
   },
   {
    "county": "Travis",
-   "today": 57958,
+   "today": 58632,
    "ed22": 130241,
-   "pct22": 44.5,
+   "pct22": 45.0,
    "ed24": 96528,
-   "pct24": 60.0,
+   "pct24": 60.7,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "01:54 PM"
+   "updated": "02:00 PM"
   },
   {
    "county": "Montgomery",
@@ -51,14 +51,14 @@
   },
   {
    "county": "Mclennan",
-   "today": 12762,
+   "today": 12918,
    "ed22": 27228,
-   "pct22": 46.9,
+   "pct22": 47.4,
    "ed24": 25422,
-   "pct24": 50.2,
+   "pct24": 50.8,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "01:57 PM"
+   "updated": "02:02 PM"
   },
   {
    "county": "Hays",
@@ -73,36 +73,36 @@
   },
   {
    "county": "Ellis",
-   "today": 9015,
+   "today": 9116,
    "ed22": 22089,
-   "pct22": 40.8,
+   "pct22": 41.3,
    "ed24": 17850,
-   "pct24": 50.5,
+   "pct24": 51.1,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "01:55 PM"
+   "updated": "02:00 PM"
   },
   {
    "county": "Hockley",
-   "today": 870,
+   "today": 880,
    "ed22": 2415,
-   "pct22": 36.0,
+   "pct22": 36.4,
    "ed24": 2025,
-   "pct24": 43.0,
+   "pct24": 43.5,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "01:57 PM"
+   "updated": "02:02 PM"
   },
   {
    "county": "Madison",
-   "today": 708,
+   "today": 720,
    "ed22": 1805,
-   "pct22": 39.2,
+   "pct22": 39.9,
    "ed24": 1174,
-   "pct24": 60.3,
+   "pct24": 61.3,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "01:58 PM"
+   "updated": "02:03 PM"
   }
  ],
  "dallas": {
