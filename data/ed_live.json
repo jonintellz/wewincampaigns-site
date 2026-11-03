@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:41 PM",
- "total": 273568,
+ "as_of": "2026-11-03 03:43 PM",
+ "total": 273872,
  "base22_total": 517013,
- "pct_of_22": 52.9,
- "mix_lean_vs_22": 2.11,
+ "pct_of_22": 53.0,
+ "mix_lean_vs_22": 2.14,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 52.5,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:41 PM"
+   "updated": "03:43 PM"
   },
   {
    "county": "Travis",
@@ -62,36 +62,36 @@
   },
   {
    "county": "Hays",
-   "today": 13765,
+   "today": 13917,
    "ed22": 23506,
-   "pct22": 58.6,
+   "pct22": 59.2,
    "ed24": 20320,
-   "pct24": 67.7,
+   "pct24": 68.5,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "03:37 PM"
+   "updated": "03:43 PM"
   },
   {
    "county": "Ellis",
-   "today": 11383,
+   "today": 11521,
    "ed22": 22089,
-   "pct22": 51.5,
+   "pct22": 52.2,
    "ed24": 17850,
-   "pct24": 63.8,
+   "pct24": 64.5,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "03:37 PM"
+   "updated": "03:42 PM"
   },
   {
    "county": "Hockley",
-   "today": 1070,
+   "today": 1084,
    "ed22": 2415,
-   "pct22": 44.3,
+   "pct22": 44.9,
    "ed24": 2025,
-   "pct24": 52.8,
+   "pct24": 53.5,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "03:38 PM"
+   "updated": "03:43 PM"
   },
   {
    "county": "Madison",
@@ -4994,8 +4994,8 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 6.4,
-   "over30": 39,
+   "avg": 5.8,
+   "over30": 32,
    "worst": [
     [
      "1601 Northeast Green Oaks Blvd",
@@ -5003,9 +5003,9 @@
      "Arlington"
     ],
     [
-     "2625 W. Pioneer Parkway",
-     60,
-     "Grand Prairie"
+     "1075 Eagle Boulevard",
+     120,
+     "Haslet"
     ],
     [
      "6551 Granbury Road",
@@ -5018,21 +5018,21 @@
      "Fort Worth"
     ],
     [
-     "4205 Basswood Boulevard",
+     "5400  Shiver Rd",
      60,
      "Fort Worth"
     ],
     [
-     "700 East Abram Street",
+     "4205 Basswood Boulevard",
      60,
-     "Arlington"
+     "Fort Worth"
     ]
    ]
   },
   {
    "county": "Bexar",
    "sites": 295,
-   "avg": 1.9,
+   "avg": 2.1,
    "over30": 0,
    "worst": [
     [
@@ -5041,12 +5041,17 @@
      ""
     ],
     [
-     "Guerra Branch Library",
+     "UTSA",
      15,
      ""
     ],
     [
-     "UTSA",
+     "Evelyn Scarborough Elementary School",
+     15,
+     ""
+    ],
+    [
+     "Texas A&M University San Antonio",
      15,
      ""
     ],
@@ -5057,11 +5062,6 @@
     ],
     [
      "Dr. Pat Henderson Elementary School",
-     15,
-     ""
-    ],
-    [
-     "Big Country Elementary School",
      15,
      ""
     ]
@@ -5289,6 +5289,14 @@
   [
    "15:41",
    273568
+  ],
+  [
+   "15:43",
+   273858
+  ],
+  [
+   "15:43",
+   273872
   ]
  ]
 }
