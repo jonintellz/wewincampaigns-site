@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:06 PM",
- "total": 254177,
+ "as_of": "2026-11-03 03:08 PM",
+ "total": 254762,
  "base22_total": 517013,
- "pct_of_22": 49.2,
- "mix_lean_vs_22": 2.15,
+ "pct_of_22": 49.3,
+ "mix_lean_vs_22": 2.26,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:06 PM"
+   "updated": "03:08 PM"
   },
   {
    "county": "Travis",
@@ -29,25 +29,25 @@
   },
   {
    "county": "Montgomery",
-   "today": 39671,
+   "today": 40083,
    "ed22": 67248,
-   "pct22": 59.0,
+   "pct22": 59.6,
    "ed24": 57549,
-   "pct24": 68.9,
+   "pct24": 69.7,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "03:02 PM"
+   "updated": "03:07 PM"
   },
   {
    "county": "Bell",
-   "today": 16392,
+   "today": 16554,
    "ed22": 29955,
-   "pct22": 54.7,
+   "pct22": 55.3,
    "ed24": 29024,
-   "pct24": 56.5,
+   "pct24": 57.0,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "03:02 PM"
+   "updated": "03:07 PM"
   },
   {
    "county": "Mclennan",
@@ -84,14 +84,14 @@
   },
   {
    "county": "Hockley",
-   "today": 991,
+   "today": 1002,
    "ed22": 2415,
-   "pct22": 41.0,
+   "pct22": 41.5,
    "ed24": 2025,
-   "pct24": 48.9,
+   "pct24": 49.5,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "03:03 PM"
+   "updated": "03:08 PM"
   },
   {
    "county": "Madison",
@@ -4994,8 +4994,8 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.6,
-   "over30": 27,
+   "avg": 6.8,
+   "over30": 35,
    "worst": [
     [
      "4205 Basswood Boulevard",
@@ -5023,9 +5023,9 @@
      "Fort Worth"
     ],
     [
-     "1001 East Bailey Boswell Road",
+     "1201 Municipal Way",
      60,
-     "Fort Worth"
+     "Grapevine"
     ]
    ]
   },
@@ -5229,6 +5229,10 @@
   [
    "15:06",
    254177
+  ],
+  [
+   "15:08",
+   254762
   ]
  ]
 }
