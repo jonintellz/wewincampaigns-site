@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:00 PM",
- "total": 251426,
+ "as_of": "2026-11-03 03:02 PM",
+ "total": 253020,
  "base22_total": 517013,
- "pct_of_22": 48.6,
- "mix_lean_vs_22": 2.16,
+ "pct_of_22": 48.9,
+ "mix_lean_vs_22": 2.2,
  "counties": [
   {
    "county": "Dallas",
@@ -14,40 +14,40 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:00 PM"
+   "updated": "03:02 PM"
   },
   {
    "county": "Travis",
-   "today": 65978,
+   "today": 66707,
    "ed22": 130241,
-   "pct22": 50.7,
+   "pct22": 51.2,
    "ed24": 96528,
-   "pct24": 68.4,
+   "pct24": 69.1,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "02:55 PM"
+   "updated": "03:01 PM"
   },
   {
    "county": "Montgomery",
-   "today": 39235,
+   "today": 39671,
    "ed22": 67248,
-   "pct22": 58.3,
+   "pct22": 59.0,
    "ed24": 57549,
-   "pct24": 68.2,
+   "pct24": 68.9,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "02:57 PM"
+   "updated": "03:02 PM"
   },
   {
    "county": "Bell",
-   "today": 16224,
+   "today": 16392,
    "ed22": 29955,
-   "pct22": 54.2,
+   "pct22": 54.7,
    "ed24": 29024,
-   "pct24": 55.9,
+   "pct24": 56.5,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "02:57 PM"
+   "updated": "03:02 PM"
   },
   {
    "county": "Mclennan",
@@ -62,25 +62,25 @@
   },
   {
    "county": "Hays",
-   "today": 12650,
+   "today": 12791,
    "ed22": 23506,
-   "pct22": 53.8,
+   "pct22": 54.4,
    "ed24": 20320,
-   "pct24": 62.3,
+   "pct24": 62.9,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "02:56 PM"
+   "updated": "03:01 PM"
   },
   {
    "county": "Ellis",
-   "today": 10403,
+   "today": 10523,
    "ed22": 22089,
-   "pct22": 47.1,
+   "pct22": 47.6,
    "ed24": 17850,
-   "pct24": 58.3,
+   "pct24": 59.0,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "02:56 PM"
+   "updated": "03:01 PM"
   },
   {
    "county": "Hockley",
@@ -4942,11 +4942,11 @@
  "harris": {
   "sites": 623,
   "bands": {
-   "0-14 min": 601,
-   "15-29 min": 10,
-   "30+ min": 12
+   "0-14 min": 598,
+   "15-29 min": 12,
+   "30+ min": 13
   },
-  "in_line": 3075,
+  "in_line": 3150,
   "worst": [
    [
     "Tom Bass Park Community Center Section Three",
@@ -4984,8 +4984,8 @@
     35
    ],
    [
-    "Katy Branch Harris County Public Library",
-    "Katy",
+    "Kreinhop Elementary School",
+    "Spring",
     30
    ]
   ]
@@ -4994,28 +4994,23 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.6,
-   "over30": 32,
+   "avg": 5.0,
+   "over30": 30,
    "worst": [
-    [
-     "1300 Northeast 35th Street",
-     120,
-     "Fort Worth"
-    ],
-    [
-     "2625 W. Pioneer Parkway",
-     60,
-     "Grand Prairie"
-    ],
     [
      "3212 Miller Avenue",
      60,
      "Fort Worth"
     ],
     [
-     "901 Precinct Line Road",
+     "4600  Alta Vista Rd",
      60,
-     "Hurst"
+     "Fort Worth"
+    ],
+    [
+     "5001 James Avenue",
+     60,
+     "Fort Worth"
     ],
     [
      "1216 Diamond Back Lane",
@@ -5026,6 +5021,11 @@
      "700 East Abram Street",
      60,
      "Arlington"
+    ],
+    [
+     "1100 East Broad Street",
+     60,
+     "Mansfield"
     ]
    ]
   },
@@ -5217,6 +5217,10 @@
   [
    "15:00",
    251426
+  ],
+  [
+   "15:02",
+   253020
   ]
  ]
 }
