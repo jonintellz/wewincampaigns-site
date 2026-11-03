@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 01:51 PM",
- "total": 201069,
+ "as_of": "2026-11-03 01:57 PM",
+ "total": 202756,
  "base22_total": 517013,
- "pct_of_22": 38.9,
- "mix_lean_vs_22": 3.58,
+ "pct_of_22": 39.2,
+ "mix_lean_vs_22": 3.62,
  "counties": [
   {
    "county": "Dallas",
@@ -14,100 +14,101 @@
    "pct24": 33.1,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "01:51 PM"
+   "updated": "01:57 PM"
   },
   {
    "county": "Travis",
-   "today": 57211,
+   "today": 57958,
    "ed22": 130241,
-   "pct22": 43.9,
+   "pct22": 44.5,
    "ed24": 96528,
-   "pct24": 59.3,
+   "pct24": 60.0,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "01:49 PM"
+   "updated": "01:54 PM"
   },
   {
    "county": "Montgomery",
-   "today": 34095,
+   "today": 34457,
    "ed22": 67248,
-   "pct22": 50.7,
+   "pct22": 51.2,
    "ed24": 57549,
-   "pct24": 59.2,
+   "pct24": 59.9,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "01:49 PM"
+   "updated": "01:54 PM"
   },
   {
    "county": "Bell",
-   "today": 13976,
+   "today": 14143,
    "ed22": 29955,
-   "pct22": 46.7,
+   "pct22": 47.2,
    "ed24": 29024,
-   "pct24": 48.2,
+   "pct24": 48.7,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "01:49 PM"
+   "updated": "01:54 PM"
   },
   {
    "county": "Mclennan",
-   "today": 12492,
+   "today": 12629,
    "ed22": 27228,
-   "pct22": 45.9,
+   "pct22": 46.4,
    "ed24": 25422,
-   "pct24": 49.1,
+   "pct24": 49.7,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "01:47 PM"
+   "updated": "01:52 PM"
   },
   {
    "county": "Hays",
-   "today": 10663,
+   "today": 10825,
    "ed22": 23506,
-   "pct22": 45.4,
+   "pct22": 46.1,
    "ed24": 20320,
-   "pct24": 52.5,
+   "pct24": 53.3,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "01:48 PM"
+   "updated": "01:53 PM"
   },
   {
    "county": "Ellis",
-   "today": 8917,
+   "today": 9015,
    "ed22": 22089,
-   "pct22": 40.4,
+   "pct22": 40.8,
    "ed24": 17850,
-   "pct24": 50.0,
+   "pct24": 50.5,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "01:50 PM"
+   "updated": "01:55 PM"
   },
   {
    "county": "Hockley",
-   "today": 858,
+   "today": 860,
    "ed22": 2415,
-   "pct22": 35.5,
+   "pct22": 35.6,
    "ed24": 2025,
-   "pct24": 42.4,
+   "pct24": 42.5,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "01:47 PM"
+   "updated": "01:52 PM"
   },
   {
    "county": "Madison",
-   "today": 685,
+   "today": 697,
    "ed22": 1805,
-   "pct22": 38.0,
+   "pct22": 38.6,
    "ed24": 1174,
-   "pct24": 58.3,
+   "pct24": 59.4,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "01:48 PM"
+   "updated": "01:53 PM"
   }
  ],
  "dallas": {
   "sites": 444,
   "avg_wait": 15.4,
+  "ed22_same_sites": 175396,
   "top": [
    [
     "Oak Lawn Branch Library",
@@ -211,7 +212,4731 @@
     "Carrollton",
     30
    ]
-  ]
+  ],
+  "all_sites": [
+   [
+    "V1708",
+    "Dallas College-Garland Center",
+    "Garland",
+    522,
+    1845,
+    1381,
+    15,
+    0
+   ],
+   [
+    "V0003",
+    "Evans Recreation Center",
+    "Mesquite",
+    0,
+    204,
+    257,
+    15,
+    0
+   ],
+   [
+    "V0005",
+    "Churchill Recreation Center",
+    "Dallas",
+    193,
+    null,
+    312,
+    15,
+    1
+   ],
+   [
+    "V0014",
+    "Vietnamese Community Center",
+    "Garland",
+    311,
+    544,
+    589,
+    15,
+    0
+   ],
+   [
+    "V0016",
+    "Elections Training / Warehouse",
+    "Dallas",
+    109,
+    116,
+    252,
+    15,
+    0
+   ],
+   [
+    "V0019",
+    "Mockingbird Elementary School-Disd",
+    "Dallas",
+    580,
+    1497,
+    1158,
+    15,
+    1
+   ],
+   [
+    "V0030",
+    "Woodhaven Presbyterian Church",
+    "Irving",
+    165,
+    null,
+    312,
+    15,
+    0
+   ],
+   [
+    "V0034",
+    "Stephens Elementary School",
+    "Rowlett",
+    46,
+    189,
+    142,
+    15,
+    0
+   ],
+   [
+    "V0036",
+    "Addison Town Hall",
+    "Addison",
+    542,
+    null,
+    1191,
+    15,
+    1
+   ],
+   [
+    "V0038",
+    "Islamic Association Of North Texas",
+    "Richardson",
+    184,
+    null,
+    679,
+    15,
+    1
+   ],
+   [
+    "V0039",
+    "West Irving Library",
+    "Irving",
+    191,
+    null,
+    564,
+    15,
+    0
+   ],
+   [
+    "V0042",
+    "Frank Crowley Courts Building",
+    "Dallas",
+    68,
+    null,
+    266,
+    15,
+    0
+   ],
+   [
+    "V0044",
+    "Cedar Hill Collegiate High School",
+    "Cedar Hill",
+    76,
+    null,
+    203,
+    15,
+    0
+   ],
+   [
+    "V0049",
+    "La Villita Elementary School",
+    "Irving",
+    238,
+    null,
+    471,
+    15,
+    1
+   ],
+   [
+    "V0051",
+    "Mlk Jr Branch Library",
+    "Dallas",
+    271,
+    null,
+    752,
+    15,
+    0
+   ],
+   [
+    "V0052",
+    "Abbett Elementary School",
+    "Garland",
+    154,
+    null,
+    415,
+    15,
+    0
+   ],
+   [
+    "V0061",
+    "The Summit",
+    "Grand Prairie",
+    201,
+    null,
+    737,
+    15,
+    0
+   ],
+   [
+    "V0062",
+    "For Oak Cliff",
+    "Dallas",
+    126,
+    null,
+    349,
+    15,
+    0
+   ],
+   [
+    "V0065",
+    "Mt Zion Mbc Of Sandbranch",
+    "Seagoville",
+    6,
+    null,
+    25,
+    15,
+    0
+   ],
+   [
+    "V1005",
+    "New Mount Zion Baptist Church",
+    "Dallas",
+    164,
+    510,
+    407,
+    15,
+    1
+   ],
+   [
+    "V1006",
+    "Moss Haven Elementary School",
+    "Dallas",
+    193,
+    697,
+    310,
+    15,
+    0
+   ],
+   [
+    "V1008",
+    "Lee Mcshan Jr Elem School",
+    "Dallas",
+    275,
+    425,
+    491,
+    15,
+    1
+   ],
+   [
+    "V1013",
+    "North Dallas High School",
+    "Dallas",
+    320,
+    458,
+    589,
+    15,
+    1
+   ],
+   [
+    "V1019",
+    "Solar Preparatory School For Girls",
+    "Dallas",
+    299,
+    471,
+    649,
+    15,
+    1
+   ],
+   [
+    "V1020",
+    "Ben Milam Elementary School",
+    "Dallas",
+    187,
+    1215,
+    663,
+    15,
+    1
+   ],
+   [
+    "V1022",
+    "Oak Lawn Branch Library",
+    "Dallas",
+    1060,
+    2293,
+    1501,
+    15,
+    1
+   ],
+   [
+    "V1023",
+    "The Father'S Church",
+    "Dallas",
+    314,
+    591,
+    532,
+    15,
+    1
+   ],
+   [
+    "V1027",
+    "Audelia Creek Elementary School",
+    "Dallas",
+    167,
+    453,
+    508,
+    15,
+    1
+   ],
+   [
+    "V1029",
+    "Dallas College-R Jan Lecroy Ctr",
+    "Dallas",
+    263,
+    1211,
+    973,
+    15,
+    1
+   ],
+   [
+    "V1030",
+    "A M Aikin Elementary School",
+    "Dallas",
+    107,
+    313,
+    369,
+    15,
+    1
+   ],
+   [
+    "V1033",
+    "Spring Valley Elementary School",
+    "Dallas",
+    125,
+    300,
+    389,
+    15,
+    1
+   ],
+   [
+    "V1043",
+    "Skyview Elementary School",
+    "Dallas",
+    131,
+    457,
+    342,
+    15,
+    0
+   ],
+   [
+    "V1047",
+    "Martha T Reilly Elementary Sch",
+    "Dallas",
+    67,
+    292,
+    252,
+    15,
+    0
+   ],
+   [
+    "V1049",
+    "Merriman Park Elementary School",
+    "Dallas",
+    190,
+    500,
+    405,
+    15,
+    0
+   ],
+   [
+    "V1052",
+    "Lochwood Branch Library",
+    "Dallas",
+    413,
+    1559,
+    1062,
+    15,
+    0
+   ],
+   [
+    "V1056",
+    "Charles A Gill Elementary School",
+    "Dallas",
+    73,
+    null,
+    245,
+    15,
+    0
+   ],
+   [
+    "V1058",
+    "Harry Stone Recreation Center",
+    "Dallas",
+    250,
+    916,
+    895,
+    15,
+    0
+   ],
+   [
+    "V1059",
+    "Reinhardt Elementary School",
+    "Dallas",
+    82,
+    241,
+    198,
+    15,
+    0
+   ],
+   [
+    "V1060",
+    "Alex Sanger Preparatory School",
+    "Dallas",
+    208,
+    692,
+    434,
+    15,
+    0
+   ],
+   [
+    "V1063",
+    "George Truett Elementary School",
+    "Dallas",
+    71,
+    293,
+    249,
+    15,
+    0
+   ],
+   [
+    "V1070",
+    "Grace United Methodist Church",
+    "Dallas",
+    129,
+    496,
+    520,
+    15,
+    1
+   ],
+   [
+    "V1071",
+    "Lakewood Branch Library",
+    "Dallas",
+    361,
+    1261,
+    975,
+    15,
+    1
+   ],
+   [
+    "V1073",
+    "Junius Heights Church",
+    "Dallas",
+    107,
+    367,
+    340,
+    15,
+    1
+   ],
+   [
+    "V1074",
+    "Samuell Grand Recreation Center",
+    "Dallas",
+    316,
+    1138,
+    871,
+    15,
+    1
+   ],
+   [
+    "V1076",
+    "Eduardo Mata Montessori School",
+    "Dallas",
+    113,
+    275,
+    264,
+    15,
+    1
+   ],
+   [
+    "V1078",
+    "Bayles Elementary School",
+    "Dallas",
+    79,
+    222,
+    242,
+    15,
+    0
+   ],
+   [
+    "V1081",
+    "Owenwood Farm & Neighbor Space",
+    "Dallas",
+    88,
+    330,
+    295,
+    15,
+    0
+   ],
+   [
+    "V1088",
+    "Skyline Branch Library",
+    "Dallas",
+    275,
+    968,
+    938,
+    15,
+    0
+   ],
+   [
+    "V1095",
+    "Nathaniel Hawthorne Elem School",
+    "Dallas",
+    74,
+    237,
+    282,
+    15,
+    0
+   ],
+   [
+    "V1096",
+    "Dallas College-Pleasant Grove Ctr",
+    "Dallas",
+    249,
+    863,
+    1003,
+    15,
+    0
+   ],
+   [
+    "V1098",
+    "Young Men'S Leadership Academy",
+    "Dallas",
+    176,
+    406,
+    476,
+    15,
+    0
+   ],
+   [
+    "V1101",
+    "Pleasant Grove Branch Library",
+    "Dallas",
+    84,
+    290,
+    382,
+    15,
+    0
+   ],
+   [
+    "V1108",
+    "H Grady Spruce High School",
+    "Dallas",
+    97,
+    260,
+    333,
+    15,
+    0
+   ],
+   [
+    "V1119",
+    "St Luke Community Church",
+    "Dallas",
+    56,
+    176,
+    230,
+    15,
+    1
+   ],
+   [
+    "V1120",
+    "Solar Preparatory School For Boys",
+    "Dallas",
+    196,
+    835,
+    552,
+    15,
+    1
+   ],
+   [
+    "V1134",
+    "Herschel Forester Field House",
+    "Dallas",
+    99,
+    311,
+    349,
+    15,
+    0
+   ],
+   [
+    "V1301",
+    "Florence Recreation Center",
+    "Mesquite",
+    194,
+    710,
+    638,
+    15,
+    0
+   ],
+   [
+    "V1303",
+    "Dallas College-Eastfield Campus",
+    "Mesquite",
+    233,
+    557,
+    819,
+    15,
+    0
+   ],
+   [
+    "V1304",
+    "Goodbar Recreation Center",
+    "Mesquite",
+    76,
+    198,
+    226,
+    15,
+    0
+   ],
+   [
+    "V1310",
+    "Tosch Elementary School",
+    "Mesquite",
+    119,
+    318,
+    398,
+    15,
+    0
+   ],
+   [
+    "V1311",
+    "Jc Rugel Elementary School",
+    "Mesquite",
+    110,
+    333,
+    299,
+    30,
+    0
+   ],
+   [
+    "V1312",
+    "Galloway Elementary School",
+    "Mesquite",
+    87,
+    214,
+    269,
+    15,
+    0
+   ],
+   [
+    "V1500",
+    "Dover Elementary School",
+    "Richardson",
+    116,
+    357,
+    447,
+    15,
+    1
+   ],
+   [
+    "V1503",
+    "Richland Elementary School",
+    "Richardson",
+    135,
+    501,
+    446,
+    15,
+    1
+   ],
+   [
+    "V1703",
+    "A R Davis Elementary School",
+    "Garland",
+    106,
+    443,
+    375,
+    15,
+    0
+   ],
+   [
+    "V1705",
+    "O Henry Elementary School",
+    "Garland",
+    133,
+    515,
+    506,
+    15,
+    0
+   ],
+   [
+    "V1709",
+    "Austin Academy",
+    "Garland",
+    135,
+    402,
+    479,
+    15,
+    0
+   ],
+   [
+    "V1713",
+    "Memorial Pathway Academy",
+    "Garland",
+    93,
+    346,
+    300,
+    15,
+    0
+   ],
+   [
+    "V1718",
+    "Southgate Elementary School",
+    "Garland",
+    0,
+    369,
+    276,
+    15,
+    0
+   ],
+   [
+    "V1720",
+    "O'Banion Middle School",
+    "Garland",
+    142,
+    406,
+    496,
+    15,
+    0
+   ],
+   [
+    "V1723",
+    "South Garland Branch Library",
+    "Garland",
+    733,
+    2121,
+    1424,
+    15,
+    0
+   ],
+   [
+    "V2002",
+    "Thomas C Marsh Preparatory Academy",
+    "Dallas",
+    83,
+    232,
+    175,
+    15,
+    1
+   ],
+   [
+    "V2003",
+    "W T White High School",
+    "Dallas",
+    110,
+    385,
+    279,
+    15,
+    1
+   ],
+   [
+    "V2004",
+    "Nathan Adams Elementary School",
+    "Dallas",
+    227,
+    541,
+    440,
+    15,
+    1
+   ],
+   [
+    "V2005",
+    "Marsh Lane Baptist Church",
+    "Dallas",
+    559,
+    1428,
+    1012,
+    15,
+    1
+   ],
+   [
+    "V2006",
+    "Harry C Withers Elementary Sch",
+    "Dallas",
+    118,
+    395,
+    257,
+    15,
+    1
+   ],
+   [
+    "V2008",
+    "John J Pershing Elementary Sch",
+    "Dallas",
+    111,
+    275,
+    228,
+    15,
+    1
+   ],
+   [
+    "V2011",
+    "Walnut Hill Recreation Center",
+    "Dallas",
+    212,
+    677,
+    406,
+    15,
+    1
+   ],
+   [
+    "V2018",
+    "Northaven United Methodist Ch",
+    "Dallas",
+    148,
+    436,
+    275,
+    15,
+    1
+   ],
+   [
+    "V2020",
+    "Arthur Kramer Elementary School",
+    "Dallas",
+    80,
+    419,
+    263,
+    15,
+    1
+   ],
+   [
+    "V2023",
+    "Benjamin Franklin - Iea",
+    "Dallas",
+    149,
+    349,
+    414,
+    15,
+    1
+   ],
+   [
+    "V2029",
+    "Westminster Presbyterian Church",
+    "Dallas",
+    172,
+    451,
+    358,
+    15,
+    0
+   ],
+   [
+    "V2034",
+    "Henry W Longfellow - Cea",
+    "Dallas",
+    156,
+    378,
+    288,
+    15,
+    0
+   ],
+   [
+    "V2041",
+    "University Of Texas At Dallas",
+    "Richardson",
+    239,
+    922,
+    731,
+    30,
+    1
+   ],
+   [
+    "V2044",
+    "Texas A&M Agrilife Research",
+    "Dallas",
+    76,
+    212,
+    236,
+    15,
+    1
+   ],
+   [
+    "V2047",
+    "Bowie Elementary School",
+    "Dallas",
+    240,
+    644,
+    471,
+    15,
+    1
+   ],
+   [
+    "V2050",
+    "Prestonwood Elementary School",
+    "Dallas",
+    171,
+    504,
+    427,
+    15,
+    1
+   ],
+   [
+    "V2051",
+    "Spring Creek Elem School-Risd",
+    "Dallas",
+    159,
+    397,
+    275,
+    15,
+    1
+   ],
+   [
+    "V2052",
+    "Fretz Park Library",
+    "Dallas",
+    683,
+    2339,
+    1426,
+    15,
+    1
+   ],
+   [
+    "V2059",
+    "Audelia Road Branch Library",
+    "Dallas",
+    598,
+    1710,
+    1232,
+    15,
+    0
+   ],
+   [
+    "V2061",
+    "Lake Highlands Elementary School",
+    "Dallas",
+    0,
+    627,
+    606,
+    15,
+    0
+   ],
+   [
+    "V2067",
+    "L L Hotchkiss Elementary School",
+    "Dallas",
+    125,
+    394,
+    322,
+    15,
+    0
+   ],
+   [
+    "V2069",
+    "Ridgewood-Belcher Recreation Center",
+    "Dallas",
+    201,
+    815,
+    562,
+    15,
+    0
+   ],
+   [
+    "V2072",
+    "Northridge Presbyterian Church",
+    "Dallas",
+    234,
+    676,
+    484,
+    15,
+    0
+   ],
+   [
+    "V2077",
+    "E D Walker Middle School",
+    "Dallas",
+    141,
+    455,
+    452,
+    15,
+    1
+   ],
+   [
+    "V2079",
+    "Anne Frank Elementary School",
+    "Dallas",
+    305,
+    930,
+    671,
+    15,
+    1
+   ],
+   [
+    "V2203",
+    "John S Armstrong Elem School",
+    "Dallas",
+    222,
+    786,
+    584,
+    15,
+    1
+   ],
+   [
+    "V2220",
+    "University Park Umc",
+    "Dallas",
+    745,
+    2462,
+    971,
+    15,
+    1
+   ],
+   [
+    "V2221",
+    "John S Bradfield Elem School",
+    "Dallas",
+    336,
+    784,
+    627,
+    15,
+    1
+   ],
+   [
+    "V2223",
+    "University Park Elem School",
+    "Dallas",
+    246,
+    677,
+    387,
+    15,
+    1
+   ],
+   [
+    "V2226",
+    "Highland Park Isd Admin Bldg",
+    "Dallas",
+    115,
+    566,
+    269,
+    15,
+    1
+   ],
+   [
+    "V2301",
+    "Alfred J Loos Field House",
+    "Addison",
+    208,
+    775,
+    765,
+    30,
+    1
+   ],
+   [
+    "V2302",
+    "Vivian Field Middle School",
+    "Farmers Branch",
+    72,
+    321,
+    380,
+    15,
+    1
+   ],
+   [
+    "V2305",
+    "Farmers Branch Manske Library",
+    "Farmers Branch",
+    519,
+    1677,
+    1324,
+    15,
+    1
+   ],
+   [
+    "V2307",
+    "Dallas College-Brookhaven Campus",
+    "Farmers Branch",
+    200,
+    717,
+    374,
+    15,
+    1
+   ],
+   [
+    "V2403",
+    "Jerry R Junkins Elementary Sch",
+    "Carrollton",
+    133,
+    326,
+    402,
+    15,
+    1
+   ],
+   [
+    "V2406",
+    "Keller Springs Baptist Church",
+    "Carrollton",
+    87,
+    315,
+    420,
+    15,
+    1
+   ],
+   [
+    "V2407",
+    "Josey Ranch Lake Library",
+    "Carrollton",
+    422,
+    1767,
+    1282,
+    15,
+    1
+   ],
+   [
+    "V2408",
+    "Crosby Recreation Center",
+    "Carrollton",
+    119,
+    456,
+    521,
+    15,
+    1
+   ],
+   [
+    "V2501",
+    "Canyon Creek Elementary School",
+    "Richardson",
+    186,
+    504,
+    434,
+    15,
+    1
+   ],
+   [
+    "V2502",
+    "Prairie Creek Elementary School",
+    "Richardson",
+    0,
+    673,
+    572,
+    15,
+    1
+   ],
+   [
+    "V2503",
+    "Mohawk Elementary School",
+    "Richardson",
+    194,
+    697,
+    389,
+    15,
+    1
+   ],
+   [
+    "V2505",
+    "Northrich Elementary School",
+    "Richardson",
+    144,
+    452,
+    441,
+    15,
+    1
+   ],
+   [
+    "V2506",
+    "Arapaho Classical Magnet School",
+    "Richardson",
+    168,
+    503,
+    417,
+    15,
+    1
+   ],
+   [
+    "V2509",
+    "Care Church",
+    "Richardson",
+    188,
+    771,
+    574,
+    15,
+    1
+   ],
+   [
+    "V2510",
+    "Yale Elementary School",
+    "Richardson",
+    215,
+    503,
+    487,
+    15,
+    1
+   ],
+   [
+    "V2511",
+    "Dartmouth Elementary School",
+    "Richardson",
+    214,
+    644,
+    582,
+    15,
+    1
+   ],
+   [
+    "V2514",
+    "Jess Harben Elementary School",
+    "Richardson",
+    240,
+    645,
+    707,
+    15,
+    1
+   ],
+   [
+    "V2604",
+    "Valley Ranch Library",
+    "Irving",
+    518,
+    1553,
+    1507,
+    15,
+    1
+   ],
+   [
+    "V2700",
+    "Big Springs Elementary School",
+    "Garland",
+    242,
+    941,
+    596,
+    15,
+    0
+   ],
+   [
+    "V2701",
+    "Springpark Sports Club",
+    "Garland",
+    228,
+    720,
+    533,
+    15,
+    0
+   ],
+   [
+    "V2704",
+    "North Garland Branch Library",
+    "Garland",
+    454,
+    794,
+    969,
+    15,
+    0
+   ],
+   [
+    "V2705",
+    "Hickman Elementary School",
+    "Garland",
+    84,
+    536,
+    423,
+    15,
+    0
+   ],
+   [
+    "V2706",
+    "Wallace Ethridge Elementary Sch",
+    "Garland",
+    132,
+    559,
+    421,
+    15,
+    0
+   ],
+   [
+    "V2710",
+    "Lister Elementary School",
+    "Garland",
+    262,
+    830,
+    704,
+    15,
+    0
+   ],
+   [
+    "V2712",
+    "Northlake Elementary Sch-Gisd",
+    "Garland",
+    217,
+    570,
+    541,
+    15,
+    0
+   ],
+   [
+    "V2713",
+    "Club Hill Elementary School",
+    "Garland",
+    0,
+    395,
+    293,
+    15,
+    0
+   ],
+   [
+    "V2714",
+    "Lyles Middle School",
+    "Garland",
+    126,
+    302,
+    362,
+    15,
+    0
+   ],
+   [
+    "V2808",
+    "Cottonwood Creek Elem School",
+    "Coppell",
+    128,
+    339,
+    370,
+    15,
+    1
+   ],
+   [
+    "V2921",
+    "Back Elementary School",
+    "Rowlett",
+    285,
+    952,
+    742,
+    15,
+    0
+   ],
+   [
+    "V2922",
+    "Liberty Grove Elementary School",
+    "Rowlett",
+    270,
+    967,
+    631,
+    15,
+    0
+   ],
+   [
+    "V2925",
+    "Rowlett Elementary School",
+    "Rowlett",
+    174,
+    747,
+    447,
+    15,
+    0
+   ],
+   [
+    "V2926",
+    "Herfurth Elementary School",
+    "Rowlett",
+    261,
+    855,
+    620,
+    15,
+    0
+   ],
+   [
+    "V2927",
+    "Schrade Middle School",
+    "Rowlett",
+    262,
+    978,
+    434,
+    15,
+    0
+   ],
+   [
+    "V2941",
+    "Sachse City Hall",
+    "Sachse",
+    485,
+    1088,
+    1198,
+    15,
+    0
+   ],
+   [
+    "V2942",
+    "B G Hudson Middle School",
+    "Sachse",
+    144,
+    762,
+    387,
+    15,
+    0
+   ],
+   [
+    "V3000",
+    "William B Travis Vanguard Acad",
+    "Dallas",
+    388,
+    1182,
+    812,
+    15,
+    0
+   ],
+   [
+    "V3003",
+    "T W Browne Middle School",
+    "Dallas",
+    74,
+    321,
+    351,
+    15,
+    0
+   ],
+   [
+    "V3004",
+    "Daniel Webster Elementary School",
+    "Dallas",
+    0,
+    338,
+    284,
+    15,
+    0
+   ],
+   [
+    "V3009",
+    "Exall Park Recreation Center",
+    "Dallas",
+    240,
+    858,
+    601,
+    15,
+    1
+   ],
+   [
+    "V3012",
+    "Life In Deep Ellum Community Ctr",
+    "Dallas",
+    123,
+    470,
+    390,
+    15,
+    1
+   ],
+   [
+    "V3016",
+    "Dallas College-Bill J Priest Ctr",
+    "Dallas",
+    92,
+    242,
+    197,
+    15,
+    0
+   ],
+   [
+    "V3022",
+    "Irma Rangel Women'S School",
+    "Dallas",
+    41,
+    133,
+    190,
+    15,
+    0
+   ],
+   [
+    "V3027",
+    "Lincoln High School - Chm",
+    "Dallas",
+    54,
+    122,
+    null,
+    15,
+    0
+   ],
+   [
+    "V3038",
+    "The Way-Truth-Life Christian Ch",
+    "Dallas",
+    58,
+    156,
+    221,
+    15,
+    0
+   ],
+   [
+    "V3043",
+    "Paul L Dunbar Library",
+    "Dallas",
+    252,
+    904,
+    792,
+    15,
+    0
+   ],
+   [
+    "V3046",
+    "John W Carpenter Elem School",
+    "Dallas",
+    74,
+    308,
+    184,
+    15,
+    0
+   ],
+   [
+    "V3048",
+    "South Oak Cliff High School",
+    "Dallas",
+    90,
+    304,
+    250,
+    15,
+    0
+   ],
+   [
+    "V3049",
+    "Clara Oliver Elementary School",
+    "Dallas",
+    42,
+    178,
+    170,
+    15,
+    0
+   ],
+   [
+    "V3054",
+    "Jdg Louis A Bedford Jr Law Academy",
+    "Dallas",
+    0,
+    284,
+    221,
+    15,
+    0
+   ],
+   [
+    "V3056",
+    "Mark Twain Leadership Vanguard",
+    "Dallas",
+    37,
+    313,
+    194,
+    15,
+    0
+   ],
+   [
+    "V3057",
+    "T G Terry Elementary School",
+    "Dallas",
+    89,
+    336,
+    382,
+    15,
+    0
+   ],
+   [
+    "V3058",
+    "St Paul Lutheran Church",
+    "Dallas",
+    41,
+    237,
+    251,
+    15,
+    0
+   ],
+   [
+    "V3060",
+    "Otto M Fridia Elementary School",
+    "Dallas",
+    78,
+    256,
+    215,
+    15,
+    0
+   ],
+   [
+    "V3062",
+    "J N Ervin Elementary School",
+    "Dallas",
+    32,
+    101,
+    120,
+    15,
+    0
+   ],
+   [
+    "V3063",
+    "Ronald E Mcnair Elementary Sch",
+    "Dallas",
+    136,
+    412,
+    496,
+    15,
+    0
+   ],
+   [
+    "V3064",
+    "Friendship West Baptist Church",
+    "Dallas",
+    212,
+    930,
+    800,
+    15,
+    0
+   ],
+   [
+    "V3068",
+    "Singing Hills Recreation Center",
+    "Dallas",
+    88,
+    161,
+    170,
+    15,
+    0
+   ],
+   [
+    "V3070",
+    "Tommie Allen Recreation Center",
+    "Dallas",
+    39,
+    119,
+    172,
+    15,
+    0
+   ],
+   [
+    "V3072",
+    "Dallas College-Cedar Valley Campus",
+    "Lancaster",
+    87,
+    288,
+    396,
+    15,
+    0
+   ],
+   [
+    "V3073",
+    "Highland Hills Library",
+    "Dallas",
+    219,
+    841,
+    804,
+    15,
+    0
+   ],
+   [
+    "V3078",
+    "Park In The Woods Recreation Ctr",
+    "Dallas",
+    0,
+    739,
+    568,
+    15,
+    0
+   ],
+   [
+    "V3080",
+    "Kleberg-Rylie Recreation Center",
+    "Dallas",
+    157,
+    635,
+    597,
+    15,
+    0
+   ],
+   [
+    "V3081",
+    "Booker T Washington High School",
+    "Dallas",
+    252,
+    879,
+    818,
+    15,
+    0
+   ],
+   [
+    "V3090",
+    "J Erik Jonsson Central Library",
+    "Dallas",
+    252,
+    545,
+    537,
+    15,
+    0
+   ],
+   [
+    "V3097",
+    "University Of North Texas-Dallas",
+    "Dallas",
+    104,
+    310,
+    297,
+    15,
+    0
+   ],
+   [
+    "V3100",
+    "A E Sims Cedar Hill Rec Center",
+    "Cedar Hill",
+    386,
+    1426,
+    1301,
+    15,
+    0
+   ],
+   [
+    "V3102",
+    "L Kim Lewis Auxiliary Services Ctr",
+    "Cedar Hill",
+    66,
+    297,
+    309,
+    15,
+    0
+   ],
+   [
+    "V3103",
+    "Bessie Coleman Middle School",
+    "Cedar Hill",
+    169,
+    638,
+    527,
+    15,
+    0
+   ],
+   [
+    "V3104",
+    "Maddox Teaching & Learning Center",
+    "Cedar Hill",
+    143,
+    354,
+    350,
+    15,
+    0
+   ],
+   [
+    "V3109",
+    "Lake Ridge Elementary School",
+    "Cedar Hill",
+    204,
+    598,
+    504,
+    15,
+    0
+   ],
+   [
+    "V3202",
+    "Duncanville Library",
+    "Duncanville",
+    388,
+    1976,
+    1655,
+    15,
+    0
+   ],
+   [
+    "V3206",
+    "Byrd Middle School",
+    "Duncanville",
+    58,
+    272,
+    198,
+    15,
+    0
+   ],
+   [
+    "V3300",
+    "Porter Elementary School",
+    "Mesquite",
+    131,
+    336,
+    308,
+    15,
+    0
+   ],
+   [
+    "V3301",
+    "Dunford Recreation Center",
+    "Mesquite",
+    154,
+    474,
+    403,
+    15,
+    0
+   ],
+   [
+    "V3312",
+    "Pirrung Elementary School",
+    "Mesquite",
+    98,
+    371,
+    389,
+    15,
+    0
+   ],
+   [
+    "V3313",
+    "J R Thompson Elementary School",
+    "Mesquite",
+    180,
+    431,
+    436,
+    15,
+    0
+   ],
+   [
+    "V3314",
+    "A C New Middle School",
+    "Balch Springs",
+    121,
+    439,
+    617,
+    15,
+    0
+   ],
+   [
+    "V3316",
+    "Rutherford Recreation Center",
+    "Mesquite",
+    151,
+    354,
+    493,
+    15,
+    0
+   ],
+   [
+    "V3317",
+    "Horn High School",
+    "Mesquite",
+    186,
+    501,
+    617,
+    15,
+    0
+   ],
+   [
+    "V3500",
+    "Sunnyvale Town Hall",
+    "Sunnyvale",
+    406,
+    959,
+    656,
+    15,
+    0
+   ],
+   [
+    "V3605",
+    "Disciple Central Comm Church",
+    "Desoto",
+    410,
+    1971,
+    1340,
+    15,
+    0
+   ],
+   [
+    "V3607",
+    "Cockrell Hill Elementary School",
+    "Desoto",
+    135,
+    579,
+    548,
+    30,
+    0
+   ],
+   [
+    "V3700",
+    "Couch Elementary School",
+    "Garland",
+    264,
+    413,
+    494,
+    15,
+    0
+   ],
+   [
+    "V3800",
+    "Houston Elementary School-Lisd",
+    "Lancaster",
+    0,
+    324,
+    391,
+    15,
+    0
+   ],
+   [
+    "V3805",
+    "Rosa Parks Millbrook Elem School",
+    "Lancaster",
+    120,
+    334,
+    350,
+    15,
+    0
+   ],
+   [
+    "V3808",
+    "West Main Elementary School",
+    "Lancaster",
+    109,
+    259,
+    281,
+    15,
+    0
+   ],
+   [
+    "V3809",
+    "Lancaster Veterans Memorial Library",
+    "Lancaster",
+    282,
+    1333,
+    999,
+    15,
+    0
+   ],
+   [
+    "V3921",
+    "Seagoville City Hall",
+    "Seagoville",
+    225,
+    null,
+    705,
+    15,
+    0
+   ],
+   [
+    "V3940",
+    "Wilmer Community Center",
+    "Wilmer",
+    112,
+    361,
+    397,
+    15,
+    0
+   ],
+   [
+    "V3951",
+    "Former City Hall Building",
+    "Hutchins",
+    93,
+    351,
+    324,
+    15,
+    0
+   ],
+   [
+    "V4002",
+    "F P Caillet Elem School",
+    "Dallas",
+    96,
+    326,
+    279,
+    15,
+    0
+   ],
+   [
+    "V4010",
+    "Stephen Foster Elementary School",
+    "Dallas",
+    129,
+    360,
+    356,
+    15,
+    0
+   ],
+   [
+    "V4014",
+    "Sudie L Williams Tag Academy",
+    "Dallas",
+    216,
+    534,
+    405,
+    15,
+    0
+   ],
+   [
+    "V4018",
+    "Maple Lawn Elementary School",
+    "Dallas",
+    193,
+    747,
+    633,
+    15,
+    0
+   ],
+   [
+    "V4019",
+    "Arlington Park Recreation Center",
+    "Dallas",
+    82,
+    260,
+    219,
+    15,
+    0
+   ],
+   [
+    "V4029",
+    "Dallas College-West Dallas Center",
+    "Dallas",
+    247,
+    781,
+    868,
+    15,
+    0
+   ],
+   [
+    "V4032",
+    "Reverchon Recreation Center",
+    "Dallas",
+    407,
+    1563,
+    797,
+    15,
+    1
+   ],
+   [
+    "V4043",
+    "The Union Church",
+    "Dallas",
+    34,
+    166,
+    166,
+    15,
+    0
+   ],
+   [
+    "V4046",
+    "Clinton P Russell Elementary Sch",
+    "Dallas",
+    76,
+    207,
+    389,
+    15,
+    0
+   ],
+   [
+    "V4050",
+    "Mountain Creek Library",
+    "Dallas",
+    261,
+    568,
+    694,
+    15,
+    0
+   ],
+   [
+    "V4052",
+    "Bilhartz Elementary School",
+    "Dallas",
+    92,
+    261,
+    235,
+    15,
+    0
+   ],
+   [
+    "V4055",
+    "Leslie Stemmons Elementary Sch",
+    "Dallas",
+    107,
+    318,
+    436,
+    15,
+    0
+   ],
+   [
+    "V4057",
+    "Kiest Recreation Center",
+    "Dallas",
+    207,
+    553,
+    679,
+    15,
+    0
+   ],
+   [
+    "V4063",
+    "Elmwood-El Buen Samaritano Umc",
+    "Dallas",
+    68,
+    309,
+    325,
+    15,
+    0
+   ],
+   [
+    "V4064",
+    "Martin Weiss Recreation Center",
+    "Dallas",
+    230,
+    884,
+    848,
+    15,
+    0
+   ],
+   [
+    "V4068",
+    "Lida Hooe Elementary School",
+    "Dallas",
+    0,
+    281,
+    307,
+    15,
+    0
+   ],
+   [
+    "V4069",
+    "Winnetka Elementary School",
+    "Dallas",
+    87,
+    431,
+    418,
+    15,
+    0
+   ],
+   [
+    "V4071",
+    "Oak Cliff Government Center",
+    "Dallas",
+    334,
+    654,
+    851,
+    15,
+    0
+   ],
+   [
+    "V4073",
+    "Preparing The Way Ministries",
+    "Dallas",
+    68,
+    170,
+    267,
+    15,
+    0
+   ],
+   [
+    "V4076",
+    "Stevens Park Elem School",
+    "Dallas",
+    101,
+    380,
+    406,
+    15,
+    0
+   ],
+   [
+    "V4078",
+    "Kidd Springs Recreation Center",
+    "Dallas",
+    239,
+    474,
+    601,
+    15,
+    0
+   ],
+   [
+    "V4079",
+    "Kessler Park United Methodist Chur",
+    "Dallas",
+    0,
+    1039,
+    589,
+    15,
+    0
+   ],
+   [
+    "V4081",
+    "Eladio Martinez Learning Center",
+    "Dallas",
+    96,
+    486,
+    343,
+    15,
+    0
+   ],
+   [
+    "V4082",
+    "Jaycee Zaragoza Recreation Center",
+    "Dallas",
+    91,
+    null,
+    352,
+    15,
+    0
+   ],
+   [
+    "V4085",
+    "Anita Martinez Recreation Center",
+    "Dallas",
+    137,
+    474,
+    441,
+    15,
+    0
+   ],
+   [
+    "V4086",
+    "Grauwyler Park Recreation Center",
+    "Dallas",
+    228,
+    867,
+    827,
+    15,
+    0
+   ],
+   [
+    "V4087",
+    "Bachman Recreation Center",
+    "Dallas",
+    75,
+    239,
+    260,
+    15,
+    0
+   ],
+   [
+    "V4094",
+    "Park Forest Branch Library",
+    "Dallas",
+    77,
+    302,
+    null,
+    15,
+    0
+   ],
+   [
+    "V4113",
+    "Dallas College-Mountain View Campus",
+    "Dallas",
+    188,
+    728,
+    769,
+    15,
+    0
+   ],
+   [
+    "V4300",
+    "Cockrell Hill City Hall",
+    "Cockrell Hill",
+    58,
+    232,
+    303,
+    15,
+    0
+   ],
+   [
+    "V4502",
+    "Betty Warmack Library",
+    "Grand Prairie",
+    436,
+    null,
+    815,
+    15,
+    0
+   ],
+   [
+    "V4508",
+    "Ellen Ochoa Stem Acad Milam Elem",
+    "Grand Prairie",
+    90,
+    357,
+    346,
+    15,
+    0
+   ],
+   [
+    "V4509",
+    "Bill Arnold Middle School",
+    "Grand Prairie",
+    146,
+    498,
+    533,
+    30,
+    0
+   ],
+   [
+    "V4512",
+    "Charley Taylor Recreation Center",
+    "Grand Prairie",
+    85,
+    413,
+    424,
+    15,
+    0
+   ],
+   [
+    "V4514",
+    "Crosswinds High School",
+    "Grand Prairie",
+    0,
+    942,
+    1022,
+    15,
+    0
+   ],
+   [
+    "V4517",
+    "Eisenhower Elementary School",
+    "Grand Prairie",
+    91,
+    369,
+    303,
+    15,
+    0
+   ],
+   [
+    "V4519",
+    "Ronald Reagan Middle School",
+    "Grand Prairie",
+    61,
+    419,
+    384,
+    15,
+    0
+   ],
+   [
+    "V4520",
+    "Sam Rayburn Elementary School",
+    "Grand Prairie",
+    117,
+    392,
+    382,
+    15,
+    0
+   ],
+   [
+    "V4521",
+    "Lorenzo De Zavala Academy",
+    "Grand Prairie",
+    122,
+    671,
+    487,
+    15,
+    0
+   ],
+   [
+    "V4522",
+    "Truman Middle School",
+    "Grand Prairie",
+    68,
+    279,
+    213,
+    15,
+    0
+   ],
+   [
+    "V4525",
+    "L B Johnson Daep",
+    "Grand Prairie",
+    80,
+    545,
+    328,
+    15,
+    0
+   ],
+   [
+    "V4528",
+    "Our Redeemer Lutheran Church-Gp",
+    "Grand Prairie",
+    169,
+    1295,
+    561,
+    15,
+    0
+   ],
+   [
+    "V4601",
+    "Sally B Elliott Elementary School",
+    "Irving",
+    163,
+    603,
+    493,
+    15,
+    0
+   ],
+   [
+    "V4602",
+    "Nimitz High School",
+    "Irving",
+    114,
+    328,
+    450,
+    15,
+    0
+   ],
+   [
+    "V4605",
+    "Otis Brown Elementary School",
+    "Irving",
+    85,
+    283,
+    315,
+    15,
+    0
+   ],
+   [
+    "V4607",
+    "Irving City Hall",
+    "Irving",
+    653,
+    2379,
+    2121,
+    15,
+    0
+   ],
+   [
+    "V4608",
+    "J O Davis Elementary School",
+    "Irving",
+    84,
+    316,
+    356,
+    15,
+    0
+   ],
+   [
+    "V4610",
+    "L B Barton Elementary School",
+    "Irving",
+    59,
+    272,
+    229,
+    15,
+    0
+   ],
+   [
+    "V4613",
+    "Irving High School",
+    "Irving",
+    75,
+    234,
+    328,
+    15,
+    0
+   ],
+   [
+    "V4619",
+    "Lively Elementary School",
+    "Irving",
+    74,
+    238,
+    261,
+    15,
+    0
+   ],
+   [
+    "V4621",
+    "Thomas Haley Elementary School",
+    "Irving",
+    120,
+    662,
+    628,
+    15,
+    0
+   ],
+   [
+    "V4623",
+    "A S Johnston Elementary School",
+    "Irving",
+    59,
+    347,
+    340,
+    15,
+    0
+   ],
+   [
+    "V4629",
+    "Bear Creek Community Church",
+    "Irving",
+    122,
+    717,
+    499,
+    15,
+    0
+   ],
+   [
+    "V4633",
+    "Dallas College-North Lake Campus",
+    "Irving",
+    206,
+    948,
+    796,
+    15,
+    0
+   ],
+   [
+    "V4640",
+    "Houston Middle School",
+    "Irving",
+    126,
+    332,
+    439,
+    15,
+    0
+   ],
+   [
+    "V4642",
+    "Irving Arts Center",
+    "Irving",
+    237,
+    957,
+    604,
+    15,
+    0
+   ],
+   [
+    "V4647",
+    "Mustang Park Recreation Center",
+    "Irving",
+    245,
+    638,
+    620,
+    15,
+    1
+   ],
+   [
+    "V0103",
+    "Islamic Center Of Irving",
+    "Irving",
+    70,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0117",
+    "Esperanza Comm Ctr At Dobie",
+    "Dallas",
+    52,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0007",
+    "Amber Terrace Elementary-Deisd",
+    "Desoto",
+    73,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0020",
+    "Central Elementary School-Disd",
+    "Seagoville",
+    29,
+    399,
+    223,
+    15,
+    0
+   ],
+   [
+    "V0022",
+    "Janie Stark Elementary School",
+    "Farmers Branch",
+    66,
+    306,
+    355,
+    15,
+    1
+   ],
+   [
+    "V0026",
+    "The Woods United Methodist Church",
+    "Grand Prairie",
+    57,
+    630,
+    357,
+    15,
+    0
+   ],
+   [
+    "V0027",
+    "First Umc Of Sachse",
+    "Sachse",
+    0,
+    440,
+    219,
+    15,
+    0
+   ],
+   [
+    "V0032",
+    "Larry G Smith Elementary School",
+    "Mesquite",
+    40,
+    117,
+    96,
+    15,
+    0
+   ],
+   [
+    "V0040",
+    "Desoto House Of Peace & Comm Center",
+    "Desoto",
+    65,
+    null,
+    176,
+    15,
+    0
+   ],
+   [
+    "V0043",
+    "Seagoville Elementary School",
+    "Seagoville",
+    36,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0046",
+    "Glenn Heights Family Center",
+    "Glenn Heights",
+    217,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0047",
+    "Moises E Molina High School",
+    "Dallas",
+    29,
+    null,
+    196,
+    15,
+    0
+   ],
+   [
+    "V0050",
+    "Salem Institutional Baptist Church",
+    "Dallas",
+    35,
+    null,
+    162,
+    15,
+    0
+   ],
+   [
+    "V0053",
+    "Jubilee Park And Community Center",
+    "Dallas",
+    67,
+    null,
+    174,
+    15,
+    1
+   ],
+   [
+    "V0054",
+    "Antioch Worship Center",
+    "Mesquite",
+    86,
+    null,
+    211,
+    15,
+    0
+   ],
+   [
+    "V0055",
+    "Rocky Springs Missionary Baptist Ch",
+    "Grand Prairie",
+    40,
+    null,
+    146,
+    15,
+    0
+   ],
+   [
+    "V0063",
+    "Katherine Johnson Tech Magnet Acad",
+    "Desoto",
+    63,
+    null,
+    131,
+    15,
+    0
+   ],
+   [
+    "V0064",
+    "Trinity Love Church",
+    "Seagoville",
+    80,
+    null,
+    181,
+    15,
+    0
+   ],
+   [
+    "V0066",
+    "Pilgrim Rest Missionary Baptist Ch",
+    "Dallas",
+    143,
+    null,
+    305,
+    15,
+    1
+   ],
+   [
+    "V0067",
+    "Thomas Jefferson High School",
+    "Dallas",
+    63,
+    null,
+    108,
+    15,
+    1
+   ],
+   [
+    "V0068",
+    "Moss Elementary School",
+    "Mesquite",
+    57,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0071",
+    "The Chapel Of The Cross",
+    "Dallas",
+    249,
+    null,
+    336,
+    15,
+    1
+   ],
+   [
+    "V1004",
+    "Forest Meadow Middle School",
+    "Dallas",
+    288,
+    null,
+    289,
+    15,
+    0
+   ],
+   [
+    "V1015",
+    "Multiple Careers Magnet Center",
+    "Dallas",
+    110,
+    415,
+    292,
+    15,
+    1
+   ],
+   [
+    "V1032",
+    "Northwood Hills Elementary Sch",
+    "Dallas",
+    71,
+    274,
+    151,
+    30,
+    1
+   ],
+   [
+    "V1040",
+    "Thurgood Marshall Elementary School",
+    "Dallas",
+    53,
+    129,
+    193,
+    15,
+    0
+   ],
+   [
+    "V1045",
+    "Pla @ Highland Meadows",
+    "Dallas",
+    101,
+    261,
+    256,
+    15,
+    0
+   ],
+   [
+    "V1054",
+    "Casa View Elementary School",
+    "Dallas",
+    87,
+    214,
+    236,
+    15,
+    0
+   ],
+   [
+    "V1057",
+    "St Pius X Catholic Church Parish",
+    "Dallas",
+    100,
+    255,
+    229,
+    15,
+    0
+   ],
+   [
+    "V1061",
+    "W H Gaston Middle School",
+    "Dallas",
+    55,
+    210,
+    163,
+    15,
+    0
+   ],
+   [
+    "V1079",
+    "S S Conner Elementary School",
+    "Dallas",
+    52,
+    229,
+    189,
+    15,
+    0
+   ],
+   [
+    "V1083",
+    "Colonial Baptist Church",
+    "Dallas",
+    59,
+    141,
+    202,
+    15,
+    0
+   ],
+   [
+    "V1084",
+    "Buckner Terrace Montessori",
+    "Dallas",
+    65,
+    200,
+    170,
+    15,
+    0
+   ],
+   [
+    "V1085",
+    "Urban Park Elementary School",
+    "Dallas",
+    57,
+    144,
+    213,
+    15,
+    0
+   ],
+   [
+    "V1087",
+    "Skyline High School",
+    "Dallas",
+    50,
+    141,
+    191,
+    15,
+    0
+   ],
+   [
+    "V1090",
+    "San Jacinto Elementary School",
+    "Dallas",
+    99,
+    277,
+    369,
+    15,
+    0
+   ],
+   [
+    "V1091",
+    "Annie Webb Blanton Elem School",
+    "Dallas",
+    91,
+    211,
+    268,
+    15,
+    0
+   ],
+   [
+    "V1092",
+    "Edward Titche Elementary School",
+    "Dallas",
+    94,
+    239,
+    291,
+    15,
+    0
+   ],
+   [
+    "V1094",
+    "S Mendez Crew Leadership Acad",
+    "Dallas",
+    51,
+    131,
+    188,
+    15,
+    0
+   ],
+   [
+    "V1102",
+    "B H Macon Elementary School",
+    "Dallas",
+    35,
+    228,
+    238,
+    15,
+    0
+   ],
+   [
+    "V1104",
+    "William Anderson Elem School",
+    "Dallas",
+    56,
+    null,
+    259,
+    15,
+    0
+   ],
+   [
+    "V1107",
+    "Richard Lagow Elementary School",
+    "Dallas",
+    30,
+    82,
+    118,
+    15,
+    0
+   ],
+   [
+    "V1109",
+    "Fireside Recreation Center",
+    "Dallas",
+    73,
+    150,
+    252,
+    15,
+    0
+   ],
+   [
+    "V1118",
+    "Plp @ Jw Ray",
+    "Dallas",
+    47,
+    370,
+    345,
+    15,
+    1
+   ],
+   [
+    "V1121",
+    "Living Waters Church Of God",
+    "Dallas",
+    64,
+    246,
+    230,
+    15,
+    0
+   ],
+   [
+    "V1128",
+    "Lake Highlands High School",
+    "Dallas",
+    74,
+    345,
+    465,
+    15,
+    0
+   ],
+   [
+    "V1300",
+    "Vanston Middle School",
+    "Mesquite",
+    60,
+    216,
+    214,
+    15,
+    0
+   ],
+   [
+    "V1305",
+    "Motley Elementary School",
+    "Mesquite",
+    50,
+    183,
+    227,
+    15,
+    0
+   ],
+   [
+    "V1308",
+    "Range Elementary School",
+    "Mesquite",
+    85,
+    259,
+    338,
+    15,
+    0
+   ],
+   [
+    "V1701",
+    "Bussey Middle School",
+    "Garland",
+    87,
+    172,
+    288,
+    15,
+    0
+   ],
+   [
+    "V1706",
+    "Bradfield Elementary School",
+    "Garland",
+    59,
+    416,
+    414,
+    30,
+    0
+   ],
+   [
+    "V1710",
+    "Kimberlin Academy",
+    "Garland",
+    57,
+    174,
+    227,
+    15,
+    0
+   ],
+   [
+    "V1711",
+    "Granger Recreation Center",
+    "Garland",
+    63,
+    169,
+    244,
+    15,
+    0
+   ],
+   [
+    "V1715",
+    "Watson Technology Center",
+    "Garland",
+    83,
+    216,
+    240,
+    15,
+    0
+   ],
+   [
+    "V1716",
+    "South Garland High School",
+    "Garland",
+    54,
+    178,
+    212,
+    15,
+    0
+   ],
+   [
+    "V1717",
+    "Classical Ctr At Brandenburg Ms",
+    "Garland",
+    41,
+    232,
+    204,
+    15,
+    0
+   ],
+   [
+    "V1722",
+    "Classical Ctr At Vial Elem Sch",
+    "Garland",
+    36,
+    167,
+    203,
+    15,
+    0
+   ],
+   [
+    "V1726",
+    "Routh Roach Elementary School",
+    "Garland",
+    97,
+    287,
+    292,
+    15,
+    0
+   ],
+   [
+    "V1727",
+    "Patty Granville Arts Center",
+    "Garland",
+    29,
+    null,
+    240,
+    15,
+    0
+   ],
+   [
+    "V1728",
+    "Sam Houston Middle School",
+    "Garland",
+    72,
+    278,
+    264,
+    15,
+    0
+   ],
+   [
+    "V2009",
+    "L G Cigarroa Elementary School",
+    "Dallas",
+    43,
+    179,
+    159,
+    15,
+    0
+   ],
+   [
+    "V2043",
+    "Brentfield Elementary School",
+    "Dallas",
+    274,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V2064",
+    "Robert T Hill Middle School",
+    "Dallas",
+    80,
+    158,
+    161,
+    15,
+    0
+   ],
+   [
+    "V2065",
+    "Victor Hexter Elementary School",
+    "Dallas",
+    139,
+    423,
+    302,
+    15,
+    0
+   ],
+   [
+    "V2071",
+    "Lakewood Elementary School",
+    "Dallas",
+    182,
+    507,
+    371,
+    15,
+    0
+   ],
+   [
+    "V2224",
+    "Highland Park Middle School",
+    "Dallas",
+    150,
+    534,
+    455,
+    15,
+    1
+   ],
+   [
+    "V2225",
+    "Smu/Hughes-Trigg Student Center",
+    "Dallas",
+    268,
+    847,
+    702,
+    15,
+    1
+   ],
+   [
+    "V2306",
+    "Chapel Hill Preparatory School",
+    "Dallas",
+    40,
+    201,
+    153,
+    15,
+    1
+   ],
+   [
+    "V2401",
+    "Ted Polk Middle School",
+    "Carrollton",
+    50,
+    127,
+    205,
+    15,
+    1
+   ],
+   [
+    "V2404",
+    "Blanton Elementary School",
+    "Carrollton",
+    85,
+    284,
+    332,
+    30,
+    1
+   ],
+   [
+    "V2507",
+    "Richardson Heights Elem Sch",
+    "Richardson",
+    222,
+    410,
+    null,
+    15,
+    1
+   ],
+   [
+    "V2601",
+    "Valley Ranch Elementary School",
+    "Irving",
+    116,
+    471,
+    null,
+    15,
+    1
+   ],
+   [
+    "V2602",
+    "Cimarron Park Rec Center",
+    "Irving",
+    46,
+    622,
+    360,
+    15,
+    1
+   ],
+   [
+    "V2603",
+    "Freeman Elementary School",
+    "Irving",
+    79,
+    351,
+    339,
+    15,
+    1
+   ],
+   [
+    "V2702",
+    "Spring Creek Elem School-Gisd",
+    "Garland",
+    92,
+    598,
+    273,
+    15,
+    0
+   ],
+   [
+    "V2802",
+    "Wilson Elementary School",
+    "Coppell",
+    187,
+    515,
+    499,
+    15,
+    1
+   ],
+   [
+    "V2803",
+    "Mockingbird Elementary School-Cisd",
+    "Coppell",
+    182,
+    509,
+    453,
+    15,
+    1
+   ],
+   [
+    "V2809",
+    "Riverchase Elementary School",
+    "Coppell",
+    106,
+    256,
+    282,
+    15,
+    1
+   ],
+   [
+    "V2920",
+    "Coyle Middle School",
+    "Rowlett",
+    55,
+    1288,
+    null,
+    15,
+    0
+   ],
+   [
+    "V2924",
+    "Rowlett Community Centre",
+    "Rowlett",
+    478,
+    null,
+    832,
+    15,
+    0
+   ],
+   [
+    "V3017",
+    "Dr Mlk Jr Arts Academy",
+    "Dallas",
+    15,
+    27,
+    115,
+    15,
+    0
+   ],
+   [
+    "V3025",
+    "Mt Horeb Missionary Baptist Chur",
+    "Dallas",
+    29,
+    73,
+    130,
+    15,
+    0
+   ],
+   [
+    "V3026",
+    "St Paul Baptist Church",
+    "Dallas",
+    28,
+    70,
+    111,
+    15,
+    0
+   ],
+   [
+    "V3029",
+    "Evangelist Temple Church Of God",
+    "Dallas",
+    66,
+    151,
+    221,
+    15,
+    0
+   ],
+   [
+    "V3035",
+    "F D Roosevelt Hs Of Innovation",
+    "Dallas",
+    69,
+    121,
+    133,
+    15,
+    0
+   ],
+   [
+    "V3040",
+    "Good Street Baptist Church",
+    "Dallas",
+    29,
+    78,
+    121,
+    15,
+    0
+   ],
+   [
+    "V3044",
+    "Albert C Black Jr Steam Academy",
+    "Dallas",
+    39,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V3045",
+    "Gethsemane Missionary Baptist Ch",
+    "Dallas",
+    36,
+    112,
+    158,
+    15,
+    0
+   ],
+   [
+    "V3050",
+    "H I Holland Elem School @ Lisbon",
+    "Dallas",
+    0,
+    145,
+    166,
+    15,
+    0
+   ],
+   [
+    "V3051",
+    "Fountain Of Living Word Church",
+    "Dallas",
+    38,
+    104,
+    98,
+    15,
+    0
+   ],
+   [
+    "V3055",
+    "Adelle Turner Elementary School",
+    "Dallas",
+    56,
+    294,
+    174,
+    15,
+    0
+   ],
+   [
+    "V3059",
+    "Ideal Family Church",
+    "Dallas",
+    19,
+    122,
+    114,
+    15,
+    0
+   ],
+   [
+    "V3061",
+    "Barack Obama Male Leadership Acad",
+    "Dallas",
+    23,
+    92,
+    4,
+    30,
+    0
+   ],
+   [
+    "V3065",
+    "Umphrey Lee Elementary School",
+    "Dallas",
+    68,
+    223,
+    236,
+    15,
+    0
+   ],
+   [
+    "V3066",
+    "Martin Weiss Elementary School",
+    "Dallas",
+    37,
+    155,
+    202,
+    15,
+    0
+   ],
+   [
+    "V3071",
+    "Highland Hills Umc",
+    "Dallas",
+    25,
+    124,
+    102,
+    15,
+    0
+   ],
+   [
+    "V3075",
+    "Wilmer-Hutchins High School",
+    "Dallas",
+    17,
+    51,
+    53,
+    15,
+    0
+   ],
+   [
+    "V3082",
+    "W A Blair Elementary School",
+    "Dallas",
+    69,
+    168,
+    231,
+    15,
+    0
+   ],
+   [
+    "V3083",
+    "Ebby Halliday Elementary School",
+    "Dallas",
+    72,
+    117,
+    221,
+    15,
+    0
+   ],
+   [
+    "V3092",
+    "Thurgood Marshall Recreation Ctr",
+    "Dallas",
+    64,
+    205,
+    212,
+    15,
+    0
+   ],
+   [
+    "V3106",
+    "Plummer Elementary School",
+    "Cedar Hill",
+    75,
+    161,
+    232,
+    15,
+    0
+   ],
+   [
+    "V3107",
+    "Highlands Elementary School",
+    "Cedar Hill",
+    78,
+    247,
+    318,
+    15,
+    0
+   ],
+   [
+    "V3200",
+    "H Bob Daniel Sr Intermediate Sch",
+    "Duncanville",
+    35,
+    123,
+    86,
+    15,
+    0
+   ],
+   [
+    "V3203",
+    "Duncanville'S First Baptist Chur",
+    "Duncanville",
+    78,
+    231,
+    200,
+    15,
+    0
+   ],
+   [
+    "V3204",
+    "Reed Middle School",
+    "Duncanville",
+    99,
+    233,
+    310,
+    15,
+    0
+   ],
+   [
+    "V3205",
+    "Brandenburg Intermediate School",
+    "Duncanville",
+    42,
+    82,
+    113,
+    15,
+    0
+   ],
+   [
+    "V3208",
+    "Central Elementary School-Duisd",
+    "Duncanville",
+    29,
+    171,
+    126,
+    15,
+    0
+   ],
+   [
+    "V3209",
+    "Duncanville High School",
+    "Duncanville",
+    87,
+    207,
+    353,
+    15,
+    0
+   ],
+   [
+    "V3211",
+    "Fairmeadows Elementary School",
+    "Duncanville",
+    122,
+    291,
+    415,
+    15,
+    0
+   ],
+   [
+    "V3302",
+    "Georgia Kimball Elementary Sch",
+    "Mesquite",
+    58,
+    234,
+    213,
+    15,
+    0
+   ],
+   [
+    "V3303",
+    "Dr Jc Cannaday Elementary School",
+    "Mesquite",
+    99,
+    232,
+    177,
+    15,
+    0
+   ],
+   [
+    "V3307",
+    "W L Wilkinson Middle School",
+    "Mesquite",
+    40,
+    144,
+    197,
+    15,
+    0
+   ],
+   [
+    "V3308",
+    "Mesquite Convention Center",
+    "Mesquite",
+    41,
+    null,
+    104,
+    15,
+    0
+   ],
+   [
+    "V3310",
+    "Mesquite High School",
+    "Mesquite",
+    85,
+    376,
+    479,
+    15,
+    0
+   ],
+   [
+    "V3315",
+    "Tisinger Elementary School",
+    "Mesquite",
+    80,
+    191,
+    283,
+    15,
+    0
+   ],
+   [
+    "V3400",
+    "Balch Springs Civic Center",
+    "Balch Springs",
+    287,
+    1357,
+    923,
+    15,
+    0
+   ],
+   [
+    "V3403",
+    "Floyd Elementary School",
+    "Mesquite",
+    63,
+    109,
+    234,
+    15,
+    0
+   ],
+   [
+    "V3405",
+    "Hodges Elem Sch",
+    "Balch Springs",
+    52,
+    92,
+    202,
+    15,
+    0
+   ],
+   [
+    "V3601",
+    "Faith Bible Church",
+    "Desoto",
+    85,
+    266,
+    245,
+    15,
+    0
+   ],
+   [
+    "V3604",
+    "Ruby Young Elementary School",
+    "Desoto",
+    51,
+    154,
+    211,
+    15,
+    0
+   ],
+   [
+    "V3606",
+    "The Meadows Elementary School",
+    "Desoto",
+    62,
+    150,
+    161,
+    15,
+    0
+   ],
+   [
+    "V3609",
+    "Desoto High School",
+    "Desoto",
+    93,
+    236,
+    353,
+    15,
+    0
+   ],
+   [
+    "V3611",
+    "Desoto East Middle School",
+    "Desoto",
+    0,
+    265,
+    481,
+    15,
+    0
+   ],
+   [
+    "V3802",
+    "Pleasant Run Elementary School",
+    "Lancaster",
+    28,
+    194,
+    150,
+    15,
+    0
+   ],
+   [
+    "V3803",
+    "Rolling Hills Elementary School",
+    "Lancaster",
+    69,
+    205,
+    244,
+    15,
+    0
+   ],
+   [
+    "V3807",
+    "Elsie Robertson Middle School",
+    "Lancaster",
+    116,
+    229,
+    284,
+    15,
+    0
+   ],
+   [
+    "V3900",
+    "Mccowan Middle School",
+    "Glenn Heights",
+    71,
+    240,
+    148,
+    15,
+    0
+   ],
+   [
+    "V4004",
+    "Marcus Recreation Center",
+    "Dallas",
+    95,
+    276,
+    342,
+    15,
+    0
+   ],
+   [
+    "V4006",
+    "E L Degolyer Elementary School",
+    "Dallas",
+    47,
+    282,
+    219,
+    15,
+    1
+   ],
+   [
+    "V4016",
+    "K B Polk Vanguard Center Atg",
+    "Dallas",
+    115,
+    226,
+    322,
+    15,
+    0
+   ],
+   [
+    "V4022",
+    "Esperanza Medrano Elementary Sch",
+    "Dallas",
+    0,
+    406,
+    555,
+    15,
+    0
+   ],
+   [
+    "V4031",
+    "C F Carr Elementary School",
+    "Dallas",
+    45,
+    156,
+    242,
+    15,
+    0
+   ],
+   [
+    "V4035",
+    "Margaret B Henderson Elem School",
+    "Dallas",
+    84,
+    168,
+    131,
+    15,
+    0
+   ],
+   [
+    "V4038",
+    "Harrell Budd Elementary School",
+    "Dallas",
+    128,
+    252,
+    407,
+    30,
+    0
+   ],
+   [
+    "V4056",
+    "Palabra De Vida Church",
+    "Dallas",
+    65,
+    178,
+    228,
+    15,
+    0
+   ],
+   [
+    "V4060",
+    "Nancy Jane Cochran Elem Sch",
+    "Dallas",
+    71,
+    261,
+    305,
+    15,
+    0
+   ],
+   [
+    "V4061",
+    "L O Donald Elementary School",
+    "Dallas",
+    56,
+    107,
+    170,
+    15,
+    0
+   ],
+   [
+    "V4062",
+    "Leila P Cowart Elementary School",
+    "Dallas",
+    85,
+    295,
+    333,
+    15,
+    0
+   ],
+   [
+    "V4065",
+    "Arcadia Park Elementary School",
+    "Dallas",
+    68,
+    209,
+    267,
+    15,
+    0
+   ],
+   [
+    "V4066",
+    "Anson Jones Elementary School",
+    "Dallas",
+    57,
+    155,
+    244,
+    15,
+    0
+   ],
+   [
+    "V4070",
+    "John Peeler Elementary School",
+    "Dallas",
+    139,
+    266,
+    388,
+    15,
+    0
+   ],
+   [
+    "V4074",
+    "Sunset High School - Annex Bldg",
+    "Dallas",
+    100,
+    283,
+    307,
+    15,
+    0
+   ],
+   [
+    "V4077",
+    "Rosemont Elem School - Upper Campus",
+    "Dallas",
+    104,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V4083",
+    "J Moroles Expressive Arts Vanguard",
+    "Dallas",
+    72,
+    168,
+    226,
+    15,
+    0
+   ],
+   [
+    "V4097",
+    "David G Burnet Elem School",
+    "Dallas",
+    68,
+    194,
+    241,
+    15,
+    0
+   ],
+   [
+    "V4110",
+    "Boude Storey Middle School",
+    "Dallas",
+    43,
+    123,
+    179,
+    15,
+    0
+   ],
+   [
+    "V4501",
+    "Suzanna Dickinson Elem School",
+    "Grand Prairie",
+    80,
+    313,
+    302,
+    15,
+    0
+   ],
+   [
+    "V4507",
+    "Daniels Elementary Academy",
+    "Grand Prairie",
+    41,
+    202,
+    232,
+    15,
+    0
+   ],
+   [
+    "V4511",
+    "Bowie Fine Arts",
+    "Grand Prairie",
+    70,
+    266,
+    297,
+    15,
+    0
+   ],
+   [
+    "V4513",
+    "Houston Auxiliary Building",
+    "Grand Prairie",
+    0,
+    193,
+    252,
+    15,
+    0
+   ],
+   [
+    "V4527",
+    "Hector P Garcia Elementary Sch - Gp",
+    "Grand Prairie",
+    76,
+    219,
+    256,
+    15,
+    0
+   ],
+   [
+    "V4538",
+    "Global Leadership Academy",
+    "Grand Prairie",
+    50,
+    242,
+    282,
+    15,
+    0
+   ],
+   [
+    "V4606",
+    "Lamar Middle School",
+    "Irving",
+    42,
+    122,
+    168,
+    15,
+    0
+   ],
+   [
+    "V4616",
+    "John R Good Elementary School",
+    "Irving",
+    44,
+    144,
+    192,
+    15,
+    0
+   ],
+   [
+    "V4618",
+    "David Crockett Middle School",
+    "Irving",
+    35,
+    128,
+    123,
+    15,
+    0
+   ],
+   [
+    "V4620",
+    "Oak Haven United Methodist Church",
+    "Irving",
+    79,
+    289,
+    318,
+    15,
+    0
+   ],
+   [
+    "V4622",
+    "W T Hanes Elementary School",
+    "Irving",
+    33,
+    437,
+    426,
+    15,
+    0
+   ],
+   [
+    "V4624",
+    "Brandenburg Elementary School",
+    "Irving",
+    69,
+    222,
+    236,
+    15,
+    0
+   ],
+   [
+    "V4626",
+    "Macarthur High School",
+    "Irving",
+    50,
+    312,
+    197,
+    15,
+    0
+   ],
+   [
+    "V4630",
+    "T J Lee Elementary School",
+    "Irving",
+    31,
+    152,
+    132,
+    15,
+    0
+   ],
+   [
+    "V4631",
+    "Travis Middle School",
+    "Irving",
+    18,
+    89,
+    81,
+    15,
+    0
+   ],
+   [
+    "V4634",
+    "Jack E Singley Academy",
+    "Irving",
+    43,
+    197,
+    182,
+    15,
+    0
+   ],
+   [
+    "V4646",
+    "Cardwell Career Preparatory Ctr",
+    "Irving",
+    29,
+    84,
+    87,
+    15,
+    0
+   ],
+   [
+    "V4654",
+    "Irving Fire Station #2",
+    "Irving",
+    65,
+    173,
+    227,
+    30,
+    0
+   ],
+   [
+    "V0085",
+    "Madinah Masjid Of Carrollton",
+    "Carrollton",
+    68,
+    null,
+    355,
+    15,
+    1
+   ],
+   [
+    "V0081",
+    "Baps Shri Swaminarayan Mandir",
+    "Irving",
+    76,
+    null,
+    259,
+    15,
+    0
+   ],
+   [
+    "V0086",
+    "Oak Gardens Church Of Christ",
+    "Dallas",
+    69,
+    null,
+    144,
+    15,
+    0
+   ],
+   [
+    "V0079",
+    "Royal Lane Baptist Church",
+    "Dallas",
+    460,
+    null,
+    719,
+    15,
+    1
+   ],
+   [
+    "V0076",
+    "Northway Christian Church",
+    "Dallas",
+    573,
+    null,
+    1066,
+    15,
+    1
+   ],
+   [
+    "V0083",
+    "Ministerios Charisma",
+    "Richardson",
+    183,
+    null,
+    284,
+    15,
+    1
+   ],
+   [
+    "V1003",
+    "Hamilton Park Umc",
+    "Dallas",
+    179,
+    456,
+    468,
+    15,
+    1
+   ],
+   [
+    "V0082",
+    "Makkah Masjid Idea",
+    "Garland",
+    81,
+    null,
+    296,
+    15,
+    0
+   ],
+   [
+    "V0089",
+    "Bowie Middle School Annex Bldg",
+    "Irving",
+    48,
+    null,
+    225,
+    15,
+    0
+   ],
+   [
+    "V0093",
+    "Dallas County Mesquite Gov Ctr",
+    "Mesquite",
+    508,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0094",
+    "Dallas County Records Bldg",
+    "Dallas",
+    258,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0099",
+    "Williams Elem School",
+    "Garland",
+    68,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0104",
+    "Temple Shalom",
+    "Dallas",
+    50,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0102",
+    "Envision Dallas",
+    "Farmers Branch",
+    111,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0087",
+    "St Paul'S Church",
+    "Dallas",
+    452,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0105",
+    "Good Elementary School",
+    "Carrollton",
+    30,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0107",
+    "Jill Stone Elem School",
+    "Dallas",
+    124,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0108",
+    "Berkner High School",
+    "Richardson",
+    146,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0109",
+    "Heather Glen Montclair Elem School",
+    "Garland",
+    62,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0133",
+    "Austin Elementary School-Misd",
+    "Mesquite",
+    102,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0134",
+    "S M Seabourn Elem School",
+    "Mesquite",
+    71,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0135",
+    "Cozby Library And Community Commons",
+    "Coppell",
+    659,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0136",
+    "Irving Fire Station #8",
+    "Irving",
+    239,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0137",
+    "Mt Rose Church",
+    "Dallas",
+    47,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0140",
+    "Audubon Rec Center",
+    "Garland",
+    122,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0139",
+    "West Garland Library",
+    "Garland",
+    160,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0142",
+    "Kiestwood Assembly Of God",
+    "Dallas",
+    48,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0141",
+    "Comm Missionary Baptist Church",
+    "Cedar Hill",
+    76,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0146",
+    "Janie C Turner Rec Center",
+    "Dallas",
+    87,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0150",
+    "Arzell Ball Center",
+    "Richardson",
+    99,
+    null,
+    null,
+    15,
+    1
+   ],
+   [
+    "V0149",
+    "William Lee Hastings Elem",
+    "Duncanville",
+    36,
+    null,
+    null,
+    15,
+    0
+   ],
+   [
+    "V0151",
+    "Austin Elementary School-CISD",
+    "Coppell",
+    85,
+    null,
+    null,
+    15,
+    1
+   ]
+  ],
+  "d2": {
+   "sites": 108,
+   "today": 22718,
+   "ed22": 56355,
+   "ed24": 50116,
+   "pct22": 40.3,
+   "pct24": 45.3,
+   "r_site_share_today": 52.3,
+   "r_site_share_22": 51.7,
+   "targets": [
+    [
+     1,
+     "University Park Umc",
+     "Dallas",
+     745,
+     2462,
+     84,
+     15
+    ],
+    [
+     2,
+     "Fretz Park Library",
+     "Dallas",
+     683,
+     2339,
+     66,
+     15
+    ],
+    [
+     3,
+     "Mockingbird Elementary School-Disd",
+     "Dallas",
+     580,
+     1497,
+     52,
+     15
+    ],
+    [
+     4,
+     "Northway Christian Church",
+     "Dallas",
+     573,
+     null,
+     79,
+     15
+    ],
+    [
+     5,
+     "Marsh Lane Baptist Church",
+     "Dallas",
+     559,
+     1428,
+     66,
+     15
+    ],
+    [
+     6,
+     "Smu/Hughes-Trigg Student Center",
+     "Dallas",
+     268,
+     847,
+     70,
+     15
+    ],
+    [
+     7,
+     "John S Bradfield Elem School",
+     "Dallas",
+     336,
+     784,
+     79,
+     15
+    ],
+    [
+     8,
+     "Ben Milam Elementary School",
+     "Dallas",
+     187,
+     1215,
+     50,
+     15
+    ],
+    [
+     9,
+     "John S Armstrong Elem School",
+     "Dallas",
+     222,
+     786,
+     70,
+     15
+    ],
+    [
+     10,
+     "Farmers Branch Manske Library",
+     "Farmers Branch",
+     519,
+     1677,
+     54,
+     15
+    ],
+    [
+     11,
+     "Royal Lane Baptist Church",
+     "Dallas",
+     460,
+     null,
+     68,
+     15
+    ],
+    [
+     12,
+     "Prairie Creek Elementary School",
+     "Richardson",
+     0,
+     673,
+     74,
+     15
+    ],
+    [
+     13,
+     "Oak Lawn Branch Library",
+     "Dallas",
+     1060,
+     2293,
+     35,
+     15
+    ],
+    [
+     14,
+     "Lakewood Branch Library",
+     "Dallas",
+     361,
+     1261,
+     42,
+     15
+    ],
+    [
+     15,
+     "University Of Texas At Dallas",
+     "Richardson",
+     239,
+     922,
+     49,
+     30
+    ],
+    [
+     16,
+     "Valley Ranch Library",
+     "Irving",
+     518,
+     1553,
+     39,
+     15
+    ],
+    [
+     17,
+     "Solar Preparatory School For Girls",
+     "Dallas",
+     299,
+     471,
+     53,
+     15
+    ],
+    [
+     18,
+     "Care Church",
+     "Richardson",
+     188,
+     771,
+     56,
+     15
+    ],
+    [
+     19,
+     "Highland Park Middle School",
+     "Dallas",
+     150,
+     534,
+     72,
+     15
+    ],
+    [
+     20,
+     "University Park Elem School",
+     "Dallas",
+     246,
+     677,
+     78,
+     15
+    ],
+    [
+     21,
+     "Addison Town Hall",
+     "Addison",
+     542,
+     null,
+     45,
+     15
+    ],
+    [
+     22,
+     "Canyon Creek Elementary School",
+     "Richardson",
+     186,
+     504,
+     60,
+     15
+    ],
+    [
+     23,
+     "North Dallas High School",
+     "Dallas",
+     320,
+     458,
+     52,
+     15
+    ],
+    [
+     24,
+     "Nathan Adams Elementary School",
+     "Dallas",
+     227,
+     541,
+     66,
+     15
+    ],
+    [
+     25,
+     "Highland Park Isd Admin Bldg",
+     "Dallas",
+     115,
+     566,
+     81,
+     15
+    ],
+    [
+     26,
+     "Solar Preparatory School For Boys",
+     "Dallas",
+     196,
+     835,
+     44,
+     15
+    ],
+    [
+     27,
+     "Mohawk Elementary School",
+     "Richardson",
+     194,
+     697,
+     63,
+     15
+    ],
+    [
+     28,
+     "Jess Harben Elementary School",
+     "Richardson",
+     240,
+     645,
+     49,
+     15
+    ],
+    [
+     29,
+     "Walnut Hill Recreation Center",
+     "Dallas",
+     212,
+     677,
+     66,
+     15
+    ],
+    [
+     30,
+     "Dartmouth Elementary School",
+     "Richardson",
+     214,
+     644,
+     52,
+     15
+    ]
+   ]
+  }
  },
  "harris": {
   "sites": 623,
