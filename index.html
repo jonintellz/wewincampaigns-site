@@ -354,9 +354,9 @@ function syncSlots(el,items,removable){const want=new Set(items.map(i=>i.key));
  items.forEach(i=>{if(!have.has(i.key))el.insertAdjacentHTML('beforeend',slotHTML(i.x,removable,i.key))});
  const ph=el.querySelector('.wall-empty');if(items.length&&ph)ph.remove();if(!items.length&&!ph)el.insertAdjacentHTML('beforeend','<p class="src wall-empty">Your wall is empty. Add channels from the list below.</p>')}
 function renderWatch(){const SV=window.STREAMS;if(!$('#wall'))return;if(!SV){$('#wall').innerHTML='<p class="src">Loading streams.</p>';return}
- const live=SV.streams.filter(x=>x.video_id);$('#watchStamp').textContent=`${live.length} of ${SV.streams.length} channels live · checked ${SV.as_of.split(' ').slice(1).join(' ')} Central${SV.dfw_checked?' · Dallas-Fort Worth stations rechecked '+SV.dfw_checked:''}.`;
+ const live=SV.streams.filter(x=>x.video_id&&x.embeddable!==false);$('#watchStamp').textContent=`${live.length} of ${SV.streams.length} channels live · checked ${SV.as_of.split(' ').slice(1).join(' ')} Central${SV.dfw_checked?' · Dallas-Fort Worth stations rechecked '+SV.dfw_checked:''}.`;
  // top row: two Dallas-Fort Worth stations, live ones first, in preference order; a station not yet live holds its slot with its live channel
- const dfw=SV.streams.filter(x=>x.group==='DFW TV').sort((a,b)=>(b.video_id?1:0)-(a.video_id?1:0)||DFW_PREF.findIndex(r=>r.test(a.name))-DFW_PREF.findIndex(r=>r.test(b.name)));
+ const dfw=SV.streams.filter(x=>x.group==='DFW TV'&&x.embeddable!==false).sort((a,b)=>(b.video_id?1:0)-(a.video_id?1:0)||DFW_PREF.findIndex(r=>r.test(a.name))-DFW_PREF.findIndex(r=>r.test(b.name)));
  SV.streams.forEach(x=>{SEEN[x.channel_id]=x});
  // the two top slots stick to their stations once chosen: a station's live-channel player switches itself to the broadcast when it starts
  let topIds=(window.TOPIDS||[]).filter(id=>dfw.some(x=>x.channel_id===id));const better=dfw.filter(x=>x.video_id&&!topIds.includes(x.channel_id));
@@ -374,7 +374,7 @@ function renderWatch(){const SV=window.STREAMS;if(!$('#wall'))return;if(!SV){$('
  syncSlots($('#wall'),WALL.map(id=>({key:id,x:SEEN[id]})),true);
  $('#wallSize').innerHTML=[2,4,6,9].map(n=>`<button type="button" class="icon-btn" data-walln="${n}" style="${n===WALLN?'border-color:var(--accent);color:var(--strong);background:var(--accent-wash)':''}">${n} more</button>`).join('');
  const groups={};SV.streams.forEach(x=>(groups[x.group]=groups[x.group]||[]).push(x));
- $('#chans').innerHTML=Object.entries(groups).map(([g,xs])=>`<div class="card" style="padding:8px 4px"><h3 style="padding:4px 10px">${esc(g)}</h3>${xs.sort((a,b)=>(b.video_id?1:0)-(a.video_id?1:0)).map(x=>{const onTop=top.some(t=>t.channel_id===x.channel_id),onWall=WALL.includes(x.channel_id);return `<div class="chan"><span>${x.video_id?'<span class="live-dot"></span>':''}${esc(x.name)}${x.title?`<br><span class="src">${esc(x.title.slice(0,70))}</span>`:''}</span>${x.video_id?`<button type="button" class="icon-btn" data-wall="${esc(x.channel_id)}"${onTop||onWall?' disabled':''}>${onTop?'On top':onWall?'On the wall':'Watch'}</button>`:`<a class="src" href="https://www.youtube.com/channel/${esc(String(x.channel_id).split('#')[0])}/live" rel="noopener" target="_blank">not live</a>`}</div>`}).join('')}</div>`).join('')}
+ $('#chans').innerHTML=Object.entries(groups).map(([g,xs])=>`<div class="card" style="padding:8px 4px"><h3 style="padding:4px 10px">${esc(g)}</h3>${xs.sort((a,b)=>(b.video_id?1:0)-(a.video_id?1:0)).map(x=>{const onTop=top.some(t=>t.channel_id===x.channel_id),onWall=WALL.includes(x.channel_id);return `<div class="chan"><span>${x.video_id?'<span class="live-dot"></span>':''}${esc(x.name)}${x.title?`<br><span class="src">${esc(x.title.slice(0,70))}</span>`:''}</span>${x.video_id&&x.embeddable===false?`<a class="src" href="https://www.youtube.com/watch?v=${esc(x.video_id)}" rel="noopener" target="_blank">live on YouTube only</a>`:x.video_id?`<button type="button" class="icon-btn" data-wall="${esc(x.channel_id)}"${onTop||onWall?' disabled':''}>${onTop?'On top':onWall?'On the wall':'Watch'}</button>`:`<a class="src" href="https://www.youtube.com/channel/${esc(String(x.channel_id).split('#')[0])}/live" rel="noopener" target="_blank">not live</a>`}</div>`}).join('')}</div>`).join('')}
 document.addEventListener('click',e=>{const a=e.target.closest('[data-wall]'),r=e.target.closest('[data-unwall]'),n=e.target.closest('[data-walln]');if(a){WALL=(WALL||[]).filter(x=>x!==a.dataset.wall);WALL.push(a.dataset.wall);if(WALL.length>WALLN){WALLN=Math.min(9,WALL.length);try{localStorage.setItem('tvd_walln',WALLN)}catch(e){}}renderWatch()}if(r){WALL=(WALL||[]).filter(x=>x!==r.dataset.unwall);window.WALL_EMPTIED=true;renderWatch()}if(n){WALLN=+n.dataset.walln;window.WALL_EMPTIED=false;try{localStorage.setItem('tvd_walln',WALLN)}catch(e){}renderWatch()}});
 async function loadStreams(){try{const r=await fetch('data/streams.json?t='+Math.floor(Date.now()/60000),{cache:'no-store'});if(r.ok)window.STREAMS=await r.json()}catch(e){}renderWatch()}
 
@@ -855,7 +855,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='e8b542604445',failN=0;
+let BUILD='2a23ab5f3a37',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
