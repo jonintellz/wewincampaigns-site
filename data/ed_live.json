@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:02 PM",
- "total": 253020,
+ "as_of": "2026-11-03 03:04 PM",
+ "total": 253178,
  "base22_total": 517013,
- "pct_of_22": 48.9,
- "mix_lean_vs_22": 2.2,
+ "pct_of_22": 49.0,
+ "mix_lean_vs_22": 2.23,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:02 PM"
+   "updated": "03:04 PM"
   },
   {
    "county": "Travis",
@@ -51,14 +51,14 @@
   },
   {
    "county": "Mclennan",
-   "today": 14422,
+   "today": 14565,
    "ed22": 27228,
-   "pct22": 53.0,
+   "pct22": 53.5,
    "ed24": 25422,
-   "pct24": 56.7,
+   "pct24": 57.3,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "02:58 PM"
+   "updated": "03:04 PM"
   },
   {
    "county": "Hays",
@@ -84,25 +84,25 @@
   },
   {
    "county": "Hockley",
-   "today": 984,
+   "today": 991,
    "ed22": 2415,
-   "pct22": 40.7,
+   "pct22": 41.0,
    "ed24": 2025,
-   "pct24": 48.6,
+   "pct24": 48.9,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "02:58 PM"
+   "updated": "03:03 PM"
   },
   {
    "county": "Madison",
-   "today": 793,
+   "today": 801,
    "ed22": 1805,
-   "pct22": 43.9,
+   "pct22": 44.4,
    "ed24": 1174,
-   "pct24": 67.5,
+   "pct24": 68.2,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "02:59 PM"
+   "updated": "03:04 PM"
   }
  ],
  "dallas": {
@@ -5036,11 +5036,6 @@
    "over30": 0,
    "worst": [
     [
-     "Maverick Branch Library",
-     15,
-     ""
-    ],
-    [
      "Las Palmas Branch Lirary",
      15,
      ""
@@ -5062,6 +5057,11 @@
     ],
     [
      "Gardendale Early Learning Program",
+     15,
+     ""
+    ],
+    [
+     "Judson ISD Performing Arts Center",
      15,
      ""
     ]
@@ -5221,6 +5221,10 @@
   [
    "15:02",
    253020
+  ],
+  [
+   "15:04",
+   253178
   ]
  ]
 }
