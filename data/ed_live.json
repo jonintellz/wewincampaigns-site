@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:08 PM",
- "total": 254762,
+ "as_of": "2026-11-03 03:10 PM",
+ "total": 254918,
  "base22_total": 517013,
  "pct_of_22": 49.3,
- "mix_lean_vs_22": 2.26,
+ "mix_lean_vs_22": 2.29,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:08 PM"
+   "updated": "03:10 PM"
   },
   {
    "county": "Travis",
@@ -51,14 +51,14 @@
   },
   {
    "county": "Mclennan",
-   "today": 14565,
+   "today": 14718,
    "ed22": 27228,
-   "pct22": 53.5,
+   "pct22": 54.1,
    "ed24": 25422,
-   "pct24": 57.3,
+   "pct24": 57.9,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "03:04 PM"
+   "updated": "03:09 PM"
   },
   {
    "county": "Hays",
@@ -95,14 +95,14 @@
   },
   {
    "county": "Madison",
-   "today": 801,
+   "today": 804,
    "ed22": 1805,
-   "pct22": 44.4,
+   "pct22": 44.5,
    "ed24": 1174,
-   "pct24": 68.2,
+   "pct24": 68.5,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "03:04 PM"
+   "updated": "03:09 PM"
   }
  ],
  "dallas": {
@@ -4994,23 +4994,13 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 6.8,
-   "over30": 35,
+   "avg": 5.8,
+   "over30": 33,
    "worst": [
-    [
-     "4205 Basswood Boulevard",
-     120,
-     "Fort Worth"
-    ],
     [
      "700 East Abram Street",
      120,
      "Arlington"
-    ],
-    [
-     "2625 W. Pioneer Parkway",
-     60,
-     "Grand Prairie"
     ],
     [
      "3212 Miller Avenue",
@@ -5023,18 +5013,33 @@
      "Fort Worth"
     ],
     [
-     "1201 Municipal Way",
+     "1001 East Bailey Boswell Road",
      60,
-     "Grapevine"
+     "Fort Worth"
+    ],
+    [
+     "1075 Eagle Boulevard",
+     60,
+     "Haslet"
+    ],
+    [
+     "1216 Diamond Back Lane",
+     60,
+     "Haslet"
     ]
    ]
   },
   {
    "county": "Bexar",
    "sites": 295,
-   "avg": 1.9,
+   "avg": 1.8,
    "over30": 0,
    "worst": [
+    [
+     "Thousand Oaks Library",
+     15,
+     ""
+    ],
     [
      "Las Palmas Branch Lirary",
      15,
@@ -5057,11 +5062,6 @@
     ],
     [
      "Collins Garden Branch Library",
-     15,
-     ""
-    ],
-    [
-     "Gardendale Early Learning Program",
      15,
      ""
     ]
@@ -5233,6 +5233,10 @@
   [
    "15:08",
    254762
+  ],
+  [
+   "15:10",
+   254918
   ]
  ]
 }
