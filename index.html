@@ -235,7 +235,7 @@ function splitLine(r){const cs=[...r.candidates].sort((a,b)=>b.votes-a.votes);if
  return `<p class="src" style="margin:6px 0 0">${[seg('ev','Early'),seg('mail','Mail'),seg('ed','Election Day')].filter(Boolean).join(' · ')}</p>`}
 function renderBallots(){const CB=window.CBALLOTS;if(!$('#bBody'))return;if(!CB){$('#bBody').innerHTML='<p class="src">Loading county feeds.</p>';return}
  const names=Object.keys(CB.counties).sort((a,b)=>((T.county_base[b]||{}).reg||0)-((T.county_base[a]||{}).reg||0));if(!CB.counties[bC])bC=names[0];
- $('#ballotStamp').textContent=`County feeds read ${CB.as_of.split(' ').slice(1).join(' ')} Central${(CB.errors||[]).length?' · not answering: '+CB.errors.map(e=>e.split(':')[0]).join(', '):''}.`;
+ const errs=(CB.errors||[]).filter(e=>!/not posted yet/i.test(e)),wait=(CB.errors||[]).filter(e=>/not posted yet/i.test(e)).map(e=>e.split(':')[0]);$('#ballotStamp').textContent=`County feeds read ${CB.as_of.split(' ').slice(1).join(' ')} Central${errs.length?' · not answering: '+errs.map(e=>e.split(':')[0]).join(', '):''}${wait.length?' · '+wait.join(', ')+': results file not posted yet (after 7 pm)':''}.`;
  $('#bTabs').innerHTML=`<a class="icon-btn" href="#dallas" style="text-decoration:none">Dallas</a> `+names.map(c=>`<button type="button" class="icon-btn" data-bc="${esc(c)}" style="${c===bC?'border-color:var(--accent);color:var(--strong)':''}">${esc(c)} <span class="src">${CB.counties[c].contests.length}</span></button>`).join(' ');
  const K=CB.counties[bC],q=bQ.toLowerCase();const rs=K.contests.filter(r=>!q||r.race.toLowerCase().includes(q)||r.candidates.some(c=>c.name.toLowerCase().includes(q)));
  $('#bBody').innerHTML=`<p class="src">${esc(bC)} County · ${rs.length} of ${K.contests.length} contests · ${esc(K.source)}, read ${esc(K.read||'')}${K.stale?' · <b>feed not answering; last good read</b>':''}</p><div class="grid g3">${rs.map(r=>`<div>${raceCard(r)}${splitLine(r)}</div>`).join('')}</div>`}
@@ -650,7 +650,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='a6d2ae4d2ad1',failN=0;
+let BUILD='07b4e501e292',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
