@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-03 02:41 PM",
+ "as_of": "2026-11-03 02:47 PM",
  "source": "Texas Secretary of State",
  "sos_updated": "Oct 29, 2026 22:13:17",
  "statewide": [
@@ -952,6 +952,26 @@
    ]
   }
  ],
+ "legislature": {
+  "house": {
+   "R": 0,
+   "D": 0,
+   "other": 0,
+   "none": 150,
+   "uncontested_R": 0,
+   "uncontested_D": 17,
+   "seats": 150
+  },
+  "senate": {
+   "R": 0,
+   "D": 0,
+   "other": 0,
+   "none": 16,
+   "uncontested_R": 0,
+   "uncontested_D": 2,
+   "seats": 16
+  }
+ },
  "home": {
   "counties": {
    "CR": 0,
@@ -7320,1137 +7340,1351 @@
   }
  ],
  "dallas": {
-  "source": "Texas Secretary of State, Dallas County view",
+  "source": "Dallas County Elections (unofficial)",
+  "as_of": "2:47 PM",
   "races": [
    {
-    "race": "Attorney General",
-    "reporting": "0/792 precincts",
+    "race": "United States Senator",
+    "reporting": "0/914 precincts",
     "candidates": [
-     {
-      "name": "Nathan Johnson",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Mayes Middleton",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Tom Oxford",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Chief Justice, Supreme Court",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Maggie Ellis",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Jimmy Blacklock (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Commissioner Of Agriculture",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Clayton Tucker",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Nate Sheets",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Austin R. Kelly",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Commissioner Of The General Land Office",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Benjamin Flores",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Dawn Buckingham (I)",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Neill Snider",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Comptroller Of Public Accounts",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Sarah Eckhardt",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Shehla Faizi",
-      "party": "GRE",
-      "votes": 0
-     },
-     {
-      "name": "Don Huffines",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "V. Alonzo Echavarria-Garza",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Criminal District Attorney Dallas County",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Amber Givens",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Criminal District Judge Dallas County Number 1",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Stephanie Hudson",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Criminal District Judge, Dallas County Number 5",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Lakesha Smith",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Criminal District Judge, Dallas County Number 6",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Nancy Mulder (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Criminal District Judge, Dallas County Number 7",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Chika Anyiam (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 101St Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Staci Williams (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 116Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Tonya Parker (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 134Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Dale Tillery (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 160Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Aiesha Redmond (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 191St Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Elizabeth Ginsberg",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 192Nd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Maria Aceves (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 193Rd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Bridgett Whitmore (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 194Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Kim Cooks",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 195Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Etta Jeanette Mullin",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 203Rd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Raquel \"Rocky\" Jones (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 204Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Tammy Kemp (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 254Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Kim Brown (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 255Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Vonda Bailey (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 256Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Heather Nicole Johnson",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 265Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Jennifer Bennett (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 282Nd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Alison Grinter Allen",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 283Rd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Lela Lawrence Mays (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 291St Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Stephanie N Mitchell Huff (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 292Nd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Brandon Birmingham (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 298Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Ashley Smith",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Clark B. Will",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 301St Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Danielle Clark",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 302Nd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Sandra Jackson (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 303Rd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Ladeitra Adkins (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 304Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Andrea Martin (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 305Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Cheryl Lee Shannon (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 330Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Tamika Jones",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 363Rd Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Cynthia Garza",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 44Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Veretta Frazier (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "District Judge, 68Th Judicial District",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Martin Hoffman (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Governor",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Gina Hinojosa",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Greg Abbott (I)",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Pat Dixon",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Judge, Court Of Criminal Appeals, Place 3",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Okey Anyiam",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Thomas Smith",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Mark Ash",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Judge, Court Of Criminal Appeals, Place 4",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Audra Riley",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Kevin Patrick Yeary (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Judge, Court Of Criminal Appeals, Place 9",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Holly Taylor",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "John Messinger",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Justice, 5Th Court Of Appeals District, Place 3",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Amanda Reichek",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Matthew Kolodoski",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Justice, 5Th Court Of Appeals District, Place 6",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Monica Purdy",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Ben Smith",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Justice, 5Th Court Of Appeals District, Place 8",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Andrea D.  Plumlee",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Ashley Wysocki",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Justice, Supreme Court, Place 2 - Unexpired Term",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Chari Kelly",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "James P. Sullivan (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Justice, Supreme Court, Place 7",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Kristen Hawkins",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Kyle Hawkins (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Justice, Supreme Court, Place 8",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Gisela D. Triana",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Brett Busby (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Lieutenant Governor",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Vikki Goodwin",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Kevin Mccormick",
-      "party": "GRE",
-      "votes": 0
-     },
-     {
-      "name": "Dan Patrick (I)",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Anthony Cristo",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Member, State Board Of Education, District 13",
-    "reporting": "0/432 precincts",
-    "candidates": [
-     {
-      "name": "Tiffany Clark (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Carlos (Charlie) Garza",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Member, State Board Of Education, District 14",
-    "reporting": "0/185 precincts",
-    "candidates": [
-     {
-      "name": "Amy Taylor",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Mindy Bumgarner",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Member, State Board Of Education, District 9",
-    "reporting": "0/177 precincts",
-    "candidates": [
-     {
-      "name": "Ericka Ledferd",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Kason Huddleston",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "Railroad Commissioner ",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "Jon Rosenthal",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Bo French",
-      "party": "REP",
-      "votes": 0
-     },
-     {
-      "name": "Arthur Dibianca",
-      "party": "L",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 100",
-    "reporting": "0/66 precincts",
-    "candidates": [
-     {
-      "name": "Venton Jones (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Jordan Scott Hoffnagle",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 102",
-    "reporting": "0/45 precincts",
-    "candidates": [
-     {
-      "name": "Ana-Maria Rodriguez Ramos (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Bonnie Abadie",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 103",
-    "reporting": "0/70 precincts",
-    "candidates": [
-     {
-      "name": "Rafael Anchia (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Melanie Medley-Thomas",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 104",
-    "reporting": "0/61 precincts",
-    "candidates": [
-     {
-      "name": "Jessica Gonzalez (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 105",
-    "reporting": "0/46 precincts",
-    "candidates": [
-     {
-      "name": "Terry Meza (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 107",
-    "reporting": "0/48 precincts",
-    "candidates": [
-     {
-      "name": "Linda Garcia (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 108",
-    "reporting": "0/87 precincts",
-    "candidates": [
-     {
-      "name": "Allison Mitchell",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Morgan Meyer (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 109",
-    "reporting": "0/54 precincts",
-    "candidates": [
-     {
-      "name": "Aicha Davis (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Will Campbell",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 110",
-    "reporting": "0/58 precincts",
-    "candidates": [
-     {
-      "name": "Toni Rose (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 111",
-    "reporting": "0/57 precincts",
-    "candidates": [
-     {
-      "name": "Yvonne Davis (I)",
-      "party": "DEM",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 112",
-    "reporting": "0/54 precincts",
-    "candidates": [
-     {
-      "name": "Zach Herbert",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Angie Chen Button (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 113",
-    "reporting": "0/40 precincts",
-    "candidates": [
-     {
-      "name": "Rhetta Andrews Bowers (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Stephen W. Stanley",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 114",
-    "reporting": "0/70 precincts",
-    "candidates": [
-     {
-      "name": "John Bryant (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Tim Mcdonough",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Representative District 115",
-    "reporting": "0/49 precincts",
-    "candidates": [
-     {
-      "name": "Cassandra Hernandez (I)",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Danny Rosellini",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "State Senator, District 2",
-    "reporting": "0/96 precincts",
-    "candidates": [
-     {
-      "name": "Keenen Colbert",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Bob Hall (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Representative District 24",
-    "reporting": "0/91 precincts",
-    "candidates": [
-     {
-      "name": "Kevin Burge",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Beth Van Duyne (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Representative District 30",
-    "reporting": "0/171 precincts",
-    "candidates": [
-     {
-      "name": "Frederick D. Haynes Iii",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Everett Jackson",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Representative District 32",
-    "reporting": "0/117 precincts",
-    "candidates": [
-     {
-      "name": "Dan Barrios",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Jace Yarbrough",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Representative District 33",
-    "reporting": "0/252 precincts",
-    "candidates": [
-     {
-      "name": "Colin Allred",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Patrick David Gillespie",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Representative District 5",
-    "reporting": "0/116 precincts",
-    "candidates": [
-     {
-      "name": "Chelsey Hockett",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Lance Gooden (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Representative District 6",
-    "reporting": "0/50 precincts",
-    "candidates": [
-     {
-      "name": "Danny Minton",
-      "party": "DEM",
-      "votes": 0
-     },
-     {
-      "name": "Jake Ellzey (I)",
-      "party": "REP",
-      "votes": 0
-     }
-    ]
-   },
-   {
-    "race": "U.S. Senator ",
-    "reporting": "0/792 precincts",
-    "candidates": [
-     {
-      "name": "James Talarico",
-      "party": "DEM",
-      "votes": 0
-     },
      {
       "name": "Ken Paxton",
       "party": "REP",
       "votes": 0
      },
      {
+      "name": "James Talarico",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
       "name": "Ted Brown",
-      "party": "L",
+      "party": "LIB",
+      "votes": 0
+     },
+     {
+      "name": "Write-In Votes Cast",
+      "party": "NON",
       "votes": 0
      }
     ]
    },
    {
-    "race": "Chief Justice, 15Th Court Of Appeals District",
-    "reporting": "0/792 precincts",
+    "race": "United States Representative, District 5",
+    "reporting": "0/153 precincts",
     "candidates": [
+     {
+      "name": "Lance Gooden",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Chelsey Hockett",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "United States Representative, District 6",
+    "reporting": "0/59 precincts",
+    "candidates": [
+     {
+      "name": "Jake Ellzey",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Danny Minton",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "United States Representative, District 24",
+    "reporting": "0/100 precincts",
+    "candidates": [
+     {
+      "name": "Beth Van Duyne",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Kevin Burge",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "United States Representative, District 30",
+    "reporting": "0/180 precincts",
+    "candidates": [
+     {
+      "name": "Everett Jackson",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Frederick D. Haynes III",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "United States Representative, District 32",
+    "reporting": "0/136 precincts",
+    "candidates": [
+     {
+      "name": "Jace Yarbrough",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Dan Barrios",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "United States Representative, District 33",
+    "reporting": "0/286 precincts",
+    "candidates": [
+     {
+      "name": "Patrick David Gillespie",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Colin Allred",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Write-In Votes Cast",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Governor",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Greg Abbott",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Gina Hinojosa",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Pat Dixon",
+      "party": "LIB",
+      "votes": 0
+     },
+     {
+      "name": "Write-In Votes Cast",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Lieutenant Governor",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Dan Patrick",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Vikki Goodwin",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Anthony Cristo",
+      "party": "LIB",
+      "votes": 0
+     },
+     {
+      "name": "Kevin McCormick",
+      "party": "GRN",
+      "votes": 0
+     },
+     {
+      "name": "Write-In Votes Cast",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Attorney General",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Mayes Middleton",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Nathan Johnson",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Tom Oxford",
+      "party": "LIB",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Comptroller of Public Accounts",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Don Huffines",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Sarah Eckhardt",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "V. Alonzo Echavarria-Garza",
+      "party": "LIB",
+      "votes": 0
+     },
+     {
+      "name": "Shehla Faizi",
+      "party": "GRN",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Commissioner of the General Land Office",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Dawn Buckingham",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Benjamin Flores",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Neill Snider",
+      "party": "LIB",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Commissioner of Agriculture",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Nate Sheets",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Clayton Tucker",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Austin R. Kelly",
+      "party": "LIB",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Railroad Commissioner",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Bo French",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Jon Rosenthal",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Arthur DiBianca",
+      "party": "LIB",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Chief Justice, Supreme Court",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Jimmy Blacklock",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Maggie Ellis",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice, Supreme Court, Place 2 - Unexpired Term",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "James P. Sullivan",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Chari Kelly",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice, Supreme Court, Place 7",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Kyle Hawkins",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Kristen Hawkins",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice, Supreme Court, Place 8",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Brett Busby",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Gisela D. Triana",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Judge, Court of Criminal Appeals, Place 3",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Thomas Smith",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Okey Anyiam",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Mark Ash",
+      "party": "LIB",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Judge, Court of Criminal Appeals, Place 4",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Kevin Patrick Yeary",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Audra Riley",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Judge, Court of Criminal Appeals, Place 9",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "John Messinger",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Holly Taylor",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Member, State Board of Education, District 9",
+    "reporting": "0/230 precincts",
+    "candidates": [
+     {
+      "name": "Kason Huddleston",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Ericka Ledferd",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Member, State Board of Education, District 13",
+    "reporting": "0/483 precincts",
+    "candidates": [
+     {
+      "name": "Carlos (Charlie) Garza",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Tiffany Clark",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Member, State Board of Education, District 14",
+    "reporting": "0/39 precincts",
+    "candidates": [
+     {
+      "name": "Mindy Bumgarner",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Amy Taylor",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Senator, District 2",
+    "reporting": "0/138 precincts",
+    "candidates": [
+     {
+      "name": "Bob Hall",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Keenen Colbert",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 100",
+    "reporting": "0/70 precincts",
+    "candidates": [
+     {
+      "name": "Jordan Scott Hoffnagle",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Venton Jones",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 102",
+    "reporting": "0/50 precincts",
+    "candidates": [
+     {
+      "name": "Bonnie Abadie",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Ana-Maria Rodriguez Ramos",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 103",
+    "reporting": "0/81 precincts",
+    "candidates": [
+     {
+      "name": "Melanie Medley-Thomas",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Rafael Anchia",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 104",
+    "reporting": "0/67 precincts",
+    "candidates": [
+     {
+      "name": "Jessica Gonzalez",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 105",
+    "reporting": "0/52 precincts",
+    "candidates": [
+     {
+      "name": "Terry Meza",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 107",
+    "reporting": "0/59 precincts",
+    "candidates": [
+     {
+      "name": "Linda Garcia",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 108",
+    "reporting": "0/90 precincts",
+    "candidates": [
+     {
+      "name": "Morgan Meyer",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Allison Mitchell",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 109",
+    "reporting": "0/61 precincts",
+    "candidates": [
+     {
+      "name": "Will Campbell",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Aicha Davis",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 110",
+    "reporting": "0/68 precincts",
+    "candidates": [
+     {
+      "name": "Toni Rose",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 111",
+    "reporting": "0/61 precincts",
+    "candidates": [
+     {
+      "name": "Yvonne Davis",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 112",
+    "reporting": "0/75 precincts",
+    "candidates": [
+     {
+      "name": "Angie Chen Button",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Zach Herbert",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 113",
+    "reporting": "0/56 precincts",
+    "candidates": [
+     {
+      "name": "Stephen W. Stanley",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Rhetta Andrews Bowers",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 114",
+    "reporting": "0/69 precincts",
+    "candidates": [
+     {
+      "name": "Tim McDonough",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "John Bryant",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "State Representative, District 115",
+    "reporting": "0/55 precincts",
+    "candidates": [
+     {
+      "name": "Danny Rosellini",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Cassandra Hernandez",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Chief Justice, 15th Court of Appeals District",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Scott Brister",
+      "party": "REP",
+      "votes": 0
+     },
      {
       "name": "Jerry Zimmerer",
       "party": "DEM",
       "votes": 0
-     },
-     {
-      "name": "Scott Brister (I)",
-      "party": "REP",
-      "votes": 0
      }
     ]
    },
    {
-    "race": "Justice, 15Th Court Of Appeals District, Place 2",
-    "reporting": "0/792 precincts",
+    "race": "Justice, 15th Court of Appeals District, Place 2",
+    "reporting": "0/914 precincts",
     "candidates": [
+     {
+      "name": "Scott K. Field",
+      "party": "REP",
+      "votes": 0
+     },
      {
       "name": "Tom Baker",
       "party": "DEM",
       "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice, 15th Court of Appeals District, Place 3",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "April Farris",
+      "party": "REP",
+      "votes": 0
      },
      {
-      "name": "Scott K. Field (I)",
-      "party": "REP",
+      "name": "Marc M. Meyer",
+      "party": "DEM",
       "votes": 0
      }
     ]
    },
    {
-    "race": "Justice, 15Th Court Of Appeals District, Place 3",
-    "reporting": "0/792 precincts",
+    "race": "Justice, 5th Court of Appeals District, Place 3",
+    "reporting": "0/914 precincts",
     "candidates": [
      {
-      "name": "Marc M. Meyer",
+      "name": "Matthew Kolodoski",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Amanda Reichek",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice, 5th Court of Appeals District, Place 6",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Ben Smith",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Monica Purdy",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice, 5th Court of Appeals District, Place 8",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Ashley Wysocki",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Andrea D. Plumlee",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "District Judge, 298th Judicial District",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Clark B. Will",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Ashley Smith",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Criminal District Attorney",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Amber Givens",
       "party": "DEM",
       "votes": 0
      },
      {
-      "name": "April Farris (I)",
+      "name": "Write-In Votes Cast",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "County Judge",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Mike Immler",
       "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Clay Jenkins",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "District Clerk",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Dave Muehlhaeusler",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Felicia Pitre",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "County Clerk",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Skye Garcia",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Damarcus L Offord",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "County Treasurer",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Corsandra Brigham Phelps",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Pauline Medrano",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "County Commissioner, Precinct No. 2",
+    "reporting": "0/231 precincts",
+    "candidates": [
+     {
+      "name": "Barry Wernick",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Andy Sommerman",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "County Commissioner, Precinct No. 4",
+    "reporting": "0/223 precincts",
+    "candidates": [
+     {
+      "name": "Elba Garcia",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 1, Place 1",
+    "reporting": "0/175 precincts",
+    "candidates": [
+     {
+      "name": "Lizbeth Diaz",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Thomas G. Jones",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 1, Place 2",
+    "reporting": "0/175 precincts",
+    "candidates": [
+     {
+      "name": "Valencia Nash",
+      "party": "DEM",
+      "votes": 0
+     },
+     {
+      "name": "Write-In Votes Cast",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 2, Place 1",
+    "reporting": "0/190 precincts",
+    "candidates": [
+     {
+      "name": "Vickie Whiteside",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Margaret O'Brien",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 2, Place 2",
+    "reporting": "0/190 precincts",
+    "candidates": [
+     {
+      "name": "Antoinette N Harris",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 3, Place 1",
+    "reporting": "0/186 precincts",
+    "candidates": [
+     {
+      "name": "Lynn A. Benedetto",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Adam M. Swartz",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 3, Place 2",
+    "reporting": "0/186 precincts",
+    "candidates": [
+     {
+      "name": "Michael L. Geller",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Paula M Rosales",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 4, Place 1",
+    "reporting": "0/163 precincts",
+    "candidates": [
+     {
+      "name": "Fred Van Liew",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Mike Jones",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 4, Place 2",
+    "reporting": "0/163 precincts",
+    "candidates": [
+     {
+      "name": "Sasha Moreno",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 5, Place 1",
+    "reporting": "0/200 precincts",
+    "candidates": [
+     {
+      "name": "Sara Martinez",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Justice of the Peace, Precinct No. 5, Place 2",
+    "reporting": "0/200 precincts",
+    "candidates": [
+     {
+      "name": "Omar Narvaez",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Constable, Precinct No. 1",
+    "reporting": "0/175 precincts",
+    "candidates": [
+     {
+      "name": "Tracey Gulley",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Constable, Precinct No. 2",
+    "reporting": "0/190 precincts",
+    "candidates": [
+     {
+      "name": "Chad Calvert",
+      "party": "REP",
+      "votes": 0
+     },
+     {
+      "name": "Deanna Hammond",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Constable, Precinct No. 3",
+    "reporting": "0/186 precincts",
+    "candidates": [
+     {
+      "name": "Henry Curry",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Constable, Precinct No. 4",
+    "reporting": "0/163 precincts",
+    "candidates": [
+     {
+      "name": "Eddie Brown, Jr",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Constable, Precinct No. 5",
+    "reporting": "0/200 precincts",
+    "candidates": [
+     {
+      "name": "Michael Orozco",
+      "party": "DEM",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "DALLAS COUNTY PROPOSITION A",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "Uncontested Races",
+    "reporting": "0/914 precincts",
+    "candidates": [
+     {
+      "name": "Vote for All",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Vote for None",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF DALLAS PROPOSITION A",
+    "reporting": "0/482 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "City of Garland Proposition A",
+    "reporting": "0/61 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF UNIVERSITY PARK PROPOSITION A",
+    "reporting": "0/8 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF WYLIE, TEXAS PROPOSITION A",
+    "reporting": "0/2 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF WYLIE, TEXAS PROPOSITION B",
+    "reporting": "0/2 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF WYLIE, TEXAS PROPOSITION C",
+    "reporting": "0/2 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF WYLIE, TEXAS PROPOSITION D",
+    "reporting": "0/2 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "CITY OF WYLIE, TEXAS PROPOSITION E",
+    "reporting": "0/2 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "IRVING ISD PROPOSITION A",
+    "reporting": "0/58 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "IRVING ISD PROPOSITION B",
+    "reporting": "0/58 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "IRVING ISD PROPOSITION C",
+    "reporting": "0/58 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "IRVING ISD PROPOSITION D",
+    "reporting": "0/58 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
+      "votes": 0
+     }
+    ]
+   },
+   {
+    "race": "MESQUITE INDEPENDENT SCHOOL DISTRICT PROPOSITION A",
+    "reporting": "0/63 precincts",
+    "candidates": [
+     {
+      "name": "For (A Favor)",
+      "party": "NON",
+      "votes": 0
+     },
+     {
+      "name": "Against (En Contra)",
+      "party": "NON",
       "votes": 0
      }
     ]
    }
-  ]
+  ],
+  "d2": {
+   "race": "County Commissioner, Precinct No. 2",
+   "reporting": "0/231 precincts",
+   "W": 0,
+   "S": 0,
+   "ev": null,
+   "edW": 0,
+   "edS": 0
+  }
  }
 }

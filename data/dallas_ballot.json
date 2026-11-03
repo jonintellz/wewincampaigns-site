@@ -1,0 +1,2342 @@
+{
+ "generated": "2026-11-03",
+ "election": "Dallas County, Texas - November 3, 2026 General and Joint Election",
+ "source": [
+  "https://results.enr.clarityelections.com/TX/Dallas/127396/382636/json/en/summary.json",
+  "https://www.dallascountyvotes.org/election-results/historical/november-3-2026-general-and-joint-election/",
+  "https://www.dallascountyvotes.org/wp-content/uploads/2026/09/Full-Sample-Ballot-Watermark-8.5x14-Legal_110326.pdf",
+  "https://www.dallascountyvotes.org/wp-content/uploads/2026/10/Order-of-General-Election-_Dallas-1.pdf",
+  "https://www.dallascountyvotes.org/wp-content/uploads/2026/10/DallasCounty_NoticeofElection_11.03.26.pdf",
+  "https://goelect.txelections.civixapps.com/api-ivis-system/api/s3/enr/election/countyInfo/53815",
+  "https://goelect.txelections.civixapps.com/api-ivis-system/api/s3/enr/election/53815"
+ ],
+ "results_endpoint": {
+  "vendor": "Clarity/Scytl ENR",
+  "eid": 127396,
+  "page": "https://results.enr.clarityelections.com/TX/Dallas/127396/",
+  "current_version_url": "https://results.enr.clarityelections.com/TX/Dallas/127396/current_ver.txt",
+  "summary_json": "https://results.enr.clarityelections.com/TX/Dallas/127396/{ver}/json/en/summary.json",
+  "version_at_check": "382636",
+  "checked_at": "2026-11-03 ~14:45 CT",
+  "status_at_check": "LIVE, HTTP 200; 83 contests, all zero votes, 0 of 914 precincts reporting (polls open). County schedules an early-vote report at 7:00 pm.",
+  "linked_from": "Nov 3 election-results page, link 'Election night Reporting Tool' -> 127396",
+  "warning": "TX/Dallas/elections.json does NOT list 127396 (lists only 126485 Jun-13 runoff and 126270 May-26 GOP runoff); the site-wide nav 'Election Night Reporting' link still points to 126485. Poll 127396 directly; current_ver changes.",
+  "county_pdf_reports": "Unofficial Summary Results PDFs at 7, 9, 10, 11 pm and final, posted on the Nov 3 election-results page",
+  "sos_feed": "Texas SOS Civix ENR election 53815, countyInfo DALLAS: federal, statewide, SBOE, SD 2, HDs, 5th/15th COA, district, criminal district judges and CDA. No county or precinct offices, no propositions."
+ },
+ "sos_countyinfo_dallas_unmatched": [],
+ "contests": [
+  {
+   "contest": "United States Senator",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0007",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Ken Paxton",
+     "party": "REP"
+    },
+    {
+     "name": "James Talarico",
+     "party": "DEM"
+    },
+    {
+     "name": "Ted Brown",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true,
+   "write_in_line": true,
+   "write_in_candidates_sos": [
+    "AVERY AYERS",
+    "BRADFORD \"BRAD\" HALL",
+    "ZUL MOHAMED",
+    "JADE SIMMONS"
+   ]
+  },
+  {
+   "contest": "United States Representative, District 5",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0008",
+   "precincts_total": 153,
+   "candidates": [
+    {
+     "name": "Lance Gooden",
+     "party": "REP"
+    },
+    {
+     "name": "Chelsey Hockett",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "United States Representative, District 6",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0009",
+   "precincts_total": 59,
+   "candidates": [
+    {
+     "name": "Jake Ellzey",
+     "party": "REP"
+    },
+    {
+     "name": "Danny Minton",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "United States Representative, District 24",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0010",
+   "precincts_total": 100,
+   "candidates": [
+    {
+     "name": "Beth Van Duyne",
+     "party": "REP"
+    },
+    {
+     "name": "Kevin Burge",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "United States Representative, District 30",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0011",
+   "precincts_total": 180,
+   "candidates": [
+    {
+     "name": "Everett Jackson",
+     "party": "REP"
+    },
+    {
+     "name": "Frederick D. Haynes III",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "United States Representative, District 32",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0012",
+   "precincts_total": 136,
+   "candidates": [
+    {
+     "name": "Jace Yarbrough",
+     "party": "REP"
+    },
+    {
+     "name": "Dan Barrios",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "United States Representative, District 33",
+   "level": "federal",
+   "clarity_category": "Federal",
+   "clarity_key": "0013",
+   "precincts_total": 286,
+   "candidates": [
+    {
+     "name": "Patrick David Gillespie",
+     "party": "REP"
+    },
+    {
+     "name": "Colin Allred",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "write_in_line": true,
+   "write_in_candidates_sos": [
+    "MICHELLE CRAIG"
+   ]
+  },
+  {
+   "contest": "Governor",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0014",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Greg Abbott",
+     "party": "REP"
+    },
+    {
+     "name": "Gina Hinojosa",
+     "party": "DEM"
+    },
+    {
+     "name": "Pat Dixon",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true,
+   "write_in_line": true,
+   "write_in_candidates_sos": [
+    "EDWARD EARL GILES",
+    "JENN MACK",
+    "JINGHPAW MAJOISHINGRA",
+    "MIKE MILLER"
+   ]
+  },
+  {
+   "contest": "Lieutenant Governor",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0015",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Dan Patrick",
+     "party": "REP"
+    },
+    {
+     "name": "Vikki Goodwin",
+     "party": "DEM"
+    },
+    {
+     "name": "Anthony Cristo",
+     "party": "LIB"
+    },
+    {
+     "name": "Kevin McCormick",
+     "party": "GRN"
+    }
+   ],
+   "in_sos_feed": true,
+   "write_in_line": true,
+   "write_in_candidates_sos": [
+    "ARTURO ESPINOSA",
+    "STEPHEN SAMUELSON"
+   ]
+  },
+  {
+   "contest": "Attorney General",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0016",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Mayes Middleton",
+     "party": "REP"
+    },
+    {
+     "name": "Nathan Johnson",
+     "party": "DEM"
+    },
+    {
+     "name": "Tom Oxford",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Comptroller of Public Accounts",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0017",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Don Huffines",
+     "party": "REP"
+    },
+    {
+     "name": "Sarah Eckhardt",
+     "party": "DEM"
+    },
+    {
+     "name": "V. Alonzo Echavarria-Garza",
+     "party": "LIB"
+    },
+    {
+     "name": "Shehla Faizi",
+     "party": "GRN"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Commissioner of the General Land Office",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0018",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Dawn Buckingham",
+     "party": "REP"
+    },
+    {
+     "name": "Benjamin Flores",
+     "party": "DEM"
+    },
+    {
+     "name": "Neill Snider",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Commissioner of Agriculture",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0019",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Nate Sheets",
+     "party": "REP"
+    },
+    {
+     "name": "Clayton Tucker",
+     "party": "DEM"
+    },
+    {
+     "name": "Austin R. Kelly",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Railroad Commissioner",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0020",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Bo French",
+     "party": "REP"
+    },
+    {
+     "name": "Jon Rosenthal",
+     "party": "DEM"
+    },
+    {
+     "name": "Arthur DiBianca",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Chief Justice, Supreme Court",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0021",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Jimmy Blacklock",
+     "party": "REP"
+    },
+    {
+     "name": "Maggie Ellis",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, Supreme Court, Place 2 - Unexpired Term",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0022",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "James P. Sullivan",
+     "party": "REP"
+    },
+    {
+     "name": "Chari Kelly",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, Supreme Court, Place 7",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0023",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Kyle Hawkins",
+     "party": "REP"
+    },
+    {
+     "name": "Kristen Hawkins",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, Supreme Court, Place 8",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0024",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Brett Busby",
+     "party": "REP"
+    },
+    {
+     "name": "Gisela D. Triana",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Judge, Court of Criminal Appeals, Place 3",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0025",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Thomas Smith",
+     "party": "REP"
+    },
+    {
+     "name": "Okey Anyiam",
+     "party": "DEM"
+    },
+    {
+     "name": "Mark Ash",
+     "party": "LIB"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Judge, Court of Criminal Appeals, Place 4",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0026",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Kevin Patrick Yeary",
+     "party": "REP"
+    },
+    {
+     "name": "Audra Riley",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Judge, Court of Criminal Appeals, Place 9",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0027",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "John Messinger",
+     "party": "REP"
+    },
+    {
+     "name": "Holly Taylor",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Member, State Board of Education, District 9",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0028",
+   "precincts_total": 230,
+   "candidates": [
+    {
+     "name": "Kason Huddleston",
+     "party": "REP"
+    },
+    {
+     "name": "Ericka Ledferd",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Member, State Board of Education, District 13",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0029",
+   "precincts_total": 483,
+   "candidates": [
+    {
+     "name": "Carlos (Charlie) Garza",
+     "party": "REP"
+    },
+    {
+     "name": "Tiffany Clark",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Member, State Board of Education, District 14",
+   "level": "state",
+   "clarity_category": "State",
+   "clarity_key": "0030",
+   "precincts_total": 39,
+   "candidates": [
+    {
+     "name": "Mindy Bumgarner",
+     "party": "REP"
+    },
+    {
+     "name": "Amy Taylor",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Senator, District 2",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0031",
+   "precincts_total": 138,
+   "candidates": [
+    {
+     "name": "Bob Hall",
+     "party": "REP"
+    },
+    {
+     "name": "Keenen Colbert",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 100",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0032",
+   "precincts_total": 70,
+   "candidates": [
+    {
+     "name": "Jordan Scott Hoffnagle",
+     "party": "REP"
+    },
+    {
+     "name": "Venton Jones",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 102",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0033",
+   "precincts_total": 50,
+   "candidates": [
+    {
+     "name": "Bonnie Abadie",
+     "party": "REP"
+    },
+    {
+     "name": "Ana-Maria Rodriguez Ramos",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 103",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0034",
+   "precincts_total": 81,
+   "candidates": [
+    {
+     "name": "Melanie Medley-Thomas",
+     "party": "REP"
+    },
+    {
+     "name": "Rafael Anchia",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 104",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0035",
+   "precincts_total": 67,
+   "candidates": [
+    {
+     "name": "Jessica Gonzalez",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 105",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0036",
+   "precincts_total": 52,
+   "candidates": [
+    {
+     "name": "Terry Meza",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 107",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0037",
+   "precincts_total": 59,
+   "candidates": [
+    {
+     "name": "Linda Garcia",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 108",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0038",
+   "precincts_total": 90,
+   "candidates": [
+    {
+     "name": "Morgan Meyer",
+     "party": "REP"
+    },
+    {
+     "name": "Allison Mitchell",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 109",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0039",
+   "precincts_total": 61,
+   "candidates": [
+    {
+     "name": "Will Campbell",
+     "party": "REP"
+    },
+    {
+     "name": "Aicha Davis",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 110",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0040",
+   "precincts_total": 68,
+   "candidates": [
+    {
+     "name": "Toni Rose",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 111",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0041",
+   "precincts_total": 61,
+   "candidates": [
+    {
+     "name": "Yvonne Davis",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 112",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0042",
+   "precincts_total": 75,
+   "candidates": [
+    {
+     "name": "Angie Chen Button",
+     "party": "REP"
+    },
+    {
+     "name": "Zach Herbert",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 113",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0043",
+   "precincts_total": 56,
+   "candidates": [
+    {
+     "name": "Stephen W. Stanley",
+     "party": "REP"
+    },
+    {
+     "name": "Rhetta Andrews Bowers",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 114",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0044",
+   "precincts_total": 69,
+   "candidates": [
+    {
+     "name": "Tim McDonough",
+     "party": "REP"
+    },
+    {
+     "name": "John Bryant",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "State Representative, District 115",
+   "level": "legislative",
+   "clarity_category": "State",
+   "clarity_key": "0045",
+   "precincts_total": 55,
+   "candidates": [
+    {
+     "name": "Danny Rosellini",
+     "party": "REP"
+    },
+    {
+     "name": "Cassandra Hernandez",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Chief Justice, 15th Court of Appeals District",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0046",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Scott Brister",
+     "party": "REP"
+    },
+    {
+     "name": "Jerry Zimmerer",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, 15th Court of Appeals District, Place 2",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0047",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Scott K. Field",
+     "party": "REP"
+    },
+    {
+     "name": "Tom Baker",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, 15th Court of Appeals District, Place 3",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0048",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "April Farris",
+     "party": "REP"
+    },
+    {
+     "name": "Marc M. Meyer",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, 5th Court of Appeals District, Place 3",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0049",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Matthew Kolodoski",
+     "party": "REP"
+    },
+    {
+     "name": "Amanda Reichek",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, 5th Court of Appeals District, Place 6",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0050",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Ben Smith",
+     "party": "REP"
+    },
+    {
+     "name": "Monica Purdy",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Justice, 5th Court of Appeals District, Place 8",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0051",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Ashley Wysocki",
+     "party": "REP"
+    },
+    {
+     "name": "Andrea D. Plumlee",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "District Judge, 298th Judicial District",
+   "level": "judicial",
+   "clarity_category": "State",
+   "clarity_key": "0052",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Clark B. Will",
+     "party": "REP"
+    },
+    {
+     "name": "Ashley Smith",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true
+  },
+  {
+   "contest": "Criminal District Attorney",
+   "level": "county",
+   "clarity_category": "State",
+   "clarity_key": "0053",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Amber Givens",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "write_in_line": true,
+   "write_in_candidates_sos": [
+    "ERIC REED"
+   ]
+  },
+  {
+   "contest": "County Judge",
+   "level": "county",
+   "clarity_category": "County",
+   "clarity_key": "0054",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Mike Immler",
+     "party": "REP"
+    },
+    {
+     "name": "Clay Jenkins",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "District Clerk",
+   "level": "county",
+   "clarity_category": "County",
+   "clarity_key": "0055",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Dave Muehlhaeusler",
+     "party": "REP"
+    },
+    {
+     "name": "Felicia Pitre",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "County Clerk",
+   "level": "county",
+   "clarity_category": "County",
+   "clarity_key": "0056",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Skye Garcia",
+     "party": "REP"
+    },
+    {
+     "name": "Damarcus L Offord",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "County Treasurer",
+   "level": "county",
+   "clarity_category": "County",
+   "clarity_key": "0057",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Corsandra Brigham Phelps",
+     "party": "REP"
+    },
+    {
+     "name": "Pauline Medrano",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "County Commissioner, Precinct No. 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0058",
+   "precincts_total": 231,
+   "candidates": [
+    {
+     "name": "Barry Wernick",
+     "party": "REP"
+    },
+    {
+     "name": "Andy Sommerman",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "County Commissioner, Precinct No. 4",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0059",
+   "precincts_total": 223,
+   "candidates": [
+    {
+     "name": "Elba Garcia",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 1, Place 1",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0060",
+   "precincts_total": 175,
+   "candidates": [
+    {
+     "name": "Lizbeth Diaz",
+     "party": "REP"
+    },
+    {
+     "name": "Thomas G. Jones",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 1, Place 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0061",
+   "precincts_total": 175,
+   "candidates": [
+    {
+     "name": "Valencia Nash",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "write_in_line": true
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 2, Place 1",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0062",
+   "precincts_total": 190,
+   "candidates": [
+    {
+     "name": "Vickie Whiteside",
+     "party": "REP"
+    },
+    {
+     "name": "Margaret O'Brien",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 2, Place 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0063",
+   "precincts_total": 190,
+   "candidates": [
+    {
+     "name": "Antoinette N Harris",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 3, Place 1",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0064",
+   "precincts_total": 186,
+   "candidates": [
+    {
+     "name": "Lynn A. Benedetto",
+     "party": "REP"
+    },
+    {
+     "name": "Adam M. Swartz",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 3, Place 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0065",
+   "precincts_total": 186,
+   "candidates": [
+    {
+     "name": "Michael L. Geller",
+     "party": "REP"
+    },
+    {
+     "name": "Paula M Rosales",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 4, Place 1",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0066",
+   "precincts_total": 163,
+   "candidates": [
+    {
+     "name": "Fred Van Liew",
+     "party": "REP"
+    },
+    {
+     "name": "Mike Jones",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 4, Place 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0067",
+   "precincts_total": 163,
+   "candidates": [
+    {
+     "name": "Sasha Moreno",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 5, Place 1",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0068",
+   "precincts_total": 200,
+   "candidates": [
+    {
+     "name": "Sara Martinez",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Justice of the Peace, Precinct No. 5, Place 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0069",
+   "precincts_total": 200,
+   "candidates": [
+    {
+     "name": "Omar Narvaez",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Constable, Precinct No. 1",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0070",
+   "precincts_total": 175,
+   "candidates": [
+    {
+     "name": "Tracey Gulley",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Constable, Precinct No. 2",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0071",
+   "precincts_total": 190,
+   "candidates": [
+    {
+     "name": "Chad Calvert",
+     "party": "REP"
+    },
+    {
+     "name": "Deanna Hammond",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Constable, Precinct No. 3",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0072",
+   "precincts_total": 186,
+   "candidates": [
+    {
+     "name": "Henry Curry",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Constable, Precinct No. 4",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0073",
+   "precincts_total": 163,
+   "candidates": [
+    {
+     "name": "Eddie Brown, Jr",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "Constable, Precinct No. 5",
+   "level": "precinct",
+   "clarity_category": "County",
+   "clarity_key": "0074",
+   "precincts_total": 200,
+   "candidates": [
+    {
+     "name": "Michael Orozco",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false
+  },
+  {
+   "contest": "DALLAS COUNTY PROPOSITION A",
+   "level": "county",
+   "clarity_category": "County",
+   "clarity_key": "0075",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "Dallas County voter-approval tax rate election: $0.248650/$100 (+$0.02400 over voter-approval rate) for homelessness, encampment, mental-health and housing programs [V sample ballot p.3]"
+  },
+  {
+   "contest": "Uncontested Races",
+   "level": "judicial",
+   "clarity_category": "County",
+   "clarity_key": "0076",
+   "precincts_total": 914,
+   "candidates": [
+    {
+     "name": "Vote for All",
+     "party": "NON"
+    },
+    {
+     "name": "Vote for None",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "note": "One 'Vote for All / Vote for None' contest covering every uncontested judicial office; Clarity reports it as a single contest. The offices are itemized below as entries with clarity_key=null."
+  },
+  {
+   "contest": "CITY OF DALLAS PROPOSITION A",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0077",
+   "precincts_total": 482,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Dallas bond: $443,000,000 GO bonds for public safety facilities (fire, police, emergency services) [V sample ballot p.4]"
+  },
+  {
+   "contest": "City of Garland Proposition A",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0078",
+   "precincts_total": 61,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Garland tax rate election: $0.679900/$100 (+$0.036646 over voter-approval rate); police, fire, 9-1-1, parks [V sample ballot p.4]"
+  },
+  {
+   "contest": "CITY OF UNIVERSITY PARK PROPOSITION A",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0079",
+   "precincts_total": 8,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of University Park tax rate election: $0.220055/$100 (+$0.009665); police/fire staffing, firemen's pension, parking technology [V sample ballot p.4]"
+  },
+  {
+   "contest": "CITY OF WYLIE, TEXAS PROPOSITION A",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0080",
+   "precincts_total": 2,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Wylie bond: $25,500,000 street improvements (Downtown Historic District / Ballard-Sachse Rd) [V sample ballot p.4]"
+  },
+  {
+   "contest": "CITY OF WYLIE, TEXAS PROPOSITION B",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0081",
+   "precincts_total": 2,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Wylie bond election proposition; text not transcribed"
+  },
+  {
+   "contest": "CITY OF WYLIE, TEXAS PROPOSITION C",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0082",
+   "precincts_total": 2,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Wylie bond election proposition; text not transcribed"
+  },
+  {
+   "contest": "CITY OF WYLIE, TEXAS PROPOSITION D",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0083",
+   "precincts_total": 2,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Wylie bond election proposition; text not transcribed"
+  },
+  {
+   "contest": "CITY OF WYLIE, TEXAS PROPOSITION E",
+   "level": "local",
+   "clarity_category": "City",
+   "clarity_key": "0084",
+   "precincts_total": 2,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "City of Wylie bond election proposition; text not transcribed"
+  },
+  {
+   "contest": "IRVING ISD PROPOSITION A",
+   "level": "local",
+   "clarity_category": "ISD",
+   "clarity_key": "0085",
+   "precincts_total": 58,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "Irving ISD bond election (Order of Bond Election posted on dallascountyvotes.org); proposition text not transcribed"
+  },
+  {
+   "contest": "IRVING ISD PROPOSITION B",
+   "level": "local",
+   "clarity_category": "ISD",
+   "clarity_key": "0086",
+   "precincts_total": 58,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "Irving ISD bond election (Order of Bond Election posted on dallascountyvotes.org); proposition text not transcribed"
+  },
+  {
+   "contest": "IRVING ISD PROPOSITION C",
+   "level": "local",
+   "clarity_category": "ISD",
+   "clarity_key": "0087",
+   "precincts_total": 58,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "Irving ISD bond election (Order of Bond Election posted on dallascountyvotes.org); proposition text not transcribed"
+  },
+  {
+   "contest": "IRVING ISD PROPOSITION D",
+   "level": "local",
+   "clarity_category": "ISD",
+   "clarity_key": "0088",
+   "precincts_total": 58,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "Irving ISD bond election (Order of Bond Election posted on dallascountyvotes.org); proposition text not transcribed"
+  },
+  {
+   "contest": "MESQUITE INDEPENDENT SCHOOL DISTRICT PROPOSITION A",
+   "level": "local",
+   "clarity_category": "ISD",
+   "clarity_key": "0089",
+   "precincts_total": 63,
+   "candidates": [
+    {
+     "name": "For (A Favor)",
+     "party": "NON"
+    },
+    {
+     "name": "Against (En Contra)",
+     "party": "NON"
+    }
+   ],
+   "in_sos_feed": false,
+   "description": "Mesquite ISD voter-approval tax rate election (per notice title); text not transcribed"
+  },
+  {
+   "contest": "District Judge, 44th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Veretta Frazier",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 68th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Martin Hoffman",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 101st Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Staci Williams",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 116th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Tonya Parker",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 134th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Dale Tillery",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 160th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Aiesha Redmond",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 191st Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Elizabeth Ginsberg",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 192nd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Maria Aceves",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 193rd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Bridgett Whitmore",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 194th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Kim Cooks",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 195th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Etta Jeanette Mullin",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 203rd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Raquel \"Rocky\" Jones",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 204th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Tammy Kemp",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 254th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Kim Brown",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 255th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Vonda Bailey",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 256th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Heather Nicole Johnson",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 265th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Jennifer Bennett",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 282nd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Alison Grinter Allen",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 283rd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Lela Lawrence Mays",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 291st Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Stephanie N Mitchell Huff",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 292nd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Brandon Birmingham",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "District Judge, 363rd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Cynthia Garza",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Family District Judge, 301st Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Danielle Clark",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Family District Judge, 302nd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Sandra Jackson",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Family District Judge, 303rd Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "LaDeitra Adkins",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Family District Judge, 304th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Andrea Martin",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Family District Judge, 305th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Cheryl Lee Shannon",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Family District Judge, 330th Judicial District",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Tamika Jones",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Criminal District Judge, Court No. 1",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Stephanie Hudson",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Criminal District Judge, Court No. 5",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Lakesha Smith",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Criminal District Judge, Court No. 6",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Nancy Mulder",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Criminal District Judge, Court No. 7",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Chika Anyiam",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": true,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Court at Law No. 1",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Erin Nowell",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Court at Law No. 2",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Melissa J. Bellan",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Court at Law No. 3",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Sally Montgomery",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Court at Law No. 4",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Dianne Jones",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Court at Law No. 5",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Nicole Taylor",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court of Appeals No. 1",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Alexandra Guio",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court of Appeals No. 2",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Cheryl Williams",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 1",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Tifanee Baker",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 2",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Julia Hayes",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 3",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Audrey Faye Moorehead",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 4",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Dominique Torres Williams",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 5",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Lisa Green",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 6",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Angela M King",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 7",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Remeko Tranisha Edwards",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 8",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Carmen White",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 9",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Carrie Singleton",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 10",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Monique J Bracey Huff",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Criminal Court No. 11",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Shequitta D Kelly",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Probate Court No. 1",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Julia Malveaux",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Probate Court No. 2",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Ingrid Michelle Warren",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  },
+  {
+   "contest": "Judge, County Probate Court No. 3",
+   "level": "judicial",
+   "clarity_category": "Uncontested Races (aggregate)",
+   "clarity_key": null,
+   "candidates": [
+    {
+     "name": "Margaret Jones-Johnson",
+     "party": "DEM"
+    }
+   ],
+   "in_sos_feed": false,
+   "uncontested": true,
+   "printed_under": "Uncontested Races (sample ballot p.4)"
+  }
+ ]
+}
