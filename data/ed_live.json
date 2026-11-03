@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:25 PM",
- "total": 260044,
+ "as_of": "2026-11-03 03:27 PM",
+ "total": 260330,
  "base22_total": 517013,
- "pct_of_22": 50.3,
- "mix_lean_vs_22": 2.44,
+ "pct_of_22": 50.4,
+ "mix_lean_vs_22": 2.46,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:25 PM"
+   "updated": "03:27 PM"
   },
   {
    "county": "Travis",
@@ -62,36 +62,36 @@
   },
   {
    "county": "Hays",
-   "today": 13332,
+   "today": 13476,
    "ed22": 23506,
-   "pct22": 56.7,
+   "pct22": 57.3,
    "ed24": 20320,
-   "pct24": 65.6,
+   "pct24": 66.3,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "03:22 PM"
+   "updated": "03:27 PM"
   },
   {
    "county": "Ellis",
-   "today": 10990,
+   "today": 11122,
    "ed22": 22089,
-   "pct22": 49.8,
+   "pct22": 50.4,
    "ed24": 17850,
-   "pct24": 61.6,
+   "pct24": 62.3,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "03:22 PM"
+   "updated": "03:27 PM"
   },
   {
    "county": "Hockley",
-   "today": 1034,
+   "today": 1044,
    "ed22": 2415,
-   "pct22": 42.8,
+   "pct22": 43.2,
    "ed24": 2025,
-   "pct24": 51.1,
+   "pct24": 51.6,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "03:23 PM"
+   "updated": "03:28 PM"
   },
   {
    "county": "Madison",
@@ -4994,13 +4994,28 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 4.8,
-   "over30": 28,
+   "avg": 6.2,
+   "over30": 31,
    "worst": [
     [
      "2625 W. Pioneer Parkway",
-     60,
+     120,
      "Grand Prairie"
+    ],
+    [
+     "1001 East Bailey Boswell Road",
+     120,
+     "Fort Worth"
+    ],
+    [
+     "7000 Teal Drive",
+     60,
+     "Fort Worth"
+    ],
+    [
+     "2800 South Center Street",
+     60,
+     "Arlington"
     ],
     [
      "3212 Miller Avenue",
@@ -5011,28 +5026,13 @@
      "4936 McPherson Boulevard",
      60,
      "Fort Worth"
-    ],
-    [
-     "4600  Alta Vista Rd",
-     60,
-     "Fort Worth"
-    ],
-    [
-     "901 Precinct Line Road",
-     60,
-     "Hurst"
-    ],
-    [
-     "4205 Basswood Boulevard",
-     60,
-     "Fort Worth"
     ]
    ]
   },
   {
    "county": "Bexar",
    "sites": 295,
-   "avg": 2.0,
+   "avg": 2.1,
    "over30": 0,
    "worst": [
     [
@@ -5056,12 +5056,12 @@
      ""
     ],
     [
-     "UTSA",
+     "Bexar County Elections Department",
      15,
      ""
     ],
     [
-     "Evelyn Scarborough Elementary School",
+     "UTSA",
      15,
      ""
     ]
@@ -5257,6 +5257,10 @@
   [
    "15:25",
    260044
+  ],
+  [
+   "15:27",
+   260330
   ]
  ]
 }
