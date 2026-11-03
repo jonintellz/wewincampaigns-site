@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 02:47 PM",
- "total": 242302,
+ "as_of": "2026-11-03 02:54 PM",
+ "total": 244158,
  "base22_total": 517013,
- "pct_of_22": 46.9,
- "mix_lean_vs_22": 2.42,
+ "pct_of_22": 47.2,
+ "mix_lean_vs_22": 2.51,
  "counties": [
   {
    "county": "Dallas",
@@ -14,95 +14,95 @@
    "pct24": 45.4,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "02:47 PM"
+   "updated": "02:54 PM"
   },
   {
    "county": "Travis",
-   "today": 64505,
+   "today": 65236,
    "ed22": 130241,
-   "pct22": 49.5,
+   "pct22": 50.1,
    "ed24": 96528,
-   "pct24": 66.8,
+   "pct24": 67.6,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "02:44 PM"
+   "updated": "02:50 PM"
   },
   {
    "county": "Montgomery",
-   "today": 38430,
+   "today": 38849,
    "ed22": 67248,
-   "pct22": 57.1,
+   "pct22": 57.8,
    "ed24": 57549,
-   "pct24": 66.8,
+   "pct24": 67.5,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "02:46 PM"
+   "updated": "02:52 PM"
   },
   {
    "county": "Bell",
-   "today": 15885,
+   "today": 16060,
    "ed22": 29955,
-   "pct22": 53.0,
+   "pct22": 53.6,
    "ed24": 29024,
-   "pct24": 54.7,
+   "pct24": 55.3,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "02:47 PM"
+   "updated": "02:52 PM"
   },
   {
    "county": "Mclennan",
-   "today": 14023,
+   "today": 14280,
    "ed22": 27228,
-   "pct22": 51.5,
+   "pct22": 52.4,
    "ed24": 25422,
-   "pct24": 55.2,
+   "pct24": 56.2,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "02:43 PM"
+   "updated": "02:53 PM"
   },
   {
    "county": "Hays",
-   "today": 12370,
+   "today": 12512,
    "ed22": 23506,
-   "pct22": 52.6,
+   "pct22": 53.2,
    "ed24": 20320,
-   "pct24": 60.9,
+   "pct24": 61.6,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "02:45 PM"
+   "updated": "02:51 PM"
   },
   {
    "county": "Ellis",
-   "today": 10173,
+   "today": 10272,
    "ed22": 22089,
-   "pct22": 46.1,
+   "pct22": 46.5,
    "ed24": 17850,
-   "pct24": 57.0,
+   "pct24": 57.5,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "02:46 PM"
+   "updated": "02:51 PM"
   },
   {
    "county": "Hockley",
-   "today": 962,
+   "today": 979,
    "ed22": 2415,
-   "pct22": 39.8,
+   "pct22": 40.5,
    "ed24": 2025,
-   "pct24": 47.5,
+   "pct24": 48.3,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "02:42 PM"
+   "updated": "02:53 PM"
   },
   {
    "county": "Madison",
-   "today": 770,
+   "today": 786,
    "ed22": 1805,
-   "pct22": 42.7,
+   "pct22": 43.5,
    "ed24": 1174,
-   "pct24": 65.6,
+   "pct24": 67.0,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "02:44 PM"
+   "updated": "02:54 PM"
   }
  ],
  "dallas": {
@@ -4942,11 +4942,11 @@
  "harris": {
   "sites": 623,
   "bands": {
-   "0-14 min": 600,
-   "15-29 min": 11,
+   "0-14 min": 601,
+   "15-29 min": 10,
    "30+ min": 12
   },
-  "in_line": 3050,
+  "in_line": 3045,
   "worst": [
    [
     "Tom Bass Park Community Center Section Three",
@@ -4994,8 +4994,8 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.1,
-   "over30": 29,
+   "avg": 4.3,
+   "over30": 27,
    "worst": [
     [
      "700 East Abram Street",
@@ -5003,40 +5003,40 @@
      "Arlington"
     ],
     [
-     "2625 W. Pioneer Parkway",
-     60,
-     "Grand Prairie"
-    ],
-    [
-     "4600  Alta Vista Rd",
+     "1001 East Bailey Boswell Road",
      60,
      "Fort Worth"
     ],
     [
-     "901 Precinct Line Road",
+     "8215 White Settlement Road",
      60,
-     "Hurst"
+     "White Settlement"
     ],
     [
-     "9015 Grand Avenue",
-     60,
-     "North Richland Hills"
+     "2625 W. Pioneer Parkway",
+     30,
+     "Grand Prairie"
     ],
     [
-     "300 West McLeroy Boulevard",
-     60,
-     "Saginaw"
+     "2101 Overbrook Drive",
+     30,
+     "Arlington"
+    ],
+    [
+     "228 San Angelo Avenue",
+     30,
+     "Benbrook"
     ]
    ]
   },
   {
    "county": "Bexar",
    "sites": 295,
-   "avg": 1.7,
+   "avg": 1.9,
    "over30": 0,
    "worst": [
     [
-     "Johnston Branch Library",
+     "Maverick Branch Library",
      15,
      ""
     ],
@@ -5046,12 +5046,12 @@
      ""
     ],
     [
-     "Memorial Branch Library",
+     "Las Palmas Branch Lirary",
      15,
      ""
     ],
     [
-     "Guerra Branch Library",
+     "Memorial Branch Library",
      15,
      ""
     ],
@@ -5061,7 +5061,7 @@
      ""
     ],
     [
-     "Northern Hills Elementary School",
+     "Bob Lewis Elementary School",
      15,
      ""
     ]
@@ -5197,6 +5197,14 @@
   [
    "14:47",
    242302
+  ],
+  [
+   "14:52",
+   243844
+  ],
+  [
+   "14:54",
+   244158
   ]
  ]
 }
