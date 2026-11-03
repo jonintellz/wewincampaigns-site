@@ -1,6 +1,6 @@
 {
- "as_of": "2026-11-03 03:23 PM",
- "total": 260035,
+ "as_of": "2026-11-03 03:25 PM",
+ "total": 260044,
  "base22_total": 517013,
  "pct_of_22": 50.3,
  "mix_lean_vs_22": 2.44,
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:23 PM"
+   "updated": "03:25 PM"
   },
   {
    "county": "Travis",
@@ -95,14 +95,14 @@
   },
   {
    "county": "Madison",
-   "today": 818,
+   "today": 827,
    "ed22": 1805,
-   "pct22": 45.3,
+   "pct22": 45.8,
    "ed24": 1174,
-   "pct24": 69.7,
+   "pct24": 70.4,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "03:19 PM"
+   "updated": "03:24 PM"
   }
  ],
  "dallas": {
@@ -4942,8 +4942,8 @@
  "harris": {
   "sites": 623,
   "bands": {
-   "0-14 min": 596,
-   "15-29 min": 13,
+   "0-14 min": 597,
+   "15-29 min": 12,
    "30+ min": 14
   },
   "in_line": 3200,
@@ -4994,16 +4994,21 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.0,
+   "avg": 4.8,
    "over30": 28,
    "worst": [
     [
-     "1001 East Bailey Boswell Road",
-     120,
-     "Fort Worth"
+     "2625 W. Pioneer Parkway",
+     60,
+     "Grand Prairie"
     ],
     [
      "3212 Miller Avenue",
+     60,
+     "Fort Worth"
+    ],
+    [
+     "4936 McPherson Boulevard",
      60,
      "Fort Worth"
     ],
@@ -5021,11 +5026,6 @@
      "4205 Basswood Boulevard",
      60,
      "Fort Worth"
-    ],
-    [
-     "1100 East Broad Street",
-     60,
-     "Mansfield"
     ]
    ]
   },
@@ -5253,6 +5253,10 @@
   [
    "15:23",
    260035
+  ],
+  [
+   "15:25",
+   260044
   ]
  ]
 }
