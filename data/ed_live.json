@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-03 03:29 PM",
+ "as_of": "2026-11-03 03:31 PM",
  "total": 261901,
  "base22_total": 517013,
  "pct_of_22": 50.7,
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:29 PM"
+   "updated": "03:31 PM"
   },
   {
    "county": "Travis",
@@ -5032,14 +5032,9 @@
   {
    "county": "Bexar",
    "sites": 295,
-   "avg": 2.1,
+   "avg": 1.8,
    "over30": 0,
    "worst": [
-    [
-     "Las Palmas Branch Lirary",
-     15,
-     ""
-    ],
     [
      "Memorial Branch Library",
      15,
@@ -5062,6 +5057,11 @@
     ],
     [
      "UTSA",
+     15,
+     ""
+    ],
+    [
+     "William H. Taft High School",
      15,
      ""
     ]
@@ -5264,6 +5264,10 @@
   ],
   [
    "15:29",
+   261901
+  ],
+  [
+   "15:31",
    261901
   ]
  ]
