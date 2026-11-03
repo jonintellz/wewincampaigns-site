@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:04 PM",
- "total": 253178,
+ "as_of": "2026-11-03 03:06 PM",
+ "total": 254177,
  "base22_total": 517013,
- "pct_of_22": 49.0,
- "mix_lean_vs_22": 2.23,
+ "pct_of_22": 49.2,
+ "mix_lean_vs_22": 2.15,
  "counties": [
   {
    "county": "Dallas",
@@ -14,18 +14,18 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:04 PM"
+   "updated": "03:06 PM"
   },
   {
    "county": "Travis",
-   "today": 66707,
+   "today": 67454,
    "ed22": 130241,
-   "pct22": 51.2,
+   "pct22": 51.8,
    "ed24": 96528,
-   "pct24": 69.1,
+   "pct24": 69.9,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "03:01 PM"
+   "updated": "03:06 PM"
   },
   {
    "county": "Montgomery",
@@ -62,25 +62,25 @@
   },
   {
    "county": "Hays",
-   "today": 12791,
+   "today": 12929,
    "ed22": 23506,
-   "pct22": 54.4,
+   "pct22": 55.0,
    "ed24": 20320,
-   "pct24": 62.9,
+   "pct24": 63.6,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "03:01 PM"
+   "updated": "03:06 PM"
   },
   {
    "county": "Ellis",
-   "today": 10523,
+   "today": 10637,
    "ed22": 22089,
-   "pct22": 47.6,
+   "pct22": 48.2,
    "ed24": 17850,
-   "pct24": 59.0,
+   "pct24": 59.6,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "03:01 PM"
+   "updated": "03:06 PM"
   },
   {
    "county": "Hockley",
@@ -4994,9 +4994,24 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.0,
-   "over30": 30,
+   "avg": 5.6,
+   "over30": 27,
    "worst": [
+    [
+     "4205 Basswood Boulevard",
+     120,
+     "Fort Worth"
+    ],
+    [
+     "700 East Abram Street",
+     120,
+     "Arlington"
+    ],
+    [
+     "2625 W. Pioneer Parkway",
+     60,
+     "Grand Prairie"
+    ],
     [
      "3212 Miller Avenue",
      60,
@@ -5008,24 +5023,9 @@
      "Fort Worth"
     ],
     [
-     "5001 James Avenue",
+     "1001 East Bailey Boswell Road",
      60,
      "Fort Worth"
-    ],
-    [
-     "1216 Diamond Back Lane",
-     60,
-     "Haslet"
-    ],
-    [
-     "700 East Abram Street",
-     60,
-     "Arlington"
-    ],
-    [
-     "1100 East Broad Street",
-     60,
-     "Mansfield"
     ]
    ]
   },
@@ -5046,22 +5046,22 @@
      ""
     ],
     [
+     "Guerra Branch Library",
+     15,
+     ""
+    ],
+    [
      "UTSA",
      15,
      ""
     ],
     [
-     "Bob Lewis Elementary School",
+     "Collins Garden Branch Library",
      15,
      ""
     ],
     [
      "Gardendale Early Learning Program",
-     15,
-     ""
-    ],
-    [
-     "Judson ISD Performing Arts Center",
      15,
      ""
     ]
@@ -5225,6 +5225,10 @@
   [
    "15:04",
    253178
+  ],
+  [
+   "15:06",
+   254177
   ]
  ]
 }
