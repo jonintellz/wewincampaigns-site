@@ -582,7 +582,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='23c6f764549d',failN=0;
+let BUILD='b4389eb6e9e6',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -650,7 +650,7 @@ function edgeChart(){const el=$('#edgeChart');if(!el)return;const D=T.daily_edge
 function render(){nav();const r=route();const m=$('#main');
  const P={home:pageHome,dallas:pageDallas,live:pageLive,ballots:pageBallots,early:pageEarly,left:pageLeft,counties:pageCounties,polls:pagePolls,method:pageMethod}[r];
  m.innerHTML=`<div class="wrap">${P()}</div>`;document.title=(r==='home'?'':PAGES.find(p=>p[0]===r)[1]+' · ')+'Texas Vote Desk';
- if(r==='early'){paceChart();edgeChart()} if(r==='counties')wireSort(); if(r==='ballots')loadBallots(); renderLive(); scrollTo(0,0)}
+ if(r==='early'){paceChart();edgeChart()} if(r==='counties')wireSort(); if(r==='ballots')loadBallots(); if(r==='live'&&!window.TXMAP)fetch('data/tx_paths.json').then(x=>x.ok?x.json():null).then(j=>{if(j){window.TXMAP=j;renderMap()}}).catch(()=>{}); if((r==='live'||r==='dallas')&&!window.SITES)fetch('data/ed_sites.json?t='+Math.floor(Date.now()/60000)).then(x=>x.ok?x.json():null).then(j=>{if(j){window.SITES=j;renderLive()}}).catch(()=>{}); renderLive(); scrollTo(0,0)}
 function wireSort(){document.querySelectorAll('#ctab th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortD=sortK===k?-sortD:(k==='county'?1:-1);sortK=k;$('#ctab tbody').innerHTML=countyRows()})}
 $('#themeBtn').onclick=()=>{const cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',cur==='dark'?'light':'dark');render()};
 addEventListener('hashchange',render);
