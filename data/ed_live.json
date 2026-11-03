@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 01:31 PM",
- "total": 194490,
+ "as_of": "2026-11-03 01:36 PM",
+ "total": 196173,
  "base22_total": 517013,
- "pct_of_22": 37.6,
- "mix_lean_vs_22": 3.38,
+ "pct_of_22": 37.9,
+ "mix_lean_vs_22": 3.43,
  "counties": [
   {
    "county": "Dallas",
@@ -14,95 +14,95 @@
    "pct24": 33.1,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "01:31 PM"
+   "updated": "01:36 PM"
   },
   {
    "county": "Travis",
-   "today": 54314,
+   "today": 55062,
    "ed22": 130241,
-   "pct22": 41.7,
+   "pct22": 42.3,
    "ed24": 96528,
-   "pct24": 56.3,
+   "pct24": 57.0,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "01:27 PM"
+   "updated": "01:32 PM"
   },
   {
    "county": "Montgomery",
-   "today": 32671,
+   "today": 33050,
    "ed22": 67248,
-   "pct22": 48.6,
+   "pct22": 49.1,
    "ed24": 57549,
-   "pct24": 56.8,
+   "pct24": 57.4,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "01:28 PM"
+   "updated": "01:34 PM"
   },
   {
    "county": "Bell",
-   "today": 13328,
+   "today": 13490,
    "ed22": 29955,
-   "pct22": 44.5,
+   "pct22": 45.0,
    "ed24": 29024,
-   "pct24": 45.9,
+   "pct24": 46.5,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "01:28 PM"
+   "updated": "01:33 PM"
   },
   {
    "county": "Mclennan",
-   "today": 11881,
+   "today": 12031,
    "ed22": 27228,
-   "pct22": 43.6,
+   "pct22": 44.2,
    "ed24": 25422,
-   "pct24": 46.7,
+   "pct24": 47.3,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "01:27 PM"
+   "updated": "01:32 PM"
   },
   {
    "county": "Hays",
-   "today": 10154,
+   "today": 10290,
    "ed22": 23506,
-   "pct22": 43.2,
+   "pct22": 43.8,
    "ed24": 20320,
-   "pct24": 50.0,
+   "pct24": 50.6,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "01:27 PM"
+   "updated": "01:33 PM"
   },
   {
    "county": "Ellis",
-   "today": 8507,
+   "today": 8599,
    "ed22": 22089,
-   "pct22": 38.5,
+   "pct22": 38.9,
    "ed24": 17850,
-   "pct24": 47.7,
+   "pct24": 48.2,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "01:29 PM"
+   "updated": "01:34 PM"
   },
   {
    "county": "Hockley",
-   "today": 811,
+   "today": 820,
    "ed22": 2415,
-   "pct22": 33.6,
+   "pct22": 34.0,
    "ed24": 2025,
-   "pct24": 40.0,
+   "pct24": 40.5,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "01:26 PM"
+   "updated": "01:31 PM"
   },
   {
    "county": "Madison",
-   "today": 652,
+   "today": 659,
    "ed22": 1805,
-   "pct22": 36.1,
+   "pct22": 36.5,
    "ed24": 1174,
-   "pct24": 55.5,
+   "pct24": 56.1,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "01:28 PM"
+   "updated": "01:33 PM"
   }
  ],
  "dallas": {
@@ -216,16 +216,21 @@
  "harris": {
   "sites": 623,
   "bands": {
-   "0-14 min": 604,
-   "15-29 min": 6,
+   "0-14 min": 603,
+   "15-29 min": 7,
    "30+ min": 13
   },
-  "in_line": 2995,
+  "in_line": 3040,
   "worst": [
    [
     "Tom Bass Park Community Center Section Three",
     "Houston",
     200
+   ],
+   [
+    "Rennell Elementary School",
+    "Cypress",
+    50
    ],
    [
     "Jean Hines Caldwell Elementary School",
@@ -251,11 +256,6 @@
     "Kingsland Baptist Church North Katy Campus",
     "Katy",
     35
-   ],
-   [
-    "Katy Branch Harris County Public Library",
-    "Katy",
-    30
    ],
    [
     "Lilly Grove Missionary Baptist Church",
