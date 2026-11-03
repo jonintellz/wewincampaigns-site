@@ -229,7 +229,7 @@ function pageBallots(){return `
 <div id="bTabs" style="display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 10px"></div>
 <input id="bQ" type="search" placeholder="Find a race, e.g. county judge, proposition, district 12" style="width:100%;max-width:420px;padding:9px 11px;border-radius:6px;border:1px solid var(--line-2);background:var(--surface);color:var(--strong);font:15px var(--f-body);margin-bottom:12px">
 <div id="bBody"></div>
-<p class="note" style="margin-top:20px">Unofficial county results. Collin County publishes results as documents rather than a data feed, so its races are not here; its statewide and federal races are on the Live page from the state's feed.</p>`}
+<p class="note" style="margin-top:20px">Unofficial county results. Collin County posts its results as a document rather than a data feed; its full ballot appears here as soon as tonight's file is posted after 7 pm, and its statewide and federal races are on the Live page from the state's feed.</p>`}
 function splitLine(r){const cs=[...r.candidates].sort((a,b)=>b.votes-a.votes);if(cs.length<2||!(cs[0].votes+cs[1].votes))return '';const a=cs[0],b=cs[1];
  const seg=(k,lab)=>{const d=(a[k]||0)-(b[k]||0);return (a[k]||b[k])?`${lab} ${d>=0?esc(a.name.split(' ').slice(-1)[0]):esc(b.name.split(' ').slice(-1)[0])} +${fmt(Math.abs(d))}`:''};
  return `<p class="src" style="margin:6px 0 0">${[seg('ev','Early'),seg('mail','Mail'),seg('ed','Election Day')].filter(Boolean).join(' · ')}</p>`}
@@ -492,6 +492,7 @@ function pageDallas(){const c=T.counties.find(x=>x.county==='Dallas')||{};const 
 <p class="src"><b>Read with care:</b> Dallas uses countywide vote centers, so anyone in the county can vote at any site. These are check-ins at the 108 sites physically inside District 2, a proxy for District 2 turnout, not a count of District 2 voters. Turnout is today's check-ins at those sites (Dallas County vote-center finder), against the same sites' full Election Day in 2022 and 2024. "Republican site share" is the 2022 Republican share of the Commissioner vote at each site's home precincts, weighted by where today's voters are checking in: higher today than in 2022 means turnout is running heavier at the Republican sites.</p></div>
 <div class="card" id="propA" style="border-color:var(--accent);margin-top:14px"></div>
 <section><h2>Latest Dallas batches</h2><div id="dalBatches"></div></section>
+<section><h2>Precinct map</h2><div id="dmapBody"></div></section>
 <section><h2>Precinct by precinct</h2><p class="deck">Every precinct in Commissioner Precinct 2 and every precinct voting on Prop A, from Dallas County's precinct results.</p><div id="precTab"></div></section>
 <section><h2>The benchmark: this seat in 2022</h2><p class="deck">For comparison only. Four years ago Sommerman beat that year's Republican nominee, J.J. Koch, by ${fmt(k.Dt-k.Rt)}: he won the early vote and lost Election Day. Barry needs to do better than this on Election Day.</p>
 ${table([[''],['Early vote'],['Election Day'],['Total'],['Share']],
@@ -536,6 +537,25 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-ptab]');if
 document.addEventListener('input',e=>{if(e.target.id==='pQ'){pQ=e.target.value;const el=$('#precTab');if(el){el.innerHTML=precinctTableHTML();const i=$('#pQ');if(i){i.focus();i.setSelectionRange(pQ.length,pQ.length)}}}});
 document.addEventListener('change',e=>{if(e.target.id==='pSort'){pSort=e.target.value;const el=$('#precTab');if(el)el.innerHTML=precinctTableHTML()}});
 
+
+/* ---------- Dallas precinct maps: Precinct 2 (Wernick vs Sommerman) and Prop A (Against vs For) ---------- */
+let dMap='d2';
+function precinctMapHTML(){const G=window.DPATHS,D=window.RES&&window.RES.dallas_detail;if(!G)return '<p class="src">Loading precinct map.</p>';
+ const isA=dMap==='propa',geo=isA?G.county:G.d2;if(!geo)return '<p class="src">Precinct outlines not available.</p>';
+ const P=D&&D.precincts&&D.precincts[isA?'Prop A':'Commissioner Precinct 2']||[];const by={};
+ P.forEach(p=>{const nm=Object.keys(p.choices||{});const a=nm.find(x=>isA?/^against/i.test(x):/wernick/i.test(x)),b=nm.find(x=>isA?/^for/i.test(x):/sommerman/i.test(x));
+  const k=p.precinct,base=String(k).split('-')[0];[k,base].forEach(id=>{const o=by[id]=by[id]||{a:0,b:0};o.a+=(p.choices||{})[a]||0;o.b+=(p.choices||{})[b]||0})});
+ const la=isA?'Against':'Wernick',lb=isA?'For':'Sommerman';let any=0;
+ const paths=Object.entries(geo.paths).map(([id,d])=>{const o=by[id]||by[String(id).split('-')[0]];const t=o?o.a+o.b:0;if(t)any++;const m=t?100*(o.a-o.b)/t:null;
+  const col=m==null?css('--surface'):isA?mixHex(css('--raise'),m>0?css('--hi'):css('--steel'),0.15+0.85*Math.min(1,Math.abs(m)/40)):divColor(m,40);
+  const txt=t?`${la} ${fmt(o.a)} · ${lb} ${fmt(o.b)} · ${m>0?la:lb} +${Math.abs(m).toFixed(1)}`:'no votes counted yet';
+  return `<path d="${d}" fill="${col}" stroke="${css('--page')}" stroke-width="0.5" data-n="Precinct ${esc(id)}" data-t="${esc(txt)}"></path>`}).join('');
+ return `<div class="card"><div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px"><button type="button" class="icon-btn" data-dmap="d2" style="${!isA?'border-color:var(--accent);color:var(--strong)':''}">Commissioner Precinct 2</button><button type="button" class="icon-btn" data-dmap="propa" style="${isA?'border-color:var(--accent);color:var(--strong)':''}">Prop A, countywide</button></div>
+ <div class="chart" id="dmap"><svg viewBox="0 0 ${geo.w} ${geo.h}" role="img" aria-label="Dallas precinct map" style="max-width:760px;margin:0 auto">${paths}</svg></div>
+ <p class="src">${any?`${any} precincts shaded.`:'Precincts shade as Dallas County posts precinct results.'} ${isA?'Light is Against, steel is For; deeper is a wider margin.':'Red is Wernick, blue is Sommerman; deeper is a wider margin.'} Hover or tap a precinct.</p></div>`}
+function renderPrecinctMap(){const el=$('#dmapBody');if(!el)return;el.innerHTML=precinctMapHTML();const m=$('#dmap');if(m)m.querySelectorAll('path').forEach(p=>{p.onmousemove=e=>tip(e,`<b>${p.dataset.n}</b><br>${p.dataset.t}`);p.onmouseleave=untip;p.onclick=e=>tip(e,`<b>${p.dataset.n}</b><br>${p.dataset.t}`)})}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-dmap]');if(b){dMap=b.dataset.dmap;renderPrecinctMap()}});
+
 function propABoard(){const R=window.RES,p=R&&R.dallas&&R.dallas.prop_a,B=window.BALLOT;
  const desc=B?(B.contests.find(c=>/^dallas county proposition a$/i.test(c.contest))||{}).description:'';
  const head=`<p class="eyebrow" style="margin-bottom:4px">Dallas County Proposition A</p><h2 style="margin-bottom:4px">County tax-rate election</h2><p class="src" style="margin:0 0 12px">${esc((desc||'').replace(/\s*\[V sample ballot p\.\d+\]/,''))}</p>`;
@@ -556,6 +576,7 @@ function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
  if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
  const a=$('#d2Result');if(a)a.innerHTML=d2Board();const b=$('#propA');if(b)b.innerHTML=propABoard();
  const db=$('#dalBatches');if(db)db.innerHTML=batchesHTML(true);const dr=$('#dalRes');if(dr)dr.innerHTML=dallasRacesHTML();
+ if(!window.DPATHS)fetch('data/dallas_paths.json').then(x=>x.ok?x.json():null).then(j=>{if(j){window.DPATHS=j;renderPrecinctMap()}}).catch(()=>{});renderPrecinctMap();
  const pt=$('#precTab');if(pt&&document.activeElement&&document.activeElement.id!=='pQ')pt.innerHTML=precinctTableHTML();
  const dd=$('#dalResDeck');const DR=R&&R.dallas;if(dd)dd.textContent=DR&&hasVotes(DR.races)?`Unofficial, ${DR.source}, read ${DR.as_of||R.as_of}. Every race in ballot order.`:`Every race in ballot order, with its candidates. Votes fill in from Dallas County's results after 7 pm.`}
 function findD2(){const R=window.RES;if(!R||!R.dallas||!R.dallas.races)return null;
@@ -629,7 +650,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='97d235cfc76c',failN=0;
+let BUILD='a6d2ae4d2ad1',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
