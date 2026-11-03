@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:35 PM",
- "total": 271694,
+ "as_of": "2026-11-03 03:37 PM",
+ "total": 271831,
  "base22_total": 517013,
  "pct_of_22": 52.6,
- "mix_lean_vs_22": 2.04,
+ "mix_lean_vs_22": 2.06,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 52.5,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:35 PM"
+   "updated": "03:37 PM"
   },
   {
    "county": "Travis",
@@ -73,14 +73,14 @@
   },
   {
    "county": "Ellis",
-   "today": 11246,
+   "today": 11383,
    "ed22": 22089,
-   "pct22": 50.9,
+   "pct22": 51.5,
    "ed24": 17850,
-   "pct24": 63.0,
+   "pct24": 63.8,
    "m22": 35.32,
    "m24": 28.31,
-   "updated": "03:32 PM"
+   "updated": "03:37 PM"
   },
   {
    "county": "Hockley",
@@ -4994,24 +4994,9 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 6.0,
-   "over30": 30,
+   "avg": 5.2,
+   "over30": 31,
    "worst": [
-    [
-     "1001 East Bailey Boswell Road",
-     120,
-     "Fort Worth"
-    ],
-    [
-     "1075 Eagle Boulevard",
-     120,
-     "Haslet"
-    ],
-    [
-     "700 East Abram Street",
-     120,
-     "Arlington"
-    ],
     [
      "2625 W. Pioneer Parkway",
      60,
@@ -5023,9 +5008,24 @@
      "Fort Worth"
     ],
     [
-     "4936 McPherson Boulevard",
+     "4600  Alta Vista Rd",
      60,
      "Fort Worth"
+    ],
+    [
+     "1001 East Bailey Boswell Road",
+     60,
+     "Fort Worth"
+    ],
+    [
+     "901 Precinct Line Road",
+     60,
+     "Hurst"
+    ],
+    [
+     "6300 Welch Avenue",
+     60,
+     "Ft. Worth"
     ]
    ]
   },
@@ -5051,17 +5051,17 @@
      ""
     ],
     [
-     "Bexar County Elections Department",
-     15,
-     ""
-    ],
-    [
      "UTSA",
      15,
      ""
     ],
     [
      "William H. Taft High School",
+     15,
+     ""
+    ],
+    [
+     "Dr. Pat Henderson Elementary School",
      15,
      ""
     ]
@@ -5277,6 +5277,10 @@
   [
    "15:35",
    271694
+  ],
+  [
+   "15:37",
+   271831
   ]
  ]
 }
