@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:37 PM",
- "total": 271831,
+ "as_of": "2026-11-03 03:39 PM",
+ "total": 273568,
  "base22_total": 517013,
- "pct_of_22": 52.6,
- "mix_lean_vs_22": 2.06,
+ "pct_of_22": 52.9,
+ "mix_lean_vs_22": 2.11,
  "counties": [
   {
    "county": "Dallas",
@@ -14,62 +14,62 @@
    "pct24": 52.5,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:37 PM"
+   "updated": "03:39 PM"
   },
   {
    "county": "Travis",
-   "today": 71253,
+   "today": 72016,
    "ed22": 130241,
-   "pct22": 54.7,
+   "pct22": 55.3,
    "ed24": 96528,
-   "pct24": 73.8,
+   "pct24": 74.6,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "03:34 PM"
+   "updated": "03:39 PM"
   },
   {
    "county": "Montgomery",
-   "today": 42137,
+   "today": 42584,
    "ed22": 67248,
-   "pct22": 62.7,
+   "pct22": 63.3,
    "ed24": 57549,
-   "pct24": 73.2,
+   "pct24": 74.0,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "03:33 PM"
+   "updated": "03:39 PM"
   },
   {
    "county": "Bell",
-   "today": 17393,
+   "today": 17582,
    "ed22": 29955,
-   "pct22": 58.1,
+   "pct22": 58.7,
    "ed24": 29024,
-   "pct24": 59.9,
+   "pct24": 60.6,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "03:34 PM"
+   "updated": "03:39 PM"
   },
   {
    "county": "Mclennan",
-   "today": 15486,
+   "today": 15655,
    "ed22": 27228,
-   "pct22": 56.9,
+   "pct22": 57.5,
    "ed24": 25422,
-   "pct24": 60.9,
+   "pct24": 61.6,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "03:34 PM"
+   "updated": "03:39 PM"
   },
   {
    "county": "Hays",
-   "today": 13617,
+   "today": 13765,
    "ed22": 23506,
-   "pct22": 57.9,
+   "pct22": 58.6,
    "ed24": 20320,
-   "pct24": 67.0,
+   "pct24": 67.7,
    "m22": -3.94,
    "m24": -1.73,
-   "updated": "03:32 PM"
+   "updated": "03:37 PM"
   },
   {
    "county": "Ellis",
@@ -84,25 +84,25 @@
   },
   {
    "county": "Hockley",
-   "today": 1061,
+   "today": 1070,
    "ed22": 2415,
-   "pct22": 43.9,
+   "pct22": 44.3,
    "ed24": 2025,
-   "pct24": 52.4,
+   "pct24": 52.8,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "03:33 PM"
+   "updated": "03:38 PM"
   },
   {
    "county": "Madison",
-   "today": 841,
+   "today": 853,
    "ed22": 1805,
-   "pct22": 46.6,
+   "pct22": 47.3,
    "ed24": 1174,
-   "pct24": 71.6,
+   "pct24": 72.7,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "03:34 PM"
+   "updated": "03:39 PM"
   }
  ],
  "dallas": {
@@ -4994,18 +4994,18 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.2,
-   "over30": 31,
+   "avg": 6.2,
+   "over30": 36,
    "worst": [
+    [
+     "1601 Northeast Green Oaks Blvd",
+     120,
+     "Arlington"
+    ],
     [
      "2625 W. Pioneer Parkway",
      60,
      "Grand Prairie"
-    ],
-    [
-     "3212 Miller Avenue",
-     60,
-     "Fort Worth"
     ],
     [
      "4600  Alta Vista Rd",
@@ -5018,21 +5018,21 @@
      "Fort Worth"
     ],
     [
-     "901 Precinct Line Road",
-     60,
-     "Hurst"
-    ],
-    [
      "6300 Welch Avenue",
      60,
      "Ft. Worth"
+    ],
+    [
+     "4205 Basswood Boulevard",
+     60,
+     "Fort Worth"
     ]
    ]
   },
   {
    "county": "Bexar",
    "sites": 295,
-   "avg": 1.8,
+   "avg": 1.9,
    "over30": 0,
    "worst": [
     [
@@ -5042,11 +5042,6 @@
     ],
     [
      "Guerra Branch Library",
-     15,
-     ""
-    ],
-    [
-     "Bexar County Justice Center",
      15,
      ""
     ],
@@ -5062,6 +5057,11 @@
     ],
     [
      "Dr. Pat Henderson Elementary School",
+     15,
+     ""
+    ],
+    [
+     "Big Country Elementary School",
      15,
      ""
     ]
@@ -5281,6 +5281,10 @@
   [
    "15:37",
    271831
+  ],
+  [
+   "15:39",
+   273568
   ]
  ]
 }
