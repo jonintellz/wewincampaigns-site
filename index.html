@@ -582,7 +582,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD=null,failN=0;
+let BUILD='23c6f764549d',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -594,7 +594,7 @@ function chipsHTML(){const R=window.RES,out=[];const add=(n,ok,t)=>out.push(`<sp
  add('Dallas precincts',R&&R.dallas_detail&&!(R.dallas_detail.errors||[]).length);add('Dallas turnout',L&&L.dallas&&!(L.stale||[]).includes('DALLAS'));
  add('Live counties',L&&!(L.stale||[]).length,(L&&L.stale||[]).join(', '));add('Wait times',L&&(L.waits||[]).length&&!(L.waits||[]).some(w=>w.error));
  if(R&&R.markets)add('Markets',!(R.markets.errors||[]).length);return `<div class="chips">${out.join('')}</div>`}
-async function checkBuild(){try{const r=await fetch('data/build.txt?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const b=(await r.text()).trim();if(BUILD&&b&&b!==BUILD)location.reload();BUILD=BUILD||b}catch(e){}}
+async function checkBuild(){try{const r=await fetch('data/build.txt?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const b=(await r.text()).trim();if(BUILD&&b&&b!==BUILD)location.reload()}catch(e){}}
 
 /* ---------- key-race scoreboard on every page ---------- */
 function scoreCard(label,lead,margin,sub,href){return `<a class="sc" href="${href}"><div class="r1">${esc(label)}</div><div class="r2">${lead}</div><div class="r3">${sub}</div></a>`}
