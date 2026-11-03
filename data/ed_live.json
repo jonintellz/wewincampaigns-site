@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-03 03:39 PM",
+ "as_of": "2026-11-03 03:41 PM",
  "total": 273568,
  "base22_total": 517013,
  "pct_of_22": 52.9,
@@ -14,7 +14,7 @@
    "pct24": 52.5,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:39 PM"
+   "updated": "03:41 PM"
   },
   {
    "county": "Travis",
@@ -4994,8 +4994,8 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 6.2,
-   "over30": 36,
+   "avg": 6.4,
+   "over30": 39,
    "worst": [
     [
      "1601 Northeast Green Oaks Blvd",
@@ -5008,24 +5008,24 @@
      "Grand Prairie"
     ],
     [
+     "6551 Granbury Road",
+     60,
+     "Fort Worth"
+    ],
+    [
      "4600  Alta Vista Rd",
      60,
      "Fort Worth"
     ],
     [
-     "1001 East Bailey Boswell Road",
-     60,
-     "Fort Worth"
-    ],
-    [
-     "6300 Welch Avenue",
-     60,
-     "Ft. Worth"
-    ],
-    [
      "4205 Basswood Boulevard",
      60,
      "Fort Worth"
+    ],
+    [
+     "700 East Abram Street",
+     60,
+     "Arlington"
     ]
    ]
   },
@@ -5284,6 +5284,10 @@
   ],
   [
    "15:39",
+   273568
+  ],
+  [
+   "15:41",
    273568
   ]
  ]
