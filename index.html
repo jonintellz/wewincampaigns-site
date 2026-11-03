@@ -609,8 +609,8 @@ function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
  if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
  const a=$('#d2Result');if(a)a.innerHTML=d2Board();const b=$('#propA');if(b)b.innerHTML=propABoard();
  const db=$('#dalBatches');if(db)db.innerHTML=batchesHTML(true);const dr=$('#dalRes');if(dr)dr.innerHTML=dallasRacesHTML();
- if(!window.DBASE)fetch('data/dallas_base.json').then(x=>x.ok?x.json():null).then(j=>{if(j){window.DBASE=j;renderPrecinctMap()}}).catch(()=>{});
- if(!window.DPATHS)fetch('data/dallas_paths.json').then(x=>x.ok?x.json():null).then(j=>{if(j){window.DPATHS=j;renderPrecinctMap()}}).catch(()=>{});renderPrecinctMap();
+ if(!window.DBASE)fetch('data/dallas_base.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.DBASE=j;renderPrecinctMap()}}).catch(()=>{});
+ if(!window.DPATHS)fetch('data/dallas_paths.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.DPATHS=j;renderPrecinctMap()}}).catch(()=>{});renderPrecinctMap();
  const pt=$('#precTab');if(pt&&document.activeElement&&document.activeElement.id!=='pQ')pt.innerHTML=precinctTableHTML();
  const dd=$('#dalResDeck');const DR=R&&R.dallas;if(dd)dd.textContent=DR&&hasVotes(DR.races)?`Unofficial, ${DR.source}, read ${DR.as_of||R.as_of}. Every race in ballot order.`:`Every race in ballot order, with its candidates. Votes fill in from Dallas County's results after 7 pm.`}
 function findD2(){const R=window.RES;if(!R||!R.dallas||!R.dallas.races)return null;
@@ -684,7 +684,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='40bdeb31b835',failN=0;
+let BUILD='91ffb86f00b3',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -726,8 +726,8 @@ async function loadLive(){const q='?t='+Math.floor(Date.now()/60000);let ok=0;
  try{const r=await fetch('data/ed_live.json'+q,{cache:'no-store'});if(r.ok){L=await r.json();ok++}}catch(e){}
  try{const r=await fetch('data/ed_results.json'+q,{cache:'no-store'});if(r.ok){window.RES=await r.json();ok++}}catch(e){}
  const rt=route();if(rt==='live'||rt==='dallas'){try{const r=await fetch('data/ed_sites.json'+q,{cache:'no-store'});if(r.ok)window.SITES=await r.json()}catch(e){}}
- if(!window.BALLOT){try{const r=await fetch('data/dallas_ballot.json');if(r.ok)window.BALLOT=await r.json()}catch(e){}}
- if(!window.TXMAP&&route()==='live'){try{const r=await fetch('data/tx_paths.json');if(r.ok)window.TXMAP=await r.json()}catch(e){}}
+ if(!window.BALLOT){try{const r=await fetch('data/dallas_ballot.json?b='+(BUILD||Date.now()));if(r.ok)window.BALLOT=await r.json()}catch(e){}}
+ if(!window.TXMAP&&route()==='live'){try{const r=await fetch('data/tx_paths.json?b='+(BUILD||Date.now()));if(r.ok)window.TXMAP=await r.json()}catch(e){}}
  try{const r=await fetch('data/calls.json'+q,{cache:'no-store'});if(r.ok)window.CALLS=await r.json()}catch(e){}
  failN=ok?0:failN+1;freshness();scoreboard();checkBuild();if(route()==='tv')renderTV();if(route()==='ballots')loadBallots();
  renderLive()}
@@ -753,11 +753,11 @@ function edgeChart(){const el=$('#edgeChart');if(!el)return;const D=T.daily_edge
 function render(){nav();const r=route();const m=$('#main');
  const P={tv:pageTV,home:pageHome,dallas:pageDallas,live:pageLive,ballots:pageBallots,early:pageEarly,left:pageLeft,counties:pageCounties,polls:pagePolls,method:pageMethod}[r];
  m.innerHTML=`<div class="wrap">${P()}</div>`;document.title=(r==='home'?'':r==='tv'?'TV · ':PAGES.find(p=>p[0]===r)[1]+' · ')+'Texas Vote Desk';document.body.classList.toggle('tvmode',r==='tv');
- if(r==='early'){paceChart();edgeChart()} if(r==='counties')wireSort(); if(r==='ballots')loadBallots(); if(r==='tv')renderTV(); if(r==='live'&&!window.TXMAP)fetch('data/tx_paths.json').then(x=>x.ok?x.json():null).then(j=>{if(j){window.TXMAP=j;renderMap()}}).catch(()=>{}); if((r==='live'||r==='dallas')&&!window.SITES)fetch('data/ed_sites.json?t='+Math.floor(Date.now()/60000)).then(x=>x.ok?x.json():null).then(j=>{if(j){window.SITES=j;renderLive()}}).catch(()=>{}); renderLive(); scrollTo(0,0)}
+ if(r==='early'){paceChart();edgeChart()} if(r==='counties')wireSort(); if(r==='ballots')loadBallots(); if(r==='tv')renderTV(); if(r==='live'&&!window.TXMAP)fetch('data/tx_paths.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.TXMAP=j;renderMap()}}).catch(()=>{}); if((r==='live'||r==='dallas')&&!window.SITES)fetch('data/ed_sites.json?t='+Math.floor(Date.now()/60000)).then(x=>x.ok?x.json():null).then(j=>{if(j){window.SITES=j;renderLive()}}).catch(()=>{}); renderLive(); scrollTo(0,0)}
 function wireSort(){document.querySelectorAll('#ctab th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;sortD=sortK===k?-sortD:(k==='county'?1:-1);sortK=k;$('#ctab tbody').innerHTML=countyRows()})}
 $('#themeBtn').onclick=()=>{const cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',cur==='dark'?'light':'dark');render()};
 addEventListener('hashchange',render);
-(async()=>{T=await (await fetch('data/tx_final.json')).json();render();await loadLive();liveTimer=setInterval(loadLive,60000)})();
+(async()=>{T=await (await fetch('data/tx_final.json?b='+(BUILD||Date.now()))).json();render();await loadLive();liveTimer=setInterval(loadLive,60000)})();
 </script>
 </body>
 </html>
