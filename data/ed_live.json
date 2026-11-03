@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 03:43 PM",
- "total": 273872,
+ "as_of": "2026-11-03 03:45 PM",
+ "total": 275442,
  "base22_total": 517013,
- "pct_of_22": 53.0,
- "mix_lean_vs_22": 2.14,
+ "pct_of_22": 53.3,
+ "mix_lean_vs_22": 2.18,
  "counties": [
   {
    "county": "Dallas",
@@ -14,51 +14,51 @@
    "pct24": 52.5,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "03:43 PM"
+   "updated": "03:45 PM"
   },
   {
    "county": "Travis",
-   "today": 72016,
+   "today": 72792,
    "ed22": 130241,
-   "pct22": 55.3,
+   "pct22": 55.9,
    "ed24": 96528,
-   "pct24": 74.6,
+   "pct24": 75.4,
    "m22": -36.44,
    "m24": -23.75,
-   "updated": "03:39 PM"
+   "updated": "03:45 PM"
   },
   {
    "county": "Montgomery",
-   "today": 42584,
+   "today": 43001,
    "ed22": 67248,
-   "pct22": 63.3,
+   "pct22": 63.9,
    "ed24": 57549,
-   "pct24": 74.0,
+   "pct24": 74.7,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "03:39 PM"
+   "updated": "03:44 PM"
   },
   {
    "county": "Bell",
-   "today": 17582,
+   "today": 17784,
    "ed22": 29955,
-   "pct22": 58.7,
+   "pct22": 59.4,
    "ed24": 29024,
-   "pct24": 60.6,
+   "pct24": 61.3,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "03:39 PM"
+   "updated": "03:44 PM"
   },
   {
    "county": "Mclennan",
-   "today": 15655,
+   "today": 15825,
    "ed22": 27228,
-   "pct22": 57.5,
+   "pct22": 58.1,
    "ed24": 25422,
-   "pct24": 61.6,
+   "pct24": 62.2,
    "m22": 38.22,
    "m24": 32.58,
-   "updated": "03:39 PM"
+   "updated": "03:44 PM"
   },
   {
    "county": "Hays",
@@ -95,14 +95,14 @@
   },
   {
    "county": "Madison",
-   "today": 853,
+   "today": 858,
    "ed22": 1805,
-   "pct22": 47.3,
+   "pct22": 47.5,
    "ed24": 1174,
-   "pct24": 72.7,
+   "pct24": 73.1,
    "m22": 69.31,
    "m24": 59.63,
-   "updated": "03:39 PM"
+   "updated": "03:44 PM"
   }
  ],
  "dallas": {
@@ -4994,21 +4994,21 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 5.8,
+   "avg": 5.6,
    "over30": 32,
    "worst": [
-    [
-     "1601 Northeast Green Oaks Blvd",
-     120,
-     "Arlington"
-    ],
     [
      "1075 Eagle Boulevard",
      120,
      "Haslet"
     ],
     [
-     "6551 Granbury Road",
+     "12301 Grey Twig Drive",
+     60,
+     "Fort Worth"
+    ],
+    [
+     "3212 Miller Avenue",
      60,
      "Fort Worth"
     ],
@@ -5046,7 +5046,7 @@
      ""
     ],
     [
-     "Evelyn Scarborough Elementary School",
+     "Eduardo Villarreal Jr. Elementary School",
      15,
      ""
     ],
@@ -5297,6 +5297,10 @@
   [
    "15:43",
    273872
+  ],
+  [
+   "15:45",
+   275442
   ]
  ]
 }
