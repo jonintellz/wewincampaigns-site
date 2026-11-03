@@ -340,6 +340,7 @@ function pageDallas(){const c=T.counties.find(x=>x.county==='Dallas')||{};const 
 <div id="d2Result"></div>
 <div class="grid g4" id="d2Tiles" style="margin-top:14px"></div>
 <p class="src"><b>Read with care:</b> Dallas uses countywide vote centers, so anyone in the county can vote at any site. These are check-ins at the 108 sites physically inside District 2, a proxy for District 2 turnout, not a count of District 2 voters. Turnout is today's check-ins at those sites (Dallas County vote-center finder), against the same sites' full Election Day in 2022 and 2024. "Republican site share" is the 2022 Republican share of the Commissioner vote at each site's home precincts, weighted by where today's voters are checking in: higher today than in 2022 means turnout is running heavier at the Republican sites.</p></div>
+<div class="card" id="propA" style="border-color:var(--accent);margin-top:14px"></div>
 <section><h2>The benchmark: this seat in 2022</h2><p class="deck">For comparison only. Four years ago Sommerman beat that year's Republican nominee, J.J. Koch, by ${fmt(k.Dt-k.Rt)}: he won the early vote and lost Election Day. Barry needs to do better than this on Election Day.</p>
 ${table([[''],['Early vote'],['Election Day'],['Total'],['Share']],
  `<tr><td>2022 Republican (${k.R}) <span class="pill">R</span></td><td>${fmt(k.Rev)}</td><td><b>${fmt(k.Red)}</b></td><td>${fmt(k.Rt)}</td><td>${(100*k.Rt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
@@ -347,7 +348,7 @@ ${table([[''],['Early vote'],['Election Day'],['Total'],['Share']],
  <tr><td>Margin</td><td class="D">D+${fmt(k.Dev-k.Rev)}</td><td class="R">R+${fmt(k.Red-k.Ded)}</td><td class="D">D+${fmt(k.Dt-k.Rt)}</td><td></td></tr>`)}
 <p class="src">Dallas County Elections, official canvass, November 2022, 456 precinct rows.</p></section>
 <section><h2>District 2 target vote centers</h2><p class="deck">The 30 District 2 sites with the most Republican Election Day voters expected, in rank order (the volunteer list), with today's check-ins.</p><div id="d2Sites"></div></section>
-<section><h2>Dallas County results</h2><p class="deck" id="dalResDeck">Dallas County's own results, read every few minutes after 7 pm.</p><div id="dalRes"></div></section>
+<section><h2>Every other Dallas County race, in ballot order</h2><p class="deck" id="dalResDeck">Dallas County's own results, read every few minutes after 7 pm.</p><div id="dalRes"></div></section>
 <section><h2>Dallas County turnout</h2><div class="grid g4" id="dalTiles"></div>
 <p class="src">Early vote, final: ${fmt(c.ev)} (${c.pct}% of ${fmt(c.reg)} registered), against ${c.pct22}% in 2022 and ${c.pct24}% in 2024.</p></section>
 <section><h2>Every vote center</h2><p class="deck">All 444 Election Day sites, live check-ins. Type to filter by site or city.</p>
@@ -357,12 +358,21 @@ ${table([[''],['Early vote'],['Election Day'],['Total'],['Share']],
 <p class="note" style="margin-top:24px">Unofficial, from Dallas County's vote-center finder and election-night results. The canvass is official.</p>`}
 
 const LEVELS=[['precinct','Commissioners Court, Justices of the Peace, Constables'],['county','County offices and county proposition'],['federal','U.S. Senate and Congress'],['state','Statewide offices and State Board of Education'],['legislative','Texas Senate and House (Dallas seats)'],['judicial','Courts'],['local','City and school district propositions']];
-function dallasRacesHTML(){const B=window.BALLOT,R=window.RES,DR=R&&R.dallas;if(!B)return '';
- const norm=x=>x.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();const live={};(DR&&DR.races||[]).forEach(r=>live[norm(r.race)]=r);
- const lv={};B.contests.forEach(c=>{const r=live[norm(c.contest)];const card=r?r:{race:c.contest,reporting:'awaiting results',candidates:c.candidates.map(x=>({name:x.name,party:x.party,votes:0}))};
-  if(/commissioner, precinct no\. 2$/i.test(c.contest))return;(lv[c.level]=lv[c.level]||[]).push(card)});
- return LEVELS.filter(([k])=>lv[k]).map(([k,t])=>{let cs=lv[k];if(k==='judicial'){const contested=cs.filter(r=>r.candidates.length>1);const n=cs.length-contested.length;cs=contested;t+=` <span class="src">(${n} uncontested judgeships not shown)</span>`}
-  return `<h3 style="margin-top:20px">${t}</h3><div class="grid g3">${cs.map(r=>raceCard(r)).join('')}</div>`}).join('')}
+function propABoard(){const R=window.RES,p=R&&R.dallas&&R.dallas.prop_a,B=window.BALLOT;
+ const desc=B?(B.contests.find(c=>/^dallas county proposition a$/i.test(c.contest))||{}).description:'';
+ const head=`<p class="eyebrow" style="margin-bottom:4px">Dallas County Proposition A</p><h2 style="margin-bottom:4px">County tax-rate election</h2><p class="src" style="margin:0 0 12px">${esc((desc||'').replace(/\s*\[V sample ballot p\.\d+\]/,''))}</p>`;
+ if(!p||!(p.F+p.A))return head+`<div class="note" style="background:var(--raise)">Results post after 7 pm with Dallas County's first report (the early vote, about 7:30 to 8), then Election Day in batches. The result shows For and Against, the margin, and the early-vote and Election Day splits.</div>`;
+ const t=p.F+p.A,m=p.A-p.F,ev=p.ev||{F:0,A:0},evm=ev.A-ev.F,edm=p.edA-p.edF,edIn=p.edF+p.edA;
+ return head+`<div class="grid g2"><div class="card">${bars([['Against',p.A,'--rep',`${(100*p.A/t).toFixed(1)}% · ${fmt(p.A)}`],['For',p.F,'--dem',`${(100*p.F/t).toFixed(1)}% · ${fmt(p.F)}`]],Math.max(p.F,p.A))}
+  <p style="margin:10px 0 0;font:800 24px var(--f-display);color:var(--head)">${m>=0?'Against':'For'} leads by ${fmt(Math.abs(m))}</p><p class="src" style="margin:4px 0 0">${esc(p.reporting||'')} · Dallas County, unofficial. A tax-rate proposition passes with a simple majority of votes cast on it.</p></div>
+  <div class="card"><h3>Early vote vs Election Day</h3>${table([[''],['Margin']],`<tr><td>Early vote (first print, ${esc(ev.at||'')})</td><td><b>${evm>=0?'Against':'For'} +${fmt(Math.abs(evm))}</b></td></tr><tr><td>Election Day so far</td><td><b>${edIn?(edm>=0?'Against':'For')+' +'+fmt(Math.abs(edm)):'not in yet'}</b></td></tr><tr><td>Election Day votes counted</td><td>${fmt(edIn)}</td></tr>`)}
+  <p class="src">The first Dallas print is treated as the early vote and frozen; later growth counts as Election Day.</p></div></div>`}
+function dallasRacesHTML(){const B=window.BALLOT,R=window.RES,DR=R&&R.dallas;
+ const skip=r=>/county commissioner, precinct no\. 2$/i.test(r.race)||/^dallas county proposition a$/i.test(r.race.trim());
+ if(DR&&DR.races&&DR.races.length&&/Dallas County Elections/.test(DR.source||'')){   // Dallas County's own feed lists contests in ballot order
+  const unc=DR.races.find(r=>/^uncontested races$/i.test(r.race.trim()));
+  return `<div class="grid g3">${DR.races.filter(r=>!skip(r)&&r!==unc).map(r=>raceCard(r)).join('')}</div>${unc?`<p class="src" style="margin-top:10px">Dallas County reports its uncontested races, mostly judgeships, as one combined contest; they are not shown here.</p>`:''}`}
+ if(!B)return'';return `<div class="grid g3">${B.contests.filter(c=>!skip({race:c.contest})&&c.candidates.length>1).map(c=>raceCard({race:c.contest,reporting:'awaiting results',candidates:c.candidates.map(x=>({name:x.name,party:x.party,votes:0}))})).join('')}</div>`}
 
 function findD2(){const R=window.RES;if(!R||!R.dallas||!R.dallas.races)return null;
  return R.dallas.races.find(r=>/commissioner/i.test(r.race)&&/(\b2\b|no\. ?2|district 2|precinct 2|pct\.? ?2)/i.test(r.race))}
@@ -370,6 +380,7 @@ function renderDallas(){if(route()!=='dallas'||!L||!L.dallas)return;const dl=L.d
  $('#d2Stamp').textContent='Read '+L.as_of+' Central'+(dl.county_updated?'. Dallas County last updated its vote-center counts at '+dl.county_updated+'; it posts them in batches':'')+'. Refreshes every minute.';
  const r=findD2();
  $('#d2Result').innerHTML=d2Board();
+ $('#propA').innerHTML=propABoard();
  const up=d2.r_site_share_today!=null&&d2.r_site_share_22!=null?d2.r_site_share_today-d2.r_site_share_22:null;
  $('#d2Tiles').innerHTML=tile('Votes at District 2 vote centers',fmt(d2.today),`${d2.sites} sites inside the district`)
   +tile('Share of its 2022 Election Day',(d2.pct22??'–')+'%',`2022 at these sites: ${fmt(d2.ed22)} · 2024: ${fmt(d2.ed24)}`)
@@ -380,7 +391,7 @@ function renderDallas(){if(route()!=='dallas'||!L||!L.dallas)return;const dl=L.d
  $('#dalTiles').innerHTML=tile('Voted today',fmt(dc.today),`${dl.sites} vote centers${dl.county_updated?' · county update '+dl.county_updated:''}`)+tile('Share of 2022 Election Day',(dc.pct22??'–')+'%',`2022: ${fmt(dc.ed22)} · 2024: ${fmt(dc.ed24)}`)
   +tile('Average wait',dl.avg_wait+' min','across all sites')+tile('Early vote, final',mil(c.ev||0),`${c.pct}% of registered`);
  const R=window.RES,DR=R&&R.dallas;
- $('#dalResDeck').textContent=DR&&hasVotes(DR.races)?`Unofficial, ${DR.source}, read ${DR.as_of||R.as_of}. Every race on the Dallas County ballot.`:`Every race on the Dallas County ballot, with its candidates. Votes fill in from Dallas County's results after 7 pm.`;
+ $('#dalResDeck').textContent=DR&&hasVotes(DR.races)?`Unofficial, ${DR.source}, read ${DR.as_of||R.as_of}. Every race in ballot order.`:`Every race in ballot order, with its candidates. Votes fill in from Dallas County's results after 7 pm.`;
  $('#dalRes').innerHTML=dallasRacesHTML();
  drawSites()}
 function drawSites(){const el=$('#dalSites');if(!el||!L||!L.dallas)return;const q=($('#siteQ').value||'').toLowerCase(),only=$('#siteD2').checked;

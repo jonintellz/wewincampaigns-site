@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-03 02:55 PM",
+ "as_of": "2026-11-03 02:56 PM",
  "source": "Texas Secretary of State",
  "sos_updated": "Oct 29, 2026 22:13:17",
  "statewide": [
@@ -7341,7 +7341,7 @@
  ],
  "dallas": {
   "source": "Dallas County Elections (unofficial)",
-  "as_of": "2:55 PM",
+  "as_of": "2:56 PM",
   "races": [
    {
     "race": "United States Senator",
@@ -8685,6 +8685,15 @@
    "ev": null,
    "edW": 0,
    "edS": 0
+  },
+  "prop_a": {
+   "race": "DALLAS COUNTY PROPOSITION A",
+   "reporting": "0/914 precincts",
+   "F": 0,
+   "A": 0,
+   "ev": null,
+   "edF": 0,
+   "edA": 0
   }
  }
 }
