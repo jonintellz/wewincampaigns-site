@@ -1,0 +1,268 @@
+{
+ "as_of": "2026-11-03 01:16 PM",
+ "total": 189441,
+ "base22_total": 517013,
+ "pct_of_22": 36.6,
+ "mix_lean_vs_22": 3.18,
+ "counties": [
+  {
+   "county": "Dallas",
+   "today": 62172,
+   "ed22": 212526,
+   "pct22": 29.3,
+   "ed24": 187828,
+   "pct24": 33.1,
+   "m22": -21.88,
+   "m24": -17.08,
+   "updated": "01:16 PM"
+  },
+  {
+   "county": "Travis",
+   "today": 52181,
+   "ed22": 130241,
+   "pct22": 40.1,
+   "ed24": 96528,
+   "pct24": 54.1,
+   "m22": -36.44,
+   "m24": -23.75,
+   "updated": "01:10 PM"
+  },
+  {
+   "county": "Montgomery",
+   "today": 31535,
+   "ed22": 67248,
+   "pct22": 46.9,
+   "ed24": 57549,
+   "pct24": 54.8,
+   "m22": 47.72,
+   "m24": 40.2,
+   "updated": "01:13 PM"
+  },
+  {
+   "county": "Bell",
+   "today": 12825,
+   "ed22": 29955,
+   "pct22": 42.8,
+   "ed24": 29024,
+   "pct24": 44.2,
+   "m22": 26.2,
+   "m24": 17.0,
+   "updated": "01:13 PM"
+  },
+  {
+   "county": "Mclennan",
+   "today": 11426,
+   "ed22": 27228,
+   "pct22": 42.0,
+   "ed24": 25422,
+   "pct24": 44.9,
+   "m22": 38.22,
+   "m24": 32.58,
+   "updated": "01:11 PM"
+  },
+  {
+   "county": "Hays",
+   "today": 9742,
+   "ed22": 23506,
+   "pct22": 41.4,
+   "ed24": 20320,
+   "pct24": 47.9,
+   "m22": -3.94,
+   "m24": -1.73,
+   "updated": "01:12 PM"
+  },
+  {
+   "county": "Ellis",
+   "today": 8155,
+   "ed22": 22089,
+   "pct22": 36.9,
+   "ed24": 17850,
+   "pct24": 45.7,
+   "m22": 35.32,
+   "m24": 28.31,
+   "updated": "01:14 PM"
+  },
+  {
+   "county": "Hockley",
+   "today": 775,
+   "ed22": 2415,
+   "pct22": 32.1,
+   "ed24": 2025,
+   "pct24": 38.3,
+   "m22": 71.1,
+   "m24": 61.93,
+   "updated": "01:11 PM"
+  },
+  {
+   "county": "Madison",
+   "today": 630,
+   "ed22": 1805,
+   "pct22": 34.9,
+   "ed24": 1174,
+   "pct24": 53.7,
+   "m22": 69.31,
+   "m24": 59.63,
+   "updated": "01:13 PM"
+  }
+ ],
+ "dallas": {
+  "sites": 444,
+  "avg_wait": 15.4,
+  "top": [
+   [
+    "Oak Lawn Branch Library",
+    "Dallas",
+    1060,
+    2293
+   ],
+   [
+    "University Park Umc",
+    "Dallas",
+    745,
+    2462
+   ],
+   [
+    "South Garland Branch Library",
+    "Garland",
+    733,
+    2121
+   ],
+   [
+    "Fretz Park Library",
+    "Dallas",
+    683,
+    2339
+   ],
+   [
+    "Cozby Library And Community Commons",
+    "Coppell",
+    659,
+    null
+   ],
+   [
+    "Irving City Hall",
+    "Irving",
+    653,
+    2379
+   ],
+   [
+    "Audelia Road Branch Library",
+    "Dallas",
+    598,
+    1710
+   ],
+   [
+    "Mockingbird Elementary School-Disd",
+    "Dallas",
+    580,
+    1497
+   ],
+   [
+    "Northway Christian Church",
+    "Dallas",
+    573,
+    null
+   ],
+   [
+    "Marsh Lane Baptist Church",
+    "Dallas",
+    559,
+    1428
+   ]
+  ],
+  "longest_waits": [
+   [
+    "Jc Rugel Elementary School",
+    "Mesquite",
+    30
+   ],
+   [
+    "University Of Texas At Dallas",
+    "Richardson",
+    30
+   ],
+   [
+    "Alfred J Loos Field House",
+    "Addison",
+    30
+   ],
+   [
+    "Cockrell Hill Elementary School",
+    "Desoto",
+    30
+   ],
+   [
+    "Bill Arnold Middle School",
+    "Grand Prairie",
+    30
+   ],
+   [
+    "Northwood Hills Elementary Sch",
+    "Dallas",
+    30
+   ],
+   [
+    "Bradfield Elementary School",
+    "Garland",
+    30
+   ],
+   [
+    "Blanton Elementary School",
+    "Carrollton",
+    30
+   ]
+  ]
+ },
+ "harris": {
+  "sites": 623,
+  "bands": {
+   "0-14 min": 601,
+   "15-29 min": 8,
+   "30+ min": 14
+  },
+  "in_line": 3050,
+  "worst": [
+   [
+    "Tom Bass Park Community Center Section Three",
+    "Houston",
+    200
+   ],
+   [
+    "Jean Hines Caldwell Elementary School",
+    "Houston",
+    35
+   ],
+   [
+    "Alief ISD Administration Building",
+    "Houston",
+    35
+   ],
+   [
+    "Fallbrook Church",
+    "Houston",
+    35
+   ],
+   [
+    "HCPL Maud Smith Marks Branch Library",
+    "Katy",
+    35
+   ],
+   [
+    "First Christian Church",
+    "Katy",
+    35
+   ],
+   [
+    "Kingsland Baptist Church North Katy Campus",
+    "Katy",
+    35
+   ],
+   [
+    "Katy Branch Harris County Public Library",
+    "Katy",
+    30
+   ]
+  ]
+ },
+ "errors": []
+}
