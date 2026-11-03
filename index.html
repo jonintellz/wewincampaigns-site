@@ -375,6 +375,7 @@ function pageLive(){return `
 <p class="src" id="liveStamp">Loading</p>
 <section id="callsSec"><h2>Calls and claims</h2><div id="callsBody"></div></section>
 <p class="note" style="margin-top:18px">Polls close at 7 pm Central everywhere except <b>El Paso and Hudspeth counties</b>, which are on Mountain time and close at <b>8 pm Central</b>. No county may release results until its polls close.</p>
+<div id="sinceBox"></div>
 <section id="batches"><h2>Latest batches</h2><p class="deck">Every drop of votes as it lands, newest first. Read early-vote drops and Election Day drops separately: in Texas the first drop from a big county is its early vote.</p><div id="batchBody"></div></section>
 <section id="toolsSec"><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="icon-btn" id="alertBtn">Alert me when results update</button><span class="src">Share a result card:</span><button type="button" class="icon-btn" data-share="sen">Senate</button><button type="button" class="icon-btn" data-share="gov">Governor</button><button type="button" class="icon-btn" data-share="d2">Precinct 2</button><button type="button" class="icon-btn" data-share="pa">Prop A</button><button type="button" class="icon-btn" id="dlCounties">Download county results (CSV)</button><span class="src">Copy a text update:</span><button type="button" class="icon-btn" data-copy="sen">Senate</button><button type="button" class="icon-btn" data-copy="gov">Governor</button><button type="button" class="icon-btn" data-copy="d2">Precinct 2</button><button type="button" class="icon-btn" data-copy="pa">Prop A</button></div></section>
 <section id="tlSec"><div id="tlBody"></div></section>
@@ -593,6 +594,7 @@ function pageDallas(){const c=T.counties.find(x=>x.county==='Dallas')||{};const 
 <section class="grid g2" style="margin-top:14px"><div id="propCalc"></div><div id="dClock"></div></section>
 <section class="grid g2"><div id="d2Out"></div><div id="d2Ticket"></div></section>
 <section><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="icon-btn" id="alertBtn">Alert me when results update</button><button type="button" class="icon-btn" data-share="d2">Share Precinct 2 card</button><button type="button" class="icon-btn" data-share="pa">Share Prop A card</button><button type="button" class="icon-btn" id="dlPrec">Download precinct results (CSV)</button><button type="button" class="icon-btn" data-copy="d2">Copy Precinct 2 update</button><button type="button" class="icon-btn" data-copy="pa">Copy Prop A update</button></div></section>
+<div id="sinceBoxD"></div>
 <section><h2>Latest Dallas batches</h2><div id="dalBatches"></div></section>
 <section><div id="tlBodyD"></div></section>
 <section><h2>Precinct map</h2><div id="dmapBody"></div></section>
@@ -690,7 +692,7 @@ function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
  if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
  const a=$('#d2Result');if(a)a.innerHTML=d2Board();
  const pc=$('#propCalc');if(pc&&!pc.innerHTML)pc.innerHTML=propACalcHTML();const dc=$('#dClock');if(dc)dc.innerHTML=dallasClockHTML();const o_=$('#d2Out');if(o_)o_.innerHTML=d2OutHTML();const tk=$('#d2Ticket');if(tk)tk.innerHTML=d2TicketHTML();const ah=$('#after100');if(ah&&!ah.innerHTML)ah.innerHTML=afterHundredHTML();const b=$('#propA');if(b)b.innerHTML=propABoard();
- const db=$('#dalBatches');if(db)db.innerHTML=batchesHTML(true);const tbd=$('#tlBodyD');if(tbd){if(tlRace==='sen'||tlRace==='gov')tlRace='d2';tbd.innerHTML=timelineHTML()}const dr=$('#dalRes');if(dr)dr.innerHTML=dallasRacesHTML();
+ const db=$('#dalBatches');if(db)db.innerHTML=batchesHTML(true);const sbd=$('#sinceBoxD');if(sbd&&!sbd.dataset.done&&window.RES){sbd.innerHTML=sinceHTML();sbd.dataset.done=1}const tbd=$('#tlBodyD');if(tbd){if(tlRace==='sen'||tlRace==='gov')tlRace='d2';tbd.innerHTML=timelineHTML()}const dr=$('#dalRes');if(dr)dr.innerHTML=dallasRacesHTML();
  if(!window.DBASE)fetch('data/dallas_base.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.DBASE=j;renderPrecinctMap();const o_=$('#d2Out');if(o_)o_.innerHTML=d2OutHTML();const pt=$('#precTab');if(pt)pt.innerHTML=precinctTableHTML()}}).catch(()=>{});
  if(!window.DPATHS)fetch('data/dallas_paths.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.DPATHS=j;renderPrecinctMap()}}).catch(()=>{});renderPrecinctMap();
  const pt=$('#precTab');if(pt&&document.activeElement&&document.activeElement.id!=='pQ')pt.innerHTML=precinctTableHTML();
@@ -801,7 +803,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='59eeaa2bd442',failN=0;
+let BUILD='7d25cd37af06',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -957,6 +959,20 @@ function overlayKitHTML(){const base=location.origin+location.pathname;const ex=
  ${table([['Graphic'],['Address']],ex.map(([t,q])=>`<tr><td>${t}</td><td style="text-align:left;white-space:normal"><code style="font:12.5px var(--f-mono);overflow-wrap:anywhere">${esc(base+q)}</code> <a href="${esc(q)}" target="_blank" rel="noopener">preview</a></td></tr>`).join(''))}
  <p class="src">Races: sen, gov, d2 (Dallas Commissioner Precinct 2), pa (Dallas County Prop A); combine with commas. Free to use; please keep the wewincampaigns.com credit.</p></div>`}
 
+
+/* ---------- data checks and "since you last looked" ---------- */
+function checksHTML(){const B=(window.RES&&window.RES.batches||[]).filter(b=>b.flag);if(!B.length)return `<div class="card"><h3>Data checks</h3><p class="src" style="margin:0">Every update is checked for counts that go down or precincts reporting that go backwards. Nothing unusual so far.</p></div>`;
+ return `<div class="card" style="border-color:var(--accent)"><h3>Data checks: ${B.length} flagged update${B.length>1?'s':''}</h3>${table([['Time'],['County'],['What happened'],['Change']],B.slice(0,15).map(b=>`<tr><td>${esc(b.t)}</td><td>${esc(b.county)}</td><td><b style="color:var(--accent)">${esc(b.flag)}</b></td><td>Talarico ${b.dD>=0?'+':''}${fmt(b.dD)}, Paxton ${b.dR>=0?'+':''}${fmt(b.dR)}</td></tr>`).join(''))}
+ <p class="src">A drop usually means the county corrected a batch. It is shown, never hidden, so you know which numbers moved.</p></div>`}
+function keySnap(){const R=window.RES;if(!R)return null;const st=rx=>{const r=(R.statewide||[]).find(x=>rx.test(x.race));if(!r)return null;const D=(r.candidates.find(c=>c.party==='DEM')||{votes:0}).votes,Rv=(r.candidates.find(c=>c.party==='REP')||{votes:0}).votes;return [D,Rv]};
+ const d=R.dallas||{};return {at:R.as_of,sen:st(/^u\.?s\.? senat/i),gov:st(/^governor$/i),d2:d.d2?[d.d2.S,d.d2.W]:null,pa:d.prop_a?[d.prop_a.F,d.prop_a.A]:null}}
+function sinceHTML(){let prev=null;try{prev=JSON.parse(localStorage.getItem('tvd_seen')||'null')}catch(e){}const cur=keySnap();if(!cur)return '';
+ const lab={sen:['Talarico','Paxton','Senate'],gov:['Hinojosa','Abbott','Governor'],d2:['Sommerman','Wernick','Pct 2'],pa:['For','Against','Prop A']};
+ const lines=[];if(prev&&prev.at!==cur.at)Object.keys(lab).forEach(k=>{const a=prev[k],b=cur[k];if(!a||!b)return;const ta=a[0]+a[1],tb=b[0]+b[1];if(tb===ta)return;
+  const ma=ta?a[1]-a[0]:0,mb=b[1]-b[0];lines.push(`<b>${lab[k][2]}</b>: +${fmt(tb-ta)} votes counted; ${mb>=0?lab[k][1]:lab[k][0]} now leads by ${fmt(Math.abs(mb))}${ta?` (was ${ma>=0?lab[k][1]:lab[k][0]} +${fmt(Math.abs(ma))})`:''}`)});
+ try{localStorage.setItem('tvd_seen',JSON.stringify(cur))}catch(e){}
+ return lines.length?`<div class="note" style="margin-top:14px"><b>Since you last looked</b> (${esc(prev.at.split(' ').slice(1).join(' '))}): ${lines.join(' · ')}</div>`:''}
+
 function renderLive(){if(!L){if(route()==='dallas')renderDallasResults();return;}
  const hl=$('#homeLive');if(hl){hl.textContent=fmt(L.total);$('#homeLiveSub').textContent=`${L.counties.length} live counties, ${L.pct_of_22}% of their 2022 Election Day · ${L.as_of.split(' ').slice(1).join(' ')}`}
  if(route()==='polls'){const mp=$('#mktPolls');if(mp)mp.innerHTML=marketsHTML(true)?'<h2>Prediction markets, live</h2>'+marketsHTML(true):''}
@@ -968,7 +984,7 @@ function renderLive(){if(!L){if(route()==='dallas')renderDallasResults();return;
   +tile('Mix lean vs 2022',mg(mix),'geography of today\'s vote',mix>0?'r':'d')
   +tile('Dallas average wait',(L.dallas&&L.dallas.avg_wait!=null?L.dallas.avg_wait+' min':'–'),`Harris: ${fmt(L.harris&&L.harris.in_line)} people in line`);
  renderTurnTable();renderDetail();
-  histChart();renderWaits();renderResults();renderMap();{const mh=marketsHTML(false),ml=$('#mktLive');if(ml){ml.hidden=!mh;$('#mktLiveBody').innerHTML=mh}}const bb=$('#batchBody');if(bb)bb.innerHTML=batchesHTML(false);const tb=$('#tlBody');if(tb)tb.innerHTML=timelineHTML();const cb=$('#callsBody');if(cb)cb.innerHTML=callsHTML()}
+  histChart();renderWaits();renderResults();renderMap();{const mh=marketsHTML(false),ml=$('#mktLive');if(ml){ml.hidden=!mh;$('#mktLiveBody').innerHTML=mh}}const bb=$('#batchBody');if(bb)bb.innerHTML=batchesHTML(false)+'<div style="margin-top:12px">'+checksHTML()+'</div>';const sb_=$('#sinceBox');if(sb_&&!sb_.dataset.done&&window.RES){sb_.innerHTML=sinceHTML();sb_.dataset.done=1}const tb=$('#tlBody');if(tb)tb.innerHTML=timelineHTML();const cb=$('#callsBody');if(cb)cb.innerHTML=callsHTML()}
 async function loadLive(){const q='?t='+Math.floor(Date.now()/60000);let ok=0;
  try{const r=await fetch('data/ed_live.json'+q,{cache:'no-store'});if(r.ok){L=await r.json();ok++}}catch(e){}
  try{const r=await fetch('data/ed_results.json'+q,{cache:'no-store'});if(r.ok){window.RES=await r.json();ok++}}catch(e){}
