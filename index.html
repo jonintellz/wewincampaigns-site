@@ -361,6 +361,24 @@ let mapMode='margin';
 function mixHex(a,b,t){const h=x=>[1,3,5].map(i=>parseInt(x.slice(i,i+2),16));const A=h(a),B=h(b);return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join('')}
 function divColor(v,cap){const R=css('--rep')||'#ef5a5f',D=css('--dem')||'#5b8def',N=css('--raise')||'#151d35';if(v==null||isNaN(v))return css('--surface');const t=Math.min(1,Math.abs(v)/cap);return mixHex(N,v>0?R:D,0.15+0.85*t)}
 function seqColor(v){const lo=css('--raise')||'#151d35',hi=css('--steel')||'#9fb8e6';if(v==null)return css('--surface');return mixHex(lo,hi,Math.max(0,Math.min(1,v)))}
+
+function turnoutLayer(G){const R=window.RES,E=expectedByCounty(),B=T.county_base||{};const key={};Object.keys(B).forEach(k=>key[k.toLowerCase()]=k);
+ const live={};(L&&L.counties||[]).forEach(c=>live[c.county.toLowerCase()]=c);const res={};(R&&R.counties||[]).forEach(c=>res[c.county.toLowerCase()]=c);
+ const rows=[];let vmax=1,sumLive=0,sum22live=0,nLive=0,sumCounted=0,nCounted=0,sumExp=0;
+ Object.entries(G.centroids||{}).forEach(([n,xy])=>{const k=n.toLowerCase(),e=E[key[k]]||{ed:0},l=live[k],r=res[k]&&res[k].sen;
+  const counted=r&&r.T?Math.max(0,r.T-(r.Tev||0)):0;const lv=l?l.today:0;const val=Math.max(counted,lv);const exp=Math.max(e.ed||0,val);
+  if(lv){sumLive+=lv;sum22live+=l.ed22;nLive++}if(counted){sumCounted+=counted;nCounted++}sumExp+=e.ed||0;
+  rows.push({n,xy,val,exp,solid:val>0,src:counted>=lv&&counted>0?'counted':lv?'live':'',pace:l?l.pct22:null});vmax=Math.max(vmax,exp)});
+ const rad=v=>1.6+27*Math.sqrt(v/vmax);rows.sort((a,b)=>b.exp-a.exp);
+ const hi=css('--hi'),mu=css('--muted'),ac=css('--accent'),pg=css('--page');
+ const svg=rows.map(r=>{const tip=r.solid?(r.src==='counted'?`${fmt(r.val)} Election Day votes counted tonight · expected about ${fmt(Math.round(r.exp))}`:`${fmt(r.val)} checked in today, ${Math.round(r.pace)}% of its 2022 Election Day · expected about ${fmt(Math.round(r.exp))}`):`Expected Election Day: about ${fmt(Math.round(r.exp))} (estimate from 2022 and 2024)`;
+  const dashed=r.exp>=1500?`<circle cx="${r.xy[0]}" cy="${r.xy[1]}" r="${rad(r.exp).toFixed(1)}" fill="${css('--page')}" fill-opacity="0.25" stroke="${css('--strong')}" stroke-opacity="0.75" stroke-width="1.4" stroke-dasharray="4 3" data-n="${esc(r.n)}" data-t="${esc(tip)}"></circle>`:'';
+  const solid=r.solid?`<circle cx="${r.xy[0]}" cy="${r.xy[1]}" r="${rad(r.val).toFixed(1)}" fill="${hi}" fill-opacity="0.85" stroke="${pg}" stroke-width="1" data-n="${esc(r.n)}" data-t="${esc(tip)}"></circle>`:'';
+  const lab=r.solid&&rad(r.val)>=11?`<text x="${r.xy[0]}" y="${r.xy[1]+4}" text-anchor="middle" style="fill:${pg};font:700 11px var(--f-body);pointer-events:none">${r.pace!=null&&r.src==='live'?Math.round(r.pace)+'%':fmt(Math.round(r.val/1000))+'k'}</text>`:'';
+  return dashed+solid+lab}).join('');
+ const sumTxt=nCounted?`<b>${fmt(sumCounted)}</b> Election Day votes counted so far in ${nCounted} counties`:`<b>${fmt(sumLive)}</b> voters checked in today in the ${nLive} counties that publish a live count, <b>${sum22live?(100*sumLive/sum22live).toFixed(0):0}%</b> of their whole 2022 Election Day`;
+ return {svg,summary:`${sumTxt}. Expected statewide Election Day: about <b>${mil(sumExp,2)}</b> (estimate).`}}
+
 function mapHTML(){const G=window.TXMAP;if(!G)return '<p class="src">Loading map.</p>';const R=window.RES,E=expectedByCounty(),B=T.county_base||{};
  const byName={};(R&&R.counties||[]).forEach(c=>byName[c.county.toLowerCase()]=c);const base={},ekey={};Object.keys(B).forEach(k=>{base[k.toLowerCase()]=B[k];ekey[k.toLowerCase()]=k});
  const live={};(L&&L.counties||[]).forEach(c=>live[c.county.toLowerCase()]=c);
@@ -372,16 +390,17 @@ function mapHTML(){const G=window.TXMAP;if(!G)return '<p class="src">Loading map
   if(mapMode==='swing'){const done=r&&r.tp&&r.pr>=r.tp;if(anyVotes&&done&&m!=null&&b.m24!=null)return{col:divColor(m-b.m24,15),t:`${mg(m-b.m24)} vs 2024 (county finished)`};
    if(anyVotes)return{col:css('--surface'),t:'swing shown once the county finishes counting'};note='No county has finished yet: showing the shift from the 2022 Governor race to the 2024 presidential race, the baseline tonight\'s swing is measured against.';
    const sh=b.m24!=null&&b.m22!=null?b.m24-b.m22:null;return{col:divColor(sh,15),t:sh==null?'–':`2022 to 2024 shift: ${mg(sh)}`}}
-  if(mapMode==='today'){const l=live[k];note='Only Dallas and 8 smaller counties publish a live Election Day count; the rest are blank until results.';return{col:l?seqColor(Math.min(1,l.pct22/100)):css('--surface'),t:l?`${fmt(l.today)} voted today, ${l.pct22}% of the county's 2022 Election Day`:'no live count published'}}
+  if(mapMode==='today'){const p=b.reg?b.ev26/b.reg:null;return{col:p==null?css('--surface'):seqColor((p-0.22)/0.36),t:p==null?'–':`Early vote: ${(100*p).toFixed(1)}% of registered voters (${fmt(b.ev26)})`}}
   return{col:divColor(b.m24,60),t:'2024 President: '+mg(b.m24)}};
  const paths=Object.entries(G.paths).map(([n,d])=>{const i=info(n);return `<path d="${d}" fill="${i.col}" stroke="${css('--page')}" stroke-width="0.6" data-n="${esc(n)}" data-t="${esc(i.t)}"></path>`}).join('');
- const opts=[['margin',raceName+' margin'],['in','% of expected vote in'],['swing','Swing vs 2024'],['today','Election Day turnout today'],['base','2024 presidential margin']];
- const seq=mapMode==='in'||mapMode==='today';
+ const TL=mapMode==='today'?turnoutLayer(G):null;if(TL)note=TL.summary;
+ const opts=[['margin',raceName+' margin'],['in','% of expected vote in'],['swing','Swing vs 2024'],['today','Election Day turnout'],['base','2024 presidential margin']];
+ const seq=mapMode==='in';
  return `<div class="card"><div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px">${opts.map(([k,t])=>`<button type="button" class="icon-btn" data-map="${k}" aria-pressed="${k===mapMode}" style="${k===mapMode?'border-color:var(--accent);color:var(--strong);background:var(--accent-wash)':''}">${t}</button>`).join('')}</div>
  ${note?`<p class="src" style="margin:0 0 6px">${note}</p>`:''}
- <div class="chart" id="txmap"><svg viewBox="0 0 ${G.w} ${G.h}" role="img" aria-label="Texas counties">${paths}</svg></div>
- <p class="src">${seq?'Steel shading: lighter is less, brighter is more.':'Red is Republican, blue is Democratic; deeper is a wider margin.'} Hover or tap a county.</p></div>`}
-function wireMap(){const el=$('#txmap');if(!el)return;el.querySelectorAll('path').forEach(p=>{p.onmousemove=e=>tip(e,`<b>${p.dataset.n}</b><br>${p.dataset.t}`);p.onmouseleave=untip;p.onclick=e=>tip(e,`<b>${p.dataset.n}</b><br>${p.dataset.t}`)})}
+ <div class="chart" id="txmap"><svg viewBox="0 0 ${G.w} ${G.h}" role="img" aria-label="Texas counties">${paths}${TL?TL.svg:''}</svg></div>
+ <p class="src">${TL?`<svg width="14" height="14" style="vertical-align:-2px"><circle cx="7" cy="7" r="6" fill="${css('--hi')}"/></svg> Election Day votes counted or checked in (size = votes; the % is the share of that county's 2022 Election Day) · <svg width="14" height="14" style="vertical-align:-2px"><circle cx="7" cy="7" r="6" fill="none" stroke="${css('--strong')}" stroke-dasharray="3 2"/></svg> expected Election Day size (counties expecting 1,500+ Election Day votes) · county shading: early-vote turnout, share of registered voters. Before 7 pm only 9 counties publish a count; after 7 pm every county fills in from its results.`:seq?'Steel shading: lighter is less, brighter is more.':'Red is Republican, blue is Democratic; deeper is a wider margin.'} Hover or tap a county or circle.</p></div>`}
+function wireMap(){const el=$('#txmap');if(!el)return;el.querySelectorAll('path,circle').forEach(p=>{p.onmousemove=e=>tip(e,`<b>${p.dataset.n}</b><br>${p.dataset.t}`);p.onmouseleave=untip;p.onclick=e=>tip(e,`<b>${p.dataset.n}</b><br>${p.dataset.t}`)})}
 function renderMap(){const el=$('#mapBody');if(!el)return;el.innerHTML=mapHTML();wireMap()}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-map]');if(b){mapMode=b.dataset.map;renderMap()}});
 
@@ -665,7 +684,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='de50a67e1418',failN=0;
+let BUILD='40bdeb31b835',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
