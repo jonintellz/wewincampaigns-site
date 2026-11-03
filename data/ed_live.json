@@ -1,9 +1,9 @@
 {
- "as_of": "2026-11-03 02:56 PM",
- "total": 250722,
+ "as_of": "2026-11-03 02:58 PM",
+ "total": 251277,
  "base22_total": 517013,
- "pct_of_22": 48.5,
- "mix_lean_vs_22": 2.04,
+ "pct_of_22": 48.6,
+ "mix_lean_vs_22": 2.14,
  "counties": [
   {
    "county": "Dallas",
@@ -14,7 +14,7 @@
    "pct24": 48.3,
    "m22": -21.88,
    "m24": -17.08,
-   "updated": "02:56 PM"
+   "updated": "02:58 PM"
   },
   {
    "county": "Travis",
@@ -29,25 +29,25 @@
   },
   {
    "county": "Montgomery",
-   "today": 38849,
+   "today": 39235,
    "ed22": 67248,
-   "pct22": 57.8,
+   "pct22": 58.3,
    "ed24": 57549,
-   "pct24": 67.5,
+   "pct24": 68.2,
    "m22": 47.72,
    "m24": 40.2,
-   "updated": "02:52 PM"
+   "updated": "02:57 PM"
   },
   {
    "county": "Bell",
-   "today": 16060,
+   "today": 16224,
    "ed22": 29955,
-   "pct22": 53.6,
+   "pct22": 54.2,
    "ed24": 29024,
-   "pct24": 55.3,
+   "pct24": 55.9,
    "m22": 26.2,
    "m24": 17.0,
-   "updated": "02:52 PM"
+   "updated": "02:57 PM"
   },
   {
    "county": "Mclennan",
@@ -84,14 +84,14 @@
   },
   {
    "county": "Hockley",
-   "today": 979,
+   "today": 984,
    "ed22": 2415,
-   "pct22": 40.5,
+   "pct22": 40.7,
    "ed24": 2025,
-   "pct24": 48.3,
+   "pct24": 48.6,
    "m22": 71.1,
    "m24": 61.93,
-   "updated": "02:53 PM"
+   "updated": "02:58 PM"
   },
   {
    "county": "Madison",
@@ -4994,13 +4994,18 @@
   {
    "county": "Tarrant",
    "sites": 224,
-   "avg": 4.8,
-   "over30": 28,
+   "avg": 5.2,
+   "over30": 27,
    "worst": [
     [
-     "700 East Abram Street",
+     "1300 Northeast 35th Street",
      120,
-     "Arlington"
+     "Fort Worth"
+    ],
+    [
+     "4205 Basswood Boulevard",
+     120,
+     "Fort Worth"
     ],
     [
      "2625 W. Pioneer Parkway",
@@ -5008,14 +5013,9 @@
      "Grand Prairie"
     ],
     [
-     "1001 East Bailey Boswell Road",
+     "3212 Miller Avenue",
      60,
      "Fort Worth"
-    ],
-    [
-     "1075 Eagle Boulevard",
-     60,
-     "Haslet"
     ],
     [
      "1216 Diamond Back Lane",
@@ -5023,9 +5023,9 @@
      "Haslet"
     ],
     [
-     "8215 White Settlement Road",
+     "700 East Abram Street",
      60,
-     "White Settlement"
+     "Arlington"
     ]
    ]
   },
@@ -5209,6 +5209,10 @@
   [
    "14:56",
    250722
+  ],
+  [
+   "14:58",
+   251277
   ]
  ]
 }
