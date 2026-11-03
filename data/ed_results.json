@@ -1,5 +1,5 @@
 {
- "as_of": "2026-11-03 02:04 PM",
+ "as_of": "2026-11-03 02:41 PM",
  "source": "Texas Secretary of State",
  "sos_updated": "Oct 29, 2026 22:13:17",
  "statewide": [
@@ -10,17 +10,20 @@
     {
      "name": "Ted Brown",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Ken Paxton",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "James Talarico",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -31,12 +34,14 @@
     {
      "name": "Michael Cloud (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Tanya Lloyd",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -47,12 +52,14 @@
     {
      "name": "Craig Goldman (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Angela \"Heli\" Rodriguez Prilliman",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -63,12 +70,14 @@
     {
      "name": "Leticia Gutierrez",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Alex Mealer",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -79,12 +88,14 @@
     {
      "name": "Kyle Rable",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Tom Sell",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -95,17 +106,20 @@
     {
      "name": "Henry Cuellar (i)",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Marl\u00f3n Dur\u00e1n",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Tano E. Tijerina",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -116,12 +130,14 @@
     {
      "name": "Laura Jones",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Jessica Hart Steinmann",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -132,12 +148,14 @@
     {
      "name": "Martha Fierro",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Sylvia Garcia (i)",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -148,12 +166,14 @@
     {
      "name": "Shaun Finnie",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Steve Toth",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -164,12 +184,14 @@
     {
      "name": "Evan Hunt",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Keith Self (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -180,12 +202,14 @@
     {
      "name": "Monica De La Cruz (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Bobby Pulido",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -196,12 +220,14 @@
     {
      "name": "Edgardo Rafael Baez",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Joaquin Castro (i)",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -212,12 +238,14 @@
     {
      "name": "Frederick D. Haynes Iii",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Everett Jackson",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -228,17 +256,20 @@
     {
      "name": "Lizzie Pannill Fletcher (i)",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Alexander Hale",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Espoir Ngabo",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -249,12 +280,14 @@
     {
      "name": "Chris Gober",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Caitlin Rourk",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -265,17 +298,20 @@
     {
      "name": "John Carter (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Justin Early",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Greg Stoker",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -286,12 +322,14 @@
     {
      "name": "Dan Barrios",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Jace Yarbrough",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -302,12 +340,14 @@
     {
      "name": "Kristin Hook",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Mark Teixeira",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -318,12 +358,14 @@
     {
      "name": "Jake Ellzey (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Danny Minton",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -334,12 +376,14 @@
     {
      "name": "Ronny Jackson (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Mark Nair",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -350,12 +394,14 @@
     {
      "name": "Colin Allred",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Patrick David Gillespie",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -366,12 +412,14 @@
     {
      "name": "Carlos De La Cruz",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Johnny C. Garcia",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -382,12 +430,14 @@
     {
      "name": "Adam Bauman",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Veronica Escobar (i)",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -398,12 +448,14 @@
     {
      "name": "Marquette Greene-Scott",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Trever Nehls",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -414,12 +466,14 @@
     {
      "name": "Brian Babin (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Rhonda Hart",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -430,12 +484,14 @@
     {
      "name": "Pete Sessions (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Casey Shepard",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -446,12 +502,14 @@
     {
      "name": "Greg Casar",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Lauren B. Pe\u00f1a",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -462,17 +520,20 @@
     {
      "name": "Jon Bonck",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Melissa Mcdonough",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Alex Mcmenemy",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -483,12 +544,14 @@
     {
      "name": "Lance Gooden (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Chelsey Hockett",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -499,22 +562,26 @@
     {
      "name": "Eddie Espinoza",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Eric Flores",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Vicente Gonzalez (i)",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Chris Royal",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -525,12 +592,14 @@
     {
      "name": "Pat Fallon (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Jason Pearce",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -541,12 +610,14 @@
     {
      "name": "Nathaniel Moran (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Yolanda R.  Prince",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -557,17 +628,20 @@
     {
      "name": "Brandon Herrera",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Ben Mendoza",
      "party": "IND",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Katy Padilla Stout",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -578,12 +652,14 @@
     {
      "name": "Kevin Burge",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Beth Van Duyne (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -594,12 +670,14 @@
     {
      "name": "August Pfluger (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Claire Reynolds",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -610,12 +688,14 @@
     {
      "name": "Christian Dashaun Menefee",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Ronald Dwayne Whitfield",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -626,12 +706,14 @@
     {
      "name": "Dione Sims",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Roger Williams (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -642,12 +724,14 @@
     {
      "name": "Thurman Bill Bartie",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Randy Weber (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -658,17 +742,20 @@
     {
      "name": "Brandon Gill (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Phil Gray",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Steven Shook",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -679,17 +766,20 @@
     {
      "name": "Greg Abbott (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Pat Dixon",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Gina Hinojosa",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -700,22 +790,26 @@
     {
      "name": "Anthony Cristo",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Vikki Goodwin",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Kevin Mccormick",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Dan Patrick (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -726,17 +820,20 @@
     {
      "name": "Nathan Johnson",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Mayes Middleton",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Tom Oxford",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -747,22 +844,26 @@
     {
      "name": "V. Alonzo Echavarria-Garza",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Sarah Eckhardt",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Shehla Faizi",
      "party": "GRE",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Don Huffines",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -773,17 +874,20 @@
     {
      "name": "Dawn Buckingham (i)",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Benjamin Flores",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Neill Snider",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -794,17 +898,20 @@
     {
      "name": "Austin R. Kelly",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Nate Sheets",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Clayton Tucker",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -815,17 +922,20 @@
     {
      "name": "Arthur Dibianca",
      "party": "LIB",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Bo French",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     },
     {
      "name": "Jon Rosenthal",
      "party": "DEM",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   },
@@ -836,370 +946,6375 @@
     {
      "name": "Paul W. Lewallen",
      "party": "REP",
-     "votes": 0
+     "votes": 0,
+     "ev": 0
     }
    ]
   }
  ],
+ "home": {
+  "counties": {
+   "CR": 0,
+   "CT": 254
+  },
+  "polling": {
+   "PLR": 0,
+   "PLT": 5302
+  },
+  "precincts": {
+   "PR": 0,
+   "PT": 90
+  }
+ },
  "county_race": "U.S. Senate (Talarico D, Paxton R)",
  "counties": [
   {
    "county": "Nolan",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/10 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Mitchell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Fisher",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Zavala",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/7 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Zapata",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/8 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Young",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/8 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Yoakum",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/7 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wood",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/15 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wise",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 29,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 29,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/29 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Winkler",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/6 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wilson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/13 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Williamson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 178,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 178,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/178 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Willacy",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/18 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wilbarger",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wichita",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 41,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 41,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/41 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wheeler",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Wharton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/13 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Webb",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 79,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 79,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/79 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Washington",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/20 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Ward",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/9 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Waller",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/20 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Walker",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/19 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Victoria",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 36,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 36,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/36 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Van Zandt",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/19 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Val Verde",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/18 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Uvalde",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/15 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Upton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/7 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Upshur",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/20 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Tyler",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/18 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Trinity",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/21 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Travis",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 309,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 309,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/309 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Tom Green",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 36,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 36,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/36 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Titus",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/20 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Throckmorton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Terry",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/7 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Terrell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Taylor",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 69,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 69,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/69 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Tarrant",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 708,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 708,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/708 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Swisher",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/8 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Sutton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Stonewall",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 4,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 4,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/4 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Sterling",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Stephens",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/6 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Starr",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/15 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Somervell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Smith",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 67,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 67,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/67 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Sherman",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/8 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Shelby",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/15 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Shackelford",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/8 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Scurry",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/12 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Schleicher",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/5 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "San Saba",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/6 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "San Patricio",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 28,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 28,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/28 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "San Jacinto",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/12 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "San Augustine",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/12 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Sabine",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/9 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Rusk",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/23 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Runnels",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/9 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Rockwall",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 28,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 28,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/28 precincts",
    "D": 0,
    "R": 0
   },
   {
    "county": "Robertson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
    "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Roberts",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Refugio",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Reeves",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Red River",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Real",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Reagan",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Randall",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 32,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 32,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/32 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Rains",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Presidio",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Potter",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 25,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 25,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/25 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Polk",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/23 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Pecos",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Parmer",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Parker",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 47,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 47,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/47 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Panola",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/20 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Palo Pinto",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 30,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 30,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/30 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Orange",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 35,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 35,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/35 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Oldham",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Ochiltree",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Nueces",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 130,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 130,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/130 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Newton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 24,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 24,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/24 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Navarro",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 34,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 34,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/34 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Nacogdoches",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/20 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Motley",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Morris",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Moore",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Montgomery",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 122,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 122,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/122 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Montague",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/16 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Mills",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Milam",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/12 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Midland",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 49,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 49,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/49 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Menard",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Medina",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/16 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Mcmullen",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Mclennan",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 96,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 96,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/96 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Mcculloch",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Maverick",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 17,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 17,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/17 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Matagorda",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/19 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Mason",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Martin",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Marion",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Madison",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lynn",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lubbock",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 120,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 120,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/120 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Loving",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Llano",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Live Oak",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/15 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lipscomb",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Limestone",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Liberty",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/23 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Leon",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/15 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lee",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/16 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lavaca",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/13 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lasalle",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lampasas",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lamb",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Lamar",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 27,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 27,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/27 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Knox",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kleberg",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/18 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kinney",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "King",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kimble",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kerr",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/21 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kent",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kenedy",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kendall",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/18 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Kaufman",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 38,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 38,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/38 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Karnes",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/16 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jones",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Johnson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 51,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 51,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/51 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jim Wells",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jim Hogg",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jefferson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 105,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 105,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/105 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jeff Davis",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jasper",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/21 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jackson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Jack",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Irion",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hutchinson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hunt",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 40,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 40,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/40 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hudspeth",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Howard",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 32,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 32,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/32 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Houston",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hopkins",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hood",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/18 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hockley",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/15 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hill",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hidalgo",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 259,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 259,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/259 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Henderson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 31,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 31,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/31 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hemphill",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hays",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 89,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 89,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/89 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Haskell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hartley",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Harrison",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 27,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 27,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/27 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Harris",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 1225,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 1225,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/1225 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hardin",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/20 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hardeman",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hansford",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hamilton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/12 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hall",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Hale",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 31,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 31,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/31 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Guadalupe",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 79,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 79,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/79 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Grimes",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Gregg",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Grayson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 43,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 43,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/43 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Gray",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Gonzales",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 16,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/16 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Goliad",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Glasscock",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 4,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 4,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/4 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Gillespie",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Garza",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Galveston",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 96,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 96,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/96 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Gaines",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Frio",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Freestone",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/15 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Franklin",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Fort Bend",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 202,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 202,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/202 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Foard",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Floyd",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Fayette",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/13 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Fannin",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/18 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Falls",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 13,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/13 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Erath",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/21 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "El Paso",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 237,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 237,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/237 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Ellis",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 61,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 61,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/61 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Edwards",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Ector",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 42,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 42,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/42 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Eastland",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Duval",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/12 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Donley",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Dimmit",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Dickens",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 7,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/7 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Dewitt",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Denton",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 253,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 253,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/253 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Delta",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Deaf Smith",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Dawson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Dallas",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 792,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 792,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/792 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Dallam",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Culberson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Crosby",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Crockett",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Crane",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Cottle",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 4,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 4,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/4 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Coryell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 17,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 17,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/17 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Cooke",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 18,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/18 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Concho",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Comanche",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 15,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/15 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Comal",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 42,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 42,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/42 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Colorado",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/12 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Collingsworth",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Collin",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 274,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 274,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/274 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Coleman",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Coke",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Cochran",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Clay",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 17,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 17,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/17 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Childress",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Cherokee",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 26,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 26,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/26 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Chambers",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 20,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/20 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Castro",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Cass",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/19 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Carson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Camp",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Cameron",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 103,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 103,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/103 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Callahan",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Calhoun",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/12 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Caldwell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 25,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 25,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/25 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Burnet",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 22,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/22 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Burleson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Brown",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 19,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/19 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Brooks",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Briscoe",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Brewster",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 9,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/9 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Brazos",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 78,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 78,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/78 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Brazoria",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 85,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 85,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/85 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bowie",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 44,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 44,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/44 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bosque",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 12,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/12 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Borden",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Blanco",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 6,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/6 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bexar",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 807,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 807,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/807 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bell",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 73,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 73,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/73 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bee",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Baylor",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bastrop",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 27,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 27,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/27 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bandera",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 11,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/11 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Bailey",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Austin",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 10,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/10 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Atascosa",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 21,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/21 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Armstrong",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Archer",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 14,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/14 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Aransas",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 8,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/8 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Angelina",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 43,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 43,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/43 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Andrews",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 5,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/5 precincts",
+   "D": 0,
+   "R": 0
+  },
+  {
+   "county": "Anderson",
+   "tv": 0,
+   "gov": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "sen": {
+    "pr": 0,
+    "tp": 23,
+    "D": 0,
+    "R": 0,
+    "Dev": 0,
+    "Rev": 0,
+    "T": 0
+   },
+   "reporting": "0/23 precincts",
    "D": 0,
    "R": 0
   }

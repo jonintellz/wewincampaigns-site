@@ -212,7 +212,8 @@ function pageLive(){return `
 <p class="src" id="liveStamp">Loading</p>
 <section id="res"><h2>Results</h2><p class="deck" id="resDeck">Unofficial results from the Texas Secretary of State, read every few minutes once counting starts.</p><div id="resBody"></div></section>
 <section id="turn"><h2>Turnout today, by county</h2><p class="deck">The 30 largest counties. "Today" is filled where the county publishes a live Election Day count; the others publish only after polls close. "Mix lean" weighs each live county's share of today's vote against its 2022 share, at its 2022 Election Day margin: positive means today's vote is coming from redder counties than in 2022.</p>
-<div class="grid g4" id="liveTiles" style="margin-bottom:14px"></div><div id="liveCounties"></div></section>
+<div class="grid g4" id="liveTiles" style="margin-bottom:14px"></div><div class="card chart" style="margin-bottom:14px"><h3>Votes so far today, live counties</h3><div id="liveHist"></div></div><div id="liveCounties"></div></section>
+<section><h2>Lines right now</h2><p class="deck">Every county that publishes wait times. A long line at 7 pm still votes: anyone in line when polls close can cast a ballot.</p><div id="liveWaits"></div></section>
 <section class="grid g2"><div><h2>Dallas: busiest sites</h2><p class="deck">Check-ins so far today. All 444 sites are on the <a href="#dallas">Dallas County page</a>.</p><div id="liveDallas"></div></div>
 <div><h2>Harris: lines</h2><p class="deck">Harris publishes wait times during the day, not counts.</p><div id="liveHarris"></div></div></section>
 <p class="note" style="margin-top:24px">Unofficial, from the Secretary of State and county websites. The canvass is official.</p>`}
@@ -225,19 +226,56 @@ function raceCard(r,big){const tot=r.candidates.reduce((s,c)=>s+(c.votes||0),0);
  return `<div class="card"><h3 ${big?'style="font-size:20px"':''}>${esc(r.race)}</h3><p class="src" style="margin:0 0 8px">${r.reporting?esc(r.reporting):''}</p>`+
  bars(cs.map(c=>[`${esc(c.name)}${c.party?` <span class="pill">${esc(c.party)}</span>`:''}`,c.votes||0,pcol(c.party),`${tot?(100*(c.votes||0)/tot).toFixed(1):'0.0'}% · ${fmt(c.votes||0)}`]),Math.max(1,cs[0]&&cs[0].votes||1))+`</div>`}
 const hasVotes=rs=>rs&&rs.some(r=>r.candidates&&r.candidates.some(c=>c.votes>0));
+const EXPECTED_TOTAL=10100000;  // planning figure: 7.72M early + about 2.4M on Election Day (range 9.8M to 10.5M)
+let cRace='sen',cQ='';
+function splitTable(r){const cs=[...r.candidates].filter(c=>c.votes>0||c.party!=='W').sort((a,b)=>b.votes-a.votes).slice(0,4);
+ const tv=cs.reduce((s,c)=>s+c.votes,0),te=cs.reduce((s,c)=>s+(c.ev||0),0),td=tv-te;
+ return table([['Candidate'],['Early vote'],['Election Day'],['Total']],cs.map(c=>{const ed=c.votes-(c.ev||0);return `<tr><td>${esc(c.name)} <span class="pill">${esc(c.party||'')}</span></td><td>${fmt(c.ev||0)} <span class="src">${te?(100*(c.ev||0)/te).toFixed(1)+'%':''}</span></td><td>${fmt(ed)} <span class="src">${td>0?(100*ed/td).toFixed(1)+'%':''}</span></td><td><b>${fmt(c.votes)}</b></td></tr>`}).join(''))}
+function swingSummary(R){const B=T.county_base||{};let w=0,s24=0,s22=0,n=0,vv=0;
+ R.counties.forEach(c=>{const r=c[cRace];if(!r||!r.tp||r.pr<r.tp||!(r.D+r.R))return;const b=B[c.county];if(!b||b.m24==null)return;const m=100*(r.R-r.D)/(r.D+r.R);const v=r.D+r.R;w+=v;s24+=v*(m-b.m24);s22+=v*(m-(b.m22??b.m24));n++;vv+=v});
+ return n?{n,vv,s24:s24/w,s22:s22/w}:null}
 function renderResults(){const el=$('#resBody');if(!el)return;const R=window.RES;
+ const H=R&&R.home||{},pl=H.polling||{},cr=H.counties||{};
+ const sen=R&&R.statewide&&R.statewide.find(r=>rk(r)===0);const counted=sen?sen.candidates.reduce((s,c)=>s+c.votes,0):0;
+ const prog=`<div class="grid g4" style="margin-bottom:14px">${tile('Votes counted, Senate',fmt(counted),`${(100*counted/EXPECTED_TOTAL).toFixed(0)}% of about ${mil(EXPECTED_TOTAL,1)} expected`)}
+  ${tile('Polling places reporting',`${fmt(pl.PLR||0)} / ${fmt(pl.PLT||0)}`,pl.PLT?`${(100*(pl.PLR||0)/pl.PLT).toFixed(0)}% · early votes post first`:'')}
+  ${tile('Counties reporting',`${cr.CR||0} / ${cr.CT||254}`,'a county counts as reporting once it posts anything')}
+  ${tile('Early vote counted, Senate',fmt(sen?sen.candidates.reduce((s,c)=>s+(c.ev||0),0):0),`of ${fmt(T.final.ev)} early ballots cast`)}</div>`;
  if(!R||!hasVotes(R.statewide)){
-  el.innerHTML=`<div class="grid g2">${['U.S. Senate: Talarico (D) vs Paxton (R)','Governor: Abbott (R) vs Hinojosa (D)'].map(t=>`<div class="card"><h3>${t}</h3><p class="src" style="margin:0">Counting starts after 7 pm Central. Early-vote totals usually post first, within the first hour.</p></div>`).join('')}</div>`;return}
- const rank=rk;
- const sw=R.statewide.filter(r=>rank(r)<99).sort((a,b)=>rank(a)-rank(b));const dn=r=>+((r.race.match(/District (\d+)/)||[0,999])[1]);const rest=R.statewide.filter(r=>rank(r)===99).sort((a,b)=>dn(a)-dn(b));
- $('#resDeck').textContent=`Unofficial, ${R.source||'Texas Secretary of State'}, read ${R.as_of}.`;
- let h=`<div class="grid g2">${sw.slice(0,2).map(r=>raceCard(r,1)).join('')}</div>`;
+  el.innerHTML=prog+`<div class="grid g2">${['U.S. Senate: Talarico (D) vs Paxton (R)','Governor: Abbott (R) vs Hinojosa (D)'].map(t=>`<div class="card"><h3>${t}</h3><p class="src" style="margin:0">Counting starts after 7 pm Central. In Texas the early vote posts first and leans Democratic in the big counties; Election Day votes come later and lean Republican, so the early margin shrinks or flips through the night.</p></div>`).join('')}</div>`;return}
+ const sw=R.statewide.filter(r=>rk(r)<99).sort((a,b)=>rk(a)-rk(b));const dn=r=>+((r.race.match(/District (\d+)/)||[0,999])[1]);const rest=R.statewide.filter(r=>rk(r)===99).sort((a,b)=>dn(a)-dn(b));
+ $('#resDeck').textContent=`Unofficial, ${R.source||'Texas Secretary of State'}, read ${R.as_of}${R.sos_updated?' (state file '+R.sos_updated+')':''}.`;
+ let h=prog+`<div class="grid g2">${sw.slice(0,2).map(r=>raceCard(r,1)+`<div style="margin-top:8px">${splitTable(r)}</div>`).map(x=>`<div>${x}</div>`).join('')}</div>`;
+ const S=swingSummary(R);
+ h+=`<div class="note" style="margin-top:16px">${S?`<b>Swing in the ${S.n} counties fully counted</b> (${fmt(S.vv)} votes, ${cRace==='sen'?'Senate':'Governor'}): <b class="${S.s24>0?'R':'D'}">${mg(S.s24)}</b> against the 2024 presidential margin, <b class="${S.s22>0?'R':'D'}">${mg(S.s22)}</b> against the 2022 Governor margin, vote-weighted. Fully counted counties are mostly small and rural early in the night.`:'Swing against 2024 and 2022 appears here once whole counties finish counting. Partly counted counties are not compared: their early vote is in and their Election Day vote is not.'}</div>`;
  if(sw.length>2)h+=`<div class="grid g3" style="margin-top:14px">${sw.slice(2).map(r=>raceCard(r)).join('')}</div>`;
- if(R.counties&&R.counties.length){h+=`<h3 style="margin-top:22px">${esc(R.county_race||'U.S. Senate')} by county</h3>`+table([['County'],['Reporting'],['Dem'],['Rep'],['Margin'],['2024 pres']],
-  R.counties.map(c=>{const m=c.R+c.D?100*(c.R-c.D)/(c.R+c.D):null;const t=(T.counties.find(x=>x.county.toUpperCase()===String(c.county).toUpperCase())||{});
-  return `<tr><td>${esc(c.county)}</td><td>${esc(c.reporting||'')}</td><td>${fmt(c.D)}</td><td>${fmt(c.R)}</td><td class="${m>0?'pos':'neg'}">${mg(m)}</td><td class="${t.m24>0?'pos':'neg'}">${mg(t.m24)}</td></tr>`}).join(''))}
+ if(R.counties&&R.counties.length){h+=`<h3 style="margin-top:22px">By county <select id="cRace" style="margin-left:8px;background:var(--surface);color:var(--strong);border:1px solid var(--line-2);border-radius:5px;padding:3px 6px"><option value="sen"${cRace==='sen'?' selected':''}>U.S. Senate</option><option value="gov"${cRace==='gov'?' selected':''}>Governor</option></select>
+  <input id="cQ" type="search" value="${esc(cQ)}" placeholder="Find a county" style="margin-left:8px;padding:4px 8px;border-radius:5px;border:1px solid var(--line-2);background:var(--surface);color:var(--strong)"></h3><div id="cTab"></div>`}
  if(rest.length)h+=`<h3 style="margin-top:22px">U.S. House and other races</h3><div class="grid g3">${rest.map(r=>raceCard(r)).join('')}</div>`;
- el.innerHTML=h}
+ el.innerHTML=h;drawCountyResults()}
+function drawCountyResults(){const el=$('#cTab'),R=window.RES;if(!el||!R)return;const B=T.county_base||{};
+ const rows=R.counties.filter(c=>c[cRace]&&(!cQ||c.county.toLowerCase().includes(cQ.toLowerCase()))).sort((a,b)=>((B[b.county]||{}).reg||0)-((B[a.county]||{}).reg||0)).slice(0,cQ?254:60);
+ const isSen=cRace==='sen';
+ el.innerHTML=table([['County'],['Reporting'],[isSen?'Talarico (D)':'Hinojosa (D)'],[isSen?'Paxton (R)':'Abbott (R)'],['Margin'],['Early-vote margin'],['vs 2024 pres'],['vs 2022 gov'],['Counted / 2026 early vote']],rows.map(c=>{const r=c[cRace],b=B[c.county]||{};
+  const m=r.D+r.R?100*(r.R-r.D)/(r.D+r.R):null,me=r.Dev+r.Rev?100*(r.Rev-r.Dev)/(r.Dev+r.Rev):null,done=r.tp&&r.pr>=r.tp;
+  return `<tr><td>${esc(c.county)}</td><td>${r.pr}/${r.tp}${done?' ✓':''}</td><td>${fmt(r.D)}</td><td>${fmt(r.R)}</td><td class="${m>0?'pos':'neg'}"><b>${mg(m)}</b></td><td class="${me>0?'pos':'neg'}">${mg(me)}</td>
+   <td>${done&&m!=null&&b.m24!=null?`<span class="${m-b.m24>0?'pos':'neg'}">${mg(m-b.m24)}</span>`:`<span class="src">${mg(b.m24)} in 2024</span>`}</td><td>${done&&m!=null&&b.m22!=null?`<span class="${m-b.m22>0?'pos':'neg'}">${mg(m-b.m22)}</span>`:`<span class="src">${mg(b.m22)} in 2022</span>`}</td>
+   <td>${b.ev26?(100*r.T/b.ev26).toFixed(0)+'%':'–'}</td></tr>`}).join(''))+`<p class="src">Largest 60 counties by registration (search to see any of the 254). Swing columns fill only when a county finishes (✓); until then they show the past margin to beat. "Counted / 2026 early vote" above 100% means Election Day votes are coming in.</p>`}
+document.addEventListener('change',e=>{if(e.target.id==='cRace'){cRace=e.target.value;renderResults()}});
+document.addEventListener('input',e=>{if(e.target.id==='cQ'){cQ=e.target.value;drawCountyResults()}});
+function histChart(){const el=$('#liveHist');if(!el||!L||!L.history||L.history.length<2)return;const P=L.history,W=900,H=200,l=60,r=20,t=10,b=26;
+ const mx=Math.max(...P.map(p=>p[1]),L.base22_total||0)*1.02,tm=s=>{const[a,c]=s.split(':').map(Number);return a*60+c},t0=7*60,t1=19*60+30;
+ const x=v=>l+(tm(v)-t0)/(t1-t0)*(W-l-r),y=v=>t+(H-t-b)*(1-v/mx);let g='';
+ [0,.25,.5,.75,1].forEach(f=>{const v=mx*f;g+=`<line x1="${l}" x2="${W-r}" y1="${y(v)}" y2="${y(v)}" stroke="${css('--grid')}"/><text x="${l-6}" y="${y(v)+4}" text-anchor="end">${Math.round(v/1000)}k</text>`});
+ ['07:00','09:00','11:00','13:00','15:00','17:00','19:00'].forEach(s=>g+=`<text x="${x(s)}" y="${H-6}" text-anchor="middle">${(+s.slice(0,2)%12||12)+(+s.slice(0,2)<12?' am':' pm')}</text>`);
+ if(L.base22_total)g+=`<line x1="${l}" x2="${W-r}" y1="${y(L.base22_total)}" y2="${y(L.base22_total)}" stroke="${css('--y2022')}" stroke-dasharray="5 4"/><text x="${W-r}" y="${y(L.base22_total)-6}" text-anchor="end">2022 full Election Day, same counties: ${fmt(L.base22_total)}</text>`;
+ g+=`<polyline points="${P.map(p=>x(p[0])+','+y(p[1])).join(' ')}" fill="none" stroke="${css('--hi')}" stroke-width="3"/>`;
+ el.innerHTML=svgEl(W,H,g)}
+function renderWaits(){const el=$('#liveWaits');if(!el||!L)return;const out=[];const dl=L.dallas,H=L.harris;
+ if(dl)out.push(['Dallas',dl.sites,dl.avg_wait+' min avg',(dl.longest_waits||[]).slice(0,3).map(w=>`${w[0]} (${w[2]} min)`).join('; ')]);
+ if(H)out.push(['Harris',H.sites,`${fmt(H.in_line)} in line · ${H.bands['30+ min']} sites 30+ min`,H.worst.slice(0,3).map(w=>`${w[0]} (${w[2]} in line)`).join('; ')]);
+ (L.waits||[]).forEach(w=>{if(w.error)return;out.push([w.county,w.sites,w.levels?Object.entries(w.levels).map(([k,v])=>`${v} ${k.toLowerCase()}`).join(', '):`${w.avg} min avg · ${w.over30} sites 30+ min`,(w.worst||[]).slice(0,3).map(x=>`${x[0]}${x[2]?', '+x[2]:''}${typeof x[1]==='number'?' ('+x[1]+' min)':''}`).join('; ')])});
+ el.innerHTML=table([['County'],['Sites'],['Lines now'],['Longest']],out.map(r=>`<tr><td>${r[0]}</td><td>${fmt(r[1])}</td><td>${r[2]}</td><td style="white-space:normal;text-align:left;min-width:260px">${esc(r[3])}</td></tr>`).join(''))}
 
 /* ---------- Dallas County ---------- */
 const D2_22={R:'J.J. Koch',D:'Andrew Sommerman',Rt:97236,Dt:109108,Rev:62945,Ded:32731,Red:34169,Dev:76240};
@@ -249,10 +287,10 @@ function pageDallas(){const c=T.counties.find(x=>x.county==='Dallas')||{};const 
 <div id="d2Result"></div>
 <div class="grid g4" id="d2Tiles" style="margin-top:14px"></div>
 <p class="src">Turnout is today's check-ins at the 108 Election Day vote centers inside District 2 (Dallas County vote-center finder), against the same sites' full Election Day in 2022 and 2024. "Republican site share" is the 2022 Republican share of the Commissioner vote at each site's home precincts, weighted by where today's voters are checking in: higher today than in 2022 means turnout is running heavier at the Republican sites.</p></div>
-<section><h2>District 2 in 2022</h2><p class="deck">The last race for this seat: Sommerman won by ${fmt(k.Dt-k.Rt)} on the strength of the early vote. Koch won Election Day.</p>
+<section><h2>The benchmark: this seat in 2022</h2><p class="deck">For comparison only. Four years ago Sommerman beat that year's Republican nominee, J.J. Koch, by ${fmt(k.Dt-k.Rt)}: he won the early vote and lost Election Day. Barry needs to do better than this on Election Day.</p>
 ${table([[''],['Early vote'],['Election Day'],['Total'],['Share']],
- `<tr><td>${k.R} <span class="pill">R</span></td><td>${fmt(k.Rev)}</td><td><b>${fmt(k.Red)}</b></td><td>${fmt(k.Rt)}</td><td>${(100*k.Rt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
- <tr><td>${k.D} <span class="pill">D</span></td><td><b>${fmt(k.Dev)}</b></td><td>${fmt(k.Ded)}</td><td><b>${fmt(k.Dt)}</b></td><td>${(100*k.Dt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
+ `<tr><td>2022 Republican (${k.R}) <span class="pill">R</span></td><td>${fmt(k.Rev)}</td><td><b>${fmt(k.Red)}</b></td><td>${fmt(k.Rt)}</td><td>${(100*k.Rt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
+ <tr><td>Sommerman, 2022 <span class="pill">D</span></td><td><b>${fmt(k.Dev)}</b></td><td>${fmt(k.Ded)}</td><td><b>${fmt(k.Dt)}</b></td><td>${(100*k.Dt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
  <tr><td>Margin</td><td class="D">D+${fmt(k.Dev-k.Rev)}</td><td class="R">R+${fmt(k.Red-k.Ded)}</td><td class="D">D+${fmt(k.Dt-k.Rt)}</td><td></td></tr>`)}
 <p class="src">Dallas County Elections, official canvass, November 2022, 456 precinct rows.</p></section>
 <section><h2>District 2 target vote centers</h2><p class="deck">The 30 District 2 sites with the most Republican Election Day voters expected, in rank order (the volunteer list), with today's check-ins.</p><div id="d2Sites"></div></section>
@@ -307,7 +345,7 @@ function renderLive(){if(!L)return;
   return `<tr><td>${esc(t.county.replace('Mclennan','McLennan'))}</td><td>${l?'<b>'+fmt(l.today)+'</b>':'<span class="pill">no live count</span>'}</td><td>${l?l.pct22+'%':'–'}</td><td>${l?l.pct24+'%':'–'}</td><td>${fmt(e22)}</td><td>${fmt(e24)}</td><td>${fmt(t.ev)}</td><td class="${mm>0?'pos':'neg'}">${mg(mm)}</td><td>${l?esc(l.updated):''}</td></tr>`}).join(''));
  $('#liveDallas').innerHTML=L.dallas?table([['Site'],['City'],['Today'],['2022 day']],L.dallas.top.map(s=>`<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td><td><b>${fmt(s[2])}</b></td><td>${fmt(s[3])}</td></tr>`).join('')):'';
  const H=L.harris;$('#liveHarris').innerHTML=H?`<div class="card">${bars(Object.entries(H.bands).map(([k,v])=>[k,v,'--steel',fmt(v)+' sites']),H.sites)}</div>`+table([['Longest lines'],['City'],['In line']],H.worst.slice(0,6).map(s=>`<tr><td>${esc(s[0])}</td><td>${esc(s[1])}</td><td>${fmt(s[2])}</td></tr>`).join('')):'';
- renderResults()}
+  histChart();renderWaits();renderResults()}
 async function loadLive(){const q='?t='+Math.floor(Date.now()/60000);
  try{const r=await fetch('data/ed_live.json'+q,{cache:'no-store'});if(r.ok)L=await r.json()}catch(e){}
  try{const r=await fetch('data/ed_results.json'+q,{cache:'no-store'});if(r.ok)window.RES=await r.json()}catch(e){}
