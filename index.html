@@ -651,31 +651,31 @@ function pageDallas(){const c=T.counties.find(x=>x.county==='Dallas')||{};const 
 <div class="card" style="border-color:var(--accent);margin-top:14px"><p class="eyebrow" style="margin-bottom:4px">Commissioner, District 2</p>
 <h2 style="margin-bottom:4px">Barry Wernick (R) vs Andy Sommerman (D)</h2>
 <p class="src" id="d2Stamp" style="margin:0 0 12px">Loading</p>
-<div id="d2Result"></div>
-<div class="grid g4" id="d2Tiles" style="margin-top:14px"></div>
-<p class="src"><b>Read with care:</b> Dallas uses countywide vote centers, so anyone in the county can vote at any site. These are check-ins at the 108 sites physically inside District 2, a proxy for District 2 turnout, not a count of District 2 voters. Turnout is today's check-ins at those sites (Dallas County vote-center finder), against the same sites' full Election Day in 2022 and 2024. "Republican site share" is the 2022 Republican share of the Commissioner vote at each site's home precincts, weighted by where today's voters are checking in: higher today than in 2022 means turnout is running heavier at the Republican sites.</p></div>
+<div id="d2Result"></div></div>
 <div class="card" id="propA" style="border-color:var(--accent);margin-top:14px"></div>
-<section class="grid g2" style="margin-top:14px"><div id="propCalc"></div><div id="dClock"></div></section>
-<section class="grid g2"><div id="wi_d2"></div><div id="wi_pa"></div></section>
-<section class="grid g2"><div id="d2Out"></div><div id="d2Ticket"></div></section>
-<section><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="icon-btn" id="alertBtn">Alert me when results update</button><button type="button" class="icon-btn speakBtn">Speak updates aloud</button><button type="button" class="icon-btn" data-share="d2">Share Precinct 2 card</button><button type="button" class="icon-btn" data-share="pa">Share Prop A card</button><button type="button" class="icon-btn" id="dlPrec">Download precinct results (CSV)</button><button type="button" class="icon-btn" data-copy="d2">Copy Precinct 2 update</button><button type="button" class="icon-btn" data-copy="pa">Copy Prop A update</button></div></section>
+<section style="margin-top:14px"><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="icon-btn" id="alertBtn">Alert me when results update</button><button type="button" class="icon-btn speakBtn">Speak updates aloud</button><button type="button" class="icon-btn" data-share="d2">Share Precinct 2 card</button><button type="button" class="icon-btn" data-share="pa">Share Prop A card</button><button type="button" class="icon-btn" id="dlPrec">Download precinct results (CSV)</button><button type="button" class="icon-btn" data-copy="d2">Copy Precinct 2 update</button><button type="button" class="icon-btn" data-copy="pa">Copy Prop A update</button></div></section>
+<section><h2>Every other Dallas County race, in ballot order</h2><p class="deck" id="dalResDeck">Dallas County's own results, read every few minutes after 7 pm.</p><div id="dalRes"></div></section>
 <div id="sinceBoxD"></div>
 <section><div id="deskBodyD"></div></section>
-<section><div id="knownD"></div></section>
 <section><h2>Latest Dallas batches</h2><div id="dalBatches"></div></section>
 <section><div id="tlBodyD"></div></section>
 <section><h2>Precinct map</h2><div id="dmapBody"></div></section>
-<section><div id="after100"></div></section>
 <section><h2>Precinct by precinct</h2><p class="deck">Every precinct in Commissioner Precinct 2 and every precinct voting on Prop A, from Dallas County's precinct results.</p><div id="precTab"></div></section>
+<section class="grid g2"><div id="d2Out"></div><div id="d2Ticket"></div></section>
+<section class="grid g2"><div id="wi_d2"></div><div id="wi_pa"></div></section>
+<section class="grid g2"><div id="propCalc"></div><div id="dClock"></div></section>
+<section><div id="knownD"></div></section>
+<section><div id="after100"></div></section>
 <section><h2>The benchmark: this seat in 2022</h2><p class="deck">For comparison only. Four years ago Sommerman beat that year's Republican nominee, J.J. Koch, by ${fmt(k.Dt-k.Rt)}: he won the early vote and lost Election Day. Barry needs to do better than this on Election Day.</p>
 ${table([[''],['Early vote'],['Election Day'],['Total'],['Share']],
  `<tr><td>2022 Republican (${k.R}) <span class="pill">R</span></td><td>${fmt(k.Rev)}</td><td><b>${fmt(k.Red)}</b></td><td>${fmt(k.Rt)}</td><td>${(100*k.Rt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
  <tr><td>Sommerman, 2022 <span class="pill">D</span></td><td><b>${fmt(k.Dev)}</b></td><td>${fmt(k.Ded)}</td><td><b>${fmt(k.Dt)}</b></td><td>${(100*k.Dt/(k.Rt+k.Dt)).toFixed(1)}%</td></tr>
  <tr><td>Margin</td><td class="D">D+${fmt(k.Dev-k.Rev)}</td><td class="R">R+${fmt(k.Red-k.Ded)}</td><td class="D">D+${fmt(k.Dt-k.Rt)}</td><td></td></tr>`)}
 <p class="src">Dallas County Elections, official canvass, November 2022, 456 precinct rows.</p></section>
-
-<section><h2>Every other Dallas County race, in ballot order</h2><p class="deck" id="dalResDeck">Dallas County's own results, read every few minutes after 7 pm.</p><div id="dalRes"></div></section>
-<section><h2>Dallas County turnout</h2><div class="grid g4" id="dalTiles"></div>
+<section><h2>Turnout and voting locations</h2>
+<h3>District 2 vote centers today</h3><div class="grid g4" id="d2Tiles" style="margin-top:8px"></div>
+<p class="src"><b>Read with care:</b> Dallas uses countywide vote centers, so anyone in the county can vote at any site. These are check-ins at the 108 sites physically inside District 2, a proxy for District 2 turnout, not a count of District 2 voters. Turnout is today's check-ins at those sites (Dallas County vote-center finder), against the same sites' full Election Day in 2022 and 2024. "Republican site share" is the 2022 Republican share of the Commissioner vote at each site's home precincts, weighted by where today's voters are checking in: higher today than in 2022 means turnout is running heavier at the Republican sites.</p>
+<h3 style="margin-top:16px">Dallas County</h3><div class="grid g4" id="dalTiles"></div>
 <p class="src">Early vote, final: ${fmt(c.ev)} (${c.pct}% of ${fmt(c.reg)} registered), against ${c.pct22}% in 2022 and ${c.pct24}% in 2024.</p></section>
 <section><h2>Every vote center</h2><p class="deck">All 444 Election Day sites, live check-ins. Type to filter by site or city.</p>
 <input id="siteQ" type="search" placeholder="Filter: site or city" style="width:100%;max-width:360px;padding:9px 11px;border-radius:6px;border:1px solid var(--line-2);background:var(--surface);color:var(--strong);font:15px var(--f-body);margin-bottom:10px">
@@ -893,7 +893,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='09599372988f',failN=0;
+let BUILD='c57cd1185385',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
