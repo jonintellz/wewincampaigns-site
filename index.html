@@ -103,6 +103,7 @@ body.tvmode header.bar,body.tvmode .status,body.tvmode footer,body.tvmode .score
 body.tvmode main{padding-block:24px}
 body.tvmode .wrap{max-width:1700px}
 .wall{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.wall.wall-feat{grid-template-columns:1fr;max-width:1100px}
 .wall .slot{position:relative;background:#000;border:1px solid var(--line);border-radius:8px;overflow:hidden;aspect-ratio:16/9;max-width:100%}
 .wall iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .wall .cap{position:absolute;left:8px;top:6px;z-index:2;font:700 12px var(--f-mono);color:#fff;background:rgba(0,0,0,.6);padding:2px 7px;border-radius:4px}
@@ -329,8 +330,9 @@ function renderTV(){const el=$('#tvBody');if(!el)return;const R=window.RES;const
 let WALL=null;try{WALL=JSON.parse(localStorage.getItem('tvd_wall')||'null')}catch(e){}
 function pageWatch(){return `
 <p class="eyebrow">Watch live · election night</p><h1>Every live broadcast, one page</h1>
-<p class="lede">Dallas-Fort Worth TV on top, then Texas stations in every major market, Texas newsrooms, the national networks, the campaigns and parties, and Dallas County's own counting-room cameras. Everything starts muted; tap a player to turn it up.</p>
+<p class="lede">Real America's Voice with Steve Bannon on top, then Dallas-Fort Worth TV, then Texas stations in every major market, Texas newsrooms, the national networks, the campaigns and parties, and Dallas County's own counting-room cameras. Everything starts muted; tap a player to turn it up.</p>
 <p class="src" id="watchStamp">Loading</p>
+<section style="margin-top:12px"><h2 style="font-size:22px">Real America's Voice: MAGA Midterms 2026, with Steve Bannon</h2><div class="wall wall-feat" id="wallFeat"></div><p class="src" style="margin-top:6px">Steve Bannon, John Solomon, Amanda Head, Eric Bolling and Ed Martin, live from the Washington Decision Desk on Real America's Voice. Rumble's player: tap it to start. <a href="https://rumble.com/v7ht466-maga-midterm-2026-battle-for-america.html" target="_blank" rel="noopener">Open on Rumble</a></p></section>
 <section style="margin-top:12px"><h2 style="font-size:22px">Dallas-Fort Worth</h2><div class="wall" id="wallTop"></div></section>
 <section><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between"><h2 style="font-size:22px;margin:0">Your wall</h2><div id="wallSize" style="display:flex;gap:6px;flex-wrap:wrap"></div></div><div class="wall" id="wall" style="margin-top:10px"></div></section>
 <section><h2>All channels</h2><p class="deck">Tap a live channel to add it to your wall. Channels that are not live link to their page.</p><div class="grid g3" id="chans"></div></section>
@@ -342,10 +344,12 @@ function pageWatch(){return `
 <li><a href="https://www.votedenton.gov/" target="_blank" rel="noopener">Denton County: 12 counting-room cameras (on the county elections site)</a></li><li><a href="https://www.fortbendcountytx.gov/government/departments/elections-voter-registration" target="_blank" rel="noopener">Fort Bend County: elections livestream</a></li><li><a href="https://votetravis.gov/" target="_blank" rel="noopener">Travis County: central count livestream</a></li><li><a href="https://www.bexar.org/2186/Elections-Department" target="_blank" rel="noopener">Bexar County: Elections Department</a></li><li><a href="https://elliscountytx.gov/1094/Live-Stream-Ballot-processing" target="_blank" rel="noopener">Ellis County: ballot processing</a></li>
 <li><a href="https://killeentexas.gov/657/Election-Livestream" target="_blank" rel="noopener">Bell County (City of Killeen page): election livestream</a></li></ul></div></section>
 <section>${overlayKitHTML()}</section>
-<p class="note" style="margin-top:20px">Streams are each broadcaster's own YouTube live stream, embedded with YouTube's player. Availability is up to the broadcaster.</p>`}
+<p class="note" style="margin-top:20px">Streams are each broadcaster's own live stream, embedded with the broadcaster's player: YouTube's, and Rumble's for Real America's Voice. Availability is up to the broadcaster.</p>`}
 let WALLN=4;try{WALLN=+(localStorage.getItem('tvd_walln')||4)||4}catch(e){}
+/* featured at the top of Watch: Real America's Voice election-night coverage hosted by Steve Bannon (Rumble live stream, read 3 Nov 2026 6:50 pm) */
+const FEATURED=[{name:"Real America's Voice · MAGA Midterms 2026 with Steve Bannon",provider:'rumble',video_id:'v7fmr8o',channel_id:'r:v7fmr8o',group:'Featured'}];
 const DFW_PREF=[/WFAA/i,/NBC 5|KXAS/i,/CBS News Texas|KTVT/i,/Telemundo/i,/FOX 4/i];
-function slotHTML(x,removable,key){const src=x.video_id?`https://www.youtube-nocookie.com/embed/${encodeURIComponent(x.video_id)}?autoplay=1&mute=1&playsinline=1`:`https://www.youtube-nocookie.com/embed/live_stream?channel=${encodeURIComponent(String(x.channel_id).split('#')[0])}&autoplay=1&mute=1&playsinline=1`;
+function slotHTML(x,removable,key){const src=x.provider==='rumble'?`https://rumble.com/embed/${encodeURIComponent(x.video_id)}/?pub=4&autoplay=2`:x.video_id?`https://www.youtube-nocookie.com/embed/${encodeURIComponent(x.video_id)}?autoplay=1&mute=1&playsinline=1`:`https://www.youtube-nocookie.com/embed/live_stream?channel=${encodeURIComponent(String(x.channel_id).split('#')[0])}&autoplay=1&mute=1&playsinline=1`;
  return `<div class="slot" data-key="${esc(key||x.channel_id)}"><span class="cap">${esc(x.name)}${x.video_id?'':' · goes live when the station does'}</span>${removable?`<button type="button" class="icon-btn x" data-unwall="${esc(x.channel_id)}" style="background:rgba(0,0,0,.6);color:#fff">Remove</button>`:''}<iframe src="${src}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="${esc(x.name)}"></iframe></div>`}
 /* never rebuild a player that is already on screen: remove only what left, append only what is new (moving or rewriting an iframe restarts it and drops its sound) */
 const SEEN={};
@@ -362,6 +366,7 @@ function renderWatch(){const SV=window.STREAMS;if(!$('#wall'))return;if(!SV){$('
  // the two top slots stick to their stations once chosen: a station's live-channel player switches itself to the broadcast when it starts
  let topIds=(window.TOPIDS||[]).filter(id=>dfw.some(x=>x.channel_id===id));const better=dfw.filter(x=>x.video_id&&!topIds.includes(x.channel_id));
  topIds=topIds.filter(id=>{const x=dfw.find(y=>y.channel_id===id);return x&&(x.video_id||!better.length)});dfw.forEach(x=>{if(topIds.length<2&&!topIds.includes(x.channel_id))topIds.push(x.channel_id)});window.TOPIDS=topIds;
+ if($('#wallFeat'))syncSlots($('#wallFeat'),FEATURED.map(x=>({key:x.channel_id,x})),false);
  const top=topIds.map(id=>SEEN[id]);syncSlots($('#wallTop'),top.map(x=>({key:x.channel_id,x})),false);
  // your wall: user picks, default a mix (national, Dallas counting room, Houston, Austin, San Antonio...)
  const pool=live.filter(x=>!top.some(t=>t.channel_id===x.channel_id));
@@ -912,7 +917,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='d95258dbe048',failN=0;
+let BUILD='b05eb9aa3756',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
