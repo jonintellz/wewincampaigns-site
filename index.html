@@ -265,7 +265,7 @@ function renderBallots(){const CB=window.CBALLOTS;if(!$('#bBody'))return;if(!CB)
  const errs=(CB.errors||[]).filter(e=>!/not posted yet/i.test(e)),wait=(CB.errors||[]).filter(e=>/not posted yet/i.test(e)).map(e=>e.split(':')[0]);$('#ballotStamp').textContent=`County feeds read ${CB.as_of.split(' ').slice(1).join(' ')} Central${errs.length?' · not answering: '+errs.map(e=>e.split(':')[0]).join(', '):''}${wait.length?' · '+wait.join(', ')+': results file not posted yet (after 7 pm)':''}.`;
  $('#bTabs').innerHTML=`<a class="icon-btn" href="#dallas" style="text-decoration:none">Dallas</a> `+names.map(c=>`<button type="button" class="icon-btn" data-bc="${esc(c)}" style="${c===bC?'border-color:var(--accent);color:var(--strong)':''}">${esc(c)} <span class="src">${CB.counties[c].contests.length}</span></button>`).join(' ');
  const K=CB.counties[bC],q=bQ.toLowerCase();const rs=K.contests.filter(r=>!q||r.race.toLowerCase().includes(q)||r.candidates.some(c=>c.name.toLowerCase().includes(q)));
- $('#bBody').innerHTML=`<p class="src">${esc(bC)} County · ${rs.length} of ${K.contests.length} contests · ${esc(K.source)}, read ${esc(K.read||'')}${K.stale?' · <b>feed not answering; last good read</b>':''}</p><div class="grid g3">${rs.map(r=>`<div>${raceCard(r)}${splitLine(r)}</div>`).join('')}</div>`}
+ $('#bBody').innerHTML=`<p class="src">${esc(bC)} County · ${rs.length} of ${K.contests.length} contests · ${esc(K.source)}, read ${esc(K.read||'')}${K.stale?' · <b>feed not answering; last good read</b>':''}</p><p class="src" style="margin:0 0 10px">Races that cross county lines show the <b>whole race</b> first (every county, from the Texas Secretary of State), then this county's own share.</p><div class="grid g3">${rs.map(r=>`<div>${raceCard(r,false,bC)}${splitLine(r)}</div>`).join('')}</div>`}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-bc]');if(b){bC=b.dataset.bc;bQ='';const i=$('#bQ');if(i)i.value='';renderBallots()}});
 document.addEventListener('input',e=>{if(e.target.id==='bQ'){bQ=e.target.value;renderBallots()}});
 async function loadBallots(){try{const r=await fetch('data/ed_county_ballots.json?t='+Math.floor(Date.now()/60000),{cache:'no-store'});if(r.ok)window.CBALLOTS=await r.json()}catch(e){}renderBallots()}
@@ -455,8 +455,14 @@ const RACE_RX=[/^u\.?\s?s\.? senat/i,/^governor/i,/^lieutenant governor/i,/^atto
 const rk=x=>{const i=RACE_RX.findIndex(re=>re.test(x.race.trim()));return i<0?99:i};
 const pcol=p=>/^R/i.test(p||'')?'--rep':/^D/i.test(p||'')?'--dem':'--both';
 const mg=v=>v==null||isNaN(v)?'–':(v>0?'R+':'D+')+Math.abs(v).toFixed(1);
-function raceCard(r,big){const _cb=callFor(new RegExp('^'+r.race.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'$','i'));const tot=r.candidates.reduce((s,c)=>s+(c.votes||0),0);const cs=[...r.candidates].sort((a,b)=>(b.votes||0)-(a.votes||0));
- return `<div class="card"><h3 ${big?'style="font-size:20px"':''}>${esc(r.race)}</h3>${_cb?`<p style="margin:0 0 6px"><span class="pill" style="border-color:var(--accent);color:var(--strong)">CALLED: ${esc(_cb.winner)} · ${esc(_cb.source)}</span></p>`:''}<p class="src" style="margin:0 0 8px">${r.reporting?esc(r.reporting):''}</p>`+
+function raceKeyJS(n){return String(n).toUpperCase().replace(/UNITED STATES/g,'US').replace(/U\. S\./g,'US').replace(/U\.S\./g,'US').replace(/\bNO\.?\s*/g,'').replace(/[^A-Z0-9]/g,'')}
+function wholeRace(name){const A=window.RES&&window.RES.all_races;return A?A[raceKeyJS(name)]:null}
+function wholeBlock(W,county){const cs=[...W.candidates].filter(c=>c.party!=='W'||c.votes).sort((a,b)=>b.votes-a.votes).slice(0,4);const t=W.candidates.reduce((a,c)=>a+(c.votes||0),0);
+ return `<div style="border:1px solid var(--line-2);border-radius:6px;padding:8px 10px;margin:0 0 10px;background:var(--raise)"><p style="margin:0 0 6px;font:700 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--strong)">Whole race · all ${W.counties} counties</p><p class="src" style="margin:0 0 6px">${fmt(W.pr)} of ${fmt(W.tp)} precincts · Texas Secretary of State</p>`+
+ bars(cs.map(c=>[`${esc(c.name)}${c.party?` <span class="pill">${esc(c.party)}</span>`:''}`,c.votes||0,pcol(c.party),`${t?(100*(c.votes||0)/t).toFixed(1):'0.0'}% · ${fmt(c.votes||0)}`]),Math.max(1,cs[0]&&cs[0].votes||1))+
+ `</div><p style="margin:0 0 4px;font:700 12px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)">${esc(county)} County only</p>`}
+function raceCard(r,big,county){const _W=county?wholeRace(r.race):null;const _cb=callFor(new RegExp('^'+r.race.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'$','i'));const tot=r.candidates.reduce((s,c)=>s+(c.votes||0),0);const cs=[...r.candidates].sort((a,b)=>(b.votes||0)-(a.votes||0));
+ return `<div class="card"><h3 ${big?'style="font-size:20px"':''}>${esc(r.race)}</h3>${_cb?`<p style="margin:0 0 6px"><span class="pill" style="border-color:var(--accent);color:var(--strong)">CALLED: ${esc(_cb.winner)} · ${esc(_cb.source)}</span></p>`:''}${_W?wholeBlock(_W,county):''}<p class="src" style="margin:0 0 8px">${r.reporting?esc(r.reporting):''}</p>`+
  bars(cs.map(c=>[`${esc(c.name)}${c.party?` <span class="pill">${esc(c.party)}</span>`:''}`,c.votes||0,pcol(c.party),`${tot?(100*(c.votes||0)/tot).toFixed(1):'0.0'}% · ${fmt(c.votes||0)}`]),Math.max(1,cs[0]&&cs[0].votes||1))+`</div>`}
 const hasVotes=rs=>rs&&rs.some(r=>r.candidates&&r.candidates.some(c=>c.votes>0));
 const EXPECTED_TOTAL=10100000;  // planning figure: 7.72M early + about 2.4M on Election Day (range 9.8M to 10.5M)
@@ -766,7 +772,7 @@ function dallasRacesHTML(){const B=window.BALLOT,R=window.RES,DR=R&&R.dallas;
  if(!races.length)return '<p class="src">Loading the Dallas County ballot.</p>';
  const by={};races.forEach(r=>{const t=raceTab(r.race);(by[t]=by[t]||[]).push(r)});if(!by[dTab])dTab=(DTABS.find(([k])=>by[k])||['federal'])[0];
  const tabs=DTABS.filter(([k])=>by[k]).map(([k,t])=>`<button type="button" class="icon-btn" data-dtab="${k}" aria-pressed="${k===dTab}" style="${k===dTab?'border-color:var(--accent);color:var(--strong);background:var(--accent-wash)':''}">${t} <span class="src">${by[k].length}</span></button>`).join('');
- return `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">${tabs}</div><div class="grid g3">${by[dTab].map(r=>raceCard(r)).join('')}</div>${dTab==='judicial'&&unc?`<p class="src" style="margin-top:10px">Dallas County reports its uncontested races, mostly judgeships, as one combined contest; they are not shown here.</p>`:''}`}
+ return `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">${tabs}</div><p class="src" style="margin:0 0 10px">Races that cross county lines show the <b>whole race</b> first (every county, from the Texas Secretary of State), then Dallas County's own share.</p><div class="grid g3">${by[dTab].map(r=>raceCard(r,false,'Dallas')).join('')}</div>${dTab==='judicial'&&unc?`<p class="src" style="margin-top:10px">Dallas County reports its uncontested races, mostly judgeships, as one combined contest; they are not shown here.</p>`:''}`}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-dtab]');if(b){dTab=b.dataset.dtab;try{localStorage.setItem('tvd_dtab',dTab)}catch(_){}const el=$('#dalRes');if(el)el.innerHTML=dallasRacesHTML()}});
 function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
  if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
@@ -906,7 +912,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='d8358c4c032d',failN=0;
+let BUILD='d95258dbe048',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
