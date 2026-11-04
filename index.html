@@ -548,6 +548,7 @@ function engineCard(R){const race=cRace,e=engine(R,race),isSen=race==='sen';cons
  return `<div class="card" style="border-color:var(--accent)"><h3>${isSen?'Senate':'Governor'}: votes remaining</h3>
  <div class="grid g4" style="margin-top:8px">${tile('Counted',fmt(e.cnt),`${e.exp?(100*e.cnt/e.exp).toFixed(0):0}% of about ${mil(e.exp,2)} expected`)}${tile('Still to count, estimated',fmt(Math.round(e.rem)),'early vote not yet posted + Election Day')}
  ${tile('Current lead',e.cnt?`${leader} +${fmt(Math.abs(e.lead))}`:'–','',e.lead>0?'r':'d')}${tile(`${trailer} needs`,needTxt,needSub)}</div>
+ ${e.cnt?recountLine(Math.max(e.D,e.R),Math.min(e.D,e.R)):''}
  <p class="src">Counties: ${e.st.done} complete · ${e.st.ed} early vote + some Election Day · ${e.st.ev} early vote only · ${e.st.none} not reporting. Expected vote = each county's 2026 early vote + an Election Day estimate (its 2022/2024 average scaled to a ${mil(ED_PLAN,1)} statewide Election Day, or its live check-ins if higher); a county that finishes counts as exactly what it counted. The share counted can fall when the estimate rises. An estimate, not a projection: the remaining vote is mostly Election Day, which in Texas leans Republican.</p></div>`}
 function legislatureCard(R){const G=R.legislature;if(!G)return'';const row=(k,name,maj)=>{const o=G[k];if(!o)return'';return `<div class="card"><h3>${name}</h3>
  ${bars([['Republican leading',o.R,'--rep',fmt(o.R)],['Democrat leading',o.D,'--dem',fmt(o.D)],['No votes yet',o.none,'--both',fmt(o.none)]],o.seats)}
@@ -615,6 +616,9 @@ const D2_ED22=66900;   // 2022 Commissioner District 2 Election Day ballots (Koc
 function chiHour(){try{return +new Intl.DateTimeFormat('en-US',{hour:'numeric',hour12:false,timeZone:'America/Chicago'}).format(new Date())%24}catch(e){return new Date().getHours()}}
 function d2EdEstimate(){const d2=L&&L.dallas&&L.dallas.d2;const ratio=d2&&d2.pct22?d2.pct22/100:null;const h=chiHour();const full=h>=19||h<4;
  if(!ratio)return null;const now=Math.round(D2_ED22*ratio);const hi=full?now:Math.round(now*(1+Math.max(0,19-h)*0.06));return {now,lo:now,hi,ratio,full}}
+
+function recountLine(lead,trail){if(!(lead+trail))return '';const m=lead-trail,lim=0.10*lead;return `<p class="src" style="margin:6px 0 0">Recount range: a losing candidate may request a recount when the final margin is under 10% of the winner's votes (Texas Election Code §212.022). On the votes counted so far the margin is ${fmt(m)} against a line of ${fmt(Math.round(lim))}: <b>${m<lim?'inside recount range':'outside recount range'}</b>.</p>`}
+
 function d2Board(){const R=window.RES,b=R&&R.dallas&&R.dallas.d2,k=D2_22,est=d2EdEstimate();const vt=d2VoteTypes();
  if(!b||!(b.W+b.S)){const X=est?(est.full?est.now:est.hi):D2_ED22;const need=(X+(k.Dev-k.Rev))/(2*X);
   return `<div class="grid g2"><div class="card"><h3>Results post after 7 pm</h3><p class="src" style="margin:0">Dallas County's first report, about 7:30 to 8, is the early vote: in 2022 Sommerman won it by ${fmt(k.Dev-k.Rev)}. Election Day votes follow from about 9 pm, in batches, often finishing after midnight. Read the early-vote margin and the Election Day margin separately, never only the blended total.</p></div>
@@ -628,7 +632,7 @@ function d2Board(){const R=window.RES,b=R&&R.dallas&&R.dallas.d2,k=D2_22,est=d2E
  const needTxt=m===0?'Tied.':need==null||rem<=0?`${trail} trails with no estimated Election Day votes left.`:need>1?`${trail} cannot catch up on the estimated ${fmt(Math.round(rem))} Election Day votes left.`:`${trail} needs <b>${(100*need).toFixed(1)}%</b> of the about ${fmt(Math.round(rem))} Election Day votes still to count.`;
  return `<div class="grid g2"><div class="card"><h3>${esc(b.race)}</h3><p class="src" style="margin:0 0 8px">${esc(b.reporting||'')} · Dallas County, unofficial${R.dallas.stale_since?` · <b>feed not answering since ${esc(R.dallas.stale_since)}; showing the last good read</b>`:''}</p>
  ${bars([['Barry Wernick (R)',b.W,'--rep',`${(100*b.W/tot).toFixed(1)}% · ${fmt(b.W)}`],['Andy Sommerman (D)',b.S,'--dem',`${(100*b.S/tot).toFixed(1)}% · ${fmt(b.S)}`]],Math.max(b.W,b.S))}
- <p style="margin:10px 0 0;font:800 24px var(--f-display);color:var(--head)">${m===0?'Tied':lead+' +'+fmt(Math.abs(m))}</p></div>
+ <p style="margin:10px 0 0;font:800 24px var(--f-display);color:var(--head)">${m===0?'Tied':lead+' +'+fmt(Math.abs(m))}</p>${recountLine(Math.max(b.W,b.S),Math.min(b.W,b.S))}</div>
  <div class="card"><h3>Early vote vs Election Day</h3>${split?table([[''],['2026'],['2022']],
   `<tr><td>Early vote margin</td><td class="${split.ev>0?'D':'R'}">${split.ev>0?'Sommerman':'Wernick'} +${fmt(Math.abs(split.ev))}</td><td class="D">Sommerman +${fmt(k.Dev-k.Rev)}</td></tr>
    ${split.mail!=null?`<tr><td>of which mail</td><td>${split.mail>0?'Sommerman':'Wernick'} +${fmt(Math.abs(split.mail))}</td><td></td></tr>`:''}
@@ -652,6 +656,7 @@ function pageDallas(){const c=T.counties.find(x=>x.county==='Dallas')||{};const 
 <p class="src"><b>Read with care:</b> Dallas uses countywide vote centers, so anyone in the county can vote at any site. These are check-ins at the 108 sites physically inside District 2, a proxy for District 2 turnout, not a count of District 2 voters. Turnout is today's check-ins at those sites (Dallas County vote-center finder), against the same sites' full Election Day in 2022 and 2024. "Republican site share" is the 2022 Republican share of the Commissioner vote at each site's home precincts, weighted by where today's voters are checking in: higher today than in 2022 means turnout is running heavier at the Republican sites.</p></div>
 <div class="card" id="propA" style="border-color:var(--accent);margin-top:14px"></div>
 <section class="grid g2" style="margin-top:14px"><div id="propCalc"></div><div id="dClock"></div></section>
+<section class="grid g2"><div id="wi_d2"></div><div id="wi_pa"></div></section>
 <section class="grid g2"><div id="d2Out"></div><div id="d2Ticket"></div></section>
 <section><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><button type="button" class="icon-btn" id="alertBtn">Alert me when results update</button><button type="button" class="icon-btn speakBtn">Speak updates aloud</button><button type="button" class="icon-btn" data-share="d2">Share Precinct 2 card</button><button type="button" class="icon-btn" data-share="pa">Share Prop A card</button><button type="button" class="icon-btn" id="dlPrec">Download precinct results (CSV)</button><button type="button" class="icon-btn" data-copy="d2">Copy Precinct 2 update</button><button type="button" class="icon-btn" data-copy="pa">Copy Prop A update</button></div></section>
 <div id="sinceBoxD"></div>
@@ -753,7 +758,7 @@ function dallasRacesHTML(){const B=window.BALLOT,R=window.RES,DR=R&&R.dallas;
 function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
  if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
  const a=$('#d2Result');if(a)a.innerHTML=d2Board();
- const pc=$('#propCalc');if(pc&&!pc.innerHTML)pc.innerHTML=propACalcHTML();const dc=$('#dClock');if(dc)dc.innerHTML=dallasClockHTML();const o_=$('#d2Out');if(o_)o_.innerHTML=d2OutHTML();const tk=$('#d2Ticket');if(tk)tk.innerHTML=d2TicketHTML();const ah=$('#after100');if(ah&&!ah.innerHTML)ah.innerHTML=afterHundredHTML();const b=$('#propA');if(b)b.innerHTML=propABoard();
+ const pc=$('#propCalc');if(pc&&!pc.innerHTML)pc.innerHTML=propACalcHTML();['d2','pa'].forEach(k=>{const el=$('#wi_'+k);if(el&&!(document.activeElement&&document.activeElement.dataset&&document.activeElement.dataset.wi))el.innerHTML=whatIfHTML(k)});const dc=$('#dClock');if(dc)dc.innerHTML=dallasClockHTML();const o_=$('#d2Out');if(o_)o_.innerHTML=d2OutHTML();const tk=$('#d2Ticket');if(tk)tk.innerHTML=d2TicketHTML();const ah=$('#after100');if(ah&&!ah.innerHTML)ah.innerHTML=afterHundredHTML();const b=$('#propA');if(b)b.innerHTML=propABoard();
  const db=$('#dalBatches');if(db)db.innerHTML=batchesHTML(true);const dkd=$('#deskBodyD');if(dkd)dkd.innerHTML=notesHTML(5);const kd=$('#knownD');if(kd)kd.innerHTML=knownUncountedHTML();const sbd=$('#sinceBoxD');if(sbd&&!sbd.dataset.done&&window.RES){sbd.innerHTML=sinceHTML();sbd.dataset.done=1}const tbd=$('#tlBodyD');if(tbd){if(tlRace==='sen'||tlRace==='gov')tlRace='d2';tbd.innerHTML=timelineHTML()}const dr=$('#dalRes');if(dr)dr.innerHTML=dallasRacesHTML();
  if(!window.DBASE)fetch('data/dallas_base.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.DBASE=j;renderPrecinctMap();const o_=$('#d2Out');if(o_)o_.innerHTML=d2OutHTML();const pt=$('#precTab');if(pt)pt.innerHTML=precinctTableHTML()}}).catch(()=>{});
  if(!window.DPATHS)fetch('data/dallas_paths.json?b='+(BUILD||Date.now())).then(x=>x.ok?x.json():null).then(j=>{if(j){window.DPATHS=j;renderPrecinctMap()}}).catch(()=>{});renderPrecinctMap();
@@ -793,6 +798,29 @@ function afterHundredHTML(){return `<div class="card"><h3>Ballots still counted 
  <li><b>Provisional ballots</b> are counted only after review; voters who need to show ID have until <b>Monday, 9 November</b> to do it.</li>
  <li>Results stay unofficial until the county canvass. In a race decided by a few hundred votes, these piles can matter.</li></ul>
  <p class="src" style="margin:6px 0 0">Texas Election Code deadlines for the 3 November 2026 general election.</p></div>`}
+
+
+/* ---------- what-if dials: Precinct 2 and Prop A ---------- */
+const WI={d2:{ed:null,edShare:51.1,mail:400,mailShare:45,prov:250,cure:50,provShare:45},pa:{ed:null,edShare:52,mail:1500,mailShare:50,prov:800,cure:50,provShare:50}};
+function wiBase(kind){const R=window.RES,d=R&&R.dallas;const k=D2_22;
+ if(kind==='d2'){const b=d&&d.d2;if(b&&b.W+b.S)return {a:b.W,b:b.S,real:true,la:'Wernick',lb:'Sommerman'};return {a:k.Rev,b:k.Dev,real:false,la:'Wernick',lb:'Sommerman'}}
+ const p=d&&d.prop_a;if(p&&p.F+p.A)return {a:p.A,b:p.F,real:true,la:'Against',lb:'For'};return {a:0,b:0,real:false,la:'Against',lb:'For'}}
+function wiDefaultED(kind){if(kind==='d2'){const est=d2EdEstimate();const b=wiBase('d2');const vt=d2VoteTypes();const edIn=vt?vt.W_ed+vt.S_ed:0;return Math.max(0,Math.round((est?est.now:D2_ED22)-edIn))}
+ const dc=L&&L.counties&&L.counties.find(x=>x.county==='Dallas');return Math.max(0,Math.round((dc?dc.today:200000)-(0)))}
+function whatIfHTML(kind){const w=WI[kind];if(w.ed==null)w.ed=wiDefaultED(kind);const B=wiBase(kind);
+ const add=(n,sh)=>[n*sh/100,n*(100-sh)/100];const e=add(w.ed,w.edShare),m=add(w.mail,w.mailShare),p=add(w.prov*w.cure/100,w.provShare);
+ const A=B.a+e[0]+m[0]+p[0],Bv=B.b+e[1]+m[1]+p[1],marg=A-Bv;const leader=marg>=0?B.la:B.lb;
+ const rest=e[0]+e[1],other=(m[0]+p[0])-(m[1]+p[1]);const need=rest>0?((B.b-B.a-other)/rest+1)/2:null;
+ const sl=(id,lab,v,min,max,step,suf)=>`<label style="display:grid;grid-template-columns:minmax(150px,1fr) 2fr 70px;gap:8px;align-items:center;font-size:14px;margin:6px 0">${lab}<input type="range" data-wi="${kind}.${id}" min="${min}" max="${max}" step="${step}" value="${v}"><b>${fmt(Math.round(v))}${suf||''}</b></label>`;
+ return `<div class="card"><h3>What if? ${kind==='d2'?'Commissioner Precinct 2':'Prop A'}</h3>
+ <p class="src" style="margin:0 0 6px">${B.real?'Starts from the votes counted so far.':kind==='d2'?'No votes yet, so it starts from the 2022 early vote (Sommerman +13,295) as a stand-in for tonight\'s first report.':'No votes yet: starts from zero.'} Move the dials to see where the race ends.</p>
+ ${sl('ed','Election Day votes still to count',w.ed,0,kind==='d2'?150000:500000,500)}${sl('edShare',`${B.la} share of them`,w.edShare,30,70,0.5,'%')}
+ ${sl('mail','Late mail and overseas ballots',w.mail,0,kind==='d2'?5000:20000,50)}${sl('mailShare',`${B.la} share of those`,w.mailShare,20,80,1,'%')}
+ ${sl('prov','Provisional ballots',w.prov,0,kind==='d2'?3000:10000,50)}${sl('cure','Share of provisionals that count',w.cure,0,100,5,'%')}${sl('provShare',`${B.la} share of those`,w.provShare,20,80,1,'%')}
+ <p style="margin:10px 0 0;font:800 24px var(--f-display);color:var(--head)">Projected: ${leader} +${fmt(Math.round(Math.abs(marg)))} <span class="src" style="font:400 14px var(--f-body)">(${B.la} ${fmt(Math.round(A))}, ${B.lb} ${fmt(Math.round(Bv))})</span></p>
+ <p style="margin:4px 0 0">${need==null?'':need>1?`${B.la} cannot win on these Election Day numbers.`:need<0?`${B.la} wins even losing every remaining Election Day vote.`:`${B.la} needs <b>${(100*need).toFixed(1)}%</b> of the remaining Election Day vote to win, given the other dials.`}</p>
+ <p class="src">A calculator, not a forecast: it only does the arithmetic on the numbers you set.</p></div>`}
+document.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.wi;if(!k)return;const [kind,id]=k.split('.');WI[kind][id]=+e.target.value;const el=$('#wi_'+kind);if(el){const y=window.scrollY;el.innerHTML=whatIfHTML(kind);const again=el.querySelector(`[data-wi="${k}"]`);if(again)again.focus();window.scrollTo(0,y)}});
 
 function findD2(){const R=window.RES;if(!R||!R.dallas||!R.dallas.races)return null;
  return R.dallas.races.find(r=>/commissioner/i.test(r.race)&&/(\b2\b|no\. ?2|district 2|precinct 2|pct\.? ?2)/i.test(r.race))}
@@ -865,7 +893,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='cbc0b2a6ef7a',failN=0;
+let BUILD='09599372988f',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
