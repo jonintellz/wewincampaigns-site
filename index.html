@@ -338,7 +338,7 @@ function renderTV(){const el=$('#tvBody');if(!el)return;const R=window.RES;const
   if(!t){const aft=Date.now()>=Date.parse('2026-11-04T01:00:00Z');cards.push(tvCard(label,aft?'Counting':'Polls close 7 pm','',cs.map(c=>esc(c.name)+' ('+c.party[0]+')').join(' vs ')+(aft?' · the state has no counties in yet':''),callBadge(rx,race)));return}const e=engine(R,race);
   cards.push(tvCard(label,esc(lastN(cs[0].name)),`+${(100*(cs[0].votes-cs[1].votes)/t).toFixed(1)} · ${fmt(cs[0].votes-cs[1].votes)} votes`,`${(100*cs[0].votes/t).toFixed(1)}% to ${(100*cs[1].votes/t).toFixed(1)}% · about ${e.exp?(100*e.cnt/e.exp).toFixed(0):0}% of expected vote in`,callBadge(rx,race),cs[0].party==='REP'?'--rep':'--dem'))};
  st(/^u\.?s\.? senat/i,'U.S. Senate','sen');st(/^governor/i,'Governor','gov');
- const d=R&&R.dallas&&R.dallas.d2;if(d){const t=d.W+d.S;cards.push(tvCard('Dallas County Commissioner, Precinct 2',t?(d.W>=d.S?'Wernick':'Sommerman'):'After 7 pm',t?`+${(100*Math.abs(d.W-d.S)/t).toFixed(1)} · ${fmt(Math.abs(d.W-d.S))} votes`:'',t?`${(100*d.W/t).toFixed(1)}% to ${(100*d.S/t).toFixed(1)}% · ${dalRep('d2',1)}`:'Wernick (R) vs Sommerman (D)',callBadge(/^county commissioner,? precinct (no\.? ?)?2$/i),t?(d.W>=d.S?'--rep':'--dem'):''))}
+ const d=R&&R.dallas&&R.dallas.d2;if(d){const t=d.W+d.S;cards.push(tvCard('Dallas County Commissioner, Precinct 2',t?(d.W>=d.S?'Wernick':'Sommerman'):'After 7 pm',t?`+${(100*Math.abs(d.W-d.S)/t).toFixed(1)} · ${fmt(Math.abs(d.W-d.S))} votes`:'',t?`${(100*Math.max(d.W,d.S)/t).toFixed(1)}% to ${(100*Math.min(d.W,d.S)/t).toFixed(1)}% · ${dalRep('d2',1)}`:'Wernick (R) vs Sommerman (D)',callBadge(/^county commissioner,? precinct (no\.? ?)?2$/i),t?(d.W>=d.S?'--rep':'--dem'):''))}
  const p=R&&R.dallas&&R.dallas.prop_a;if(p){const t=p.F+p.A;cards.push(tvCard('Dallas County Proposition A',t?(p.A>=p.F?'Against':'For'):'After 7 pm',t?`${(100*Math.max(p.A,p.F)/t).toFixed(1)}% · ${fmt(Math.abs(p.A-p.F))} votes`:'',t?dalRep('pa',1):'County tax-rate election',callBadge(/^dallas county proposition a$/i),'--accent'))}
  const B=(R&&R.batches||[]).slice(0,6);
  el.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:10px;margin-bottom:16px"><div style="font:900 clamp(36px,4vw,60px)/1 var(--f-display);color:var(--head);text-transform:uppercase">Texas election night</div><div style="font:600 18px var(--f-mono);color:var(--muted)">${R?'Updated '+esc(R.as_of.split(' ').slice(1).join(' '))+' Central':''} · wewincampaigns.com</div></div>
@@ -1016,7 +1016,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='0ebce4ef00df',failN=0;
+let BUILD='e1c84e2278d3',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
