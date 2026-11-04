@@ -683,7 +683,7 @@ function renderResults(){const el=$('#resBody');if(!el)return;const R=window.RES
  h+=`<div style="margin-top:14px">${engineCard(R)}</div><div style="margin-top:14px">${remainingHTML(R)}</div><div style="margin-top:14px">${knownUncountedHTML()}</div><div style="margin-top:14px">${rollupsHTML(R)}</div><div style="margin-top:14px">${marketHTML(R)}</div><div style="margin-top:14px">${seatsHTML(R)}</div><div style="margin-top:14px">${benchHTML(R)}</div><div class="grid g2" style="margin-top:14px"><div>${splitHTML(R)}</div><div>${dropClockHTML(R)}</div></div>`;
  const S=swingSummary(R);
  h+=`<div class="note" style="margin-top:16px">${S?`<b>Swing in the ${S.n} counties fully counted</b> (${fmt(S.vv)} votes, ${cRace==='sen'?'Senate':'Governor'}): <b class="${S.s24>0?'R':'D'}">${mg(S.s24)}</b> against the 2024 presidential margin, <b class="${S.s22>0?'R':'D'}">${mg(S.s22)}</b> against the 2022 Governor margin, vote-weighted. Margins are over all votes cast in the race, the same basis as the 2022 and 2024 figures. Fully counted counties are mostly small and rural early in the night.`:'Swing against 2024 and 2022 appears here once whole counties finish counting. Partly counted counties are not compared: their early vote is in and their Election Day vote is not.'}</div>`;
- if(sw.length>2)h+=`<div class="grid g3" style="margin-top:14px">${sw.slice(2).map(r=>raceCard(r)).join('')}</div>`;
+ if(sw.length>2)h+=`<div class="grid g3" style="margin-top:14px">${sw.slice(2).map(r=>raceCard((BR&&BR.statewide||[]).find(x=>x.race===r.race)||r)).join('')}</div>`;
  h+=`<h3 style="margin-top:22px">The Legislature</h3>`+legislatureCard(R)+`<div style="margin-top:14px">${afterHundredHTML()}</div>`;
  if(R.counties&&R.counties.length){h+=`<h3 style="margin-top:22px">By county <select id="cRace" style="margin-left:8px;background:var(--surface);color:var(--strong);border:1px solid var(--line-2);border-radius:5px;padding:3px 6px"><option value="sen"${cRace==='sen'?' selected':''}>U.S. Senate</option><option value="gov"${cRace==='gov'?' selected':''}>Governor</option></select>
   <input id="cQ" type="search" value="${esc(cQ)}" placeholder="Find a county" style="margin-left:8px;padding:4px 8px;border-radius:5px;border:1px solid var(--line-2);background:var(--surface);color:var(--strong)"></h3><div id="cTab"></div>`}
@@ -1017,7 +1017,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='c1d352016e0b',failN=0;
+let BUILD='bbdb16bf35b4',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -1045,6 +1045,11 @@ function bestRES(){const R=window.RES;if(!R||!R.counties)return R;const k=(R.as_
  [['sen',/^u\.?s\.? senat/i],['gov',/^governor/i]].forEach(([race,rx])=>{const own={};try{ownCountRows(race).forEach(o=>{own[o.county.toLowerCase()]=o})}catch(e){}
   let n=0,dD=0,dR=0;out.counties.forEach(c=>{const s0=c[race]||{T:0,D:0,R:0},o=own[c.county.toLowerCase()];if(o&&o.T>(s0.T||0)){dD+=o.D-(s0.D||0);dR+=o.R-(s0.R||0);c[race]={...s0,T:o.T,D:o.D,R:o.R,Tev:o.T,county_site:true};n++}});
   const i=out.statewide.findIndex(x=>rx.test(x.race));if(i>=0&&n){const sw=out.statewide[i];out.statewide[i]={...sw,candidates:sw.candidates.map(c=>c.party==='DEM'?{...c,votes:c.votes+dD}:c.party==='REP'?{...c,votes:c.votes+dR}:c),reporting:`${sw.reporting}, plus ${n} counties' own counts that are ahead of the state's`,county_sites:n}}});
+ {const zero=new Set(out.counties.filter(c=>!((R.counties.find(x=>x.county===c.county)||{}).sen||{}).T).map(c=>c.county.toLowerCase()));const src=[];
+  const DR=R.dallas;if(DR&&DR.races&&zero.has('dallas'))src.push(['Dallas',DR.races]);const CB=window.CBALLOTS;if(CB&&CB.counties)Object.entries(CB.counties).forEach(([n,x])=>{if(n!=='Dallas'&&zero.has(n.toLowerCase()))src.push([n,x.contests||[]])});
+  if(src.length)out.statewide=out.statewide.map(sw=>{if(/^u\.?\s?s\.? senat/i.test(sw.race)||/^governor/i.test(sw.race)||/^u\.?\s?s\.?\s+rep/i.test(sw.race))return sw;const key=canonRace(sw.race);if(!key)return sw;
+   let add={D:0,R:0},n=0;src.forEach(([cty,cs])=>{const c=cs.find(x=>canonRace(x.race||'')===key);if(!c)return;n++;c.candidates.forEach(x=>{if(/^dem/i.test(x.party||''))add.D+=x.votes||0;else if(/^rep/i.test(x.party||''))add.R+=x.votes||0})});
+   if(!n||!(add.D+add.R))return sw;return {...sw,candidates:sw.candidates.map(c=>c.party==='DEM'?{...c,votes:c.votes+add.D}:c.party==='REP'?{...c,votes:c.votes+add.R}:c),reporting:`${sw.reporting}, plus ${n} counties' own counts the state has not loaded yet`,county_sites:n}})}
  window._BR=out;window._BRk=k;return out}
 function scoreboard(){const R=bestRES(),bar=$('#scoreBar');if(!bar)return;if(!R){bar.hidden=true;return}const cards=[];
  const one=(rx,label)=>{const r=(R.statewide||[]).find(x=>rx.test(x.race));if(!r)return;const cs=[...r.candidates].filter(c=>c.party==='DEM'||c.party==='REP').sort((a,b)=>b.votes-a.votes);const t=r.candidates.reduce((a,c)=>a+c.votes,0);
