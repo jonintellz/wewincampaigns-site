@@ -870,7 +870,7 @@ function dallasRacesHTML(){const B=window.BALLOT,R=window.RES,DR=R&&R.dallas;
  return `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">${tabs}</div><p class="src" style="margin:0 0 10px">Races that cross county lines show the <b>whole race</b> first (every county, from the Texas Secretary of State), then Dallas County's own share.</p><div class="grid g3">${by[dTab].map(r=>raceCard(r,false,'Dallas')).join('')}</div>${dTab==='judicial'&&unc?`<p class="src" style="margin-top:10px">Dallas County reports its uncontested races, mostly judgeships, as one combined contest; they are not shown here.</p>`:''}`}
 document.addEventListener('click',e=>{const b=e.target.closest('[data-dtab]');if(b){dTab=b.dataset.dtab;try{localStorage.setItem('tvd_dtab',dTab)}catch(_){}const el=$('#dalRes');if(el)el.innerHTML=dallasRacesHTML()}});
 function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
- if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
+ if(st)st.textContent=(R&&R.dallas&&R.dallas.as_of?`Results read ${R.dallas.as_of} Central`:'')+(R&&R.dallas&&R.dallas.pdf?` · from Dallas County's summary report of ${R.dallas.pdf.stamp.split(' ').slice(1).join(' ')}, because the county's live results server is not answering`:'')+(R&&R.dallas&&R.dallas.stale_since?` · Dallas County's results server has not answered since ${R.dallas.stale_since}; these are its last numbers`:'')+(L&&L.dallas&&L.dallas.county_updated?` · Dallas County last updated its vote-center counts at ${L.dallas.county_updated}`:'')+'. Refreshes every minute.';
  const a=$('#d2Result');if(a)a.innerHTML=d2Board();
  const pc=$('#propCalc');if(pc&&!pc.innerHTML)pc.innerHTML=propACalcHTML();['d2','pa'].forEach(k=>{const el=$('#wi_'+k);if(el&&!(document.activeElement&&document.activeElement.dataset&&document.activeElement.dataset.wi))el.innerHTML=whatIfHTML(k)});const dc=$('#dClock');if(dc)dc.innerHTML=dallasClockHTML();const o_=$('#d2Out');if(o_)o_.innerHTML=d2OutHTML();const tk=$('#d2Ticket');if(tk)tk.innerHTML=d2TicketHTML();const ah=$('#after100');if(ah&&!ah.innerHTML)ah.innerHTML=afterHundredHTML();const b=$('#propA');if(b)b.innerHTML=propABoard();
  const db=$('#dalBatches');if(db)db.innerHTML=batchesHTML(true);const dkd=$('#deskBodyD');if(dkd)dkd.innerHTML=notesHTML(5);const kd=$('#knownD');if(kd)kd.innerHTML=knownUncountedHTML();const sbd=$('#sinceBoxD');if(sbd&&!sbd.dataset.done&&window.RES){sbd.innerHTML=sinceHTML();sbd.dataset.done=1}const tbd=$('#tlBodyD');if(tbd){if(tlRace==='sen'||tlRace==='gov')tlRace='d2';tbd.innerHTML=timelineHTML()}const dr=$('#dalRes');if(dr)dr.innerHTML=dallasRacesHTML();
@@ -1008,7 +1008,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='8f8adb7ed116',failN=0;
+let BUILD='b8cd16d275f7',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
