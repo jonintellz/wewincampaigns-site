@@ -584,7 +584,7 @@ function remainingHTML(R){const race=cRace,E=expectedByCounty(),B=T.county_base|
  const fin=v=>{const m=lead+v;return `<b class="${m>0?'R':'D'}">${m>0?Rn:Dn} +${fmt(Math.round(Math.abs(m)))}</b>`};
  return `<div class="card"><h3>Where the remaining vote is (${isSen?'Senate':'Governor'})</h3>
  <p style="margin:4px 0 10px">About <b>${fmt(Math.round(tot))}</b> votes still out, by our estimate, ${fmt(Math.round(rows.reduce((a,r)=>a+r.evLeft,0)))} of them early and mail votes already cast but not yet posted. If each county's uncounted early vote breaks like its own posted early vote (or like its 2024 result where none is posted) and its Election Day like its 2022 Election Day, the race ends near ${fin(sumEd)}. If each county's remaining vote breaks like the votes it has counted so far, it ends near ${fin(sumNow)}.</p>
- ${table([['County'],['Status'],['Est. votes out'],['Counted so far'],['Net if like counted'],['2022 Election Day'],['Net, early + Election Day']],top.map(r=>`<tr><td>${esc(r.c)}</td><td>${r.k==='none'?'not reporting':r.k==='ev'?'early vote only':r.k==='ed'?'partly in':'–'}</td><td><b>${fmt(Math.round(r.left))}</b></td>
+ ${table([['County'],['Status'],['Est. votes out'],['Counted so far'],['Net if like counted'],['2022 Election Day'],['Net, early + Election Day']],top.map(r=>`<tr><td>${esc(cname(r.c))}</td><td>${r.k==='none'?'not reporting':r.k==='ev'?'early vote only':r.k==='ed'?'partly in':'–'}</td><td><b>${fmt(Math.round(r.left))}</b></td>
   <td class="${r.mNow>0?'pos':'neg'}">${r.mNow==null?'–':mg(100*r.mNow)}</td><td class="${r.netNow>0?'pos':'neg'}">${r.netNow==null?'–':(r.netNow>0?'R':'D')+'+'+fmt(Math.round(Math.abs(r.netNow)))}</td>
   <td class="${r.mEd>0?'pos':'neg'}">${r.mEd==null?'–':mg(100*r.mEd)}</td><td class="${r.netEd>0?'pos':'neg'}">${r.netEd==null?'–':(r.netEd>0?'R':'D')+'+'+fmt(Math.round(Math.abs(r.netEd)))}</td></tr>`).join(''))}
  <p class="src">The 30 counties with the most estimated votes out. Two simple paths, not a forecast: the counted vote in a county that has only posted its early vote is the wrong guide to its Election Day, which is why the 2022 Election Day column is shown beside it. 2022 Election Day margins are from the Governor's race; early votes not yet posted are priced like the county's own posted early count, or its 2024 presidential margin where it has posted nothing.</p></div>`}
@@ -657,7 +657,7 @@ function healthRow(){const R=window.RES;const parts=[];if(L)parts.push(`Turnout 
  if(R&&R.dallas)parts.push(`Dallas results: ${R.dallas.source}`);return parts.join(' · ')}
 
 function splitTable(r){const cs=[...r.candidates].filter(c=>c.votes>0||c.party!=='W').sort((a,b)=>b.votes-a.votes).slice(0,4);
- const tv=cs.reduce((s,c)=>s+c.votes,0),te=cs.reduce((s,c)=>s+(c.ev||0),0),td=tv-te;
+ const tv=r.candidates.reduce((s,c)=>s+(c.votes||0),0),te=r.candidates.reduce((s,c)=>s+(c.ev||0),0),td=tv-te;
  return table([['Candidate'],['Early vote'],['Election Day'],['Total']],cs.map(c=>{const ed=c.votes-(c.ev||0);return `<tr><td>${esc(c.name)} <span class="pill">${esc(c.party||'')}</span></td><td>${fmt(c.ev||0)} <span class="src">${te?(100*(c.ev||0)/te).toFixed(1)+'%':''}</span></td><td>${fmt(ed)} <span class="src">${td>0?(100*ed/td).toFixed(1)+'%':''}</span></td><td><b>${fmt(c.votes)}</b></td></tr>`}).join(''))}
 function swingSummary(R){const B=T.county_base||{};let w=0,s24=0,s22=0,w22=0,n=0,vv=0;
  R.counties.forEach(c=>{const r=c[cRace];if(!cDone(c,r))return;const b=B[c.county];if(!b||b.m24==null)return;const m=100*(r.R-r.D)/r.T;const v=r.T;w+=v;s24+=v*(m-b.m24);if(b.m22!=null){s22+=v*(m-b.m22);w22+=v}n++;vv+=v});
@@ -694,7 +694,7 @@ function drawCountyResults(){const el=$('#cTab'),R=window.RES;if(!el||!R)return;
 document.addEventListener('change',e=>{if(e.target.id==='cRace'){cRace=e.target.value;renderResults()}});
 document.addEventListener('input',e=>{if(e.target.id==='cQ'){cQ=e.target.value;drawCountyResults()}});
 function histChart(){const el=$('#liveHist');if(!el||!L||!L.history||L.history.length<2)return;const P=L.history,W=900,H=200,l=60,r=20,t=10,b=26;
- const mx=Math.max(...P.map(p=>p[1]),L.base22_total||0)*1.02,tm=s=>{const[a,c]=s.split(':').map(Number);return a*60+c},t0=7*60,t1=19*60+30;
+ const mx=Math.max(...P.map(p=>p[1]),L.base22_total||0)*1.02,tm=s=>{const[a,c]=s.split(':').map(Number);return a*60+c},t0=7*60,t1=Math.max(19*60+30,tm(P[P.length-1][0])+10);
  const x=v=>l+(tm(v)-t0)/(t1-t0)*(W-l-r),y=v=>t+(H-t-b)*(1-v/mx);let g='';
  [0,.25,.5,.75,1].forEach(f=>{const v=mx*f;g+=`<line x1="${l}" x2="${W-r}" y1="${y(v)}" y2="${y(v)}" stroke="${css('--grid')}"/><text x="${l-6}" y="${y(v)+4}" text-anchor="end">${Math.round(v/1000)}k</text>`});
  ['07:00','09:00','11:00','13:00','15:00','17:00','19:00'].forEach(s=>g+=`<text x="${x(s)}" y="${H-6}" text-anchor="middle">${(+s.slice(0,2)%12||12)+(+s.slice(0,2)<12?' am':' pm')}</text>`);
@@ -1011,12 +1011,12 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='9f8ff669ddb0',failN=0;
+let BUILD='473a83125dbe',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
-function freshness(){const bar=$('#staleBar');if(!bar)return;const a=L?ageMin(L.as_of):null,b=window.RES?ageMin(window.RES.as_of):null;const worst=Math.max(a??0,b??0);
- if(failN>=3||worst>8){bar.hidden=false;bar.textContent=`Updates delayed: the newest data on this page is from ${(b!=null&&b>=(a??0)?window.RES.as_of:L&&L.as_of||'').split(' ').slice(1).join(' ')} Central${failN>=3?' and the site is not answering':''}. Numbers below may be out of date.`}else bar.hidden=true}
+function freshness(){const bar=$('#staleBar');if(!bar)return;const a=L&&Date.now()<Date.parse('2026-11-04T01:30:00Z')?ageMin(L.as_of):null,b=window.RES?ageMin(window.RES.as_of):null;const worst=Math.max(a??0,b??0);
+ if(failN>=3||worst>8){bar.hidden=false;bar.textContent=`Updates delayed: ${b!=null&&window.RES?'results read '+window.RES.as_of.split(' ').slice(1).join(' '):''}${a!=null&&L?(b!=null?'; ':'')+'turnout read '+L.as_of.split(' ').slice(1).join(' '):''} Central${failN>=3?', and the site is not answering':''}. Numbers below may be out of date.`}else bar.hidden=true}
 function chipsHTML(){const R=window.RES,out=[];const add=(n,ok,t)=>out.push(`<span class="chip ${ok?'ok':'bad'}" title="${esc(t||'')}">${esc(n)}</span>`);
  const errs=[...(L&&L.errors||[]),...(R&&R.errors||[])].join(' | ');const has=re=>re.test(errs);
  add('State results',R&&!has(/^results/im),R?'read '+R.as_of:'');add('Dallas results',R&&R.dallas&&!R.dallas.stale_since&&!has(/Dallas results/i),R&&R.dallas&&R.dallas.stale_since?'last good read '+R.dallas.stale_since:'');
@@ -1030,6 +1030,7 @@ function scoreCard(label,lead,margin,sub,href){return `<a class="sc" href="${hre
 /* a candidate's surname for headlines: drops the state's incumbent marker '(i)' and a generational suffix */
 /* the SOS stamps its file in UTC ('Nov 04, 2026 01:13:09'): show it in Central */
 function sosCT(x){const t=Date.parse(String(x||'')+' UTC');if(!t)return x||'';return new Date(t).toLocaleTimeString('en-US',{timeZone:'America/Chicago',hour:'numeric',minute:'2-digit'})+' Central'}
+function cname(n){return String(n||'').replace(/\bMc([a-z])/g,(m,a)=>'Mc'+a.toUpperCase()).replace(/^Dewitt$/,'DeWitt')}
 function lastN(n){const w=String(n||'').replace(/\s*\([iI]\)\s*/g,' ').replace(/,?\s+(Jr|Sr|II|III|IV)\.?\s*$/i,'').trim().split(/\s+/);return w[w.length-1]||''}
 function scoreboard(){const R=window.RES,bar=$('#scoreBar');if(!bar)return;if(!R){bar.hidden=true;return}const cards=[];
  const one=(rx,label)=>{const r=(R.statewide||[]).find(x=>rx.test(x.race));if(!r)return;const cs=[...r.candidates].filter(c=>c.party==='DEM'||c.party==='REP').sort((a,b)=>b.votes-a.votes);const t=r.candidates.reduce((a,c)=>a+c.votes,0);
@@ -1051,7 +1052,7 @@ function benchHTML(R){const race=cRace,B=T.county_base||{},E=expectedByCounty(),
  const head=pace==null?`<p style="margin:0 0 8px">For a statewide tie, every county has to move <b>${mg(-M).replace('R+','R+').replace('D+','D+')}</b> from its ${baseLab} margin (Texas was ${mg(M)} then). The pace reading appears as counties finish.</p>`
   :`<p style="margin:0 0 8px">In the <b>${n}</b> counties that have finished (${fmt(w)} votes), the ${isSen?'Senate':'Governor'} race is running <b class="${pace>0?'R':'D'}">${mg(pace)}</b> against the tie benchmark: if the rest of Texas runs at the same pace, ${pace>0?Rn:Dn} wins by about <b>${Math.abs(pace).toFixed(1)} points</b>. Early finishers are mostly small rural counties, so read this with the county mix in mind.</p>`;
  return `<div class="card"><h3>Benchmarks: what each county needs for a statewide tie (${isSen?'Senate':'Governor'})</h3>${head}
- ${table([['County'],[baseLab],['Tie benchmark'],['Now'],['Status'],['vs benchmark']],rows.slice(0,40).map(r=>`<tr><td>${esc(r.c)}</td><td class="${r.bm>0?'pos':'neg'}">${mg(r.bm)}</td><td>${mg(r.bench)}</td><td class="${r.m>0?'pos':'neg'}">${r.m==null?'–':mg(r.m)}</td><td>${esc(r.k)}</td><td>${r.done&&r.m!=null?`<b class="${r.m-r.bench>0?'R':'D'}">${(r.m-r.bench>0?Rn:Dn)} +${Math.abs(r.m-r.bench).toFixed(1)}</b>`:'<span class="src">when finished</span>'}</td></tr>`).join(''))}
+ ${table([['County'],[baseLab],['Tie benchmark'],['Now'],['Status'],['vs benchmark']],rows.slice(0,40).map(r=>`<tr><td>${esc(cname(r.c))}</td><td class="${r.bm>0?'pos':'neg'}">${mg(r.bm)}</td><td>${mg(r.bench)}</td><td class="${r.m>0?'pos':'neg'}">${r.m==null?'–':mg(r.m)}</td><td>${esc(r.k)}</td><td>${r.done&&r.m!=null?`<b class="${r.m-r.bench>0?'R':'D'}">${(r.m-r.bench>0?Rn:Dn)} +${Math.abs(r.m-r.bench).toFixed(1)}</b>`:'<span class="src">when finished</span>'}</td></tr>`).join(''))}
  <p class="src">The 40 counties with the most expected votes. Tie benchmark = the county's ${baseLab} margin shifted by the statewide amount needed for a tie (uniform swing). A county "ahead of benchmark" for a candidate is voting better for them than a tied state needs. Margins over all votes cast.</p></div>`}
 
 /* ---------- vote over time ---------- */
@@ -1108,7 +1109,7 @@ function splitHTML(R){const B=T.county_base||{};const rows=(R.counties||[]).filt
  if(!rows.length)return `<div class="card"><h3>Ticket splitting: Abbott against Paxton</h3><p class="src" style="margin:0">Once counties report: in every county, how far Abbott runs ahead of or behind Paxton on the same ballots, the clearest sign of Republicans and independents splitting their tickets between the Senate and Governor races.</p></div>`;
  let w=0,g=0;rows.forEach(r=>{w+=r.T;g+=r.T*r.gap});const avg=g/w;rows.sort((a,b)=>b.T-a.T);const top=[...rows].sort((a,b)=>Math.abs(b.gap)-Math.abs(a.gap)).filter(r=>r.T>2000).slice(0,10);
  return `<div class="card"><h3>Ticket splitting: Abbott against Paxton</h3><p style="margin:0 0 8px">Across the ${rows.length} counties reporting, Abbott runs <b class="${avg>0?'R':'D'}">${Math.abs(avg).toFixed(1)} points ${avg>0?'ahead of':'behind'}</b> Paxton on the margin, vote-weighted.</p>
- ${table([['County'],['Governor margin'],['Senate margin'],['Abbott minus Paxton']],rows.slice(0,25).map(r=>`<tr><td>${esc(r.c)}</td><td class="${r.mgv>0?'pos':'neg'}">${mg(r.mgv)}</td><td class="${r.ms>0?'pos':'neg'}">${mg(r.ms)}</td><td><b class="${r.gap>0?'R':'D'}">${r.gap>0?'+':''}${r.gap.toFixed(1)}</b></td></tr>`).join(''))}
+ ${table([['County'],['Governor margin'],['Senate margin'],['Abbott minus Paxton']],rows.slice(0,25).map(r=>`<tr><td>${esc(cname(r.c))}</td><td class="${r.mgv>0?'pos':'neg'}">${mg(r.mgv)}</td><td class="${r.ms>0?'pos':'neg'}">${mg(r.ms)}</td><td><b class="${r.gap>0?'R':'D'}">${r.gap>0?'+':''}${r.gap.toFixed(1)}</b></td></tr>`).join(''))}
  <p class="src">Largest gaps (counties over 2,000 votes): ${top.map(r=>`${esc(r.c)} ${r.gap>0?'+':''}${r.gap.toFixed(1)}`).join(' · ')}. Positive means Abbott does better than Paxton.</p></div>`}
 
 /* ---------- next-batch clock and stall watch, from our own batch feed ---------- */
@@ -1118,7 +1119,7 @@ function dropClockHTML(R){const B=(R&&R.batches||[]).filter(b=>b.race==='Senate'
  const rows=Object.entries(byC).map(([c,ts])=>{ts=[...new Set(ts)].sort((a,b)=>a-b);const gaps=ts.slice(1).map((t,i)=>t-ts[i]).filter(g=>g>0);const med=gaps.length?gaps.sort((a,b)=>a-b)[Math.floor(gaps.length/2)]:null;const last=ts[ts.length-1];return {c,n:ts.length,last,med,age:now-last}})
   .sort((a,b)=>((T.county_base[b.c]||{}).reg||0)-((T.county_base[a.c]||{}).reg||0)).slice(0,30);
  const hm=m=>{let h=Math.floor(m/60)%24,mm=m%60;return `${h%12||12}:${String(mm).padStart(2,'0')} ${h<12?'am':'pm'}`};
- return `<div class="card"><h3>Next-batch clock</h3>${table([['County'],['Batches'],['Last batch'],['Typical gap'],['Next expected'],['Status']],rows.map(r=>{const late=r.med&&r.age>2*Math.max(r.med,15);return `<tr><td>${esc(r.c)}</td><td>${r.n}</td><td>${hm(r.last)} <span class="src">${r.age} min ago</span></td><td>${r.med?r.med+' min':'–'}</td><td>${r.med?hm(r.last+r.med):'–'}</td><td>${late?'<b style="color:var(--accent)">quiet longer than usual</b>':'on its usual pace'}</td></tr>`}).join(''))}
+ return `<div class="card"><h3>Next-batch clock</h3>${table([['County'],['Batches'],['Last batch'],['Typical gap'],['Next expected'],['Status']],rows.map(r=>{const late=r.med&&r.age>2*Math.max(r.med,15);return `<tr><td>${esc(cname(r.c))}</td><td>${r.n}</td><td>${hm(r.last)} <span class="src">${r.age} min ago</span></td><td>${r.med?r.med+' min':'–'}</td><td>${r.med?hm(r.last+r.med):'–'}</td><td>${late?'<b style="color:var(--accent)">quiet longer than usual</b>':'on its usual pace'}</td></tr>`}).join(''))}
  <p class="src">From the batches this site has recorded tonight (Senate race). A quiet county may simply be between batches; "quiet longer than usual" means more than twice its typical gap.</p></div>`}
 
 /* ---------- countdown and live tab title ---------- */
@@ -1198,7 +1199,7 @@ function knownUncountedHTML(){const R=window.RES;if(!L||!R)return '';const res={
  const rows=(L.counties||[]).map(c=>{const r=res[c.county.toLowerCase()]||{};const counted=r.T?Math.max(0,r.T-(r.Tev||0)):0;return {c:c.county.replace('Mclennan','McLennan'),ci:c.today,counted,left:Math.max(0,c.today-counted)}}).filter(r=>r.ci);
  if(!rows.length)return '';const tot=rows.reduce((a,r)=>a+r.left,0);
  return `<div class="card"><h3>Known uncounted Election Day ballots</h3><p style="margin:0 0 6px">In the counties that publish live check-ins, <b>${fmt(tot)}</b> people checked in today whose ballots are not yet in the count.</p>
- ${table([['County'],['Checked in today'],['Election Day votes counted'],['Not yet counted']],rows.map(r=>`<tr><td>${esc(r.c)}</td><td>${fmt(r.ci)}</td><td>${fmt(r.counted)}</td><td><b>${fmt(r.left)}</b></td></tr>`).join(''))}
+ ${table([['County'],['Checked in today'],['Election Day votes counted'],['Not yet counted']],rows.map(r=>`<tr><td>${esc(cname(r.c))}</td><td>${fmt(r.ci)}</td><td>${fmt(r.counted)}</td><td><b>${fmt(r.left)}</b></td></tr>`).join(''))}
  <p class="src">Check-ins are a hard count of Election Day voters (the vote-center finder and county turnout pages); counted Election Day votes are each county's Senate total minus its early vote. A few check-ins become provisional ballots that are counted later or not at all.</p></div>`}
 
 
@@ -1237,7 +1238,7 @@ document.addEventListener('input',e=>{if(e.target.id==='mQ'){mQ=e.target.value;c
 const WATCH_SEATS=[9,15,28,32,34,35];
 function seatsHTML(R){const sw=R&&R.statewide||[];const M=(R&&R.markets&&R.markets.markets)||[];
  const rows=WATCH_SEATS.map(n=>{const r=sw.find(x=>new RegExp('District '+n+'$').test(x.race));const mk=M.filter(m=>new RegExp('TX-?'+n+'\\b','i').test(m.event)&&/winner/i.test(m.event)).sort((a,b)=>b.price-a.price)[0];
-  if(!r)return `<tr><td>TX-${n}</td><td colspan="4" class="src">not on the state feed</td></tr>`;const cs=[...r.candidates].sort((a,b)=>b.votes-a.votes);const t=cs.reduce((a,c)=>a+c.votes,0);const hr=(R.house_reporting||{})[r.race];
+  if(!r)return `<tr><td>TX-${n}</td><td colspan="4" class="src">not on the state feed</td></tr>`;const mj=c=>/^(REP|DEM)$/i.test(c.party||'')?1:0;const cs=[...r.candidates].sort((a,b)=>b.votes-a.votes||mj(b)-mj(a));const t=cs.reduce((a,c)=>a+c.votes,0);const hr=(R.house_reporting||{})[r.race];
   return `<tr><td><b>TX-${n}</b></td><td style="text-align:left;white-space:normal">${cs.filter(c=>c.party!=='W').slice(0,2).map(c=>`${esc(c.name)} (${esc(c.party[0]||'')})`).join(' vs ')}</td><td>${t?`<b class="${cs[0].party==='REP'?'R':'D'}">${esc(lastN(cs[0].name))} +${(100*(cs[0].votes-cs[1].votes)/t).toFixed(1)}</b>`:'<span class="src">no votes yet</span>'}</td><td>${hr?`${fmt(hr[0])}/${fmt(hr[1])} precincts`:''}</td><td>${mk?`${esc(mk.outcome)} ${(mk.price*100).toFixed(0)}¢ <span class="src">${esc(mk.source)}</span>`:'–'}</td></tr>`}).join('');
  return `<div class="card"><h3>Congressional seats to watch</h3>${table([['Seat'],['Candidates'],['Now'],['Reporting'],['Market favorite']],rows)}<p class="src">The Texas seats with the most active prediction markets tonight. Market prices are implied chances, not results.</p></div>`}
 
