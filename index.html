@@ -891,7 +891,7 @@ function d2OutHTML(){const D=window.RES&&window.RES.dallas_detail,CB=(window.DBA
  const started=P.length-out.length;
  const reg=out.reduce((a,p)=>a+(p.reg||0),0);
  return `<div class="card"><h3>Precincts still out</h3><p style="margin:0 0 4px"><b>${out.length}</b> of ${P.length} Precinct 2 precincts have no votes counted yet${started?'':' (nothing has posted)'}, with <b>${fmt(reg)}</b> registered voters between them${reg<1000?': too few to move this race':''}.${t&&reg>=1000?` In 2022 the matching precincts cast <b>${fmt(t)}</b> votes in this race and went <b class="${m>0?'R':'D'}">${m==null?'–':(m>0?'Koch (R)':'Sommerman (D)')+' +'+Math.abs(m).toFixed(1)}</b>.`:''}</p>
- <p class="src" style="margin:0">A read on what is left, not a projection: 2022 Commissioner results by precinct, Dallas County canvass (${mt} of these ${out.length} precincts match a 2022 precinct; lines moved for the rest). Early votes can post before a precinct's Election Day votes, so "no votes" means nothing at all has posted.</p></div>`}
+ <p class="src" style="margin:0">${t&&reg>=1000?`A read on what is left, not a projection: 2022 Commissioner results by precinct, Dallas County canvass (${mt} of these ${out.length} precincts match a 2022 precinct; lines moved for the rest). `:''}Registered voters from Dallas County's precinct results. Early votes can post before a precinct's Election Day votes, so "no votes" means nothing at all has posted.</p></div>`}
 function d2TicketHTML(){const D=window.RES&&window.RES.dallas_detail;const P=D&&D.precincts;if(!P||!P['Commissioner Precinct 2']||!P['Senate'])return '';
  const ids=new Set(P['Commissioner Precinct 2'].map(p=>p.precinct));const sum=(k,ra,rb)=>{let a=0,b=0;(P[k]||[]).forEach(p=>{if(!ids.has(p.precinct))return;const c=p.choices||{};Object.entries(c).forEach(([n,v])=>{if(ra.test(n))a+=v;if(rb.test(n))b+=v})});return [a,b]};
  const d2=sum('Commissioner Precinct 2',/wernick/i,/sommerman/i),sen=sum('Senate',/paxton/i,/talarico/i),gov=P['Governor']?sum('Governor',/abbott/i,/hinojosa/i):[0,0];
@@ -1008,7 +1008,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='b30cf6df288b',failN=0;
+let BUILD='8f8adb7ed116',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
