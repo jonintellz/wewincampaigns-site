@@ -314,7 +314,7 @@ function callBadge(re_,race){const c=callFor(re_);if(c)return `<span class="pill
 /* ---------- calls and claims: each declaration paired with the count at that minute and the count now ---------- */
 function claimKey(race){return /senat/i.test(race)?'sen':/^governor/i.test(race)?'gov':/precinct\s*(no\.\s*)?2|pct\.?\s*2|commissioner/i.test(race)?'d2':/prop/i.test(race)?'pa':null}
 function countAt(key,t){const TL=(window.RES&&window.RES.timeline)||[];if(!key)return null;const toM=x=>{const[a,b]=x.split(':').map(Number);return (a<6?a+24:a)*60+b};let best=null;
- TL.forEach(p=>{if(p[key]&&toM(p.t)<=toM(t))best=p[key]});return best}
+ TL.forEach(p=>{if(p[key]&&!((p.t||'')>='07:00'&&(p.t||'')<'19:00')&&toM(p.t)<=toM(t))best=p[key]});return best}
 function countLine(key,v){if(!v)return '–';const lab={sen:['Talarico','Paxton'],gov:['Hinojosa','Abbott'],d2:['Sommerman','Wernick'],pa:['For','Against']}[key];const t=v[0]+v[1];if(!t)return 'no votes yet';const m=v[1]-v[0];return `${m>=0?lab[1]:lab[0]} +${fmt(Math.abs(m))} (${(100*Math.abs(m)/t).toFixed(1)} pts) on ${fmt(t)} votes`}
 function claimsHTML(){const C=(window.CLAIMS||{}).claims||[];if(!C.length)return '';const TL=(window.RES&&window.RES.timeline)||[];const last=TL[TL.length-1]||{};
  const kindLab={victory:'Declared victory',concession:'Conceded',statement:'Statement',alleges:'Alleged a problem'};
@@ -475,7 +475,7 @@ function pageMethod(){return `
 /* the counties' own counts of the two top races, read from each county's own results site, each set against the same county's
    2024 presidential (Senate) or 2022 governor (Governor) margin; a separate measure from the Secretary of State's, never added to it */
 function ownCountRows(race){const rx=race==='sen'?/^(united states|u\.?\s?s\.?) senator/i:/^governor\b/i;const rows=[];
- const add=(county,c)=>{if(!c||!c.candidates)return;let D=0,Rv=0,Tt=0;c.candidates.forEach(x=>{const v=x.votes||0;Tt+=v;if(x.party==='DEM'||/\(DEM\)/.test(x.name||''))D+=v;else if(x.party==='REP'||/\(REP\)/.test(x.name||''))Rv+=v});if(Tt)rows.push({county,D,R:Rv,T:Tt,rep:c.reporting||''})};
+ const add=(county,c)=>{if(!c||!c.candidates)return;let D=0,Rv=0,Tt=0;c.candidates.forEach(x=>{const v=x.votes||0;Tt+=v;if(/^dem/i.test(x.party||'')||/\(DEM\)/i.test(x.name||''))D+=v;else if(/^rep/i.test(x.party||'')||/\(REP\)/i.test(x.name||''))Rv+=v});if(Tt)rows.push({county,D,R:Rv,T:Tt,rep:c.reporting||''})};
  const DR=window.RES&&window.RES.dallas;if(DR&&DR.races)add('Dallas',DR.races.find(r=>rx.test((r.race||'').trim())));
  const CB=window.CBALLOTS;if(CB&&CB.counties)Object.entries(CB.counties).forEach(([n,x])=>{if(n!=='Dallas')add(n,(x.contests||[]).find(r=>rx.test((r.race||'').trim())))});
  return rows.sort((a,b)=>b.T-a.T)}
@@ -485,7 +485,7 @@ function ownCountHTML(){const B=T.county_base||{};
   const body=rows.map(r=>{const m=100*(r.R-r.D)/r.T,b=B[r.county]||{},bm=b[mk],sw=bm==null?null:m-bm;const ml=v=>`${v<0?'D':'R'}+${Math.abs(v).toFixed(1)}`;
    return `<tr><td>${esc(r.county)}</td><td>${fmt(r.D)}</td><td>${fmt(r.R)}</td><td class="${m<0?'D':'R'}">${ml(m)}</td><td>${bm==null?'':ml(bm)}</td><td class="${sw==null?'':sw<0?'D':'R'}">${sw==null?'':(sw<0?'D ':'R ')+Math.abs(sw).toFixed(1)}</td><td class="src">${esc(r.rep)}</td></tr>`}).join('');
   return `<div class="card" style="min-width:0"><h3>${lab}</h3><p class="src" style="margin:0 0 6px">${rows.length} counties' own results sites. Not a statewide total: these are mostly the big metro counties.</p><div style="overflow-x:auto">${table([['County'],[Dn+' (D)'],[Rn+' (R)'],['Margin'],[baseLab],['Shift'],['Reporting']],body)}</div></div>`}).filter(Boolean);
- return parts.length?`<h2>The counties' own counts</h2><p class="deck">Big counties post their own results before the Texas Secretary of State collects them. Each row is one county's own unofficial count. Shift compares tonight's margin with the same county's ${'2024 presidential (Senate) or 2022 governor (Governor)'} margin: read it across counties, not the raw totals.</p><div class="grid g2">${parts.join('')}</div>`:''}
+ return parts.length?`<h2>The counties' own counts</h2><p class="deck">Big counties post their own results before the Texas Secretary of State collects them. Each row is one county's own unofficial count: early and mail votes only until its Election Day precincts report, and Election Day runs more Republican. Shift compares tonight's margin with the same county's ${'2024 presidential (Senate) or 2022 governor (Governor)'} margin: read it across counties, not the raw totals.</p><div class="grid g2">${parts.join('')}</div>`:''}
 function pageLive(){return `
 <p class="eyebrow">Live · Tuesday 3 November 2026</p><h1>Election night, live</h1>
 <p class="lede">Results as counties report after polls close at 7 pm, and Election Day turnout in every large county that publishes a live count. Dallas County and District 2 have <a href="#dallas">their own page</a>. For a full-screen view on a studio monitor, open <a href="#tv">TV mode</a>.</p>
@@ -570,21 +570,24 @@ function engine(R,race){const E=expectedByCounty();let D=0,Rr=0,rem=0,cnt=0,exp=
  return {D,R:Rr,cnt,exp,rem,lead,need,st}}
 
 /* ---------- where the remaining vote is ---------- */
-function remainingHTML(R){const race=cRace,E=expectedByCounty(),B=T.county_base||{};let rows=[];
+function remainingHTML(R){const race=cRace,E=expectedByCounty(),B=T.county_base||{};let rows=[];const own={};ownCountRows(race).forEach(o=>{own[o.county.toLowerCase()]=(o.R-o.D)/o.T});
  (R.counties||[]).forEach(c=>{const r=c[race]||{T:0,D:0,R:0,pr:0,tp:0},e=E[c.county],b=B[c.county]||{};if(!e)return;const k=countyStatus(c,r,e)[0];
   const left=k==='done'?0:Math.max(e.tot-(r.T||0),(r.tp?(1-r.pr/r.tp):1)*e.ed,0);if(left<500)return;
   const mNow=r.T?(r.R-r.D)/r.T:null,mEd=b.edm22!=null?b.edm22/100:(b.m22!=null?b.m22/100:null);
-  rows.push({c:c.county,k,left,mNow,mEd,netNow:mNow!=null?left*mNow:null,netEd:mEd!=null?left*mEd:null})});
+  const evIn=r.Tev!=null?r.Tev:(k==='none'?0:Math.min(r.T||0,e.ev||0)),evLeft=Math.min(left,Math.max(0,(e.ev||0)-evIn)),edLeft=Math.max(0,left-evLeft);
+  const oc=own[c.county.toLowerCase()],mEv=oc!=null?oc:(r.Tev?(r.Rev-r.Dev)/r.Tev:(b.m24!=null?b.m24/100:mEd));
+  const netMix=(mEv!=null&&mEd!=null)?evLeft*mEv+edLeft*mEd:null;
+  rows.push({c:c.county,k,left,evLeft,mNow,mEd,mEv,netNow:mNow!=null?left*mNow:null,netEd:netMix})});
  rows.sort((a,b)=>b.left-a.left);const top=rows.slice(0,30);
  const tot=rows.reduce((a,r)=>a+r.left,0),sumNow=rows.reduce((a,r)=>a+(r.netNow??r.netEd??0),0),sumEd=rows.reduce((a,r)=>a+(r.netEd??0),0);
  const e=engine(R,race),lead=e.lead;const isSen=race==='sen',Rn=isSen?'Paxton':'Abbott',Dn=isSen?'Talarico':'Hinojosa';
  const fin=v=>{const m=lead+v;return `<b class="${m>0?'R':'D'}">${m>0?Rn:Dn} +${fmt(Math.round(Math.abs(m)))}</b>`};
  return `<div class="card"><h3>Where the remaining vote is (${isSen?'Senate':'Governor'})</h3>
- <p style="margin:4px 0 10px">About <b>${fmt(Math.round(tot))}</b> votes still out, by our estimate. If each county's remaining vote breaks like its votes counted so far, the race ends near ${fin(sumNow)}. If it breaks like that county's 2022 Election Day vote, it ends near ${fin(sumEd)}.</p>
- ${table([['County'],['Status'],['Est. votes out'],['Counted so far'],['Net if like counted'],['2022 Election Day'],['Net if like 2022 ED']],top.map(r=>`<tr><td>${esc(r.c)}</td><td>${r.k==='none'?'not reporting':r.k==='ev'?'early vote only':r.k==='ed'?'partly in':'–'}</td><td><b>${fmt(Math.round(r.left))}</b></td>
+ <p style="margin:4px 0 10px">About <b>${fmt(Math.round(tot))}</b> votes still out, by our estimate, ${fmt(Math.round(rows.reduce((a,r)=>a+r.evLeft,0)))} of them early and mail votes already cast but not yet posted. If each county's uncounted early vote breaks like its own posted early vote (or like its 2024 result where none is posted) and its Election Day like its 2022 Election Day, the race ends near ${fin(sumEd)}. If each county's remaining vote breaks like the votes it has counted so far, it ends near ${fin(sumNow)}.</p>
+ ${table([['County'],['Status'],['Est. votes out'],['Counted so far'],['Net if like counted'],['2022 Election Day'],['Net, early + Election Day']],top.map(r=>`<tr><td>${esc(r.c)}</td><td>${r.k==='none'?'not reporting':r.k==='ev'?'early vote only':r.k==='ed'?'partly in':'–'}</td><td><b>${fmt(Math.round(r.left))}</b></td>
   <td class="${r.mNow>0?'pos':'neg'}">${r.mNow==null?'–':mg(100*r.mNow)}</td><td class="${r.netNow>0?'pos':'neg'}">${r.netNow==null?'–':(r.netNow>0?'R':'D')+'+'+fmt(Math.round(Math.abs(r.netNow)))}</td>
   <td class="${r.mEd>0?'pos':'neg'}">${r.mEd==null?'–':mg(100*r.mEd)}</td><td class="${r.netEd>0?'pos':'neg'}">${r.netEd==null?'–':(r.netEd>0?'R':'D')+'+'+fmt(Math.round(Math.abs(r.netEd)))}</td></tr>`).join(''))}
- <p class="src">The 30 counties with the most estimated votes out. Two simple paths, not a forecast: the counted vote in a county that has only posted its early vote is the wrong guide to its Election Day, which is why the 2022 Election Day column is shown beside it. 2022 Election Day margins are from the Governor's race.</p></div>`}
+ <p class="src">The 30 counties with the most estimated votes out. Two simple paths, not a forecast: the counted vote in a county that has only posted its early vote is the wrong guide to its Election Day, which is why the 2022 Election Day column is shown beside it. 2022 Election Day margins are from the Governor's race; early votes not yet posted are priced like the county's own posted early count, or its 2024 presidential margin where it has posted nothing.</p></div>`}
 
 
 /* ---------- Texas county map ---------- */
@@ -880,7 +883,7 @@ function renderDallasResults(){const R=window.RES;const st=$('#d2Stamp');
  const dd=$('#dalResDeck');const DR=R&&R.dallas;if(dd)dd.textContent=DR&&hasVotes(DR.races)?`${/unofficial/i.test(DR.source||'')?DR.source:'Unofficial, '+DR.source}, read ${DR.as_of||R.as_of}. Pick a tab; each tab is in ballot order.`:`Every race on the ballot, by tab and in ballot order. Votes fill in from Dallas County's results after 7 pm.`}
 
 /* ---------- Dallas: reporting clock, precincts still out, Wernick vs the ticket, Prop A dollars, ballots after 100% ---------- */
-function dallasClockHTML(){const R=window.RES,d=R&&R.dallas&&R.dallas.d2;const h=chiHour(),mn=new Date().getMinutes();const t=h+mn/60;
+function dallasClockHTML(){const R=window.RES,d=R&&R.dallas&&R.dallas.d2;const h0=chiHour(),h=h0<6?h0+24:h0,mn=new Date().getMinutes();const t=h+mn/60;
  const ev=d&&(d.W+d.S)>0;const vt=d2VoteTypes();const ed=vt&&(vt.W_ed+vt.S_ed)>0;
  const steps=[['7:00 pm','Polls close. Anyone in line still votes.',t>=19],['about 7:30','First report: early vote and mail',ev],['about 9:00','First Election Day votes',ed],['10 and 11 pm','Hourly Election Day updates (county PDFs at 7, 9, 10, 11 pm)',t>=23&&ed],['after midnight','Last Election Day batches; "unofficial final"',false]];
  return `<div class="card"><h3>Dallas County's reporting clock</h3><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin-top:6px">${steps.map(([tm,txt,done])=>`<div style="border-left:3px solid ${done?'var(--accent)':'var(--line-2)'};padding:4px 10px"><div style="font:700 13px var(--f-mono);color:${done?'var(--strong)':'var(--muted)'}">${tm}${done?' ✓':''}</div><div class="src" style="margin:0">${txt}</div></div>`).join('')}</div>
@@ -921,8 +924,8 @@ function wiBase(kind){const R=window.RES,d=R&&R.dallas;const k=D2_22;
  if(kind==='d2'){const b=d&&d.d2;if(b&&b.W+b.S)return {a:b.W,b:b.S,real:true,la:'Wernick',lb:'Sommerman'};return {a:k.Rev,b:k.Dev,real:false,la:'Wernick',lb:'Sommerman'}}
  const p=d&&d.prop_a;if(p&&p.F+p.A)return {a:p.A,b:p.F,real:true,la:'Against',lb:'For'};return {a:0,b:0,real:false,la:'Against',lb:'For'}}
 function wiDefaultED(kind){if(kind==='d2'){const est=d2EdEstimate();const b=wiBase('d2');const vt=d2VoteTypes();const edIn=vt?vt.W_ed+vt.S_ed:0;return Math.max(0,Math.round((est?est.now:D2_ED22)-edIn))}
- const dc=L&&L.counties&&L.counties.find(x=>x.county==='Dallas');return Math.max(0,Math.round((dc?dc.today:200000)-(0)))}
-function whatIfHTML(kind){const w=WI[kind];if(w.ed==null)w.ed=wiDefaultED(kind);const B=wiBase(kind);
+ const dc=L&&L.counties&&L.counties.find(x=>x.county==='Dallas');let vt=null;try{vt=propATypes()}catch(e){}const edIn=vt?vt.F_ed+vt.A_ed:0;return Math.max(0,Math.round((dc?dc.today:200000)-edIn))}
+function whatIfHTML(kind){const w=WI[kind];if(w.ed==null||!w.touched)w.ed=wiDefaultED(kind);const B=wiBase(kind);
  const add=(n,sh)=>[n*sh/100,n*(100-sh)/100];const e=add(w.ed,w.edShare),m=add(w.mail,w.mailShare),p=add(w.prov*w.cure/100,w.provShare);
  const A=B.a+e[0]+m[0]+p[0],Bv=B.b+e[1]+m[1]+p[1],marg=A-Bv;const leader=marg>=0?B.la:B.lb;
  const rest=e[0]+e[1],other=(m[0]+p[0])-(m[1]+p[1]);const need=rest>0?((B.b-B.a-other)/rest+1)/2:null;
@@ -935,7 +938,7 @@ function whatIfHTML(kind){const w=WI[kind];if(w.ed==null)w.ed=wiDefaultED(kind);
  <p style="margin:10px 0 0;font:800 24px var(--f-display);color:var(--head)">Projected: ${leader} +${fmt(Math.round(Math.abs(marg)))} <span class="src" style="font:400 14px var(--f-body)">(${B.la} ${fmt(Math.round(A))}, ${B.lb} ${fmt(Math.round(Bv))})</span></p>
  <p style="margin:4px 0 0">${need==null?'':need>1?`${B.la} cannot win on these Election Day numbers.`:need<0?`${B.la} wins even losing every remaining Election Day vote.`:`${B.la} needs <b>${(100*need).toFixed(1)}%</b> of the remaining Election Day vote to win, given the other dials.`}</p>
  <p class="src">A calculator, not a forecast: it only does the arithmetic on the numbers you set.</p></div>`}
-document.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.wi;if(!k)return;const [kind,id]=k.split('.');WI[kind][id]=+e.target.value;const el=$('#wi_'+kind);if(el){const y=window.scrollY;el.innerHTML=whatIfHTML(kind);const again=el.querySelector(`[data-wi="${k}"]`);if(again)again.focus();window.scrollTo(0,y)}});
+document.addEventListener('input',e=>{const k=e.target.dataset&&e.target.dataset.wi;if(!k)return;const [kind,id]=k.split('.');WI[kind][id]=+e.target.value;if(id==='ed')WI[kind].touched=true;const el=$('#wi_'+kind);if(el){const y=window.scrollY;el.innerHTML=whatIfHTML(kind);const again=el.querySelector(`[data-wi="${k}"]`);if(again)again.focus();window.scrollTo(0,y)}});
 
 function findD2(){const R=window.RES;if(!R||!R.dallas||!R.dallas.races)return null;
  return R.dallas.races.find(r=>/commissioner/i.test(r.race)&&/(\b2\b|no\. ?2|district 2|precinct 2|pct\.? ?2)/i.test(r.race))}
@@ -1008,7 +1011,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='b8cd16d275f7',failN=0;
+let BUILD='9f8ff669ddb0',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -1124,7 +1127,7 @@ function statusNow(){const cd=countdownText(),sb=document.getElementById('status
 setTimeout(()=>{try{statusNow()}catch(e){}},0);
 function countdownText(){const now=new Date();const fmtd=ms=>{const m=Math.max(0,Math.round(ms/60000));return m>=60?`${Math.floor(m/60)} h ${m%60} min`:`${m} min`};
  const at=(h)=>{const d=new Date();try{const p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d);const g=k=>p.find(x=>x.type===k).value;return Date.UTC(+g('year'),+g('month')-1,+g('day'),h+6,0)}catch(e){return null}};
- const t7=at(19),t8=at(20);if(!t7)return '';if(now<t7)return `Polls close in ${fmtd(t7-now)} (7 pm Central); El Paso and Hudspeth close at 8 pm Central.`;if(now<t8)return `Polls are closed everywhere except El Paso and Hudspeth counties, which close in ${fmtd(t8-now)} (8 pm Central). Anyone in line at closing still votes.`;return ''}
+ const t7=Date.parse('2026-11-04T01:00:00Z'),t8=Date.parse('2026-11-04T02:00:00Z');if(now<t7)return `Polls close in ${fmtd(t7-now)} (7 pm Central); El Paso and Hudspeth close at 8 pm Central.`;if(now<t8)return `Polls are closed everywhere except El Paso and Hudspeth counties, which close in ${fmtd(t8-now)} (8 pm Central). Anyone in line at closing still votes.`;return 'Polls have closed in all 254 Texas counties. Counting continues through the night.'}
 function liveTitle(){const R=window.RES;if(!R)return;const r=(R.statewide||[]).find(x=>/^u\.?s\.? senat/i.test(x.race));const d=R.dallas&&R.dallas.d2;const bits=[];
  if(r){const cs=[...r.candidates].filter(c=>c.party==='DEM'||c.party==='REP').sort((a,b)=>b.votes-a.votes);const t=r.candidates.reduce((a,c)=>a+c.votes,0);if(t&&cs.length>1){const e=engine(R,'sen');bits.push(`${lastN(cs[0].name)} +${(100*(cs[0].votes-cs[1].votes)/t).toFixed(1)} (${e.exp?Math.min(100,Math.round(100*e.cnt/e.exp)):0}% in)`)}}
  if(d&&d.W+d.S)bits.push(`Pct 2 ${d.W>=d.S?'Wernick':'Sommerman'} +${fmt(Math.abs(d.W-d.S))}`);
