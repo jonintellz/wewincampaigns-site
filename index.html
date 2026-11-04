@@ -110,7 +110,7 @@ body.tvmode .wrap{max-width:1700px}
 .wall .x{position:absolute;right:6px;top:6px;z-index:2}
 .chan{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:7px 10px;border-bottom:1px solid var(--line)}
 .chan:last-child{border-bottom:0}.live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:6px}
-.post{display:grid;grid-template-columns:40px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.post img.av{width:40px;height:40px;border-radius:50%;background:var(--raise)}
+.post{display:grid;grid-template-columns:40px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.post.vx{grid-template-columns:minmax(0,1fr)}.post .xbox{max-width:100%;overflow:hidden}.post img.av{width:40px;height:40px;border-radius:50%;background:var(--raise)}
 .post .who{font-weight:700;color:var(--strong)}.post .meta{font-size:12.5px;color:var(--muted)}.post .txt{white-space:pre-wrap;margin-top:4px;overflow-wrap:anywhere}
 .side-R{color:var(--rep)}.side-D{color:var(--dem)}.side-NP{color:var(--muted)}
 #menuBtn{display:none}
@@ -401,32 +401,49 @@ function pageVoices(){return `
 <p class="note" style="margin:8px 0">Posts are claims, not results. The count beside each post is the U.S. Senate count on this site at the minute it was posted.</p>
 <section class="grid g3" style="align-items:start;margin-top:8px"><div><h2 class="R" style="font-size:24px">Republican</h2><div class="card" id="laneR"></div></div><div><h2 class="D" style="font-size:24px">Democratic</h2><div class="card" id="laneD"></div></div><div><h2 style="font-size:24px">Nonpartisan and press</h2><div class="card" id="laneNP"></div></div></section>
 <section><h2>Who to follow</h2><p class="deck">Every account on this page, with links to each platform.</p><div id="vDir"></div></section>
-<p class="note" style="margin-top:20px">Posts appear as their authors published them; inclusion is not endorsement. X no longer lets websites show live timelines to visitors who are not logged in, so X posts here are individual posts embedded with X's own post embed.</p>`}
+<p class="note" style="margin-top:20px">Posts appear as their authors published them; inclusion is not endorsement. X no longer lets websites show live timelines to visitors who are not logged in, so X posts here are individual posts embedded with X's own post embed. The desk reads these accounts' posts on X through the night, so an X post can reach this page up to half an hour after it was posted; national election-data accounts are shown only when they post about Texas.</p>`}
 function ago(iso){const t=Date.parse(iso);if(!t)return '';const m=Math.round((Date.now()-t)/60000);return m<1?'just now':m<60?m+' min ago':m<1440?Math.round(m/60)+' h ago':Math.round(m/1440)+' d ago'}
 function vKeep(a){return (vSide==='all'||a.side===vSide)&&(vCat==='all'||a.category===vCat)}
 function centralHM(iso){const t=Date.parse(iso);if(!t)return null;const d=new Date(t-6*3600e3);return String(d.getUTCHours()).padStart(2,'0')+':'+String(d.getUTCMinutes()).padStart(2,'0')}
 function stampAt(hm){if(!hm)return '';const v=countAt('sen',hm);return v&&(v[0]+v[1])?` · Senate then: ${countLine('sen',v)}`:''}
+/* one lane per side: X and Bluesky posts from today merged newest first; X posts embed lazily with X's own post embed as they near the screen,
+   and a refresh only adds what is new and drops what left, so an embed that has loaded is never rebuilt */
+let LANEN={R:25,D:25,NP:25};
+let XQ=[];
+const XIO=('IntersectionObserver' in window)?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){XIO.unobserve(e.target);xEmbed(e.target)}}),{rootMargin:'900px 0px'}):null;
+function xLoad(){if(document.getElementById('twjs'))return;const sc=document.createElement('script');sc.id='twjs';sc.src='https://platform.twitter.com/widgets.js';sc.async=true;
+ sc.onload=()=>{try{twttr.ready(()=>{const q=XQ;XQ=[];q.forEach(xEmbed)})}catch(e){}};document.body.appendChild(sc)}
+function xEmbed(box){if(box.dataset.done)return;if(!(window.twttr&&twttr.widgets&&twttr.widgets.createTweet)){XQ.push(box);xLoad();return}
+ box.dataset.done='1';twttr.widgets.createTweet(box.dataset.tid,box,{dnt:true,conversation:'none',theme:effectiveTheme()==='dark'?'dark':'light'}).then(n=>{if(n){const f=box.querySelector('.xfb');if(f)f.remove()}}).catch(()=>{})}
+function vItemHTML(it){const p=it.p;
+ if(it.kind==='x'){const a=it.a||{};return `<div class="post vx" data-k="${esc(it.k)}"><div style="min-width:0;flex:1"><div><span class="who">${esc(a.name||'@'+p.handle)}</span> <span class="meta">${esc(a.role||'')} · X · <span class="ago" data-at="${esc(p.at)}">${ago(p.at)}</span>${stampAt(centralHM(p.at))}</span></div>${p.note?`<div class="src" style="margin:2px 0">${esc(p.note)}</div>`:''}<div class="xbox" data-tid="${esc(p.id)}"><p class="xfb meta" style="margin:6px 0"><a href="${esc(p.url)}" target="_blank" rel="noopener">Open the post on X</a></p></div></div></div>`}
+ return `<div class="post" data-k="${esc(it.k)}"><img class="av" src="${esc(p.avatar||'')}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div style="min-width:0"><div><span class="who">${esc(p.name)}</span> <span class="meta">${esc(p.role||'')} · Bluesky · <span class="ago" data-at="${esc(p.at)}">${ago(p.at)}</span>${p.repost?' · repost':''}${stampAt(centralHM(p.at))}</span></div><div class="txt">${esc(p.text)}</div>${p.image?`<img src="${esc(p.image)}" alt="" loading="lazy" style="margin-top:6px;border-radius:6px;max-height:220px;max-width:100%">`:''}<div class="meta"><a href="${esc(p.url)}" target="_blank" rel="noopener">Open on Bluesky</a></div></div></div>`}
+function syncLane(el,items){const want=new Set(items.map(i=>i.k));
+ [...el.children].forEach(c=>{if(!c.dataset.k||!want.has(c.dataset.k))c.remove()});
+ const have={};[...el.children].forEach(c=>{have[c.dataset.k]=c});
+ let prev=null;items.forEach(it=>{let n=have[it.k];
+  if(!n){const t=document.createElement('template');t.innerHTML=vItemHTML(it).trim();n=t.content.firstElementChild;if(prev)prev.after(n);else el.prepend(n);const xb=n.querySelector('.xbox');if(xb){if(XIO)XIO.observe(xb);else xEmbed(xb)}}
+  else{const g=n.querySelector('.ago');if(g)g.textContent=ago(g.dataset.at)}
+  prev=n})}
 function renderVoices(){const V=window.VOICES;if(!$('#laneR'))return;if(!V){$('#laneR').innerHTML='<p class="src">Loading.</p>';return}
- $('#voiceStamp').textContent=`${V.accounts.length} accounts · Bluesky read ${V.as_of.split(' ').slice(1).join(' ')} Central · ${(V.x_posts||[]).length} X posts pinned by the desk.`;
- const cats=[...new Set(V.accounts.map(a=>a.category))];
- $('#vFilters').innerHTML=[['all','All roles'],...cats.map(c=>[c,c])].map(([k,t])=>`<button type="button" class="icon-btn" data-vcat="${esc(k)}" style="${k===vCat?'border-color:var(--accent);color:var(--strong);background:var(--accent-wash)':''}">${esc(t)}</button>`).join('');
  const byX={};V.accounts.forEach(a=>{if(a.x)byX[String(a.x).toLowerCase().replace('@','')]=a});
  const catOK=a=>vCat==='all'||(a&&a.category===vCat);
+ const X=(V.x_posts||[]).filter(p=>p.at&&p.id),Bs=V.bluesky||[];
+ const newest=[...X.map(p=>p.at),...Bs.map(p=>p.at)].sort().pop();
+ $('#voiceStamp').textContent=`${V.accounts.length} accounts · today so far: ${X.length} X posts and ${Bs.length} Bluesky posts · newest ${newest?ago(newest):'none yet'} · Bluesky read ${V.as_of.split(' ').slice(1).join(' ')} Central.`;
+ const cats=[...new Set(V.accounts.map(a=>a.category))];const vf=$('#vFilters'),fsig=vCat+'|'+cats.join('|');
+ if(vf&&vf.dataset.sig!==fsig){vf.dataset.sig=fsig;vf.innerHTML=[['all','All roles'],...cats.map(c=>[c,c])].map(([k,t])=>`<button type="button" class="icon-btn" data-vcat="${esc(k)}" style="${k===vCat?'border-color:var(--accent);color:var(--strong);background:var(--accent-wash)':''}">${esc(t)}</button>`).join('')}
  ['R','D','NP'].forEach(side=>{const el=$('#lane'+side);if(!el)return;
-  const xs=(V.x_posts||[]).filter(p=>{const a=byX[(p.handle||'').toLowerCase()];return (a?a.side:'NP')===side&&catOK(a)});
-  const bs=V.bluesky.filter(p=>p.side===side&&catOK(p)).slice(0,15);
-  const sig=vCat+'|'+xs.map(p=>p.url).join(',')+'|'+bs.map(p=>p.url).join(',');if(el.dataset.sig===sig)return;el.dataset.sig=sig;
-  let h='';
-  if(xs.length)h+=xs.map(p=>`<div style="margin-bottom:10px"><p class="src" style="margin:0 0 4px">${esc(p.note||'')}${p.added?' · pinned '+esc(p.added):''}</p><blockquote class="twitter-tweet" data-dnt="true" data-conversation="none" data-theme="${effectiveTheme()==='dark'?'dark':'light'}"><a href="${esc(p.url)}">${esc(p.url)}</a></blockquote></div>`).join('');
-  if(bs.length)h+=bs.map(p=>`<div class="post"><img class="av" src="${esc(p.avatar||'')}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><div><div><span class="who">${esc(p.name)}</span> <span class="meta">${esc(p.role||'')} · Bluesky · ${ago(p.at)}${p.repost?' · repost':''}${stampAt(centralHM(p.at))}</span></div><div class="txt">${esc(p.text)}</div>${p.image?`<img src="${esc(p.image)}" alt="" loading="lazy" style="margin-top:6px;border-radius:6px;max-height:220px">`:''}<div class="meta"><a href="${esc(p.url)}" target="_blank" rel="noopener">Open on Bluesky</a></div></div></div>`).join('');
-  if(!bs.length){const ppl=V.accounts.filter(a=>a.side===side&&a.x&&catOK(a)).slice(0,14);
-   h+=`<p class="src" style="margin:8px 0 4px">${side==='R'?'Most Republican officials and party accounts post on X, not Bluesky.':'No Bluesky posts for this filter.'} The desk pins key X posts above as they happen; follow them on X:</p><p style="margin:0;line-height:1.9">${ppl.map(a=>`<a href="https://x.com/${esc(String(a.x).replace('@',''))}" target="_blank" rel="noopener">${esc(a.name)}</a>`).join(' · ')}</p>`}
-  el.innerHTML=h||'<p class="src" style="margin:0">Nothing yet.</p>';
-  if(xs.length){if(!window.twttr){if(!document.getElementById('twjs')){const sc=document.createElement('script');sc.id='twjs';sc.src='https://platform.twitter.com/widgets.js';sc.async=true;document.body.appendChild(sc)}}else try{twttr.widgets.load(el)}catch(e){}}});
+  const items=[...X.map(p=>({kind:'x',p,a:byX[(p.handle||'').toLowerCase()],k:'x'+p.id,at:p.at})).filter(i=>((i.a?i.a.side:'NP')===side)&&catOK(i.a)),
+   ...Bs.filter(p=>p.side===side&&catOK(p)).map(p=>({kind:'b',p,k:'b'+p.url,at:p.at}))].sort((a,b)=>a.at<b.at?1:a.at>b.at?-1:0);
+  const shown=items.slice(0,LANEN[side]);
+  if(!shown.length)el.innerHTML='<p class="src" style="margin:0">No posts today for this filter.</p>';else syncLane(el,shown);
+  let more=$('#vmore'+side);if(!more){el.insertAdjacentHTML('afterend',`<button type="button" class="icon-btn" id="vmore${side}" data-vmore="${side}" style="margin-top:8px"></button>`);more=$('#vmore'+side)}
+  more.hidden=items.length<=shown.length;more.textContent=`Show ${Math.min(25,items.length-shown.length)} more (${items.length-shown.length} older today)`});
  const byCat={};V.accounts.filter(a=>catOK(a)).forEach(a=>(byCat[a.category]=byCat[a.category]||[]).push(a));
  const link=(u,t)=>u?`<a href="${esc(u)}" target="_blank" rel="noopener">${t}</a>`:'';
  const dir=$('#vDir');if(dir&&dir.dataset.cat!==vCat){dir.dataset.cat=vCat;dir.innerHTML=`<div class="grid g3">${Object.entries(byCat).map(([c,as])=>`<div class="card"><h3>${esc(c)}</h3>${as.map(a=>`<div class="chan" style="padding:6px 0"><span><b>${esc(a.name)}</b> <span class="side-${esc(a.side)}">●</span><br><span class="src">${esc(a.role||'')}</span></span><span class="src" style="text-align:right;white-space:nowrap">${[link(a.x?'https://x.com/'+String(a.x).replace('@',''):'', 'X'),link(a.bluesky?'https://bsky.app/profile/'+String(a.bluesky).replace('@',''):'', 'Bluesky'),link(a.threads?'https://www.threads.net/@'+String(a.threads).replace('@',''):'', 'Threads'),link(a.youtube||'', 'YouTube')].filter(Boolean).join(' · ')}</span></div>`).join('')}</div>`).join('')}</div>`}}
-document.addEventListener('click',e=>{const b=e.target.closest('[data-vcat]');if(b){vCat=b.dataset.vcat;renderVoices()}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-vcat]');if(b){vCat=b.dataset.vcat;renderVoices()}const m=e.target.closest('[data-vmore]');if(m){LANEN[m.dataset.vmore]+=25;renderVoices()}});
 async function loadVoices(){try{const r=await fetch('data/voices.json?t='+Math.floor(Date.now()/60000),{cache:'no-store'});if(r.ok)window.VOICES=await r.json()}catch(e){}renderVoices()}
 
 function pageMethod(){return `
@@ -924,7 +941,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='555556ae7018',failN=0;
+let BUILD='01dd0f91f481',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
