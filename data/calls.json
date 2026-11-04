@@ -27,6 +27,27 @@
    "source": "VoteHub",
    "t": "21:26",
    "time": "9:26 PM"
+  },
+  {
+   "race": "U.S. Senator",
+   "winner": "James Talarico",
+   "source": "AP",
+   "t": "22:06",
+   "time": "10:06 PM"
+  },
+  {
+   "race": "Governor",
+   "winner": "Gina Hinojosa",
+   "source": "VoteHub",
+   "t": "22:07",
+   "time": "10:07 PM"
+  },
+  {
+   "race": "U.S. Representative District 15",
+   "winner": "Bobby Pulido",
+   "source": "Decision Desk HQ",
+   "t": "22:00",
+   "time": "10:00 PM"
   }
  ]
 }
