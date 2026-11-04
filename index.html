@@ -344,7 +344,7 @@ function pageWatch(){return `
 <section>${overlayKitHTML()}</section>
 <p class="note" style="margin-top:20px">Streams are each broadcaster's own YouTube live stream, embedded with YouTube's player. Availability is up to the broadcaster.</p>`}
 let WALLN=4;try{WALLN=+(localStorage.getItem('tvd_walln')||4)||4}catch(e){}
-const DFW_PREF=[/FOX 4/i,/NBC 5|KXAS/i,/WFAA/i,/CBS News Texas|KTVT/i,/Telemundo/i];
+const DFW_PREF=[/WFAA/i,/NBC 5|KXAS/i,/CBS News Texas|KTVT/i,/Telemundo/i,/FOX 4/i];
 function slotHTML(x,removable,key){const src=x.video_id?`https://www.youtube-nocookie.com/embed/${encodeURIComponent(x.video_id)}?autoplay=1&mute=1&playsinline=1`:`https://www.youtube-nocookie.com/embed/live_stream?channel=${encodeURIComponent(String(x.channel_id).split('#')[0])}&autoplay=1&mute=1&playsinline=1`;
  return `<div class="slot" data-key="${esc(key||x.channel_id)}"><span class="cap">${esc(x.name)}${x.video_id?'':' · goes live when the station does'}</span>${removable?`<button type="button" class="icon-btn x" data-unwall="${esc(x.channel_id)}" style="background:rgba(0,0,0,.6);color:#fff">Remove</button>`:''}<iframe src="${src}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen loading="lazy" title="${esc(x.name)}"></iframe></div>`}
 /* never rebuild a player that is already on screen: remove only what left, append only what is new (moving or rewriting an iframe restarts it and drops its sound) */
@@ -572,7 +572,7 @@ function renderResults(){const el=$('#resBody');if(!el)return;const R=window.RES
   ${tile('Counties reporting',`${cr.CR||0} / ${cr.CT||254}`,'a county counts as reporting once it posts anything')}
   ${tile('Early vote counted, Senate',fmt(sen?sen.candidates.reduce((s,c)=>s+(c.ev||0),0):0),`of ${fmt(T.final.ev)} early ballots cast`)}</div>`;
  if(!R||!hasVotes(R.statewide)){
-  el.innerHTML=prog+`<div class="grid g2">${['U.S. Senate: Talarico (D) vs Paxton (R)','Governor: Abbott (R) vs Hinojosa (D)'].map(t=>`<div class="card"><h3>${t}</h3><p class="src" style="margin:0">Counting starts after 7 pm Central. In Texas the early vote posts first and leans Democratic in the big counties; Election Day votes come later and lean Republican, so the early margin shrinks or flips through the night.</p></div>`).join('')}</div>`+(R&&R.counties?`<div style="margin-top:14px">${benchHTML(R)}</div>`:'');return}
+  el.innerHTML=prog+`<div class="grid g2">${['U.S. Senate: Talarico (D) vs Paxton (R)','Governor: Abbott (R) vs Hinojosa (D)'].map(t=>`<div class="card"><h3>${t}</h3><p class="src" style="margin:0">Counting starts after 7 pm Central. In Texas the early vote posts first and leans Democratic in the big counties; Election Day votes come later and lean Republican, so the early margin shrinks or flips through the night.</p></div>`).join('')}</div>`+(R&&R.counties?`<div style="margin-top:14px">${benchHTML(R)}</div>`:'')+`<div style="margin-top:14px">${afterHundredHTML()}</div>`;return}
  const sw=R.statewide.filter(r=>rk(r)<99).sort((a,b)=>rk(a)-rk(b));const dn=r=>+((r.race.match(/District (\d+)/)||[0,999])[1]);const rest=R.statewide.filter(r=>rk(r)===99).sort((a,b)=>dn(a)-dn(b));
  $('#resDeck').textContent=`Unofficial, ${R.source||'Texas Secretary of State'}, read ${R.as_of}${R.sos_updated?' (state file '+R.sos_updated+')':''}.`;
  let h=prog+`<div class="grid g2">${sw.slice(0,2).map(r=>raceCard(r,1)+`<div style="margin-top:8px">${splitTable(r)}</div>`).map(x=>`<div>${x}</div>`).join('')}</div>`;
@@ -865,7 +865,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='8522f9b86ce2',failN=0;
+let BUILD='cbc0b2a6ef7a',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
