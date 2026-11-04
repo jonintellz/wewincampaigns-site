@@ -973,7 +973,7 @@ function batchesHTML(onlyDallas){const R=window.RES,B=(R&&R.batches||[]).filter(
 
 
 /* ---------- freshness: never show old numbers as live ---------- */
-let BUILD='5fe9ccf90215',failN=0;
+let BUILD='4f04ef1c9b82',failN=0;
 function chiParse(s){const m=(s||'').match(/(\d{4})-(\d\d)-(\d\d) (\d\d):(\d\d) (AM|PM)/);if(!m)return null;let h=+m[4]%12+(m[6]==='PM'?12:0);
  const utc=Date.UTC(+m[1],+m[2]-1,+m[3],h+6,+m[5]);return utc}   // Central Standard Time (UTC-6) on 3 Nov 2026
 function ageMin(s){const t=chiParse(s);return t==null?null:Math.round((Date.now()-t)/60000)}
@@ -1082,6 +1082,9 @@ function dropClockHTML(R){const B=(R&&R.batches||[]).filter(b=>b.race==='Senate'
  <p class="src">From the batches this site has recorded tonight (Senate race). A quiet county may simply be between batches; "quiet longer than usual" means more than twice its typical gap.</p></div>`}
 
 /* ---------- countdown and live tab title ---------- */
+/* the banner is right from the first paint, not only after the first data read */
+function statusNow(){const cd=countdownText(),sb=document.getElementById('status');if(sb&&cd)sb.innerHTML=esc(cd)+' <a href="#dallas">Dallas County and District 2</a> · <a href="#live">Live results and turnout</a>'}
+setTimeout(()=>{try{statusNow()}catch(e){}},0);
 function countdownText(){const now=new Date();const fmtd=ms=>{const m=Math.max(0,Math.round(ms/60000));return m>=60?`${Math.floor(m/60)} h ${m%60} min`:`${m} min`};
  const at=(h)=>{const d=new Date();try{const p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d);const g=k=>p.find(x=>x.type===k).value;return Date.UTC(+g('year'),+g('month')-1,+g('day'),h+6,0)}catch(e){return null}};
  const t7=at(19),t8=at(20);if(!t7)return '';if(now<t7)return `Polls close in ${fmtd(t7-now)} (7 pm Central); El Paso and Hudspeth close at 8 pm Central.`;if(now<t8)return `Polls are closed everywhere except El Paso and Hudspeth counties, which close in ${fmtd(t8-now)} (8 pm Central). Anyone in line at closing still votes.`;return ''}
@@ -1231,7 +1234,7 @@ async function loadLive(){const q='?t='+Math.floor(Date.now()/60000);let ok=0;
  try{const r=await fetch('data/calls.json'+q,{cache:'no-store'});if(r.ok)window.CALLS=await r.json()}catch(e){}
  try{const r=await fetch('data/claims.json'+q,{cache:'no-store'});if(r.ok)window.CLAIMS=await r.json()}catch(e){}
  try{const r=await fetch('data/notes.json'+q,{cache:'no-store'});if(r.ok)window.NOTES=await r.json()}catch(e){}
- await loadExtras();failN=ok?0:failN+1;freshness();scoreboard();fillHomeNight();checkBuild();alertCheck();speakCheck();liveTitle();{const cd=countdownText(),sb=$('#status');if(sb&&cd)sb.innerHTML=esc(cd)+' <a href="#dallas">Dallas County and District 2</a> · <a href="#live">Live results and turnout</a>'}if(route()==='watch')loadStreams();if(route()==='voices')loadVoices();if(route()==='tv')renderTV();if(route()==='ballots')loadBallots();
+ await loadExtras();failN=ok?0:failN+1;freshness();scoreboard();fillHomeNight();checkBuild();alertCheck();speakCheck();liveTitle();statusNow();if(route()==='watch')loadStreams();if(route()==='voices')loadVoices();if(route()==='tv')renderTV();if(route()==='ballots')loadBallots();
  renderLive()}
 
 function svgEl(w,h,inner){return `<svg viewBox="0 0 ${w} ${h}" role="img">${inner}</svg>`}
